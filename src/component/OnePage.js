@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
 
-import Head from './Head'
-import Content from './Content'
+import Head from './head/Head'
+import Content from './content/Content'
 import Colors from './theme/Colors'
 
 const CustomDiv = styled.div`

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Me from './head/Me'
-import Title from './head/Title'
+import Me from './Me'
+import Title from './Title'
 import styled from "styled-components"
 
 const CustomRow = styled(Row)`

@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Colors from '../theme/Colors'
 import ToLinkedin from '../common/ToLinkedin'
-import Mail from '../common/Mail'
+import Mail from './Mail'
 import Home from '../common/Home'
 
 const CustomRow = styled(Row)`
