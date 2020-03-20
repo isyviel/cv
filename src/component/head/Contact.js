@@ -1,17 +1,27 @@
 import React, { useState, useContext, useEffect } from "react"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
+import styled from "styled-components"
 
+import Colors from '../theme/Colors'
+import ToLinkedin from '../common/ToLinkedin'
 
-const Contact = ()=> {
-return(
-    <Row className="ml-4 mt-4">
-        <Col>Facebook</Col>
-        <Col>Linkedin</Col>
-        <Col>Mail</Col>
-        <Col>Téléphone</Col>
-        <Col>CV</Col>
-    </Row>
-)
+const CustomRow = styled(Row)`
+border-radius :50px;
+height : 70px;
+width: 85%;
+background-color: ${Colors.bleuVert};
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.63);
+text-align: center;
+`
+const Contact = () => {
+    return(
+        <CustomRow className="align-items-center mx-auto">
+            <Col><ToLinkedin/></Col>
+            <Col><img src="images/mail.png"/></Col>
+            <Col><img src="images/tel.png"/></Col>
+            <Col><img src="images/pdf.png"/></Col>
+        </CustomRow>
+    )
 }
 
 export default Contact

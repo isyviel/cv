@@ -1,25 +1,35 @@
 import React, { useState, useContext, useEffect } from "react"
-import { Row,Col } from "@bootstrap-styled/v4"
-import Container from './common/Container'
 import styled from "styled-components"
-import Tech from './Tech'
-import { Parallax } from "react-scroll-parallax"
-import Background from 'images'
+
+import Container from './common/Container'
+import Spacer from './common/Spacer'
+import Detales from './content/Detales'
 
 
 const CustomDiv = styled.div`
-    height: 500px;
-    width: 100%;
-    background: url(${Background}/paral.jpg) center 0 no-repeat fixed;
-`
+    background: url(images/Rectangle.png) no-repeat center fixed;
+    padding: 2%;
+    `
 
-
-const Content = () => {
-return (
-    <CustomDiv>
-        <Tech></Tech>
-    </CustomDiv>
-)
+const Content = ({title,content,...props}) => {
+    return (
+        <CustomDiv>
+            <Container>
+                <Detales
+                    title="Techno"/>
+            </Container>
+            <Spacer/>
+            <Container>
+                <Detales 
+                    title="Exp"/>
+            </Container>
+            <Spacer/>
+            <Container>
+                <Detales 
+                    title="Formation"/>
+            </Container>
+        </CustomDiv>
+    )
 }
 
 export default Content
