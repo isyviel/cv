@@ -5,9 +5,10 @@ import Content from './Content'
 
 
 const OnePage = () => {
+    const [isForm, setIsForm] = useState(false)
     return (
         <div>
-            <Head/>
+            <Head isForm={isForm}/>
             <Content/>
         </div>
     )

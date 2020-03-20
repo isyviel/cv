@@ -6,10 +6,12 @@ import Form from './mail/Form'
 
 
 const Formulaire = () => {
+    const [isForm, setIsForm] = useState(true)
+
     return (
         <div>
             <Title/>
-            <Contact/>
+            <Contact isForm={isForm}/>
             <Form/>
         </div>
     )

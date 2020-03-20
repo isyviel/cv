@@ -5,12 +5,12 @@ import Title from './head/Title'
 import Contact from './head/Contact'
 
 
-const Head = () => {
+const Head = ({isForm,...props}) => {
     return (
         <div className="mt-5">
                 <Me/>
                 <Title/>
-                <Contact/>
+                <Contact isForm={isForm}/>
         </div>
     )
 }

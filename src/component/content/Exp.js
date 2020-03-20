@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 
-import {LISTE_EXP, DESCRIPTION} from '../constantes/texte'
+import {LISTE_EXP, DESCRIPTION} from '../common/constantes/texte'
 
 const Exp = () => {
    return (

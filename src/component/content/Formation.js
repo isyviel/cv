@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 
-import {LISTE_FORMATION} from '../constantes/texte'
+import {LISTE_FORMATION} from '../common/constantes/texte'
 
 const Formation = () => {
     return (

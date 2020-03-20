@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 
-import {LISTE_TECHNO, LISTE_SECONDAIRE, LISTE_OUTILS} from '../constantes/texte'
+import {LISTE_TECHNO, LISTE_SECONDAIRE, LISTE_OUTILS} from '../common/constantes/texte'
 
 const Tech = () => {
    return (
