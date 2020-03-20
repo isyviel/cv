@@ -3,17 +3,18 @@ import styled from "styled-components"
 import Tech from './Tech'
 import Exp from './Exp'
 import Formation from './Formation'
+import Colors from '../theme/Colors'
 
 const CustomTitle = styled.p`
     text-align: center;
-    font-family: Centaur;
+    font-family: "Baloo 2";
     font-size: 48px;
     font-weight: bold;
 `
 
 const CustomContent = styled.p`
     text-align: center;
-    font-family: "Gill Sans MT";
+    font-family: "Baloo 2";
     font-size: 30px;
     padding: 2%;
 `

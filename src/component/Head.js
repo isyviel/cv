@@ -1,17 +1,21 @@
 import React, { useState, useContext, useEffect } from "react"
-
+import {Row,Col} from "@bootstrap-styled/v4/lib"
 import Me from './head/Me'
 import Title from './head/Title'
-import Contact from './head/Contact'
+import styled from "styled-components"
+
+const CustomRow = styled(Row)`
+
+padding: 10px;
+`
 
 
 const Head = ({isForm,...props}) => {
     return (
-        <div className="mt-5">
-                <Me/>
-                <Title/>
-                <Contact isForm={isForm}/>
-        </div>
+        <CustomRow>
+            <Me/> 
+            <Title/>            
+        </CustomRow>
     )
 }
 

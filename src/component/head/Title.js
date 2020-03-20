@@ -1,29 +1,33 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
+import Contact from './Contact'
+import Colors from '../theme/Colors'
+import {Row,Col} from "@bootstrap-styled/v4/lib"
 
-const CustomName = styled.h1`
+const CustomName = styled.div`
     color: #000;
-    font-family: "Gill Sans MT";
-    font-size: 48px;
-    line-height: 56px;
+    font-family: "Comfortaa";
+    font-size: 48px; 
     text-align: center;
-    margin-top: 2%;
   `
 
-const CustomJob = styled.h2`
-    color: grey;
-    font-family: Centaur;
+const CustomJob = styled.div`
+    color: ${Colors.orange};
+    font-family: "Baloo 2";
     font-size: 48px;
-    font-weight: bold;
-    line-height: 55px;
     text-align: center;
+    margin-bottom: 50px;
 `
+
 const Title = ()=> {
     return(
-        <div className="text-align-center">
+        
+        <Col xs="12">
             <CustomName>Adeline SIMON</CustomName>
             <CustomJob>Développeuse Web et Web Mobile</CustomJob>
-        </div>
+            <Contact/>
+        </Col>
+        
     )
 }
 

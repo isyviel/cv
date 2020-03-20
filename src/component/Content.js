@@ -7,10 +7,9 @@ import Detales from './content/Detales'
 
 
 const CustomDiv = styled.div`
-    background: url(images/Rectangle.png) no-repeat center fixed;
-    padding: 2%;
+    padding-top:2%;
+    background: url(images/Rectangle1.png) no-repeat center fixed;
     `
-
 const Content = ({title,content,...props}) => {
     return (
         <CustomDiv>

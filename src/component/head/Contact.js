@@ -8,20 +8,21 @@ import Mail from '../common/Mail'
 import Home from '../common/Home'
 
 const CustomRow = styled(Row)`
-border-radius :50px;
-height : 70px;
-width: 85%;
-background-color: ${Colors.bleuVert};
-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.63);
+border-radius :15px;
+height : 100px;
+box-shadow: 0 2px 2px 0 rgba(0,0,0,0.63);
 text-align: center;
+padding-bottom: 35px; 
+
 `
 const Contact = ({isForm,...props}) => {
     return(
-        <CustomRow className="align-items-center mx-auto">
-            <Col><a href="https://www.linkedin.com/in/adeline-simon-b8614018b"><ToLinkedin/></a></Col>
+        <CustomRow className="align-items-center">
+            <Col><a href="https://www.linkedin.com/in/adeline-simon-b8614018b"><img src="images/linkedin.png"/></a></Col>
             <Col>{isForm ? <Home/> : <Mail/>}</Col>
-            <Col><img src="images/tel.png"/></Col>
+            <Col><img src="images/phone.png"/></Col>
             <Col><img src="images/pdf.png"/></Col>
+            <Row className="mb-4"></Row>
         </CustomRow>
     )
 }
