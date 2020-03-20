@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import Colors from '../theme/Colors'
 import ToLinkedin from '../common/ToLinkedin'
+import Mail from './Mail'
 
 const CustomRow = styled(Row)`
 border-radius :50px;
@@ -16,8 +17,8 @@ text-align: center;
 const Contact = () => {
     return(
         <CustomRow className="align-items-center mx-auto">
-            <Col><ToLinkedin/></Col>
-            <Col><img src="images/mail.png"/></Col>
+            <Col><a href="https://www.linkedin.com/in/adeline-simon-b8614018b"><ToLinkedin/></a></Col>
+            <Col><Mail/></Col>
             <Col><img src="images/tel.png"/></Col>
             <Col><img src="images/pdf.png"/></Col>
         </CustomRow>

@@ -1,4 +1,4 @@
-export const LISTE_TECHNO = "Symfony, ApiPlatform, ReactJS, Material.ui";
+export const LISTE_TECHNO = "Symfony, ApiPlatform, ReactJS, Material-UI";
 export const LISTE_SECONDAIRE = "MySQL, Java, Android";
 export const LISTE_OUTILS = "Visual Studio Code, Postman, Invision, MiroApp";
 
