@@ -21,8 +21,6 @@ const CustomContent = styled.div`
 const Detales = ({ title, content,...props}) => {
     return (
         <div className="m-0">
-            
-            <CustomTitle>{title}</CustomTitle>
              <CustomContent>
                 {title === "Techno" && (<Tech/>)}
                 {title === "Exp" && (<Exp/>)}

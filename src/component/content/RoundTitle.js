@@ -8,11 +8,9 @@ const CustomTitle = styled.div`
     font-weight: bold;
 `
 
-const RoundTitle = () => {
+const RoundTitle = ({title,...props}) => {
     return(
-        <CustomTitle>
-            Techno
-        </CustomTitle>
+        <CustomTitle>{title}</CustomTitle>
     )
 }
 

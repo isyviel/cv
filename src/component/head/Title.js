@@ -5,18 +5,19 @@ import Colors from '../theme/Colors'
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 
 const CustomName = styled.div`
-    color: #000;
+
     font-family: "Comfortaa";
     font-size: 48px; 
     text-align: center;
   `
 
 const CustomJob = styled.div`
-    color: ${Colors.orange};
+    
     font-family: "Baloo 2";
     font-size: 48px;
     text-align: center;
     margin-bottom: 50px;
+    
 `
 
 const Title = ()=> {
