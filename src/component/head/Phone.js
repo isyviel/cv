@@ -7,7 +7,7 @@ font-size: 28px;
 `
 const Phone = () => {
     return <MDBPopover
-    placement="right"
+    placement="bottom"
     popover
     clickable
     id="popper2"

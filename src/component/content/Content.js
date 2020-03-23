@@ -9,13 +9,12 @@ import Tech from './Tech'
 import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "../common/constantes/logos"
 import { EXP, FORMATION } from "../common/constantes/texte"
 
-
 const CustomDiv = styled.div`
     padding: 70px;
    
     `
 const Title= styled.div`
-    text-align: center;
+    text-align: left;
     font-family: "Baloo 2";
     font-size: 28px;
     padding-bottom : 26px;
@@ -24,9 +23,13 @@ const Citation = styled.p`
 font-family: 'Annie Use Your Telescope', cursive;
     font-size: 30px;
     color: grey;
-    font-weight: italic;
     text-align: center;
+`
+const Author = styled.p`
+    font-family: 'Baloo 2';
+    color: grey;
     padding-bottom : 50px;
+    text-align: center;
 `
 
 
@@ -37,14 +40,16 @@ const Content = ({title,content,...props}) => {
 
     return (
         <CustomDiv>
+            
             <Citation>
-                <strong>"Faire un bond en avant, je sautille pas"</strong> - Perceval de Kaamelott
+                <strong>"Faire un bond en avant, je sautille pas"</strong> 
             </Citation>
-            <Container fluid>
+            <Author>- Perceval de Kaamelott</Author>
+            <Title></Title>
                 <Row>
                     {techno.map((tech) => <Tech tech={tech}/>)}
                 </Row>
-            </Container>
+      
             <Spacer/>
                 {sections.map((section)=>{
                     return(

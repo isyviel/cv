@@ -8,7 +8,7 @@ import Colors from './theme/Colors'
 const CustomDiv = styled.div`
 background: url(images/head.png) no-repeat top fixed;
 background-size: 100%;
-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.63);
+box-shadow: 0 4px 6px 0 rgba(0,0,0,0.5);
 `
 const OnePage = () => {
     /*TO DO changer la bannière par un automate p5*/
@@ -17,7 +17,6 @@ const OnePage = () => {
         <div>
         <CustomDiv>
             <Head isForm={isForm}/>
-            <Contact/>
         </CustomDiv>
             <Content />
         </div>

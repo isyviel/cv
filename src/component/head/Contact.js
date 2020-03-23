@@ -4,10 +4,11 @@ import styled from "styled-components"
 import Container from '../common/Container'
 import Mail from './Mail'
 import Phone from './Phone'
+
 const CustomRow = styled(Row)`
 height : 100px;
 text-align: center;
-padding-bottom: 10px;
+padding:30px;
 `
 const Contact = ({isForm,...props}) => {
 /* TODO 
