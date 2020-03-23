@@ -15,7 +15,7 @@ const CustomJob = styled.div`
     
     font-family: "Baloo 2";
     font-size: 48px;
-    text-align: center;
+   text-align: center;
     margin-bottom: 50px;
     
 `
@@ -26,7 +26,6 @@ const Title = ()=> {
         <Col xs="12">
             <CustomName>Adeline SIMON</CustomName>
             <CustomJob>Développeuse Web et Web Mobile</CustomJob>
-            <Contact/>
         </Col>
         
     )

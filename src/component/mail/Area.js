@@ -12,6 +12,8 @@ const Area = ({label,...props}) => {
           multiline
           rows="4"
           variant="outlined"
+          fullWidth
+          className="mt-4"
         />    
     )
 }

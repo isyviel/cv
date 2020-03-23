@@ -4,6 +4,7 @@ import Tech from './Tech'
 import Exp from './Exp'
 import Formation from './Formation'
 import Colors from '../theme/Colors'
+import { EXP, FORMATION } from "../common/constantes/texte"
 
 const CustomTitle = styled.div`
     text-align: center;
@@ -22,9 +23,7 @@ const Detales = ({ title, content,...props}) => {
     return (
         <div className="m-0">
              <CustomContent>
-                {title === "Techno" && (<Tech/>)}
-                {title === "Exp" && (<Exp/>)}
-                {title === "Formation" && (<Formation/>)}
+                {title === EXP ? <Exp/> : <Formation/>}
             </CustomContent>
         </div>  
     )

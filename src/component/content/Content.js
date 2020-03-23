@@ -5,13 +5,13 @@ import Container from '../common/Container'
 import RoundContainer from '../common/RoundContainer'
 import Spacer from '../common/Spacer'
 import Detales from './Detales'
-
-import RoundTitle from './RoundTitle'
 import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "../common/constantes/logos"
+import { EXP, FORMATION } from "../common/constantes/texte"
+
 
 const CustomDiv = styled.div`
     padding-top:2%;
-    
+   
     `
 const Title= styled.div`
     text-align: center;
@@ -19,22 +19,27 @@ const Title= styled.div`
     font-size: 48px;
     font-weight: bold;
 `
+
+const CustomImg = styled.img`
+width: 100px;
+`
+const CustomTitle = styled.p`
+text-align: center;
+font-family: "Baloo 2";
+font-size: 32px;
+`
+
+
 const Content = ({title,content,...props}) => {
 
     const techno = [SYMFONY,REACT,HTML,BOOTS,ANDROID,JAVA,GIT]
-    const CustomImg = styled.img`
-    width: 100px;
-    `
-    const CustomTitle = styled.p`
-    text-align: center;
-    font-family: "Baloo 2";
-    font-size: 32px;
-    `
+    const sections = [EXP,FORMATION] 
+
+
     const path = "images/"
     return (
         <CustomDiv>
             <Title>Technologies et Outils</Title>
-            <Spacer/>
             <Row>
                 {techno.map((tech) => {
                     return <Col>
@@ -46,24 +51,15 @@ const Content = ({title,content,...props}) => {
                 })}
             </Row>
              <Spacer/>
-            
-            <Row>
-                <Col xs="3"><Title>Expérience</Title></Col>
-                <Col>
-                <Container>
-                <Detales 
-                    title="Exp"/>
-                </Container></Col>
-            </Row>
-            <Spacer/>
-            <Row>
-                <Col xs="3"><Title>Formation</Title></Col>
-                <Col>
-                <Container>
-                <Detales 
-                    title="Formation"/>
-                </Container></Col>
-            </Row>
+                {sections.map((section)=>{
+                    return <><Row className="align-items-center">
+                        <Col xs="3"><Title>{section}</Title></Col>
+                    <Col>
+                    <Container>
+                    <Detales 
+                        title={section}/>
+                    </Container></Col></Row><Spacer/></>
+                })}
         </CustomDiv>
     )
 }

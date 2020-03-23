@@ -5,13 +5,15 @@ import {Row,Col} from "@bootstrap-styled/v4/lib"
 const Input = ({label,required,...props}) => {
 
     return(
+ 
         <TextField
           required={required}
-          id="filled-required"
+          id="required"
           label={label}
-          variant="filled"
+          fullWidth
         />        
-    )
+ 
+   )
 }
 
 export default Input
