@@ -7,8 +7,8 @@ import {Row,Col} from "@bootstrap-styled/v4/lib"
 const CustomName = styled.div`
 
     font-family: "Comfortaa";
-    font-size: 48px; 
-    text-align: center;
+    font-size: 36px; 
+    
   `
 
 const CustomJob = styled.div`
@@ -23,9 +23,8 @@ const CustomJob = styled.div`
 const Title = ()=> {
     return(
         
-        <Col xs="12">
-            <CustomName>Adeline SIMON</CustomName>
-            <CustomJob>Développeuse Web et Web Mobile</CustomJob>
+        <Col>
+            <CustomName>Adeline SIMON - Développeuse Web et Web Mobile</CustomName>   
         </Col>
         
     )

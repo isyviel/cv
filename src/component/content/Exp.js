@@ -5,7 +5,9 @@ import {LISTE_EXP, DESCRIPTION} from '../common/constantes/texte'
 const Exp = () => {
    return (
       <div>
-         <p>{LISTE_EXP}</p>
+         {LISTE_EXP.map((exp) => {
+            return <p>{exp}</p>
+         })}
          <p>{DESCRIPTION}</p>
       </div> 
    )

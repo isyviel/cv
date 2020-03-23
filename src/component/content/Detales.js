@@ -16,7 +16,7 @@ const CustomTitle = styled.div`
 const CustomContent = styled.div`
     text-align: center;
     font-family: "Baloo 2";
-    font-size: 30px;
+    font-size: 22px;
     padding: 2%;
 `
 const Detales = ({ title, content,...props}) => {

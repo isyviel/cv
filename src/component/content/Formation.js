@@ -4,8 +4,10 @@ import {LISTE_FORMATION} from '../common/constantes/texte'
 
 const Formation = () => {
     return (
-        <p>{LISTE_FORMATION}</p>
-    )
+        LISTE_FORMATION.map((diplomes) => {
+            return(<p>{diplomes}</p>)
+        })
+        )
 }
 
 export default Formation
