@@ -5,11 +5,13 @@ import Container from '../common/Container'
 import RoundContainer from '../common/RoundContainer'
 import Spacer from '../common/Spacer'
 import Detales from './Detales'
+
 import RoundTitle from './RoundTitle'
+import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "../common/constantes/logos"
 
 const CustomDiv = styled.div`
     padding-top:2%;
-    background: url(images/Rectangle1.png) no-repeat center fixed;
+    
     `
 const Title= styled.div`
     text-align: center;
@@ -18,32 +20,31 @@ const Title= styled.div`
     font-weight: bold;
 `
 const Content = ({title,content,...props}) => {
+
+    const techno = [SYMFONY,REACT,HTML,BOOTS,ANDROID,JAVA,GIT]
+    const CustomImg = styled.img`
+    width: 150px;
+    `
+    const CustomTitle = styled.p`
+    text-align: center;
+    font-family: "Baloo 2";
+    font-size: 32px;
+    `
+    const path = "images/"
     return (
         <CustomDiv>
             <Spacer/>
-            <Title>Technologies</Title>
+            <Title>Technologies et Outils</Title>
             <Spacer/>
             <Row>
-                <RoundContainer>
-                    <RoundTitle title="Symfony"/>
-                    <img src="symfony.png"/>
-                </RoundContainer>
-                <RoundContainer>
-                    <RoundTitle title="Symfony"/>
-                    <img src="symfony.png"/>
-                </RoundContainer>
-                <RoundContainer>
-                    <RoundTitle title="Symfony"/>
-                    <img src="symfony.png"/>
-                </RoundContainer>
-                <RoundContainer>
-                    <RoundTitle title="Symfony"/>
-                    <img src="symfony.png"/>
-                </RoundContainer>
-                <RoundContainer>
-                    <RoundTitle title="Symfony"/>
-                    <img src="symfony.png"/>
-                </RoundContainer>
+                {techno.map((tech) => {
+                    return <Col>
+                                <RoundContainer>
+                                    <CustomImg src= {path + tech[1]}/>
+                                </RoundContainer>
+                                <CustomTitle>{tech[0]}</CustomTitle>
+                            </Col>
+                })}
             </Row>
             <Spacer/>
             <Title>Expérience</Title>
