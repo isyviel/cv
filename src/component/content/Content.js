@@ -23,7 +23,7 @@ const Content = ({title,content,...props}) => {
 
     const techno = [SYMFONY,REACT,HTML,BOOTS,ANDROID,JAVA,GIT]
     const CustomImg = styled.img`
-    width: 150px;
+    width: 100px;
     `
     const CustomTitle = styled.p`
     text-align: center;
@@ -33,7 +33,6 @@ const Content = ({title,content,...props}) => {
     const path = "images/"
     return (
         <CustomDiv>
-            <Spacer/>
             <Title>Technologies et Outils</Title>
             <Spacer/>
             <Row>
@@ -46,22 +45,24 @@ const Content = ({title,content,...props}) => {
                             </Col>
                 })}
             </Row>
-            <Spacer/>
-            <Title>Expérience</Title>
+             <Spacer/>
+            
             <Row>
+                <Col xs="3"><Title>Expérience</Title></Col>
+                <Col>
                 <Container>
                 <Detales 
                     title="Exp"/>
-                </Container>
+                </Container></Col>
             </Row>
             <Spacer/>
-            
-                <Title>Formation</Title>
-                <Row>
+            <Row>
+                <Col xs="3"><Title>Formation</Title></Col>
+                <Col>
                 <Container>
                 <Detales 
                     title="Formation"/>
-                </Container>
+                </Container></Col>
             </Row>
         </CustomDiv>
     )
