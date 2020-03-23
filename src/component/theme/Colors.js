@@ -1,4 +1,3 @@
-
 export default {
     vert: "#2E714D",
     orange: "#FF7A00",

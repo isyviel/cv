@@ -15,9 +15,7 @@ const Phone = () => {
     <MDBBtn><img src="images/phone.png" /></MDBBtn>
     <MDBPopoverBody>
         <CustomP>0621692869</CustomP>
-       
-      </MDBPopoverBody>
-    
+    </MDBPopoverBody>
     </MDBPopover>
 }
 export default Phone

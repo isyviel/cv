@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import { Container } from "@bootstrap-styled/v4"
 
-import Colors from '../theme/Colors'
-
 export default styled(Container)`
     border-radius : 150px;
     height: 120px;
@@ -12,6 +10,5 @@ export default styled(Container)`
     display: flex;
     align-items: center;
     justify-content: center;
-    :hover{
-        background-color: ${Colors.lightGrey};}
+    text-align: center;
 `

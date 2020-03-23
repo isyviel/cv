@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import Container from '../common/Container'
+
 import Mail from './Mail'
 import Phone from './Phone'
 

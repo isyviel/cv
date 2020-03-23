@@ -1,13 +1,14 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Container from '../common/Container'
-import RoundContainer from '../common/RoundContainer'
+
+import Section from './Section'
 import Spacer from '../common/Spacer'
-import Detales from './Detales'
+
 import Tech from './Tech'
+import Comp from './Competences'
 import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "../common/constantes/logos"
-import { EXP, FORMATION } from "../common/constantes/texte"
+import { EXP, FORMATION, COMPETENCES} from "../common/constantes/texte"
 
 const CustomDiv = styled.div`
     padding: 70px;
@@ -32,41 +33,24 @@ const Author = styled.p`
     text-align: center;
 `
 
-
-
 const Content = ({title,content,...props}) => {
     const techno = [SYMFONY,REACT,HTML,BOOTS,ANDROID,JAVA,GIT];
     const sections = [EXP,FORMATION] 
-
+    const competences = COMPETENCES
     return (
-        <CustomDiv>
-            
+        <CustomDiv> 
             <Citation>
                 <strong>"Faire un bond en avant, je sautille pas"</strong> 
             </Citation>
-            <Author>- Perceval de Kaamelott</Author>
-            <Title></Title>
-                <Row>
-                    {techno.map((tech) => <Tech tech={tech}/>)}
-                </Row>
-      
+            <Author>- Perceval, Kaamelott</Author>
+            <Row>
+                {techno.map((tech) => <Tech tech={tech}/>)}
+            </Row>
             <Spacer/>
-                {sections.map((section)=>{
-                    return(
-                    <>
-                        <Container fluid>
-                            <Row className="align-items-center">
-                                <Col xs="3">
-                                    <Title>{section}</Title>
-                                </Col>
-                                <Col> 
-                                    <Detales title={section}/>
-                                </Col>
-                            </Row>
-                        </Container>
-                    <Spacer/>
-                    </>)
-                })}
+            <Row>
+                {competences.map((comp) => <Comp comp={comp}/>)}
+            </Row>
+            <Section/>
         </CustomDiv>
     )
 }
