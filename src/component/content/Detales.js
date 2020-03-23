@@ -15,6 +15,7 @@ const CustomDiv = styled.div`
     background : url(images/way.png) no-repeat center;
 `
 
+
 const Detales = ({ title, content, element,...props}) => {
     const experience = LISTE_EXP;
     const formation = LISTE_FORMATION;
@@ -22,7 +23,7 @@ const Detales = ({ title, content, element,...props}) => {
     return (
     title === EXP ? 
     experience.map((exp) => 
-    <Container fluid><Exp exp={exp} element={element}/></Container>)
+    <Col><Container fluid><Exp exp={exp} element={element}/></Container></Col>)
     : formation.map((diplome)=><Col><Container><Formation diplomes={diplome}/></Container></Col>)
     )
 }
