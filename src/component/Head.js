@@ -1,11 +1,13 @@
 import React, { useState, useContext, useEffect } from "react"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Me from './Me'
-import Contact from './Contact'
+import Me from './head/Me'
+import Contact from './head/Contact'
 import styled from "styled-components"
+import { EXP, FORMATION, COMPETENCES} from "./common/constantes/texte"
+import Comp from './content/Competences'
 
 const Citation = styled.p`
-font-family: 'Annie Use Your Telescope', cursive;
+    font-family: 'Annie Use Your Telescope', cursive;
     font-size: 30px;
     color: grey;
     text-align: center;
@@ -23,22 +25,21 @@ const CustomName = styled.div`
     font-size: 36px; 
   `
 
-const CustomRow = styled(Row)`
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-`
 const Head = ({isForm,...props}) => {
+    const competences = COMPETENCES
     return (
     
-        <CustomRow >          
-             <Col  lg="2" xs ="12"><Me/></Col>  
-             <Col xs="auto">
+        <Row className="align-items-center p-4">          
+            <Col><Me/></Col>  
+            <Col lg="6">
                 <CustomName>Adeline SIMON</CustomName>
                 <CustomName>Développeuse Web et Web Mobile</CustomName>
                 <Contact/>
-            </Col>       
-        </CustomRow>
+            </Col>
+            <Col>
+            
+            </Col>    
+        </Row>
 
     )
 }

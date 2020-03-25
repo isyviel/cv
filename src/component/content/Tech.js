@@ -18,12 +18,11 @@ const Tech = ({tech,...props}) => {
    const path = "images/";
   
       return <Col>
+                <RoundContainer>
+                    <CustomImg src= {path + tech[1]}/>
+                </RoundContainer>
                 <CustomTitle>{tech[0]}</CustomTitle>
-                  <RoundContainer>
-                      <CustomImg src= {path + tech[1]}/>
-                  </RoundContainer>
-                  
-              </Col>
+            </Col>
   
 }
 

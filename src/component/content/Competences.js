@@ -4,21 +4,19 @@ import {Row,Col} from "@bootstrap-styled/v4/lib"
 import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "../common/constantes/logos"
 import RoundContainer from '../common/RoundContainer'
 import Spacer from '../common/Spacer'
-import Colors from '../theme/Colors'
+import Colors from '../common/theme/Colors'
 
 const CustomTitle = styled.p`
-text-align: center;
 font-family: "Baloo 2";
-font-weight: bold;
-font-size: 28px;
+font-size: 32px;
 color : ${Colors.orange};
+text-shadow: 1px 1px 2px black, 0 0 0.2em ${Colors.lightGrey};
 `
 
 const Comp = ({comp,...props}) => {
   
-      return <Col>
-                  <CustomTitle>{comp}</CustomTitle>
-              </Col>
+      return <CustomTitle>{comp}</CustomTitle>
+              
   
 }
 

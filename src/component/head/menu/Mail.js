@@ -1,19 +1,21 @@
 import React, { useState, useContext, useEffect } from "react"
 import { Link } from "react-router-dom"
-import Form from '../mail/Form'
-import Input from '../mail/Input'
-import Area from '../mail/Area'
+import Form from './mail/Form'
+import Input from './mail/Input'
+import Area from './mail/Area'
 import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Container from '../common/Container'
+import Container from '../../common/Container'
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Spacer from '../common/Spacer'
-import Colors from '../theme/Colors'
+import Spacer from '../../common/Spacer'
+import Colors from '../../common/theme/Colors'
 import styled from "styled-components"
+import ImageButton from "../../common/ImageButton"
+import grey from '@material-ui/core/colors/grey';
 
 const CustomButton = styled(Button)`
   color = ${Colors.orange};
@@ -21,8 +23,14 @@ const CustomButton = styled(Button)`
   border-color = ${Colors.orange};
   border-radius: 5px;
 `
+
+const CustomDiv = styled(DialogContent)`
+  background-color: ${grey[900]};
+  color: white;
+  
+`
 const Mail = () => {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
   
     const handleClickOpen = () => {
       setOpen(true);
@@ -37,14 +45,16 @@ const Mail = () => {
       handleClose();
     }
 
+    
     return(
       <div>
-        <img src="images/mail.png" onClick={handleClickOpen}/>
+        <ImageButton src="images/mail.png" onClick={handleClickOpen}/>
         
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" fullWidth>
+          <CustomDiv>
           <DialogTitle id="form-dialog-title">Pour me contacter...</DialogTitle>
           <DialogContent>
-            <Input label="E-Mail" required={true}/>
+            <Input color="white" label="E-Mail" required={true}/>
             <Input label="Objet : " required={false}/>
             <Area/>
             <Input label="Nom" required={false}/>
@@ -57,6 +67,7 @@ const Mail = () => {
               Annuler
             </CustomButton>   
           </DialogContent>
+          </CustomDiv>
         </Dialog>
       </div>
     )

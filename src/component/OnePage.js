@@ -1,9 +1,8 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
 
-import Head from './head/Head'
-import Content from './content/Content'
-
+import Head from './Head'
+import Content from './Content'
 
 const CustomDiv = styled.div`
 background: url(images/head.png) no-repeat top fixed;
