@@ -12,7 +12,7 @@ padding-bottom: 22px;
 `
 
 const CustomTitle = styled(Title)`
-        color: ${Colors.orange};
+        
 `
 const Diplome = ({diplome,...props}) => {
     

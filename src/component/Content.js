@@ -20,6 +20,7 @@ const Content = ({title,content,...props}) => {
             <Experiences/> 
             <Spacer/>
             <Formations/>
+            <Spacer/>
    
         </div>
          /* <div className="pr-5 pl-5">  */    

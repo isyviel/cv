@@ -25,9 +25,7 @@ const CustomButton = styled(Button)`
 `
 
 const CustomDiv = styled(DialogContent)`
-  background-color: ${grey[900]};
-  color: white;
-  
+  background-color: white;  
 `
 const Mail = () => {
     const [open, setOpen] = React.useState(false);
@@ -54,7 +52,7 @@ const Mail = () => {
           <CustomDiv>
           <DialogTitle id="form-dialog-title">Pour me contacter...</DialogTitle>
           <DialogContent>
-            <Input color="white" label="E-Mail" required={true}/>
+            <Input label="E-Mail" required={true}/>
             <Input label="Objet : " required={false}/>
             <Area/>
             <Input label="Nom" required={false}/>

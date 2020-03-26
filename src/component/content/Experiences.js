@@ -39,8 +39,9 @@ const Experiences = ({exp,...props}) => {
     return(   
             <CustomContainer fluid>
                 <Row className="align-items-center">
-                    <Title className="text-white">Expérience</Title>
+                    <Title>Expérience</Title>
                 </Row>
+               
                 <Row>
                     <Col xs="3">
                         {isWeb? <Active content={experience[0]}/>
@@ -55,6 +56,7 @@ const Experiences = ({exp,...props}) => {
                         <ExpDetales isSales={isSales} experience={experience}/>
                     </Col> 
                 </Row>
+               
              </CustomContainer>
         )}
 

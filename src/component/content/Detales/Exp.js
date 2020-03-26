@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Colors from '../../common/theme/Colors'
 
 const CustomTitle = styled(Title)`
-        color: ${Colors.orange};
+       
 `
 const Exp = ({exp,...props}) => {
             return  <div element={exp}>

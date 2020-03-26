@@ -16,6 +16,7 @@ const CustomRow = styled(Row)`
     border-radius: 30px;
     background-color: rgba(130,130,130,0.7);
     border: 1px solid rgba(255,255,255,0.2);
+    z-index:2;
 `
 
 const Contact = ({isForm,...props}) => {
