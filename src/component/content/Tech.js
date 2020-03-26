@@ -5,7 +5,7 @@ import RoundContainer from '../common/RoundContainer'
 
 
 const CustomImg = styled.img`
-width: 200px;
+width: 100px;
 `
 const CustomTitle = styled.p`
 text-align: center;
@@ -18,10 +18,7 @@ const Tech = ({tech,...props}) => {
    const path = "images/";
   
       return <Col>
-                <RoundContainer>
                     <CustomImg src= {path + tech[1]}/>
-                </RoundContainer>
-                <CustomTitle>{tech[0]}</CustomTitle>
             </Col>
   
 }

@@ -6,13 +6,12 @@ import { EXP, FORMATION, COMPETENCES, LISTE_FORMATION, DESCRIPTION} from "../com
 import styled from "styled-components"
 
 const CustomContainer = styled(Container)`
-background: url(images/head.png) no-repeat top fixed;
-background-size: 100%;
+
 `
 
 const Formations = ({isExp, ...props}) => {
     const diplomes = LISTE_FORMATION;
-    return  <CustomContainer fluid>
+    return  <CustomContainer >
                <Title>Formations</Title>
                <DiplDetales diplomes={diplomes}/>
             </CustomContainer>

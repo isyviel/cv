@@ -1,23 +1,25 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
-
+import { Container } from "@bootstrap-styled/v4"
 import Head from './Head'
 import Content from './Content'
+import { logRoles } from "@testing-library/react"
+import Tech from "./content/Tech"
 
 const CustomDiv = styled.div`
-background: url(images/head.png) no-repeat top fixed;
+background: url(images/rcet.png) no-repeat center;
 background-size: 100%;
-box-shadow: 0 4px 6px 0 rgba(0,0,0,0.5);
 `
+
 const OnePage = () => {
+  
     /*TO DO changer la bannière par un automate p5*/
     const [isForm, setIsForm] = useState(false)
     return (
         <div>
-        <CustomDiv>
             <Head isForm={isForm}/>
-        </CustomDiv>
-            <Content />
+            <Content/>
+    
         </div>
     )
 }

@@ -17,8 +17,7 @@ height: 70px;
 }
 `
 const CustomContainer = styled(Container)`
-background: url(images/head.png) no-repeat top fixed;
-background-size: 100%;
+
 `
 
 const Experiences = ({exp,...props}) => {
@@ -41,7 +40,7 @@ const Experiences = ({exp,...props}) => {
     
     return(   
             <>
-            <CustomContainer fluid>
+            <CustomContainer >
                 <Row className="align-items-center pb-3">
                     <Col><Title>Expérience</Title></Col>
                     <Col><SubTitle onClick={handleDisplayStrategia}>{experience[0]}</SubTitle></Col>

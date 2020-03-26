@@ -6,6 +6,11 @@ const Me = styled.div`
     width: 200px;
     background : url(images/moi.png);
     background-size: 200px;
-    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.5);
+    border: 1px solid #FFF;
+    box-shadow: 0 2px 2px 0 #828282;
+    position : relative;
+    bottom: 200px;
+    left: 390px;
+      
 `
 export default Me

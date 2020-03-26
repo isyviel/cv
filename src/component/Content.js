@@ -9,25 +9,33 @@ import Tech from './content/Tech'
 import Comp from './content/Competences'
 import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "./common/constantes/logos"
 import { EXP, FORMATION, COMPETENCES} from "./common/constantes/texte"
+import FondFleches from './common/FondFleches'
 
-
+const Logos = styled.div`
+    width: 700px;
+    position: relative;
+    left: 1000px;
+    top: 120px;
+`
 
 const Content = ({title,content,...props}) => {
-    const techno = [SYMFONY,REACT,HTML,BOOTS,ANDROID,JAVA,GIT];
+    const techno = [SYMFONY,REACT,ANDROID,JAVA,GIT];
     const competences = COMPETENCES
     return (
-        <div className="pr-5 pl-5">
-            <Row className="justify-content-around ">{competences.map((comp) => <Comp comp={comp}/>)}</Row>
+        <div>
+           
+        <Experiences/>
+            <Formations/>
+         </div>   
+         /* <div className="pr-5 pl-5">  */    
+            /* <Row className="justify-content-around ">{competences.map((comp) => <Comp comp={comp}/>)}</Row>
             <Spacer/>
-            <Perceval/>
-            <Spacer/>
-            <Row>
-               {techno.map((tech) => <Tech tech={tech}/>)}
-            </Row>
+       
+           
             <Spacer/>
             <Experiences/>
-            <Formations/>
-        </div>
+            <Formations/> */
+        /* </div> */
     )
 }
 
