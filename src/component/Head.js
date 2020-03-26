@@ -11,6 +11,7 @@ import { Container } from "@bootstrap-styled/v4"
 import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "./common/constantes/logos"
 
 import FondFleches from './common/FondFleches'
+
 const CompDiv = styled(Container)`
     position: relative;
 `
