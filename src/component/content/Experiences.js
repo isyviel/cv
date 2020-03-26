@@ -9,16 +9,12 @@ import Button from '@material-ui/core/Button';
 import {  FORMATION, COMPETENCES, LISTE_EXP, DESCRIPTION} from "../common/constantes/texte"
 import { Fade } from '@material-ui/core';
 import Colors from '../common/theme/Colors'
+import Active from '../common/Active'
+import Disactive from '../common/Disactive'
 
-const SubTitle= styled(Button)`
-    background: url(images/clicked.png) no-repeat center;
-    height:100px;
-    background-size:100%;
-    width: 300px;
-`
 const CustomContainer = styled(Container)`
     border-radius: 15px;
-    background-color: ${Colors.darkGrey};
+    background-color: rgba(79,79,79,0.5);
     box-shadow: inset 0 1px 2px 0 #FFF, inset 0 1px 3px 0 #FFF, 0 2px 4px 0 #000;
     width: 80%;
     min-height: 500px;
@@ -29,17 +25,15 @@ const Experiences = ({exp,...props}) => {
     const experience = LISTE_EXP;
     const [isSales, setIsSales] = useState(false);
     const [isActive, setIsActive] = useState(false);
-    const [checked, setChecked] = useState(false);
+    const [isWeb, setIsWeb] = useState(true)
 
-     const handleDisplayStrategia = (event) => {
+     const handleDisplayStrategia = () => {
         setIsSales(false)
-        setIsActive(true)
-        setChecked(prev => !prev);
+        setIsWeb(true) 
     }
-    const handleDisplaySales = (event) => {
+    const handleDisplaySales = () => {
         setIsSales(true)
-        setIsActive(true)
-        setChecked(prev => !prev);
+        setIsWeb(false)
     }
     
     return(   
@@ -48,12 +42,17 @@ const Experiences = ({exp,...props}) => {
                     <Title className="text-white">Expérience</Title>
                 </Row>
                 <Row>
-                    <Col className="text-align-center" xs="3">
-                        <SubTitle onClick={handleDisplayStrategia}>{experience[0]}</SubTitle>
-                        <SubTitle onClick={handleDisplaySales}>{experience[1]}</SubTitle>
+                    <Col xs="3">
+                        {isWeb? <Active content={experience[0]}/>
+                        : <Disactive display={handleDisplayStrategia} content={experience[0]}/>}
+
+                        {isSales ? 
+                        <Active content={experience[1]}/>
+                        : <Disactive display={handleDisplaySales} content={experience[1]}/>}
+                        
                     </Col>
                     <Col>
-                        <ExpDetales isSales={isSales} checked={checked}  experience={experience}/>
+                        <ExpDetales isSales={isSales} experience={experience}/>
                     </Col> 
                 </Row>
              </CustomContainer>

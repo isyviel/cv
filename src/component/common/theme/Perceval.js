@@ -11,14 +11,14 @@ const Citation = styled.p`
     font-family: 'Annie Use Your Telescope', cursive;
     font-size: 30px;
     color: white;
-    text-align: right;
+    text-align: center;
     letter-spacing: 1.32px;
 `
 const Author = styled.p`
     font-family: 'Baloo 2';
     font-size: 18px;
     color: ${Colors.orange};
-    text-align: right;
+    text-align: center;
 `
 
 const Perceval =() => {

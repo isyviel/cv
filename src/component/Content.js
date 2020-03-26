@@ -17,8 +17,9 @@ const Content = ({title,content,...props}) => {
     const competences = COMPETENCES
     return (
         <div>
-    <Experiences/> 
-    <Spacer/>
+            <Experiences/> 
+            <Spacer/>
+            <Formations/>
    
         </div>
          /* <div className="pr-5 pl-5">  */    

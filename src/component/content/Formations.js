@@ -8,7 +8,7 @@ import Colors from '../common/theme/Colors'
 
 const CustomContainer = styled(Container)`
 border-radius: 15px;
-background-color: ${Colors.darkGrey};
+background-color: rgba(79,79,79,0.5);
 box-shadow: inset 0 1px 2px 0 #FFF, inset 0 1px 3px 0 #FFF, 0 2px 4px 0 #000;
 min-width: 80%;
 min-height: 300px;

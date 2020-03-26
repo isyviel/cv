@@ -1,13 +1,18 @@
 import React from "react"
 import Title from "../../common/Title"
 import {LISTE_STAGE,LISTE_MAG} from '../../common/constantes/texte'
+import styled from "styled-components"
+import Colors from '../../common/theme/Colors'
 
+const CustomTitle = styled(Title)`
+        color: ${Colors.orange};
+`
 const Exp = ({exp,...props}) => {
             return  <div element={exp}>
                         {exp ==="Développeuse Web" ? 
                         
                         <div>
-                            <Title>STRATEGIA Communications</Title>
+                            <CustomTitle>STRATEGIA Communications</CustomTitle>
                             <p>{LISTE_STAGE}</p>
                             <p>Gestion des workflows client</p>
                             <p>Mise en place de fonctionnalités: Suppression, Duplication, Mail de notification, exportation en pdf</p>
@@ -19,7 +24,7 @@ const Exp = ({exp,...props}) => {
                         :
 
                         <div>
-                            <Title>{LISTE_MAG}</Title>
+                            <CustomTitle>{LISTE_MAG}</CustomTitle>
                             <p></p>
                             <p>vente</p>
                             </div>}
