@@ -8,16 +8,20 @@ import ExpDetales from'./Detales/ExpDetales'
 import Button from '@material-ui/core/Button';
 import {  FORMATION, COMPETENCES, LISTE_EXP, DESCRIPTION} from "../common/constantes/texte"
 import { Fade } from '@material-ui/core';
+import Colors from '../common/theme/Colors'
 
 const SubTitle= styled(Button)`
-width : 600px;
-height: 70px;
-:hover {
-    border: '4px solid currentColor'
-}
+    background: url(images/clicked.png) no-repeat center;
+    height:100px;
+    background-size:100%;
+    width: 300px;
 `
 const CustomContainer = styled(Container)`
-
+    border-radius: 15px;
+    background-color: ${Colors.darkGrey};
+    box-shadow: inset 0 1px 2px 0 #FFF, inset 0 1px 3px 0 #FFF, 0 2px 4px 0 #000;
+    width: 80%;
+    min-height: 500px;
 `
 
 const Experiences = ({exp,...props}) => {
@@ -39,23 +43,20 @@ const Experiences = ({exp,...props}) => {
     }
     
     return(   
-            <>
-            <CustomContainer >
-                <Row className="align-items-center pb-3">
-                    <Col><Title>Expérience</Title></Col>
-                    <Col><SubTitle onClick={handleDisplayStrategia}>{experience[0]}</SubTitle></Col>
-                    <Col><SubTitle onClick={handleDisplaySales}>{experience[1]}</SubTitle></Col>
+            <CustomContainer fluid>
+                <Row className="align-items-center">
+                    <Title className="text-white">Expérience</Title>
                 </Row>
-                
                 <Row>
-              
-                    <ExpDetales isSales={isSales} checked={checked}  experience={experience}/>
-             
-                </Row> 
-             
+                    <Col className="text-align-center" xs="3">
+                        <SubTitle onClick={handleDisplayStrategia}>{experience[0]}</SubTitle>
+                        <SubTitle onClick={handleDisplaySales}>{experience[1]}</SubTitle>
+                    </Col>
+                    <Col>
+                        <ExpDetales isSales={isSales} checked={checked}  experience={experience}/>
+                    </Col> 
+                </Row>
              </CustomContainer>
-            <Spacer/>
-            </>
         )}
 
 

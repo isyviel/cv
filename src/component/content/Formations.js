@@ -4,9 +4,14 @@ import Title from "../common/Title"
 import DiplDetales from './Detales/DiplDetales'
 import { EXP, FORMATION, COMPETENCES, LISTE_FORMATION, DESCRIPTION} from "../common/constantes/texte"
 import styled from "styled-components"
+import Colors from '../common/theme/Colors'
 
 const CustomContainer = styled(Container)`
-
+border-radius: 15px;
+background-color: ${Colors.darkGrey};
+box-shadow: inset 0 1px 2px 0 #FFF, inset 0 1px 3px 0 #FFF, 0 2px 4px 0 #000;
+min-width: 80%;
+min-height: 300px;
 `
 
 const Formations = ({isExp, ...props}) => {

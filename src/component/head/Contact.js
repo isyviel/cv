@@ -8,12 +8,13 @@ import Colors from '../common/theme/Colors'
 
 const CustomRow = styled(Row)`
     position: fixed;
+    top: 5px;
     left:37%;
     margin-left: -325px;
     height: 56px;
     width: 550px;
     border-radius: 30px;
-    background-color: rgba(130,130,130,0.2);
+    background-color: rgba(130,130,130,0.7);
     border: 1px solid rgba(255,255,255,0.2);
 `
 

@@ -5,10 +5,11 @@ import Head from './Head'
 import Content from './Content'
 import { logRoles } from "@testing-library/react"
 import Tech from "./content/Tech"
+import Spacer from './common/Spacer'
 
 const CustomDiv = styled.div`
-background: url(images/rcet.png) no-repeat center;
-background-size: 100%;
+background: url(images/fondfond.png) no-repeat center;
+background-size: 105%;
 `
 
 const OnePage = () => {
@@ -16,11 +17,11 @@ const OnePage = () => {
     /*TO DO changer la bannière par un automate p5*/
     const [isForm, setIsForm] = useState(false)
     return (
-        <div>
+        <CustomDiv>
             <Head isForm={isForm}/>
+            
             <Content/>
-    
-        </div>
+        </CustomDiv>
     )
 }
 

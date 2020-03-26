@@ -5,7 +5,7 @@ import RoundContainer from '../common/RoundContainer'
 
 
 const CustomImg = styled.img`
-width: 100px;
+width:100px;
 `
 const CustomTitle = styled.p`
 text-align: center;

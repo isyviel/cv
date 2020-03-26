@@ -9,30 +9,24 @@ import Tech from './content/Tech'
 import Comp from './content/Competences'
 import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "./common/constantes/logos"
 import { EXP, FORMATION, COMPETENCES} from "./common/constantes/texte"
-import FondFleches from './common/FondFleches'
+import { Container } from "@material-ui/core"
 
-const Logos = styled.div`
-    width: 700px;
-    position: relative;
-    left: 1000px;
-    top: 120px;
-`
 
 const Content = ({title,content,...props}) => {
     const techno = [SYMFONY,REACT,ANDROID,JAVA,GIT];
     const competences = COMPETENCES
     return (
         <div>
-           
-        <Experiences/>
-            <Formations/>
-         </div>   
+    <Experiences/> 
+    <Spacer/>
+   
+        </div>
          /* <div className="pr-5 pl-5">  */    
             /* <Row className="justify-content-around ">{competences.map((comp) => <Comp comp={comp}/>)}</Row>
             <Spacer/>
        
            
-            <Spacer/>
+            
             <Experiences/>
             <Formations/> */
         /* </div> */
