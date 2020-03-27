@@ -1,6 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
-import {Row,Col} from "@bootstrap-styled/v4/lib"
 import { Container } from "@bootstrap-styled/v4"
 import Colors from '../../common/theme/Colors'
 
@@ -14,5 +12,4 @@ export default styled(Container)`
     left: 235px;
     top: 400px;
     padding-top: 23px;
-  
 `

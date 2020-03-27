@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
-
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import Bouton from './Bouton'
 
@@ -15,8 +14,10 @@ const CustomRow = styled(Row)`
 `
 const Disactive= ({content, display,...props}) => {
 
-    return <CustomRow><Bouton display={display} content={content}/></CustomRow>
+    return (
+        <CustomRow>
+            <Bouton display={display} content={content}/>
+        </CustomRow>)
 }
-
 
 export default Disactive

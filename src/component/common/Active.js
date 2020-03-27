@@ -1,9 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
-import Button from '@material-ui/core/Button'
-import {Row,Col} from "@bootstrap-styled/v4/lib"
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { grey,purple } from "@material-ui/core/colors"
+import {Row} from "@bootstrap-styled/v4/lib"
 import Bouton from './Bouton'
 
 const CustomRow = styled(Row)`
@@ -19,6 +16,5 @@ const Active= ({content,...props}) => {
 
     return <CustomRow><Bouton content={content}/></CustomRow>
 }
-
 
 export default Active

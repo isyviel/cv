@@ -6,7 +6,6 @@ const CustDiv = styled.div`
    position: relative;
    top: 40px;
 `
-
 const Citation = styled.p`
     font-family: 'Annie Use Your Telescope', cursive;
     font-size: 30px;
@@ -22,12 +21,12 @@ const Author = styled.p`
 `
 
 const Perceval =() => {
-return (
-<CustDiv>
-    <Citation>
-        <strong>"Faire un bond en avant, je sautille pas"</strong> 
-    </Citation>
-    <Author>- Perceval, Kaamelott</Author>
-</CustDiv>)}
+    return (
+    <CustDiv>
+        <Citation>
+            <strong>"Faire un bond en avant, je sautille pas"</strong> 
+        </Citation>
+        <Author>- Perceval, Kaamelott</Author>
+    </CustDiv>)}
 
 export default Perceval

@@ -1,21 +1,13 @@
-import React, { useState, useContext, useEffect } from "react"
-import { Link } from "react-router-dom"
-import Form from './mail/Form'
+import React , {useState} from "react"
 import Input from './mail/Input'
 import Area from './mail/Area'
-import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Container from '../../common/Container'
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Spacer from '../../common/Spacer'
 import Colors from '../../common/theme/Colors'
 import styled from "styled-components"
 import ImageButton from "../../common/ImageButton"
-import grey from '@material-ui/core/colors/grey';
 
 const CustomButton = styled(Button)`
   color = ${Colors.orange};
@@ -28,7 +20,7 @@ const CustomDiv = styled(DialogContent)`
   background-color: white;  
 `
 const Mail = () => {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
   
     const handleClickOpen = () => {
       setOpen(true);
@@ -43,7 +35,6 @@ const Mail = () => {
       handleClose();
     }
 
-    
     return(
       <div>
         <ImageButton src="images/mail.png" onClick={handleClickOpen}/>

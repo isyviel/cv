@@ -1,20 +1,15 @@
-import React, { useState, useContext, useEffect } from "react"
-import styled from "styled-components"
-import {Row,Col} from "@bootstrap-styled/v4/lib"
+import React from "react"
+
 import Formations from './content/Formations'
 import Experiences from './content/Experiences'
 import Spacer from './common/Spacer'
-import Perceval from './common/theme/Perceval'
-import Tech from './content/Tech'
-import Comp from './content/Competences'
-import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "./common/constantes/logos"
-import { EXP, FORMATION, COMPETENCES} from "./common/constantes/texte"
-import { Container } from "@material-ui/core"
+
+import { SYMFONY, REACT, ANDROID, JAVA, GIT} from "./common/constantes/logos"
+import { COMPETENCES} from "./common/constantes/texte"
 
 
 const Content = ({title,content,...props}) => {
-    const techno = [SYMFONY,REACT,ANDROID,JAVA,GIT];
-    const competences = COMPETENCES
+    
     return (
         <div>
             <Experiences/> 
@@ -23,15 +18,6 @@ const Content = ({title,content,...props}) => {
             <Spacer/>
    
         </div>
-         /* <div className="pr-5 pl-5">  */    
-            /* <Row className="justify-content-around ">{competences.map((comp) => <Comp comp={comp}/>)}</Row>
-            <Spacer/>
-       
-           
-            
-            <Experiences/>
-            <Formations/> */
-        /* </div> */
     )
 }
 

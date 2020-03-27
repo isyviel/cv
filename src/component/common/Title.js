@@ -1,8 +1,4 @@
 import styled from "styled-components"
-import React, { useState, useContext, useEffect } from "react"
-import Colors from './theme/Colors'
-import Alignment from './theme/Alignment'
-
 
 export default styled.div`
     font-family: "Baloo 2";

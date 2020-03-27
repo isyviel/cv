@@ -1,14 +1,10 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState} from "react"
 import styled from "styled-components"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import Container from '../common/Container'
 import Title from '../common/Title'
-import Spacer from '../common/Spacer'
 import ExpDetales from'./Detales/ExpDetales'
-import Button from '@material-ui/core/Button';
-import {  FORMATION, COMPETENCES, LISTE_EXP, DESCRIPTION} from "../common/constantes/texte"
-import { Fade } from '@material-ui/core';
-import Colors from '../common/theme/Colors'
+import {  LISTE_EXP} from "../common/constantes/texte"
 import Active from '../common/Active'
 import Disactive from '../common/Disactive'
 
@@ -21,10 +17,9 @@ const CustomContainer = styled(Container)`
 `
 
 const Experiences = ({exp,...props}) => {
-
     const experience = LISTE_EXP;
+
     const [isSales, setIsSales] = useState(false);
-    const [isActive, setIsActive] = useState(false);
     const [isWeb, setIsWeb] = useState(true)
 
      const handleDisplayStrategia = () => {
@@ -39,9 +34,8 @@ const Experiences = ({exp,...props}) => {
     return(   
             <CustomContainer fluid>
                 <Row className="align-items-center">
-                    <Title>Expérience</Title>
+                    <Title className="text-white">Expérience</Title>
                 </Row>
-               
                 <Row>
                     <Col xs="3">
                         {isWeb? <Active content={experience[0]}/>
@@ -49,16 +43,13 @@ const Experiences = ({exp,...props}) => {
 
                         {isSales ? 
                         <Active content={experience[1]}/>
-                        : <Disactive display={handleDisplaySales} content={experience[1]}/>}
-                        
+                        : <Disactive display={handleDisplaySales} content={experience[1]}/>}  
                     </Col>
                     <Col>
                         <ExpDetales isSales={isSales} experience={experience}/>
                     </Col> 
                 </Row>
-               
              </CustomContainer>
         )}
-
 
 export default Experiences

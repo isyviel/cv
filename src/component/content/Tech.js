@@ -1,8 +1,6 @@
-import React, { useState, useContext, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
-import {Row,Col} from "@bootstrap-styled/v4/lib"
-import RoundContainer from '../common/RoundContainer'
-
+import {Col} from "@bootstrap-styled/v4/lib"
 
 const CustomImg = styled.img`
 width:100px;
@@ -14,13 +12,8 @@ font-size: 28px;
 `
 
 const Tech = ({tech,...props}) => {
-   
    const path = "images/";
-  
-      return <Col>
-                    <CustomImg src= {path + tech[1]}/>
-            </Col>
-  
+      return <Col><CustomImg src= {path + tech[1]}/></Col>
 }
 
 export default Tech

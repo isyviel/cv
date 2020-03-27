@@ -11,6 +11,7 @@ const Me = styled.div`
     position : relative;
     bottom: 200px;
     left: 390px;
+    
       
 `
 export default Me

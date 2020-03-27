@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import { Container } from "@bootstrap-styled/v4"
 
-import Colors from './theme/Colors'
-
 export default styled(Container)`
     border-radius: 8px;
     margin: auto;

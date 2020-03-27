@@ -7,9 +7,11 @@ import { logRoles } from "@testing-library/react"
 import Tech from "./content/Tech"
 import Spacer from './common/Spacer'
 
-const CustomDiv = styled.div`
-background: url(images/fondfond.png) no-repeat center;
-background-size: 105%;
+
+const CustomDiv = styled(Container)`
+background: url(images/fondfond.png)  no-repeat;
+background-size: 100%;
+
 `
 
 const OnePage = () => {
@@ -17,7 +19,7 @@ const OnePage = () => {
     /*TO DO changer la bannière par un automate p5*/
     const [isForm, setIsForm] = useState(false)
     return (
-        <CustomDiv>
+        <CustomDiv fluid>
             <Head isForm={isForm}/>
             
             <Content/>

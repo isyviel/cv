@@ -5,7 +5,6 @@ import { Container } from "@bootstrap-styled/v4"
 import Colors from './theme/Colors'
 
 export default styled(Container)`
-
     height: 35px;
     width: 35px;
     border-radius: 5px;
@@ -15,5 +14,4 @@ export default styled(Container)`
     padding: 0;
     background-color: ${Colors.orange};
     opacity: 70%;
-  
 `

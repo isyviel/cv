@@ -1,10 +1,9 @@
-import React, { useState, useContext, useEffect } from "react"
+import React from "react"
 import Container from '../common/Container'
 import Title from "../common/Title"
 import DiplDetales from './Detales/DiplDetales'
-import { EXP, FORMATION, COMPETENCES, LISTE_FORMATION, DESCRIPTION} from "../common/constantes/texte"
+import { LISTE_FORMATION} from "../common/constantes/texte"
 import styled from "styled-components"
-import Colors from '../common/theme/Colors'
 
 const CustomContainer = styled(Container)`
 border-radius: 15px;
@@ -16,11 +15,11 @@ min-height: 300px;
 
 const Formations = ({isExp, ...props}) => {
     const diplomes = LISTE_FORMATION;
+
     return  <CustomContainer >
                <Title>Formations</Title>
                <DiplDetales diplomes={diplomes}/>
-            </CustomContainer>
-                
+            </CustomContainer>            
 }
 
 export default Formations
