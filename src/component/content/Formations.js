@@ -17,7 +17,7 @@ const Formations = ({isExp, ...props}) => {
     const diplomes = LISTE_FORMATION;
 
     return  <CustomContainer >
-               <Title>Formations</Title>
+               <Title className="text-white">Formations</Title>
                <DiplDetales diplomes={diplomes}/>
             </CustomContainer>            
 }

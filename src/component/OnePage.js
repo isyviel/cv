@@ -9,9 +9,14 @@ import Spacer from './common/Spacer'
 
 
 const CustomDiv = styled(Container)`
-background: url(images/fondfond.png)  no-repeat;
+background: url(images/fondfond.png)  no-repeat fixed;
 background-size: 100%;
+height : 2000px;
+width: 2000px;
 
+@media screen and (max-width: 1200px) {
+    background-size: 150%;
+  }
 `
 
 const OnePage = () => {
