@@ -20,6 +20,7 @@ const CustomContainer = styled(Container)`
         width: 100%;
         padding: 0;
     }
+
 `
 
 const Experiences = ({exp,...props}) => {
@@ -44,27 +45,30 @@ const Experiences = ({exp,...props}) => {
                 </Row>
 
                 <Row className="d-sm-none justify-content-around">
-                    <Col xs="6">
+                    <Col xs="5">
                     <Bouton display={handleDisplayStrategia} content={experience[0]}/>
                     </Col>
-                    <Col xs="6">
+                    <Col xs="5">
                     <Bouton display={handleDisplaySales} content={experience[1]}/>
                     </Col>
                     <ExpDetales isSales={isSales} experience={experience}/>
                 </Row>
 
-                <Row className="d-none d-sm-block">
-                    <Col>
-                        {isWeb? <Active content={experience[0]}/>
-                        : <Disactive display={handleDisplayStrategia} content={experience[0]}/>}
+                <Row className="d-none d-sm-block justify-content-center">
+                    <Row>
+                        <Col>
+                            
+                                {isWeb? <Active content={experience[0]}/>
+                                : <Disactive display={handleDisplayStrategia} content={experience[0]}/>}
 
-                        {isSales ? 
-                        <Active content={experience[1]}/>
-                        : <Disactive display={handleDisplaySales} content={experience[1]}/>}  
-                    </Col>
-                    <Col>
-                        <ExpDetales isSales={isSales} experience={experience}/>
-                    </Col> 
+                                {isSales ? 
+                                <Active content={experience[1]}/>
+                                : <Disactive display={handleDisplaySales} content={experience[1]}/>} 
+                        </Col>
+                        <Col sm="8">
+                            <ExpDetales isSales={isSales} experience={experience}/>
+                        </Col>
+                    </Row>
                 </Row>
              </CustomContainer>
         )}

@@ -7,7 +7,7 @@ const CustomRow = styled(Row)`
     background: url(images/disactive.png) no-repeat center;
     height:100px;
     background-size:100%;
-    width: 300px;
+    width: 250px;
     padding-left: 50px;
     display: flex;
     justify-content: space-around;

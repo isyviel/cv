@@ -29,7 +29,8 @@ const Exp = ({exp,...props}) => {
                             <Title>{LISTE_MAG}</Title>
                             <hr></hr>
                             <p>vente</p>
-                            </div>}
+                        </div>}
+                        
                     </CustomDiv>)
 }
 

@@ -8,7 +8,6 @@ import { grey } from '@material-ui/core/colors';
 const them = createMuiTheme(
     { palette: {
                     primary: { main:grey[50],},
-
                 },
     })
 
@@ -16,7 +15,7 @@ const Bouton= ({content,display,...props}) => {
 
     return (
         <ThemeProvider theme={them}>
-            <Button color="primary" onClick={display}>{content}</Button>
+            <Button color="primary" onClick={display}><p className="text-align-center">{content}</p></Button>
         </ThemeProvider>)
 }
 
