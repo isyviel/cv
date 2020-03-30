@@ -25,7 +25,7 @@ export default styled(Container)`
         background-color: rgba(255,255,255,0);
         box-shadow: none;
         margin-bottom: 100px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     @media screen and (max-width:576px) {
