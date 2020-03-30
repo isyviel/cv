@@ -16,6 +16,10 @@ height : 2000px;
 @media screen and (max-width: 1200px) {
     background-size: 150%;
   }
+
+  @media screen and (max-width:576px) {
+    background-size: 250%;
+ }
 `
 
 const OnePage = () => {

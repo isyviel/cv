@@ -6,6 +6,10 @@ const Detail = styled.div`
 font-family: "Baloo 2";
 font-size: 22px;
 padding-bottom: 22px;
+
+@media screen and (max-width:576px) {
+        font-size: 12px;
+     }
 `
 
 const Diplome = ({diplome,...props}) => {

@@ -10,6 +10,7 @@ const ExpContainer = styled(Container)`
     box-shadow: inset 0 1px 2px 0 #FFF, inset 0 1px 3px 0 #FFF, 0 2px 10px 0 rgba(0,0,0,0.75), 0 2px 10px 0 rgba(0,0,0,0.94);
     @media screen and (max-width:576px) {
        max-width: 90%;
+       background-color: rgba(255,255,255,1);
     }
 `
 
