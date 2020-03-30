@@ -26,32 +26,15 @@ const Logos = styled(Row)`
 
   `
 const Head = ({isForm,...props}) => {
-    const techno = [SYMFONY,REACT,ANDROID,JAVA,GIT];
+   
     const competences = COMPETENCES
     return (
     <GlobalDiv fluid>
-
             <Contact/>
-            
             <Row>
                 <AboutMe/>
             </Row>
-        {/* <Row>
-            <Col>
-                <FondFleches> 
-                    <img src="images/fleches.png"/>
-                    <img src="images/fleches.png"/>
-                </FondFleches>
-            </Col>
-            
-            <Col>
-                <Logos>
-                        {techno.map((tech) => <Tech tech={tech}/>)}
-                </Logos>
-            </Col>
-        </Row> */}
     </GlobalDiv>
-
     )
 }
 

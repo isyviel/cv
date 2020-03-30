@@ -2,6 +2,8 @@ import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import { Container } from "@bootstrap-styled/v4"
+import FondFleches from '../../common/FondFleches'
+import ImageButton from '../../common/ImageButton'
 
 const CustomName = styled(Container)`
     color: white;
@@ -27,7 +29,12 @@ const CustomName = styled(Container)`
 
 const Titre = ()=> {
     return( 
-            <CustomName><p>Développeuse Web et Web Mobile</p></CustomName>   
+            <CustomName>
+                <p>Développeuse Web et Web Mobile</p>
+                <FondFleches>
+                    <ImageButton src="images/fleches.png"/>
+                </FondFleches>
+           </CustomName>   
     )
 }
 

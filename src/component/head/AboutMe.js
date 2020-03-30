@@ -13,15 +13,17 @@ import FondNom from './cadres/FondNom'
 import Me from './aboutme/Me'
 import Spacer from '../common/Spacer'
 import GraphicPres from './aboutme/GraphicPres'
+import FondFleches from '../common/FondFleches'
 
 const CustomContainer = styled(Container)`
-@media screen and (max-width:576px) {
-    border-radius: 30px;
-    background-color: rgba(255,255,255,0);
-    box-shadow: none;
-    position: static !important;
-    margin-top: 100px;
-}
+    max-height: 500px;
+    @media screen and (max-width:576px) {
+        border-radius: 30px;
+        background-color: rgba(255,255,255,0);
+        box-shadow: none;
+        position: static !important;
+        margin-top: 100px;
+    }
 `
 const AboutMe = ()=> {
 
@@ -30,8 +32,8 @@ const AboutMe = ()=> {
                 <GraphicPres/>
                 <FondTitre>
                     <Titre/>
-                </FondTitre>
-        </CustomContainer>
+                </FondTitre> 
+            </CustomContainer>
         
       
         )

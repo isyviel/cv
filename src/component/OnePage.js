@@ -6,7 +6,7 @@ import Content from './Content'
 import { logRoles } from "@testing-library/react"
 import Tech from "./content/Tech"
 import Spacer from './common/Spacer'
-
+import Technos from './Technos'
 
 const CustomDiv = styled(Container)`
 background: url(images/fondfond.png)  no-repeat fixed;
@@ -25,6 +25,7 @@ const OnePage = () => {
     return (
         <CustomDiv fluid>
             <Head isForm={isForm}/>
+            <Technos/>
             <Spacer/>
             <Content/>
         </CustomDiv>

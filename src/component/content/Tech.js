@@ -3,7 +3,12 @@ import styled from "styled-components"
 import {Col} from "@bootstrap-styled/v4/lib"
 
 const CustomImg = styled.img`
-width:100px;
+width:70px;
+margin-top: 5px;
+
+@media screen and (max-width:768px) {
+   width: 50px;   
+}
 `
 const CustomTitle = styled.p`
 text-align: center;
@@ -13,7 +18,7 @@ font-size: 28px;
 
 const Tech = ({tech,...props}) => {
    const path = "images/";
-      return <Col><CustomImg src= {path + tech[1]}/></Col>
+      return <CustomImg src= {path + tech[1]}/>
 }
 
 export default Tech
