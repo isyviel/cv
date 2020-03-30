@@ -11,22 +11,33 @@ import Orange from './cadres/Orange'
 import TinyOrange from './cadres/TinyOrange'
 import FondNom from './cadres/FondNom'
 import Me from './Me'
+
+const CustomContainer = styled(Container)`
+    
+`
+const PartOneContainer = styled(Container)`
+    position: relative;
+    right: 95px;
+    bottom: 20px;
+`
 const AboutMe = ()=> {
     return( 
-       <div>
-           <FondCitation>
-               <Perceval/>
-           </FondCitation>
-           <TinyOrange/>
+       <CustomContainer>
+           <PartOneContainer>
+                <FondCitation>
+                    <Perceval/>
+                </FondCitation>
+                <TinyOrange/>
+                <Orange/>
+                <FondNom>
+                    <Nom/>
+                </FondNom>
+           </PartOneContainer>
            <FondTitre>
                <Titre/>
            </FondTitre>
-           <Orange/>
-           <FondNom>
-                <Nom/>
-           </FondNom>
            <Me/>
-       </div>
+       </CustomContainer>
     )
 }
 

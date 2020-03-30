@@ -9,9 +9,14 @@ const Me = styled.div`
     border: 1px solid #FFF;
     box-shadow: 0 2px 2px 0 #828282;
     position : relative;
-    bottom: 200px;
-    left: 390px;
+    bottom: 350px;
+    right: 0px;
     
+    @media screen and (max-width: 1197px) {
+        position : relative;
+        bottom: 300px;
+        left: 200px;
+    }
       
 `
 export default Me

@@ -9,5 +9,14 @@ export default styled(Container)`
     box-shadow: inset 0 1px 3px 0 #4F4F4F, 0 2px 4px 0 #000;
     position: relative;
     left: -200px;
+    top: 70px;
     padding: 25px;
+
+    @media screen and (max-width: 1200px) {
+        position : relative;
+        left: -150px;
+        top: 60px;
+        z-index:0;
+       
+    }
     `

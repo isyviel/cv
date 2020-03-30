@@ -6,8 +6,7 @@ export default styled(Container)`
     width: 41px;
     border-radius: 30px;
     opacity: 60%;
-    position: relative;
-    right:500px;
-    bottom: 80px;
+    background-color: rgba(255,255,255,0.3);
+    padding: 0.5px;
     
 `

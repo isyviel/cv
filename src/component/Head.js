@@ -12,15 +12,14 @@ import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "./common/consta
 import Spacer from './common/Spacer'
 import FondFleches from './common/FondFleches'
 
-const GlobalDiv = styled.div`
-    
+const GlobalDiv = styled(Container)`
+    display: flex;
+    justify-content: center;
 `
 
-const Logos = styled.div`
-    width: 700px;
-    position: relative;
-    left: 1100px;
-   
+const Logos = styled(Row)`
+   display: flex;
+   justify-content: flex-start;
 `
   const CustomDiv = styled.div`
 
@@ -30,25 +29,23 @@ const Head = ({isForm,...props}) => {
     const techno = [SYMFONY,REACT,ANDROID,JAVA,GIT];
     const competences = COMPETENCES
     return (
-        <GlobalDiv>
-    <CustomDiv>
-        <Contact/>
-        
-        <AboutMe/> 
-        {/* <CompDiv>
-        {competences.map((comp) => <Comp comp={comp}/>)}</CompDiv>   */}
-    </CustomDiv>
-    
-    <Logos>
+    <GlobalDiv fluid>
+            <Contact/>
+            <AboutMe/> 
         <Row>
-            {techno.map((tech) => <Tech tech={tech}/>)}
+            <Col>
+                <FondFleches> 
+                    <img src="images/fleches.png"/>
+                    <img src="images/fleches.png"/>
+                </FondFleches>
+            </Col>
+            
+            <Col>
+                <Logos>
+                        {techno.map((tech) => <Tech tech={tech}/>)}
+                </Logos>
+            </Col>
         </Row>
-        </Logos>
-        <FondFleches>
-            <img src="images/fleches.png"/>
-            <img src="images/fleches.png"/>
-        </FondFleches>
-  
     </GlobalDiv>
 
     )
