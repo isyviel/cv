@@ -26,7 +26,7 @@ const RowExp = ({content,isActive,display,...props}) => {
     ` 
 
     return(
-    <CustomRow isActive={isActive}><Bouton display={display} content={content}/></CustomRow>
+    <CustomRow isActive={isActive}><Bouton display={display} isActive={isActive} content={content}/></CustomRow>
     )
 }
 

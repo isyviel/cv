@@ -4,8 +4,8 @@ import {Row,Col} from "@bootstrap-styled/v4/lib"
 import Bouton from '../../common/Bouton'
 import RowExperience from '../../common/RowExperience'
 
-const Active= ({content,display,...props}) => {
-    const isActive = true;
+const Active= ({content,display,isActive,...props}) => {
+    
     return <RowExperience isActive={isActive} display={display} content={content}/>
 }
 

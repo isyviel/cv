@@ -26,10 +26,7 @@ export default styled(Container)`
     }
 
     @media screen and (max-width:576px) {
-        height: 50px;
-        border-radius: 0px;
-        background-color: rgba(255,255,255,0);
-        box-shadow: none;
+        height: 30px;
         position: static !important;
         padding: 0px;
         text-align: center;

@@ -16,7 +16,7 @@ const CustomContainer = styled(ContentContainer)`
 const Formations = ({isExp, ...props}) => {
     const diplomes = LISTE_FORMATION;
 
-    return  <CustomContainer >
+    return  <CustomContainer>
                <Title className="text-white">Formations</Title>
                <DiplDetales diplomes={diplomes}/>
             </CustomContainer>            

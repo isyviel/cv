@@ -6,7 +6,7 @@ import Title from '../common/Title'
 import ExpDetales from'./Detales/ExpDetales'
 import {  LISTE_EXP} from "../common/constantes/texte"
 import Active from './Detales/Active'
-import Disactive from './Detales/Disactive'
+
 import Bouton from '../common/Bouton'
 
 const CustomContainer = styled(ContentContainer)`
@@ -18,7 +18,7 @@ const Experiences = ({exp,...props}) => {
 
     const [isSales, setIsSales] = useState(false);
     const [isWeb, setIsWeb] = useState(true)
-    
+    const [isActive, setIsActive] = useState(null)
 
      const handleDisplayStrategia = () => {
         setIsSales(false)
@@ -39,12 +39,17 @@ const Experiences = ({exp,...props}) => {
                 <Row className="d-xs-none d-lg-none d-md-block justify-content-center">
                     <Row className="justify-content-around">
                         
-                    {isWeb? <Active  content={experience[0]}/>
-                            : <Disactive  display={handleDisplayStrategia} content={experience[0]}/>}
+                            
+                            <Active isActive={isWeb}
+                                    content={experience[0]} 
+                                    display={handleDisplayStrategia}/>
+                           
 
-                            {isSales ? 
-                            <Active  content={experience[1]}/>
-                            : <Disactive  display={handleDisplaySales} content={experience[1]}/>} 
+                          
+                            <Active isActive={isSales}
+                                    content={experience[1]} 
+                                    display={handleDisplaySales}/>
+                             
                         
                        
                             <ExpDetales isSales={isSales} experience={experience}/>
@@ -55,12 +60,16 @@ const Experiences = ({exp,...props}) => {
                 <Row className="d-none d-lg-block justify-content-center">
                     <Row>
                         <Col>
-                            {isWeb? <Active content={experience[0]}/>
-                            : <Disactive display={handleDisplayStrategia} content={experience[0]}/>}
+                        
+                            <Active isActive={isWeb}
+                                    content={experience[0]} 
+                                    display={handleDisplayStrategia}/>}
+                           
 
-                            {isSales ? 
-                            <Active content={experience[1]}/>
-                            : <Disactive display={handleDisplaySales} content={experience[1]}/>} 
+                            
+                            <Active isActive={isSales}
+                                    content={experience[1]} 
+                                    display={handleDisplaySales}/>}
                         </Col>
                         <Col lg="8" xl="9">
                             <ExpDetales isSales={isSales} experience={experience}/>

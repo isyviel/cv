@@ -9,16 +9,16 @@ import Spacer from './common/Spacer'
 import Technos from './Technos'
 
 const CustomDiv = styled(Container)`
-background: url(images/fondfond.png)  no-repeat fixed;
+background: url(images/fondfond.png)  fixed ;
 background-size: 100%;
 height : 2000px;
 
 @media screen and (max-width: 1200px) {
-    background-size: 150%;
+    background-size: 100%;
   }
 
   @media screen and (max-width:576px) {
-    background-size: 250%;
+    height:1500px
  }
 `
 
