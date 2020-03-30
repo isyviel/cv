@@ -1,29 +1,24 @@
 import React from "react"
 import TextField from '@material-ui/core/TextField';
-
-import grey from '@material-ui/core/colors/grey';
+import Them from '../../../common/theme/MatThemes'
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import { orange } from '@material-ui/core/colors';
+import { grey,orange } from '@material-ui/core/colors';
 
 
-const them = createMuiTheme({ palette: {
-                                primary: orange
 
- },
-})
 
 const Input = ({label,required,...props}) => {
 
     return(
-      <ThemeProvider theme={them}>
+      <ThemeProvider theme={Them}>
         <TextField
           required={required}
-          id="required"
-          color={grey[50]}
+          id="standard-secondary"
           label={label}
           fullWidth
-          color="primary"
+          color="secondary"
+          className="pt-2 mb-2"
         />
         </ThemeProvider>
                

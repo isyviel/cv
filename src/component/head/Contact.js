@@ -17,10 +17,6 @@ const CustomRow = styled(Row)`
 `
 
 const Contact = ({isForm,...props}) => {
-/* TODO 
-fixer la barre de contact en haut de la page
-
-afficher nouvelle fenetre avec formulaire*/     
 
     return(
        

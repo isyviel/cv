@@ -63,13 +63,13 @@ const Experiences = ({exp,...props}) => {
                         
                             <Active isActive={isWeb}
                                     content={experience[0]} 
-                                    display={handleDisplayStrategia}/>}
+                                    display={handleDisplayStrategia}/>
                            
 
                             
                             <Active isActive={isSales}
                                     content={experience[1]} 
-                                    display={handleDisplaySales}/>}
+                                    display={handleDisplaySales}/>
                         </Col>
                         <Col lg="8" xl="9">
                             <ExpDetales isSales={isSales} experience={experience}/>
