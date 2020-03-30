@@ -1,13 +1,13 @@
 import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Colors from '../common/theme/Colors'
+import Colors from '../../common/theme/Colors'
 import { Container } from "@bootstrap-styled/v4"
 
 const CustomName = styled(Container)`
     color: ${Colors.orange};
     font-family: "Comfortaa";
-    font-size: 34px;
+    font-size: 30px;
     text-align: center;
 
     @media screen and (max-width:1200px) {

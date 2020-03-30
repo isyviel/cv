@@ -5,7 +5,7 @@ export default styled(Container)`
     height: 180px;
     width: 550px;
     border-radius: 30px;
-    background-color: #4F4F4F;
+    background-color: rgba(79,79,79,0.5);
     box-shadow: 0 2px 4px 0 #000;
     position: relative;
     left: 300px;
@@ -25,6 +25,7 @@ export default styled(Container)`
         background-color: rgba(255,255,255,0);
         box-shadow: none;
         margin-bottom: 100px;
+        margin-top: 100px;
     }
 
     @media screen and (max-width:576px) {

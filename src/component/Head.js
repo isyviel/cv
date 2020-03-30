@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Me from './head/Me'
+import Me from './head/aboutme/Me'
 import Contact from './head/Contact'
 import styled from "styled-components"
 import { EXP, FORMATION, COMPETENCES} from "./common/constantes/texte"
@@ -33,7 +33,9 @@ const Head = ({isForm,...props}) => {
 
             <Contact/>
             
-            <Row><AboutMe/></Row>
+            <Row>
+                <AboutMe/>
+            </Row>
         {/* <Row>
             <Col>
                 <FondFleches> 

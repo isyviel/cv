@@ -10,7 +10,7 @@ export default styled(Container)`
     position: relative;
     left: -150px;
     top: -70px;
-    padding: 25px;
+    padding: 30px;
 
     @media screen and (max-width: 1200px) {
         position : relative;
@@ -22,6 +22,7 @@ export default styled(Container)`
         padding: 25px 0px 0px 0px;
         position: relative;
         left: -120px;
+        height: 80px;
         width: 280px;
     }
 

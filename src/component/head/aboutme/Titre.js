@@ -6,7 +6,7 @@ import { Container } from "@bootstrap-styled/v4"
 const CustomName = styled(Container)`
     color: white;
     font-family: "Comfortaa";
-    font-size: 30px;
+    font-size: 26px;
     letter-spacing: 1.68px;
     z-index: 2;
     text-align: center;

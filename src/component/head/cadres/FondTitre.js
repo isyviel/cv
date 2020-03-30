@@ -8,12 +8,11 @@ export default styled(Container)`
     background-color: ${Colors.darkGrey};
     box-shadow: 0 2px 4px 0 #000;
     position: relative;
-    top: -100px;
+    top: -170px;
     z-index: 2;
-    padding-top: 15px;
+    padding-top: 20px;
     
     @media screen and (min-width:1200px) {
-        position: relative;
         height: 90px;
         width: 700px;
         padding-top: 23px;
