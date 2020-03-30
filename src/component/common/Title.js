@@ -6,7 +6,9 @@ export default styled.div`
     padding-bottom : 26px;
 
     @media screen and (max-width:576px) {
-        font-size: 22px;
+        font-size: 20px;
+        padding-bottom: 0px;
+        text-align: center;
     }
 `
 

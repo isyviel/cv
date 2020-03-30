@@ -1,13 +1,20 @@
 import React from "react"
 import Title from "../../common/Title"
 import {LISTE_STAGE,LISTE_MAG} from '../../common/constantes/texte'
+import styled from "styled-components"
 
+const CustomDiv = styled.div`
+@media screen and (max-width:576px) {
+    font-size: 12px;
+ }
+`
 const Exp = ({exp,...props}) => {
-            return  (<div element={exp}>
+            return  (<CustomDiv element={exp}>
                         {exp ==="Développeuse Web" ? 
                         
                         <div>
                             <Title>STRATEGIA Communications</Title>
+                            <hr></hr>
                             <p>{LISTE_STAGE}</p>
                             <p>Gestion des workflows client</p>
                             <p>Mise en place de fonctionnalités: Suppression, Duplication, Mail de notification, exportation en pdf</p>
@@ -20,10 +27,10 @@ const Exp = ({exp,...props}) => {
 
                         <div>
                             <Title>{LISTE_MAG}</Title>
-                            <p></p>
+                            <hr></hr>
                             <p>vente</p>
                             </div>}
-                    </div>)
+                    </CustomDiv>)
 }
 
 export default Exp
