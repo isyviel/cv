@@ -10,11 +10,22 @@ export default styled(Container)`
     background-color: ${Colors.orange};
     opacity: 70%;
     position: relative;
-    top: 350px;
+    top: 270px;
     left: 180px;
     z-index: 1;
+    padding: 0;
+
+    @media screen and (min-width: 1440px) {
+        position: relative;
+        left: 200px;
+      }
+
     @media screen and (max-width: 1200px) {
         position: relative;
         top: 280px;
+    }
+    
+    @media screen and (max-width:768px) {
+        display: none;
     }
 `

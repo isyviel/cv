@@ -13,9 +13,12 @@ export default styled(Container)`
     top: 220px;
     left: 70px;
 
-    @media screen and (min-width: 1440px) {
-        position: relative;
-        
+      @media screen and (max-width:992px) {
+        height: 110px;
+        width: 135px;
       }
-
+     
+      @media screen and (max-width:768px) {
+        display: none;
+    }
 `

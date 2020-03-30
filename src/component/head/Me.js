@@ -9,14 +9,35 @@ const Me = styled.div`
     border: 1px solid #FFF;
     box-shadow: 0 2px 2px 0 #828282;
     position : relative;
-    bottom: 350px;
-    right: 0px;
-    
-    @media screen and (max-width: 1197px) {
+    bottom: 50px;
+    z-index: 2;
+
+    @media screen and (max-width: 1200px) {
         position : relative;
-        bottom: 300px;
+        left: 100px;
+    }
+
+    @media screen and (max-width:992px) {
+        height: 150px;
+        width: 150px;
+        background-size: 150px;
         left: 200px;
     }
-      
+
+    @media screen and (max-width:768px) {
+        height: 100px;
+        width: 100px;
+        background-size: 100px;
+        position: static !important;
+        margin: auto !important;
+    }
+    
+
+    @media screen and (max-width:576px)  {
+        height: 100px;
+        width: 100px;
+        background-size: 100px;
+        
+    }
 `
 export default Me

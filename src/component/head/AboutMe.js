@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext, useEffect, useLayoutEffect } from "react"
 import styled from "styled-components"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import { Container } from "@bootstrap-styled/v4"
@@ -11,34 +11,35 @@ import Orange from './cadres/Orange'
 import TinyOrange from './cadres/TinyOrange'
 import FondNom from './cadres/FondNom'
 import Me from './Me'
+import Spacer from '../common/Spacer'
+import GraphicPres from './GraphicPres'
 
 const CustomContainer = styled(Container)`
-    
-`
-const PartOneContainer = styled(Container)`
-    position: relative;
-    right: 95px;
-    bottom: 20px;
+@media screen and (max-width:576px) {
+    border-radius: 30px;
+    background-color: rgba(255,255,255,0);
+    box-shadow: none;
+    position: static !important;
+    margin-top: 80px;
+}
 `
 const AboutMe = ()=> {
-    return( 
-       <CustomContainer>
-           <PartOneContainer>
-                <FondCitation>
-                    <Perceval/>
-                </FondCitation>
-                <TinyOrange/>
-                <Orange/>
-                <FondNom>
-                    <Nom/>
-                </FondNom>
-           </PartOneContainer>
-           <FondTitre>
-               <Titre/>
-           </FondTitre>
-           <Me/>
-       </CustomContainer>
-    )
-}
+
+        return(
+        
+            <CustomContainer>
+                <GraphicPres/>
+                <FondTitre>
+                    <Titre/>
+                </FondTitre>
+        </CustomContainer>
+        
+      
+        )
+    
+        
+    }
+    
+
 
 export default AboutMe

@@ -10,4 +10,30 @@ export default styled(Container)`
     position: relative;
     left: 300px;
     top: 300px;
+
+    @media screen and (max-width:992px) {
+        width: 350px;
+        left: 280px;
+        
+    }
+
+    @media screen and (max-width:768px) {
+        position: static !important;
+        height: 50px;
+        min-width: 100%;
+        border-radius: 0px;
+        background-color: rgba(255,255,255,0);
+        box-shadow: none;
+        margin-bottom: 100px;
+    }
+
+    @media screen and (max-width:576px) {
+        display: none;
+    }
+
+    
+    
+     
+
+
 `

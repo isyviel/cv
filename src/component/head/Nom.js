@@ -2,20 +2,31 @@ import React, { useState, useContext, useEffect } from "react"
 import styled from "styled-components"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import Colors from '../common/theme/Colors'
+import { Container } from "@bootstrap-styled/v4"
 
-const CustomName = styled.div`
-    height: 40px;
-    width: 280px;
+const CustomName = styled(Container)`
     color: ${Colors.orange};
     font-family: "Comfortaa";
     font-size: 34px;
     text-align: center;
+
+    @media screen and (max-width:1200px) {
+        font-size: 30px;
+      }
+
+    @media screen and (max-width:992px) {
+        font-size: 25px;
+    }
+
+    @media screen and (max-width:768px) {
+        font-size: 18px;
+    }
   `
 
 const Nom = ()=> {
     return( 
         <Col>
-            <CustomName >Adeline SIMON</CustomName>   
+            <CustomName ><p>Adeline SIMON</p></CustomName>   
         </Col>
     )
 }

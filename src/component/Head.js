@@ -30,9 +30,11 @@ const Head = ({isForm,...props}) => {
     const competences = COMPETENCES
     return (
     <GlobalDiv fluid>
+
             <Contact/>
-            <AboutMe/> 
-        <Row>
+            
+            <Row><AboutMe/></Row>
+        {/* <Row>
             <Col>
                 <FondFleches> 
                     <img src="images/fleches.png"/>
@@ -45,7 +47,7 @@ const Head = ({isForm,...props}) => {
                         {techno.map((tech) => <Tech tech={tech}/>)}
                 </Logos>
             </Col>
-        </Row>
+        </Row> */}
     </GlobalDiv>
 
     )
