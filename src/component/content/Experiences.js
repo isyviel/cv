@@ -13,14 +13,6 @@ const CustomContainer = styled(Container)`
     border-radius: 15px;
     background-color: rgba(79,79,79,0.5);
     box-shadow: inset 0 1px 2px 0 #FFF, inset 0 1px 3px 0 #FFF, 0 2px 4px 0 #000;
-    width: 80%;
-    min-height: 500px;
-
-    @media screen and (max-width:576px) {
-        width: 100%;
-        padding: 0;
-    }
-
 `
 
 const Experiences = ({exp,...props}) => {
@@ -39,33 +31,39 @@ const Experiences = ({exp,...props}) => {
     }
     
     return(   
-            <CustomContainer fluid>
+            <CustomContainer>
                 <Row className="align-items-center justify-content-center">
                     <Title className="text-white"><p>Expérience</p></Title>
                 </Row>
 
-                <Row className="d-sm-none justify-content-around">
-                    <Col xs="5">
-                    <Bouton display={handleDisplayStrategia} content={experience[0]}/>
-                    </Col>
-                    <Col xs="5">
-                    <Bouton display={handleDisplaySales} content={experience[1]}/>
-                    </Col>
-                    <ExpDetales isSales={isSales} experience={experience}/>
+
+                <Row className="d-xs-none d-lg-none d-md-block justify-content-center">
+                    <Row className="justify-content-around">
+                        
+                            {isWeb? <Active content={experience[0]}/>
+                            : <Disactive display={handleDisplayStrategia} content={experience[0]}/>}
+
+                            {isSales ? 
+                            <Active content={experience[1]}/>
+                            : <Disactive display={handleDisplaySales} content={experience[1]}/>} 
+                        
+                       
+                            <ExpDetales isSales={isSales} experience={experience}/>
+                        
+                    </Row>
                 </Row>
 
-                <Row className="d-none d-sm-block justify-content-center">
+                <Row className="d-none d-lg-block justify-content-center">
                     <Row>
                         <Col>
-                            
-                                {isWeb? <Active content={experience[0]}/>
-                                : <Disactive display={handleDisplayStrategia} content={experience[0]}/>}
+                            {isWeb? <Active content={experience[0]}/>
+                            : <Disactive display={handleDisplayStrategia} content={experience[0]}/>}
 
-                                {isSales ? 
-                                <Active content={experience[1]}/>
-                                : <Disactive display={handleDisplaySales} content={experience[1]}/>} 
+                            {isSales ? 
+                            <Active content={experience[1]}/>
+                            : <Disactive display={handleDisplaySales} content={experience[1]}/>} 
                         </Col>
-                        <Col sm="8">
+                        <Col lg="8" xl="9">
                             <ExpDetales isSales={isSales} experience={experience}/>
                         </Col>
                     </Row>

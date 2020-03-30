@@ -7,17 +7,17 @@ const CustomRow = styled(Row)`
     background: url(images/disactive.png) no-repeat center;
     height:100px;
     background-size:100%;
-    width: 250px;
+    width: 230px;
     padding-left: 50px;
     display: flex;
     justify-content: space-around;
 
-    @media screen and (max-width:576px) {
+    @media screen and (max-width:768px) {
         height: 30px;
         background: none;
         padding: 0px;
        
-     }
+    }
 `
 const Disactive= ({content, display,...props}) => {
 

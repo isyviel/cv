@@ -9,13 +9,13 @@ const CustomContainer = styled(Container)`
 border-radius: 15px;
 background-color: rgba(79,79,79,0.5);
 box-shadow: inset 0 1px 2px 0 #FFF, inset 0 1px 3px 0 #FFF, 0 2px 4px 0 #000;
-width: 80%;
 
-@media screen and (max-width:768px) {
-    width: 100%;
-    padding: 13px;
-    
+@media screen and (max-width:992px) {
+   
+    padding: 20px 40px 70px 40px;
+  
 }
+
 `
 
 const Formations = ({isExp, ...props}) => {

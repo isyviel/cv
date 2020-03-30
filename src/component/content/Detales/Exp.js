@@ -4,6 +4,7 @@ import {LISTE_STAGE,LISTE_MAG} from '../../common/constantes/texte'
 import styled from "styled-components"
 
 const CustomDiv = styled.div`
+font-family: "Baloo 2";
 @media screen and (max-width:576px) {
     font-size: 12px;
  }
