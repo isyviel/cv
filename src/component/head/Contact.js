@@ -14,6 +14,10 @@ const CustomRow = styled(Row)`
     background-color: rgba(130,130,130,0.7);
     border: 1px solid rgba(255,255,255,0.2);
     z-index:2;
+
+    @media screen and (max-width:576px) {
+        height: 35px;
+     }
 `
 
 const Contact = ({isForm,...props}) => {
@@ -22,8 +26,8 @@ const Contact = ({isForm,...props}) => {
        
         <CustomRow className="align-items-center">
             <Col><a href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank"><ImageButton src="images/linkedin.png"/></a></Col>
-            <Col><Mail/></Col>
-            <Col><Phone/></Col>
+            <Mail/>
+            <Phone/>
             <Col><ImageButton src="images/pdf.png"/></Col>
             <Col><a href="https://www.github.com/isyviel" target="_blank"><ImageButton src="images/github.png"/></a></Col>
         </CustomRow>

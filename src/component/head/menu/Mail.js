@@ -10,58 +10,97 @@ import styled, { ThemeProvider } from "styled-components"
 import ImageButton from "../../common/ImageButton"
 import Them from "../../common/theme/MatThemes";
 import {Row,Col} from "@bootstrap-styled/v4/lib"
+import { FormControl } from '@material-ui/core';
+import Form from './mail/Form'
+import { MDBPopover, MDBPopoverBody, MDBBtn } from "mdbreact";
+import Popover from '@material-ui/core/Popover';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
+const CustomP = styled.p`
+font-size: 22px;
+color: ${Colors.orange};
 
-
+@media screen and (max-width:992px) {
+    font-size: 14px;
+}
+`
 const CustomDiv = styled(DialogContent)`
   background-color: white;  
 `
-const Mail = () => {
-    const [open, setOpen] = useState(false);
-  
-    const handleClickOpen = () => {
-      setOpen(true);
+const useStyles = makeStyles((theme) => ({
+  typography: {
+    padding: theme.spacing(2),
+  },
+}));
+
+const Mail = ({windowClose, send,...props}) => {
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const classes = useStyles();
+    const id = open ? 'simple-popover' : undefined;
+
+    const handleClickOpen = (event) => {
+      setAnchorEl(event.currentTarget);
     };
   
     const handleClose = () => {
-      setOpen(false);
+      setAnchorEl(null);
     };
     
-    const sendThenClose = () => {
-      alert("envoyé");
-      handleClose();
-    }
+    
+    // const sendThenClose = () => {
+    //   alert("envoyé");
+    //   handleClose();
+    // }
 
-    return(
-      <div>
-        <ImageButton src="images/mail.png" onClick={handleClickOpen}/>
-        <ThemeProvider theme={Them}>
+    return <div>
+    <Button aria-describedby={id} onClick={handleClickOpen}>
+      <ImageButton src="images/mail.png" />
+    </Button>
+    <Popover
+      id={id}
+      open={open}
+      anchorEl={anchorEl}
+      onClose={handleClose}
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'center',
+      }}
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'center',
+      }}
+    >
+      <Typography className={classes.typography} >adeline.simon31@hotmail.fr</Typography>
+    </Popover>
+  </div>
+   
+        
+        // return <MDBPopover
+        //     placement="bottom"
+        //     popover
+        //     clickable
+        //     id="popper2"
+        //     >
+        //     <MDBBtn><ImageButton src="images/mail.png" onClick={handleClickOpen}/></MDBBtn>
+        //     <MDBPopoverBody>
+        //         <CustomP>adeline.simon31@hotmail.fr</CustomP>
+        //     </MDBPopoverBody>
+        //     </MDBPopover>
+        {/* <ThemeProvider theme={Them}>
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" fullWidth>
           <CustomDiv>
       
           <DialogContent className="p-2">
-            <p>Pour me contacter :</p>
-            <Input label="E-Mail" required={true}/>
-            <Input label="Objet : " required={false}/>
-            <Area/>
-          
-            <Input label="Nom" required={false}/>
-            <Input label="Prénom" required={false}/>
-            
-            <Input label="Téléphone" required={false}/>
-            <Row className="justify-content-around">
-              <Button color="secondary" className="mt-3 mb-3" onClick={sendThenClose}>
-                Envoyer
-              </Button>
-              <Button className="mt-3 mb-3" onClick={handleClose}>
-                Annuler
-              </Button>
-            </Row>   
+            <FormControl>
+              <Form windowClose={handleClose} send={sendThenClose}/>
+            </FormControl>
           </DialogContent>
           </CustomDiv>
         </Dialog>
-        </ThemeProvider>
-      </div>
-    )
+        </ThemeProvider> */}
+      
+    
 }
 export default Mail

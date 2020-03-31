@@ -10,11 +10,10 @@ const RowExp = ({content,isActive,display,...props}) => {
     background:
     ${isActive ? "url(images/clicked.png)"  
     : "url(images/disactive.png)"}no-repeat center;
-    
-        height:100px;
+        padding: 20px 5px 0px 35px;
+        height:80px;
         background-size:100%;
-        width: 230px;
-        padding-left: 50px;
+        width: 250px;
         display: flex;
         justify-content: space-around;
     

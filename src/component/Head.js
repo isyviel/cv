@@ -15,23 +15,16 @@ import FondFleches from './common/FondFleches'
 const GlobalDiv = styled(Container)`
     display: flex;
     justify-content: center;
+    
 `
 
-const Logos = styled(Row)`
-   display: flex;
-   justify-content: flex-start;
-`
-  const CustomDiv = styled.div`
-
-
-  `
 const Head = ({isForm,...props}) => {
    
     const competences = COMPETENCES
     return (
-    <GlobalDiv fluid>
+    <GlobalDiv fluid noGutters={true}>
             <Contact/>
-            <Row>
+            <Row noGutters> 
                 <AboutMe/>
             </Row>
     </GlobalDiv>

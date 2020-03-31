@@ -3,7 +3,12 @@ import Button from '@material-ui/core/Button';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { grey, orange } from '@material-ui/core/colors';
+import styled from "styled-components";
 
+const CustomButton = styled(Button) `
+    padding: 0 !important;
+    max-height: 50px;
+`
 
 const them = createMuiTheme(
     { palette: {
@@ -17,7 +22,7 @@ const Bouton= ({content,display,isActive,...props}) => {
 
     return (
         <ThemeProvider theme={them}>
-            <Button color={isActive ? "secondary" :"primary" } onClick={display}><p className="text-align-center">{content}</p></Button>
+            <CustomButton color={isActive ? "secondary" :"primary"} onClick={display}><p>{content}</p></CustomButton>
         </ThemeProvider>)
 }
 
