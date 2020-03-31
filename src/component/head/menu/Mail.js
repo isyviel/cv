@@ -71,6 +71,7 @@ const Mail = ({windowClose, send,...props}) => {
         vertical: 'top',
         horizontal: 'center',
       }}
+      anchorReference={anchorEl}
     >
       <Typography className={classes.typography} >adeline.simon31@hotmail.fr</Typography>
     </Popover>

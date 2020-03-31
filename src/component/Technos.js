@@ -19,7 +19,7 @@ const CustomContainer = styled(Container)`
     margin-top: 50px;
 `
 const Technos = () => {
-    const techno = [SYMFONY,REACT,ANDROID,JAVA,GIT];
+    const techno = [SYMFONY,REACT,GIT,ANDROID,JAVA];
 
     return (  
     <CustomContainer>  

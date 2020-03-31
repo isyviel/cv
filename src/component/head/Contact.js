@@ -4,6 +4,7 @@ import styled from "styled-components"
 import ImageButton from '../common/ImageButton'
 import Mail from './menu/Mail'
 import Phone from './menu/Phone'
+import Pdf from './menu/Pdf'
 import Colors from '../common/theme/Colors'
 import { Container } from "@bootstrap-styled/v4"
 
@@ -28,7 +29,7 @@ const Contact = ({isForm,...props}) => {
             <Col><a href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank"><ImageButton src="images/linkedin.png"/></a></Col>
             <Mail/>
             <Phone/>
-            <Col><ImageButton src="images/pdf.png"/></Col>
+            <Pdf/>
             <Col><a href="https://www.github.com/isyviel" target="_blank"><ImageButton src="images/github.png"/></a></Col>
         </CustomRow>
         
