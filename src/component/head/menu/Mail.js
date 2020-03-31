@@ -77,18 +77,6 @@ const Mail = ({windowClose, send,...props}) => {
     </Popover>
   </div>
    
-        
-        // return <MDBPopover
-        //     placement="bottom"
-        //     popover
-        //     clickable
-        //     id="popper2"
-        //     >
-        //     <MDBBtn><ImageButton src="images/mail.png" onClick={handleClickOpen}/></MDBBtn>
-        //     <MDBPopoverBody>
-        //         <CustomP>adeline.simon31@hotmail.fr</CustomP>
-        //     </MDBPopoverBody>
-        //     </MDBPopover>
         {/* <ThemeProvider theme={Them}>
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" fullWidth>
           <CustomDiv>
