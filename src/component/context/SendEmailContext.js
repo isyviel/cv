@@ -1,27 +1,19 @@
-import React, {createContext, useReducer} from 'react';
+import React, {createContext} from 'react';
 
-const initialState = {}
-const mailContext = createContext(initialState);
-const {Provider} = mailContext;
+const SendEmailContext = createContext({})
 
-const SendMailContext = ( { children } ) => {
-    const [state, dispatch] = useReducer((state, action) => {
-        const setForm = (setState) => (form) => {
-            setState(form)
-            localStorage.setItem("demandeCreation.form", form)
-          }
+const setValues = (setState) => (values) => {
+    setState(values)
+    localStorage.setItem("mail.values", JSON.stringify(values))
+}
 
-      switch(action.type) {
-        case 'action description':
-          const newState = '';// do something with the action
-          return newState;
-        default:
-          throw new Error();
-      };
-    }, initialState);
-  
-    return <Provider value={{ state, dispatch }}>{children}</Provider>;
+const getValues = () => {
+    const data = localStorage.getItem("mail.values")
+    const decodedData = data ? JSON.parse(data) : []
+}
 
-  };
-  
-  export { mailContext, SendMailContext }
+export const MailData = {
+    setValues,
+    getValues
+}
+export default SendEmailContext

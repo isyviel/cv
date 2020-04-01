@@ -1,4 +1,4 @@
-import React , {useState,useCallback} from "react"
+import React , {useState,useContext} from "react"
 import Input from './mail/Input'
 import Area from './mail/Area'
 import Button from '@material-ui/core/Button';
@@ -16,6 +16,9 @@ import { MDBPopover, MDBPopoverBody, MDBBtn } from "mdbreact";
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import USER from '../../common/constantes/mail'
+import emailjs from 'emailjs-com'
+import SendEmailContext from '../../context/SendEmailContext'
 
 const CustomP = styled.p`
 font-size: 22px;
@@ -35,8 +38,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Mail = ({send,...props}) => {
-    const [open, setOpen] = useState(null);
+
+    const [open, setOpen] = useState(true);
     
+
     const handleClickOpen = (event) => {
      setOpen(true)
     };
@@ -46,8 +51,6 @@ const Mail = ({send,...props}) => {
     };
     
     const sendThenClose = () => {
-     
-      alert("envoyé");
       handleClose();
     }
 
@@ -60,7 +63,7 @@ const Mail = ({send,...props}) => {
           <CustomDiv>
           <DialogContent className="p-2">
             <FormControl>
-              <Form windowClose={handleClose} send={sendThenClose} useForm/>
+              <Form windowClose={handleClose} send={sendThenClose}/>
             </FormControl>
           </DialogContent>
           </CustomDiv>
@@ -72,4 +75,5 @@ const Mail = ({send,...props}) => {
       
     
 }
+
 export default Mail

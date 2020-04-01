@@ -5,20 +5,40 @@ import Area from './Area'
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import {Container} from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button';
-import useForm from '../Mail'
+import emailjs from 'emailjs-com'
+import USER from '../../../common/constantes/mail'
 
 const Form = ({title,content, windowClose, send,change,value,...props}) => { 
+
   const [values,setValues] = useState({})
+  const user = USER
 
   const handleSubmit = (event) => {
       event && event.preventDefault()
-      console.log(values)
+      
+      const templateParams = {
+        from_name: values.mail,
+        to_name: user,
+        object: values.objet,
+        content: values.message,
+        name: values.nom,
+        firstname: values.prenom,
+        phone: values.phone
+      }
+
+      
+      emailjs.init(user);
+      emailjs.send( 'outlook', 'contact', templateParams, user)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+     }, function(error) {
+        console.log('FAILED...', error);
+     });
     }
 
   const handleChange = (event) => {
     event.persist();
     setValues({...values, [event.target.name]: event.target.value});
-    console.log(values)
   }
 
 
@@ -34,7 +54,7 @@ const Form = ({title,content, windowClose, send,change,value,...props}) => {
         
         <Input label="Téléphone" name="phone" value={values.phone} change={handleChange} required={false}/>
         <Row className="justify-content-around">
-          <Button type="submit" color="secondary" className="mt-3 mb-3">
+          <Button type="submit" color="secondary" className="mt-3 mb-3" onClick={send}>
             Envoyer
           </Button>
           <Button className="mt-3 mb-3" onClick={windowClose}>
