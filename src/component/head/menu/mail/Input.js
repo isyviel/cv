@@ -8,13 +8,7 @@ import { grey,orange } from '@material-ui/core/colors';
 
 
 
-const Input = ({label,required,...props}) => {
-  const [value, setValue] = useState('');
-
-  const handleChange = (event) => {
-    setValue(event.target.value)
-    console.log(value)
-  }
+const Input = ({label,required, change, send, value,...props}) => {
 
     return(
       <ThemeProvider theme={Them}>
@@ -25,7 +19,7 @@ const Input = ({label,required,...props}) => {
           fullWidth
           color="secondary"
           className="pt-2 mb-2"
-          onChange={handleChange}
+          onChange={change}
           value={value}
         />
         </ThemeProvider>
