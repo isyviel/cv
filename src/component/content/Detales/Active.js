@@ -1,10 +1,7 @@
-import React, { useState, useContext, useEffect } from "react"
-import styled from "styled-components"
-import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Bouton from '../../common/Bouton'
+import React from "react"
 import RowExperience from '../../common/RowExperience'
 
-const Active= ({content,display,isActive,...props}) => {
+const Active = ({content,display,isActive,...props}) => {
     
     return <RowExperience isActive={isActive} display={display} content={content}/>
 }

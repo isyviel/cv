@@ -30,7 +30,6 @@ const Author = styled.p`
     text-align: center;
 
     @media screen and (max-width:992px) {
-        letter-spacing: 0px;
         font-size: 14px;
       }
 `

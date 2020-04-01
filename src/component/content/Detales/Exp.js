@@ -26,7 +26,6 @@ const Exp = ({exp,...props}) => {
                                 Complétion du workflow client
                                 Reproductions d'erreurs et tests
                                 Rendre le site "responsive"
-
                             </article>
                         </div>
                      

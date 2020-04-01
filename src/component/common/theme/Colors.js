@@ -7,5 +7,7 @@ export default {
     bleuVert: "#1CD2AC",
     grisBleu: "#5F7279",
     lightGrey: "#E0E0E0",
-    darkGrey: "#4F4F4F"
+    darkGrey: "#4F4F4F",
+    veryGrey: "rgba(79,79,79,0.5)",
+    veryWhite: "rgba(255,255,255,0.5)"
 }
