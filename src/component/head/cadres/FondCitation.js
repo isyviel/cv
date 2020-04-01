@@ -9,7 +9,7 @@ export default styled(Container)`
     box-shadow: 0 2px 4px 0 #000;
     position: relative;
     left: 300px;
-    top: 300px;
+    top: 250px;
 
     @media screen and (max-width:992px) {
         width: 350px;

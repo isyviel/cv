@@ -10,7 +10,7 @@ export default styled(Container)`
     opacity: 70%;
     box-shadow: inset 0 1px 3px 0 #FF5725, 0 2px 4px 0 rgba(0,0,0,0.1);
     position: relative;
-    top: 220px;
+    top: 150px;
     left: 70px;
 
       @media screen and (max-width:992px) {
