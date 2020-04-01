@@ -26,7 +26,6 @@ const Form = ({title,content, windowClose, send,change,value,...props}) => {
         phone: values.phone
       }
 
-      
       emailjs.init(user);
       emailjs.send( 'outlook', 'contact', templateParams, user)
       .then(function(response) {
