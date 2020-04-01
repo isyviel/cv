@@ -8,7 +8,7 @@ import { grey,orange } from '@material-ui/core/colors';
 
 
 
-const Input = ({label,required, change, send, value,...props}) => {
+const Input = ({label,required, change, send, value, name,...props}) => {
 
     return(
       <ThemeProvider theme={Them}>
@@ -21,6 +21,7 @@ const Input = ({label,required, change, send, value,...props}) => {
           className="pt-2 mb-2"
           onChange={change}
           value={value}
+          name={name}
         />
         </ThemeProvider>
                

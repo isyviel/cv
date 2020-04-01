@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import { ThemeProvider } from '@material-ui/styles';
 import Them from '../../../common/theme/MatThemes'
 
-const Area = ({label,change, send,value,...props}) => {
+const Area = ({label,change, send,value, name,...props}) => {
 
 
     return(
@@ -18,6 +18,7 @@ const Area = ({label,change, send,value,...props}) => {
           color="secondary"
           onChange={change}
           value={value}
+          name={name}
         />
         </ThemeProvider>    
     )

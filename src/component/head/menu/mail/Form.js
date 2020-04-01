@@ -8,26 +8,20 @@ import Button from '@material-ui/core/Button';
 import useForm from '../Mail'
 
 const Form = ({title,content, windowClose, send,change,value,...props}) => { 
+  const [values,setValues] = useState({})
 
-  const useForm = (initialState = {}, callback) => {
-    const [values,setValues] = useState(initialState)
-
-    const handleSubmit = useCallback(event => {
+  const handleSubmit = (event) => {
       event && event.preventDefault()
-      callback && callback()
-    },[callback])
-
-    const handleChange = useCallback(event => {
-    event.persist();
-    setValues(values => ({...values, [event.target.name]: event.target.value}));
-  },[])
-    return {
-      values,handleSubmit,handleChange
+      console.log(values)
     }
+
+  const handleChange = (event) => {
+    event.persist();
+    setValues({...values, [event.target.name]: event.target.value});
+    console.log(values)
   }
 
-  const {values, handleChange, handleSubmit} = useForm(displayValue);
-  const displayValue = () => {console.log(values)}
+
     return (
         <Container>
         <p>Pour me contacter :</p>
