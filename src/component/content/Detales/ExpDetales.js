@@ -5,7 +5,7 @@ import Container from '../../common/Container'
 import {Row} from "@bootstrap-styled/v4/lib"
 
 const ExpContainer = styled(Container)`
-    text-align: center;
+    
 `
 
 const ExpDetales = ({ isSales, experience, exp, ...props}) => {    

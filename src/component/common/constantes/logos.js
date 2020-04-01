@@ -5,3 +5,5 @@ export const GIT = ["GIT","gitlab.png"];
 export const ANDROID = ["Android","android.png"]
 export const JAVA = ["Java","java.png"];
 export const BOOTS = ["Bootstrap", "boostrap.png"]
+export const POSTMAN = ["Postman", "postman.png"]
+export const APIPLAT = ["ApiPlatform","apiplatform.png"]

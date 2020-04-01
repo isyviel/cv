@@ -5,34 +5,41 @@ import styled from "styled-components"
 
 const CustomDiv = styled.div`
 font-family: "Baloo 2";
+text-align: center;
 @media screen and (max-width:576px) {
     font-size: 12px;
  }
 `
 const Exp = ({exp,...props}) => {
-            return  (<CustomDiv element={exp}>
-                        {exp ==="Développeuse Web" ? 
-                        
+            return  (<div element={exp}>
+                        {exp ==="Développeuse Web" ?
                         <div>
-                            <Title>STRATEGIA Communications</Title>
-                            <hr></hr>
-                            <p>{LISTE_STAGE}</p>
-                            <p>Gestion des workflows client</p>
-                            <p>Mise en place de fonctionnalités: Suppression, Duplication, Mail de notification, exportation en pdf</p>
-                            <p>FRONT et BACK</p>
-                            <p>Reproductions d'erreurs</p>
-                            <p>Responsive</p>
+                            <CustomDiv>
+                                <Title>STRATEGIA Communications</Title>
+                                <p>{LISTE_STAGE}</p>
+                                <hr/>
+                            </CustomDiv>
+                            <article>
+                                Méthode agile : GitLab
+                                Conception et développement de fonctionnalités sur un formulaire : 
+                                    Suppression, Duplication, Exportation en pdf
+                                Complétion du workflow client
+                                Reproductions d'erreurs et tests
+                                Rendre le site "responsive"
+
+                            </article>
                         </div>
+                     
 
                         :
 
-                        <div>
+                        <CustomDiv>
                             <Title>{LISTE_MAG}</Title>
                             <hr></hr>
                             <p>vente</p>
-                        </div>}
+                        </CustomDiv>}
                         
-                    </CustomDiv>)
+                    </div>)
 }
 
 export default Exp

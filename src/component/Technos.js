@@ -9,7 +9,7 @@ import { logRoles } from "@testing-library/react"
 import Tech from "./content/Tech"
 import Spacer from './common/Spacer'
 import FondFleches from './common/FondFleches'
-import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "./common/constantes/logos"
+import { SYMFONY, HTML, REACT, APIPLAT,ANDROID, JAVA, GIT, BOOTS } from "./common/constantes/logos"
 
 const Logos = styled(Row)`
    display: flex;
@@ -19,7 +19,7 @@ const CustomContainer = styled(Container)`
     margin-top: 50px;
 `
 const Technos = () => {
-    const techno = [SYMFONY,REACT,GIT,ANDROID,JAVA];
+    const techno = [SYMFONY,APIPLAT,REACT,GIT,BOOTS,ANDROID,JAVA];
 
     return (  
     <CustomContainer>  
