@@ -9,13 +9,12 @@ import Spacer from './common/Spacer'
 import Technos from './Technos'
 
 const CustomDiv = styled(Container)`
-background: url(images/fondfond.png)  no-repeat fixed ;
-background-size: 100%;
-height : 2000px;
+margin: 0;
+padding: 0;
+background: url(images/fondfond.png)  no-repeat center fixed ;
+background-size: cover;
+-webkit-background-size: cover;
 
-  @media screen and (max-width:576px) {
-    height:1500px
- }
 `
 
 const OnePage = () => {

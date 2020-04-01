@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Mail = ({send,...props}) => {
 
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(null);
     
 
     const handleClickOpen = (event) => {
