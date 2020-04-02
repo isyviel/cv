@@ -9,11 +9,11 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
-    <ParallaxProvider>
+    
       <Router>
         <Route exact path="/" component={OnePage} />
       </Router>
-    </ParallaxProvider>
+    
   );
 }
 
