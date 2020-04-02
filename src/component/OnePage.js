@@ -5,6 +5,7 @@ import Head from './Head'
 import Content from './Content'
 import Spacer from './common/Spacer'
 import Technos from './Technos'
+import Footer from './Footer'
 
 const CustomDiv = styled(Container)`
     margin: 0;
@@ -22,6 +23,7 @@ const OnePage = () => {
             <Technos/>
             <Spacer/>
             <Content/>
+            <Footer/>
         </CustomDiv>
     )
 }
