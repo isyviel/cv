@@ -5,6 +5,7 @@ import ImageButton from '../common/ImageButton'
 import Mail from './menu/Mail'
 import Phone from './menu/Phone'
 import Pdf from './menu/Pdf'
+import Linkedin from './menu/Linkedin'
 
 const CustomRow = styled(Row)`
     position: fixed;
@@ -12,21 +13,16 @@ const CustomRow = styled(Row)`
     border-radius: 30px;
     background-color: rgba(130,130,130,0.7);
     border: 1px solid rgba(255,255,255,0.2);
-    z-index:2;
-
+    z-index:3;
     @media screen and (max-width:576px) {
-        height: 35px;
+        height: 40px;
      }
 `
 
 const Contact = () => {
     return( 
         <CustomRow className="align-items-center">
-            <Col>
-                <a href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">
-                    <ImageButton src="images/linkedin.png"/>
-                </a>
-            </Col>
+            <Linkedin/>
             <Mail/>
             <Phone/>
             <Pdf/>

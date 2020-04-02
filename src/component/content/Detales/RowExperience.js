@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import {Container,Row} from "@bootstrap-styled/v4/lib"
+import {Row} from "@bootstrap-styled/v4/lib"
 import Bouton from '../../common/Bouton'
 
-const RowExp = ({content,isActive,display,...props}) => {
+const RowExp = ({content,isActive,display,variant,...props}) => {
 
     const CustomRow = styled(Row)`
         background: ${isActive ? 
@@ -16,16 +16,21 @@ const RowExp = ({content,isActive,display,...props}) => {
         background-size:100%;
         display: flex;
         justify-content: space-around;
+        margin-bottom:15px;
         
         @media screen and (max-width:768px) {
-            height: 30px;
+            height: 50px;
             background: none;
             padding: 0px;
+            width: 220px;
+            margin: 0;
         }
     ` 
 
     return(
-    <CustomRow><Bouton display={display} isActive={isActive} content={content}/></CustomRow>
+        <CustomRow>
+            <Bouton display={display} isActive={isActive} content={content} variant={variant}/>
+        </CustomRow>
     )
 }
 

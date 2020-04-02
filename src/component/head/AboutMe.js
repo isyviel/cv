@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Container } from "@bootstrap-styled/v4"
-import FondTitre from './cadres/FondTitre'
 import Titre from './aboutme/Titre'
 import GraphicPres from './aboutme/GraphicPres'
 
@@ -19,9 +18,7 @@ const AboutMe = ()=> {
     return(
         <CustomContainer>
             <GraphicPres/>
-            <FondTitre>
-                <Titre/>
-            </FondTitre> 
+            <Titre/>
         </CustomContainer>
     )
 }

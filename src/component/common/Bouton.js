@@ -5,15 +5,14 @@ import styled from "styled-components";
 import Them from '../common/theme/MatThemes'
 
 const CustomButton = styled(Button) `
-    padding: 0 !important;
-    max-height: 50px;
+    max-height: 40px;
 `
 
-const Bouton= ({content,display,isActive,...props}) => {
+const Bouton= ({content,display,isActive, variant,...props}) => {
 
     return (
         <ThemeProvider theme={Them}>
-            <CustomButton color={isActive ? "secondary" :"primary"} onClick={display}><p>{content}</p></CustomButton>
+            <CustomButton color={isActive ? "secondary" :"primary"} variant={variant} fullWidth onClick={display}>{content}</CustomButton>
         </ThemeProvider>)
 }
 
