@@ -5,7 +5,7 @@ import ImageButton from "../../common/ImageButton"
 const Pdf = () => {
   return (
     <Button>
-        <a href='cv_Adeline_Simon.pdf' target='__blank'>
+        <a href='cv_Adeline_Simon.pdf' target='__blank' rel="noopener noreferrer">
           <ImageButton src="images/pdf.png" />
         </a>
     </Button>

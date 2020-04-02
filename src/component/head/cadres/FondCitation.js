@@ -23,8 +23,7 @@ export default styled(Container)`
         border-radius: 0px;
         background-color: rgba(255,255,255,0);
         box-shadow: none;
-        margin-bottom: 100px;
-        margin-top: 50px;
+        margin : 35px 0px 125px 0px;
     }
 
     @media screen and (max-width:576px) {

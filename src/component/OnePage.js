@@ -13,6 +13,7 @@ const CustomDiv = styled(Container)`
     background: url(images/fondfond.png)  no-repeat center fixed ;
     background-size: cover;
     -webkit-background-size: cover;
+    overflow-x: hidden 
 `
 
 const OnePage = () => {
@@ -20,6 +21,7 @@ const OnePage = () => {
     return (
         <CustomDiv fluid>
             <Head/>
+            <Spacer/>
             <Technos/>
             <Spacer/>
             <Content/>

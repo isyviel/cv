@@ -11,7 +11,6 @@ const Experiences = ({exp,...props}) => {
     const experience = LISTE_EXP;
     const [isSales, setIsSales] = useState(false);
     const [isWeb, setIsWeb] = useState(true)
-    const [isActive, setIsActive] = useState(null)
 
      const handleDisplayStrategia = () => {
         setIsSales(false)
@@ -27,15 +26,39 @@ const Experiences = ({exp,...props}) => {
                 <Row className="align-items-center justify-content-center">
                     <Title className="text-white"><p>Expérience</p></Title>
                 </Row>
-                {/* affichage des boutons en ligne sur petites et moyennes résolutions */}
-                <Row className="d-xs-none d-lg-none d-md-block justify-content-center">
+                {/* affichage des boutons en ligne sur petites rsolutions*/}
+                <Row className="d-sm-block d-md-none d-lg-none  justify-content-center">
                     <Row className="justify-content-around">
+                        <Col xs="auto">
                             <Active isActive={isWeb}
                                     content={experience[0]} 
-                                    display={handleDisplayStrategia}/>  
+                                    display={handleDisplayStrategia}
+                                    variant="outlined"/> 
+                        </Col>
+                        <Col xs="auto"> 
                             <Active isActive={isSales}
                                     content={experience[1]} 
-                                    display={handleDisplaySales}/>
+                                    display={handleDisplaySales}
+                                    variant="outlined"/>
+                        </Col>
+                            <ExpDetales isSales={isSales} experience={experience}/>   
+                    </Row>
+                </Row>
+
+                {/* moyennes résolutions */}
+                <Row className="d-none d-md-block d-lg-none  justify-content-center">
+                    <Row className="justify-content-around">
+                        
+                            <Active isActive={isWeb}
+                                    content={experience[0]} 
+                                    display={handleDisplayStrategia}
+                                    variant="text"/> 
+                        
+                            <Active isActive={isSales}
+                                    content={experience[1]} 
+                                    display={handleDisplaySales}
+                                    variant="text"/>
+                        
                             <ExpDetales isSales={isSales} experience={experience}/>   
                     </Row>
                 </Row>
@@ -45,10 +68,12 @@ const Experiences = ({exp,...props}) => {
                         <Col>                      
                             <Active isActive={isWeb}
                                     content={experience[0]} 
-                                    display={handleDisplayStrategia}/>
+                                    display={handleDisplayStrategia}
+                                    variant="text"/>
                             <Active isActive={isSales}
                                     content={experience[1]} 
-                                    display={handleDisplaySales}/>
+                                    display={handleDisplaySales}
+                                    variant="text"/>
                         </Col>
                         <Col lg="8" xl="9">
                             <ExpDetales isSales={isSales} experience={experience}/>

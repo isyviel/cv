@@ -22,12 +22,15 @@ export default styled(Container)`
     @media screen and (max-width:768px) {
         height: 50px;
         position: static !important;
-        padding: 5px;
+        padding: 10px;
     }
 
     @media screen and (max-width:576px) {
         height: 30px;
         padding: 0px;
         text-align: center;
+        border-radius: 0px;
+        background-color: rgba(255,255,255,0);
+        box-shadow: none;
     }
 `
