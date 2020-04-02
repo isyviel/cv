@@ -6,14 +6,12 @@ import { LISTE_FORMATION} from "../common/constantes/texte"
 import styled from "styled-components"
 
 const CustomContainer = styled(ContentContainer)`
-
-@media screen and (max-width:992px) {
-    padding: 20px 40px 70px 40px;
-}
-
+    @media screen and (max-width:992px) {
+        padding: 20px 40px 70px 40px;
+    }
 `
 
-const Formations = ({isExp, ...props}) => {
+const Formations = () => {
     const diplomes = LISTE_FORMATION;
 
     return  <CustomContainer>

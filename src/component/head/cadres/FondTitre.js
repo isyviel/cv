@@ -27,7 +27,6 @@ export default styled(Container)`
 
     @media screen and (max-width:576px) {
         height: 30px;
-        position: static !important;
         padding: 0px;
         text-align: center;
     }

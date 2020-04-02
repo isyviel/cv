@@ -1,32 +1,22 @@
-import React, { useState, useContext, useEffect } from "react"
-import {Row,Col} from "@bootstrap-styled/v4/lib"
-import Me from './head/aboutme/Me'
+import React from "react"
+import {Row} from "@bootstrap-styled/v4/lib"
 import Contact from './head/Contact'
 import styled from "styled-components"
-import { EXP, FORMATION, COMPETENCES} from "./common/constantes/texte"
-import Comp from './content/Competences'
 import AboutMe from './head/AboutMe'
-import Tech from './content/Tech'
 import { Container } from "@bootstrap-styled/v4"
-import { SYMFONY, HTML, REACT, ANDROID, JAVA, GIT, BOOTS } from "./common/constantes/logos"
-import Spacer from './common/Spacer'
-import FondFleches from './common/FondFleches'
 
 const GlobalDiv = styled(Container)`
     display: flex;
     justify-content: center;
-    
 `
 
-const Head = ({isForm,...props}) => {
-   
-    const competences = COMPETENCES
+const Head = () => {
     return (
-    <GlobalDiv fluid noGutters={true}>
-            <Contact/>
-            <Row noGutters> 
-                <AboutMe/>
-            </Row>
+    <GlobalDiv fluid>
+        <Contact/>
+        <Row>
+            <AboutMe/>
+        </Row>
     </GlobalDiv>
     )
 }

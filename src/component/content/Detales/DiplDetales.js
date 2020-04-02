@@ -7,7 +7,7 @@ const DiplDetales = ({ diplomes, ...props}) => {
     return (
         <Container fluid>
             <Row>
-                {diplomes.map((diplome)=><Diplome diplome={diplome}/> )}
+                {diplomes.map((diplome,index)=><Diplome diplome={diplome} key={index}/> )}
             </Row>
         </Container> )
 }

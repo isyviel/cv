@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import Colors from './Colors'
 
@@ -10,7 +10,7 @@ const CustDiv = styled.div`
     margin: 25px;
   }
 `
-const Citation = styled.p`
+const Citation = styled.div`
     font-family: 'Annie Use Your Telescope', cursive;
     font-size: 30px;
     color: white;

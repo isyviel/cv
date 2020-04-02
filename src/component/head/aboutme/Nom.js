@@ -1,6 +1,6 @@
-import React, { useState, useContext, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
-import {Row,Col} from "@bootstrap-styled/v4/lib"
+import {Col} from "@bootstrap-styled/v4/lib"
 import Colors from '../../common/theme/Colors'
 import { Container } from "@bootstrap-styled/v4"
 
@@ -9,10 +9,6 @@ const CustomName = styled(Container)`
     font-family: "Comfortaa";
     font-size: 30px;
     text-align: center;
-
-    @media screen and (max-width:1200px) {
-        font-size: 30px;
-      }
 
     @media screen and (max-width:992px) {
         font-size: 25px;

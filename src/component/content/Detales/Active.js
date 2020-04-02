@@ -1,5 +1,5 @@
 import React from "react"
-import RowExperience from '../../common/RowExperience'
+import RowExperience from './RowExperience'
 
 const Active = ({content,display,isActive,...props}) => {
     

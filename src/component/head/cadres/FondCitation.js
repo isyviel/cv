@@ -14,7 +14,6 @@ export default styled(Container)`
     @media screen and (max-width:992px) {
         width: 350px;
         left: 280px;
-        
     }
 
     @media screen and (max-width:768px) {

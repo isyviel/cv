@@ -1,12 +1,10 @@
-import React, { useState, useContext, useEffect } from "react"
+import React from "react"
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import ImageButton from '../common/ImageButton'
 import Mail from './menu/Mail'
 import Phone from './menu/Phone'
 import Pdf from './menu/Pdf'
-import Colors from '../common/theme/Colors'
-import { Container } from "@bootstrap-styled/v4"
 
 const CustomRow = styled(Row)`
     position: fixed;
@@ -21,18 +19,23 @@ const CustomRow = styled(Row)`
      }
 `
 
-const Contact = ({isForm,...props}) => {
-
-    return(
-       
+const Contact = () => {
+    return( 
         <CustomRow className="align-items-center">
-            <Col><a href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank"><ImageButton src="images/linkedin.png"/></a></Col>
+            <Col>
+                <a href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">
+                    <ImageButton src="images/linkedin.png"/>
+                </a>
+            </Col>
             <Mail/>
             <Phone/>
             <Pdf/>
-            <Col><a href="https://www.github.com/isyviel" target="_blank"><ImageButton src="images/github.png"/></a></Col>
+            <Col>
+                <a href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">
+                    <ImageButton src="images/github.png"/>
+                </a>
+            </Col>
         </CustomRow>
-        
     )
 }
 

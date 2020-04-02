@@ -1,14 +1,9 @@
 import React from "react"
-
 import Formations from './content/Formations'
 import Experiences from './content/Experiences'
 import Spacer from './common/Spacer'
 
-import { SYMFONY, REACT, ANDROID, JAVA, GIT} from "./common/constantes/logos"
-import { COMPETENCES} from "./common/constantes/texte"
-
-
-const Content = ({title,content,...props}) => {
+const Content = () => {
     
     return (
         <div>
@@ -16,7 +11,6 @@ const Content = ({title,content,...props}) => {
             <Spacer/>
             <Formations/>
             <Spacer/>
-   
         </div>
     )
 }

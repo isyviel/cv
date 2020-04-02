@@ -13,7 +13,6 @@ const Me = styled.div`
     z-index: 2;
 
     @media screen and (max-width: 1200px) {
-        position : relative;
         left: 100px;
     }
 
@@ -29,12 +28,5 @@ const Me = styled.div`
         margin: auto !important;
     }
     
-
-    @media screen and (max-width:576px)  {
-        height: 100px;
-        width: 100px;
-        background-size: 100px;
-        
-    }
 `
 export default Me

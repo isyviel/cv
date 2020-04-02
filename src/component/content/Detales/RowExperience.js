@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import {Row} from "@bootstrap-styled/v4/lib"
-import Bouton from './Bouton'
+import {Container,Row} from "@bootstrap-styled/v4/lib"
+import Bouton from '../../common/Bouton'
 
 const RowExp = ({content,isActive,display,...props}) => {
 
@@ -25,7 +25,7 @@ const RowExp = ({content,isActive,display,...props}) => {
     ` 
 
     return(
-    <CustomRow isActive={isActive}><Bouton display={display} isActive={isActive} content={content}/></CustomRow>
+    <CustomRow><Bouton display={display} isActive={isActive} content={content}/></CustomRow>
     )
 }
 
