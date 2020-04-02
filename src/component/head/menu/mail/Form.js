@@ -44,7 +44,7 @@ const Form = ({title,content, windowClose, send,change,value,...props}) => {
           <p>Pour me contacter :</p>
 
           <form onSubmit={handleSubmit}>
-            <Input id="1" label="E-Mail" name="mail" value={values.mail} change={handleChange} required={true}/>
+            <Input required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={handleChange}/>
             <Input label="Objet : " name="objet" value={values.objet} change={handleChange} required={false}/>
             <Area label="Votre message" name="message" value={values.message} change={handleChange}/>
             <Input label="Nom" name="nom" value={values.nom} required={false} change={handleChange}/>

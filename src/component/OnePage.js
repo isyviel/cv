@@ -21,7 +21,7 @@ const OnePage = () => {
     return (
         <CustomDiv fluid>
             <Head/>
-            <Spacer/>
+            <Spacer id="exp"/>
             <Technos/>
             <Spacer/>
             <Content/>

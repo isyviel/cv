@@ -7,7 +7,7 @@ import TechSec from "./content/TechSec"
 import { SYMFONY, REACT, APIPLAT,ANDROID, JAVA, GIT, BOOTS, SQL, LINUX } from "./common/constantes/logos"
 
 const CustomContainer = styled(Container)`
-    margin-top: 50px;
+    margin-top: 30px;
 `
 const Technos = () => {
     const techno = [SYMFONY,APIPLAT,REACT,GIT,BOOTS];
