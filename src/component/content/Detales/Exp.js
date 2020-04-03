@@ -26,7 +26,7 @@ const Exp = ({exp,...props}) => {
                     <li>Méthode agile, Slack, Miro, Invision, GitLab.</li>
                     <li className="mt-2">Complétion du processus de validation dans un flux d'envoi.</li>
                     <li className="mt-2">Conception et développement de fonctionnalités :</li>
-                    <div className="text-center">Suppression, Duplication, Exportation en pdf d'un formulaire.</div>
+                    <div>Suppression, Duplication, Exportation en pdf d'un formulaire.</div>
                     <li className="mt-2">Insertions de champs et définitions des valeurs par défaut.</li>
                     <li className="mt-2">Reproductions d'erreurs et tests.</li>
                     <li className="mt-2">Rendre le site adaptable sur petites résolutions.</li>
