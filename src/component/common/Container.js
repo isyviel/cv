@@ -3,7 +3,7 @@ import { Container } from "@bootstrap-styled/v4"
 import Colors from './theme/Colors'
 
 export default styled(Container)`
-    margin: auto;
+    margin: 0;
     padding: 20px 40px 30px 40px;
     border-radius: 15px;
     background-color: ${Colors.veryWhite};

@@ -22,7 +22,7 @@ const Experiences = ({exp,...props}) => {
     }
     
     return(   
-            <ContentContainer>
+            <ContentContainer fluid>
                 <Row className="align-items-center justify-content-center">
                     <Title className="text-white"><p>Expérience</p></Title>
                 </Row>
