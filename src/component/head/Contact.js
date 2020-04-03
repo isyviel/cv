@@ -11,7 +11,7 @@ const CustomRow = styled(Row)`
     position: fixed;
     height: 56px;
     border-radius: 30px;
-    background-color: rgba(130,130,130,0.7);
+    background-color: rgba(0,0,0,0.5);
     border: 1px solid rgba(255,255,255,0.2);
     z-index:3;
     @media screen and (max-width:576px) {

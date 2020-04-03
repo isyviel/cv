@@ -81,7 +81,6 @@ const Experiences = ({exp,...props}) => {
                         </Col>
                     </Row>
                 </Row>
-
              </ContentContainer>
         )}
 

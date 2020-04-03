@@ -8,7 +8,7 @@ export default styled(Container)`
     background-color: ${Colors.darkGrey};
     box-shadow: 0 2px 4px 0 #000;
     position: relative;
-    top: -170px;
+    top: -190px;
     z-index: 1;
     padding-top: 20px;
     
