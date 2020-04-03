@@ -37,7 +37,7 @@ const Diplome = ({diplome,...props}) => {
                                         <strong> Licence 2 Langue Littérature et Civilisation Etrangère Anglaise</strong>
                                 </div>
                                 <div className="text-center">Université Lettres et Langues Poitiers</div>
-                                <div className="text-center mt-2">Littérature, Phonétique, Linguistique, Civilisation, Compréhension et Expression orale</div>
+                                <div className="mt-2">Littérature, Phonétique, Linguistique, Civilisation, Compréhension et Expression orale</div>
                                 
                         </Detail>}
                 </Container>
