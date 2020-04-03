@@ -14,8 +14,8 @@ const Footer = () => {
                 <Col xs="auto">
                     <Row className="justify-content-end"><Button color="secondary" href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button></Row>
                     <Row className="justify-content-end"><Button color="secondary" href="https://material-ui.com/" target="_blank" rel="noopener noreferrer">Material-UI</Button></Row>
-                    <Row className="justify-content-end"><Button color="secondary" href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">Publication GitHubPages</Button></Row>
                     <Row className="justify-content-end"><Button color="secondary" href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer">Service EmailJS</Button></Row>
+                    <Row className="justify-content-end"><Button color="secondary" href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">Publication GitHubPages</Button></Row>
                 </Col>
                 <Col xs="auto">
                     <Row><Button color="primary">adeline.simon31@hotmail.fr</Button></Row>

@@ -10,7 +10,7 @@ const Content = () => {
         <Container fluid>
             <Spacer id="exp"/>
             <Experiences /> 
-            <Spacer />
+            <Spacer id="dipl"/>
             <Formations/>
             <Spacer/>
         </Container>

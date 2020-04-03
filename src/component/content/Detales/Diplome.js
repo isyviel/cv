@@ -18,8 +18,28 @@ const Diplome = ({diplome,...props}) => {
                 <Container>
                         <Title className="pb-0">{diplome}</Title>
                         { diplome === "Web" ? 
-                        <Detail>2020 : <strong>Niveau III Développeuse Web et Web Mobile</strong> - Adrar Pôle Numérique RamonVille</Detail>
-                        :<Detail>2011 : <strong>Licence 2 Langue Littérature et Civilisation Etrangère Anglaise</strong> - Poitiers</Detail>}
+                        
+                        <Detail>
+                                <div className="text-center">2020 : 
+                                        <strong>Niveau III Développeuse Web et Web Mobile</strong>
+                                </div>
+                                <div className="text-right"> - Adrar Pôle Numérique RamonVille</div>
+                                <li className="mt-2">Conception et maquettage d'applications:</li>
+                                <div>Diagrammes de classes, de séquences, d'activités</div>
+                                <div>Dictionnaires de données, MCD, MLD, SQL</div>
+                                <li className="mt-2"> Gestion la partie back end d'un site web ou d'une application mobile:</li>
+                                <div>Java, PHP</div>
+                                <li className="mt-2">Construction et intégration d'une interface web dynamique:</li>
+                                <div>Android, Javascript (Jquery, React), HTML5, CSS3, Bootstrap</div>
+                        </Detail>
+                        :<Detail>
+                                <div className="text-center">2011 : 
+                                        <strong>Licence 2 Langue Littérature et Civilisation Etrangère Anglaise</strong>
+                                </div>
+                                <div className="text-right"> - Université Lettres et Langues Poitiers</div>
+                                <div className="text-center mt-2">Littérature, Phonétique, Linguistique, Civilisation, Compréhension et Expression orale</div>
+                                
+                        </Detail>}
                 </Container>
         )                
 }

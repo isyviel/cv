@@ -18,28 +18,38 @@ const Exp = ({exp,...props}) => {
             <div>
                 <CustomDiv>
                     <Title>STRATEGIA Communications</Title>
-                    <p>{LISTE_STAGE}</p>
+                    <p className="h5">{LISTE_STAGE}</p>
+                    <p className="h6 font-italic">Autonomie, sérieux, communication, ponctualité, passion</p>
                     <hr/>
                 </CustomDiv>
                 <article>
-                    <div>Méthode agile et GitLab.</div>
-                    <div>Complétion du processus de validation dans un flux d'envoi.</div>
-                    <div>Conception et développement de fonctionnalités :</div>
+                    <li>Méthode agile, Slack, Miro, Invision, GitLab.</li>
+                    <li className="mt-2">Complétion du processus de validation dans un flux d'envoi.</li>
+                    <li className="mt-2">Conception et développement de fonctionnalités :</li>
                     <div className="text-center">Suppression, Duplication, Exportation en pdf d'un formulaire.</div>
-                    <div>Insertions de champs et définitions des valeurs par défaut.</div>
-                    <div>Reproductions d'erreurs et tests.</div>
-                    <div>Rendre le site adaptable sur petites résolutions.</div>
+                    <li className="mt-2">Insertions de champs et définitions des valeurs par défaut.</li>
+                    <li className="mt-2">Reproductions d'erreurs et tests.</li>
+                    <li className="mt-2">Rendre le site adaptable sur petites résolutions.</li>
                 </article>
             </div>  
             :
+            <div>
                 <CustomDiv>
                     <Title>{LISTE_MAG}</Title>
-                    <hr></hr>
-                    <p>vente</p>
-                </CustomDiv>}
-                        
-        </div>
-        )
+                    <p className="h5">Commerce, Manutention, Comptabilité</p>
+                    <p className="h6 font-italic">Autonomie, transparence, dynamisme, proactivité, objectifs réalisés</p>
+                    <hr/>
+                </CustomDiv>
+                <article className="text-center">
+                    <div>Accueil personnalisé, conseils, accompagnement et vente complémentaire.</div>
+                    <div className="mt-2">Mise ne place du merchandising libre ou imposé.</div>
+                    <div className="mt-2">Gestion des livraisons, des retours dépôts et des inventaires.</div>
+                    <div className="mt-2">Calcul des objectifs vendeuse et magasin.</div>
+                    <div className="mt-2">Gestion de la sécurité du personnel et des fonds.</div>
+                    <div className="mt-2">Organisation de mesures contre la démarque inconnue.</div>
+                </article>      
+            </div>}
+        </div>)
 }
 
 export default Exp

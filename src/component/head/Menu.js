@@ -3,7 +3,7 @@ import {Row,Col} from "@bootstrap-styled/v4/lib"
 import Bouton from '../common/Bouton'
 import FondMenu from './cadres/FondMenu'
 
-const AboutMe = ()=> {
+const Menu = ()=> {
 
     return(
             <Row className="justify-content-center mt-2">
@@ -17,4 +17,4 @@ const AboutMe = ()=> {
     )
 }
     
-export default AboutMe
+export default Menu
