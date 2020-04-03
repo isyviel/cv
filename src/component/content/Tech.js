@@ -3,8 +3,6 @@ import styled from "styled-components"
 import {Col} from "@bootstrap-styled/v4/lib"
 
 const CustomImg = styled.img`
-   
-   margin-top: 5px;
    height: 80px;
 
    @media screen and (max-width:768px) {
@@ -15,7 +13,7 @@ const CustomImg = styled.img`
 const Tech = ({tech, ...props}) => {
    const path = "images/";
       return (
-      <Col xs="auto text-align-center">
+      <Col xs="auto text-align-center mt-4">
          <CustomImg src= {path + tech[1]}/>
       </Col>
       )

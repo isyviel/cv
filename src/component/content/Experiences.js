@@ -62,6 +62,7 @@ const Experiences = ({exp,...props}) => {
                             <ExpDetales isSales={isSales} experience={experience}/>   
                     </Row>
                 </Row>
+                
                 {/* affichage des boutons en colonne sur grandes résolutions */}
                 <Row className="d-none d-lg-block justify-content-center">
                     <Row>
