@@ -5,7 +5,7 @@ import {Row} from "@bootstrap-styled/v4/lib"
 
 const DiplDetales = ({ diplomes, ...props}) => {    
     return (
-        <Container fluid id="dipl">
+        <Container fluid>
             <Row>
                 {diplomes.map((diplome,index)=><Diplome diplome={diplome} key={index}/> )}
             </Row>

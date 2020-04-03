@@ -43,10 +43,10 @@ const Titre = ()=> {
         <FondTitre>
             <CustomName>
                Développeuse Web et Web Mobile
-                <Menu/>
-                {/* <FondFleches>
+                <Menu className="d-xs-none d-sm-block"/>
+                <FondFleches className="d-none d-xs-block">
                     <CustomImg src="images/fleches.png"/>
-                </FondFleches>  */}
+                </FondFleches>
             </CustomName>
         </FondTitre>  
     )
