@@ -24,7 +24,7 @@ const Exp = ({exp,...props}) => {
                 </CustomDiv>
                 <article>
                     <li>Méthode agile, Slack, Miro, Invision, GitLab.</li>
-                    <li className="mt-2">Complétion du processus de validation dans un flux d'envoi.</li>
+                    <li className="mt-2">Achêvement du processus de validation dans un flux d'envoi.</li>
                     <li className="mt-2">Conception et développement de fonctionnalités :</li>
                     <div className="text-left">Suppression, Duplication, Exportation en pdf d'un formulaire.</div>
                     <li className="mt-2">Insertions de champs et définitions des valeurs par défaut.</li>
@@ -42,7 +42,7 @@ const Exp = ({exp,...props}) => {
                 </CustomDiv>
                 <article className="text-center">
                     <div>Accueil personnalisé, conseils, accompagnement et vente complémentaire.</div>
-                    <div className="mt-2">Mise ne place du merchandising libre ou imposé.</div>
+                    <div className="mt-2">Mise en place du merchandising libre ou imposé.</div>
                     <div className="mt-2">Gestion des livraisons, des retours dépôts et des inventaires.</div>
                     <div className="mt-2">Calcul des objectifs vendeuse et magasin.</div>
                     <div className="mt-2">Gestion de la sécurité du personnel et des fonds.</div>
