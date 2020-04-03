@@ -21,7 +21,7 @@ const Diplome = ({diplome,...props}) => {
                         
                         <Detail>
                                 <div className="text-center">2020 : 
-                                        <strong>Niveau III Développeuse Web et Web Mobile</strong>
+                                        <strong> Niveau III Développeuse Web et Web Mobile</strong>
                                 </div>
                                 <div className="text-center">Adrar Pôle Numérique RamonVille</div>
                                 <li className="mt-2">Conception et maquettage d'applications:</li>
