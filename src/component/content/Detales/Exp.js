@@ -22,12 +22,13 @@ const Exp = ({exp,...props}) => {
                     <hr/>
                 </CustomDiv>
                 <article>
-                    Méthode agile : GitLab
-                    Conception et développement de fonctionnalités sur un formulaire : 
-                        Suppression, Duplication, Exportation en pdf
-                    Complétion du workflow client
-                    Reproductions d'erreurs et tests
-                    Rendre le site "responsive"
+                    <div>Méthode agile et GitLab.</div>
+                    <div>Complétion du processus de validation dans un flux d'envoi.</div>
+                    <div>Conception et développement de fonctionnalités :</div>
+                    <div className="text-center">Suppression, Duplication, Exportation en pdf d'un formulaire.</div>
+                    <div>Insertions de champs et définitions des valeurs par défaut.</div>
+                    <div>Reproductions d'erreurs et tests.</div>
+                    <div>Rendre le site adaptable sur petites résolutions.</div>
                 </article>
             </div>  
             :

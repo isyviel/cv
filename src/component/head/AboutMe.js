@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Container } from "@bootstrap-styled/v4"
 import Titre from './aboutme/Titre'
 import GraphicPres from './aboutme/GraphicPres'
+import Spacer from '../common/Spacer'
 
 const CustomContainer = styled(Container)`
     max-height: 500px;
@@ -19,6 +20,7 @@ const AboutMe = ()=> {
         <CustomContainer>
             <GraphicPres/>
             <Titre/>
+            <Spacer/>
         </CustomContainer>
     )
 }

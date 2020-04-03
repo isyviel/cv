@@ -8,11 +8,11 @@ const CustomButton = styled(Button) `
     max-height: 40px;
 `
 
-const Bouton= ({content,display,isActive, variant,...props}) => {
+const Bouton= ({content,display,isActive, variant, href,...props}) => {
 
     return (
         <ThemeProvider theme={Them}>
-            <CustomButton color={isActive ? "secondary" :"primary"} variant={variant} fullWidth onClick={display}>{content}</CustomButton>
+            <CustomButton color={isActive ? "secondary" :"primary"} variant={variant} fullWidth onClick={display} href={href}>{content}</CustomButton>
         </ThemeProvider>)
 }
 

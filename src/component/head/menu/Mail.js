@@ -8,10 +8,9 @@ import Them from "../../common/theme/MatThemes";
 import { FormControl } from '@material-ui/core';
 import Form from './mail/Form'
 
-
 const Mail = () => {
     const [open, setOpen] = useState(false);
-
+  
     const handleClickOpen = (event) => {
      setOpen(true)
     };
@@ -20,9 +19,6 @@ const Mail = () => {
       setOpen(false)
     };
     
-    const sendThenClose = () => {
-      handleClose();
-    }
 
     return (
       <div>
@@ -33,7 +29,7 @@ const Mail = () => {
           <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" fullWidth>
               <DialogContent className="p-2">
                 <FormControl>
-                  <Form windowClose={handleClose} send={sendThenClose}/>
+                  <Form windowClose={handleClose}/>
                 </FormControl>
               </DialogContent>
           </Dialog>
@@ -43,3 +39,4 @@ const Mail = () => {
 }
 
 export default Mail
+

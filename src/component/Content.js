@@ -7,9 +7,10 @@ import { Container } from "@bootstrap-styled/v4"
 const Content = () => {
     
     return (
-        <Container>
-            <Experiences/> 
-            <Spacer/>
+        <Container fluid>
+            <Spacer id="exp"/>
+            <Experiences /> 
+            <Spacer />
             <Formations/>
             <Spacer/>
         </Container>

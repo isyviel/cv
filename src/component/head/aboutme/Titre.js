@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Container } from "@bootstrap-styled/v4"
 import FondFleches from '../../common/FondFleches'
 import FondTitre from '../cadres/FondTitre'
+import Menu from '../Menu'
 
 const CustomName = styled(Container)`
     color: white;
@@ -42,9 +43,10 @@ const Titre = ()=> {
         <FondTitre>
             <CustomName>
                Développeuse Web et Web Mobile
-                <FondFleches>
+                <Menu/>
+                {/* <FondFleches>
                     <CustomImg src="images/fleches.png"/>
-                </FondFleches>
+                </FondFleches>  */}
             </CustomName>
         </FondTitre>  
     )

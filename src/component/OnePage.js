@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { Container } from "@bootstrap-styled/v4"
 import Head from './Head'
 import Content from './Content'
-import Spacer from './common/Spacer'
 import SmallSpacer from './common/SmallSpacer'
 import Technos from './Technos'
 import Footer from './Footer'
@@ -24,7 +23,6 @@ const OnePage = () => {
             <Head/>
             <SmallSpacer/>
             <Technos/>
-            <Spacer/>
             <Content/>
             <Footer/>
         </CustomDiv>
