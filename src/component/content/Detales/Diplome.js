@@ -24,6 +24,7 @@ const Diplome = ({diplome,...props}) => {
                                         <strong> Niveau III Développeuse Web et Web Mobile</strong>
                                 </div>
                                 <div className="text-center mb-4">Adrar Pôle Numérique RamonVille</div>
+                                <hr/>
                                 <li className="mt-2">Conception et maquettage d'applications:</li>
                                 <div>Diagrammes de classes, de séquences, d'activités</div>
                                 <div>Dictionnaires de données, MCD, MLD, SQL</div>
@@ -37,7 +38,13 @@ const Diplome = ({diplome,...props}) => {
                                         <strong> Licence 2 Langue Littérature et Civilisation Etrangère Anglaise</strong>
                                 </div>
                                 <div className="text-center mb-4">Université Lettres et Langues Poitiers</div>
-                                <div className="mt-2">Littérature, Phonétique, Linguistique, Civilisation, Compréhension et Expression orale</div>
+                                <hr/>
+                                <li className="mt-2">Littérature</li>
+                                <li>Phonétique</li>
+                                <li>Linguistique</li>
+                                <li>Civilisation</li>
+                                <li>Compréhension et Expression orale</li>
+                                <li>Options : Science du langage et Cinéma</li>
                                 
                         </Detail>}
                 </Container>

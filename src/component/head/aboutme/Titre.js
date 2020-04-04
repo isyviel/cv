@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Container } from "@bootstrap-styled/v4"
-import FondFleches from '../../common/FondFleches'
 import FondTitre from '../cadres/FondTitre'
 import Menu from '../Menu'
 
@@ -25,18 +24,6 @@ const CustomName = styled(Container)`
         font-size: 16px;
     }
   `
-const CustomImg = styled.img`
-    width: 35px;
-    padding: 0;
-
-    @media screen and (max-width:768px) {
-        width: 30px;
-    }
-
-    @media screen and (max-width:576px) {
-        width: 20px;
-    }
-`
 
 const Titre = ()=> {
     return( 
