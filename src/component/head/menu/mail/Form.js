@@ -24,10 +24,10 @@ const Form = ({title,content, windowClose, send,change,value,error, response,...
         firstname: values.prenom,
         phone: values.phone
       }
-
+      alert("Envoi en cours....")
       emailjs.init(user);
       emailjs.send( 'outlook', 'contact', templateParams, user)
-
+      
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert("Votre mail a bien été envoyé")
@@ -56,9 +56,6 @@ const Form = ({title,content, windowClose, send,change,value,error, response,...
             <Row className="justify-content-around">
               <Button type="submit" color="secondary" className="mt-3 mb-3">
                 Envoyer
-              </Button>
-              <Button className="mt-3 mb-3" onClick={windowClose}>
-                Annuler
               </Button>
               <Button className="mt-3 mb-3" onClick={windowClose}>
                 Fermer

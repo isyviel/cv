@@ -23,7 +23,7 @@ const Diplome = ({diplome,...props}) => {
                                 <div className="text-center">2020 : 
                                         <strong> Niveau III Développeuse Web et Web Mobile</strong>
                                 </div>
-                                <div className="text-center">Adrar Pôle Numérique RamonVille</div>
+                                <div className="text-center mb-4">Adrar Pôle Numérique RamonVille</div>
                                 <li className="mt-2">Conception et maquettage d'applications:</li>
                                 <div>Diagrammes de classes, de séquences, d'activités</div>
                                 <div>Dictionnaires de données, MCD, MLD, SQL</div>
@@ -36,7 +36,7 @@ const Diplome = ({diplome,...props}) => {
                                 <div className="text-center">2011 : 
                                         <strong> Licence 2 Langue Littérature et Civilisation Etrangère Anglaise</strong>
                                 </div>
-                                <div className="text-center">Université Lettres et Langues Poitiers</div>
+                                <div className="text-center mb-4">Université Lettres et Langues Poitiers</div>
                                 <div className="mt-2">Littérature, Phonétique, Linguistique, Civilisation, Compréhension et Expression orale</div>
                                 
                         </Detail>}

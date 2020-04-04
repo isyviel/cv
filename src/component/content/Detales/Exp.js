@@ -15,7 +15,7 @@ const Exp = ({exp,...props}) => {
     return  (
         <div element={exp}>
             {exp ==="Développeuse Web" ?
-            <div>
+            <section>
                 <CustomDiv>
                     <Title>STRATEGIA Communications</Title>
                     <p className="h5">{LISTE_STAGE}</p>
@@ -31,24 +31,24 @@ const Exp = ({exp,...props}) => {
                     <li className="mt-2">Reproductions d'erreurs et tests.</li>
                     <li className="mt-2">Rendre le site adaptable sur petites résolutions.</li>
                 </article>
-            </div>  
+            </section>  
             :
-            <div>
+            <section>
                 <CustomDiv>
                     <Title>{LISTE_MAG}</Title>
                     <p className="h5">Commerce, Manutention, Comptabilité</p>
                     <p className="h6 font-italic">Autonomie, transparence, dynamisme, proactivité, objectifs réalisés</p>
                     <hr/>
                 </CustomDiv>
-                <article className="text-center">
-                    <div>Accueil personnalisé, conseils, accompagnement et vente complémentaire.</div>
-                    <div className="mt-2">Mise en place du merchandising libre ou imposé.</div>
-                    <div className="mt-2">Gestion des livraisons, des retours dépôts et des inventaires.</div>
-                    <div className="mt-2">Calcul des objectifs vendeuse et magasin.</div>
-                    <div className="mt-2">Gestion de la sécurité du personnel et des fonds.</div>
-                    <div className="mt-2">Organisation de mesures contre la démarque inconnue.</div>
+                <article>
+                    <li>Accueil personnalisé, conseils, accompagnement et vente complémentaire.</li>
+                    <li className="mt-2">Mise en place du merchandising libre ou imposé.</li>
+                    <li className="mt-2">Gestion des livraisons, des retours dépôts et des inventaires.</li>
+                    <li className="mt-2">Calcul des objectifs vendeuse et magasin.</li>
+                    <li className="mt-2">Gestion de la sécurité du personnel et des fonds.</li>
+                    <li className="mt-2">Organisation de mesures contre la démarque inconnue.</li>
                 </article>      
-            </div>}
+            </section>}
         </div>)
 }
 

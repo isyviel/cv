@@ -10,7 +10,7 @@ const CustomContainer = styled(Container)`
 const Footer = () => {
     return (
         <CustomContainer fluid>
-            <Row className="justify-content-around">
+            <Row className="justify-content-center">
                 <Col xs="auto">
                     <Row className="justify-content-end"><Button color="secondary" href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button></Row>
                     <Row className="justify-content-end"><Button color="secondary" href="https://material-ui.com/" target="_blank" rel="noopener noreferrer">Material-UI</Button></Row>
