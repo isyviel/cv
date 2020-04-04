@@ -23,7 +23,7 @@ const Mail = () => {
     return (
       <div>
         <Button onClick={handleClickOpen}>
-          <ImageButton src="images/mail.png" />
+          <ImageButton src="images/mail.png" alt="icone arobase" id="envoyer_mail"/>
         </Button>
         <ThemeProvider theme={Them}>
           <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" fullWidth>

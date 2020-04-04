@@ -19,7 +19,7 @@ const CustomDiv = styled(Container)`
 const OnePage = () => {
 
     return (
-        <CustomDiv fluid>
+        <CustomDiv fluid data-nosnippet>
             <Head/>
             <SmallSpacer/>
             <Technos/>

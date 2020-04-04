@@ -29,7 +29,7 @@ const Phone = () => {
   return (
     <div>
       <Button aria-describedby={id} onClick={handleClickOpen}>
-        <ImageButton src="images/phone.png" />
+        <ImageButton src="images/phone.png" alt="icone téléphone" id="téléphoner"/>
       </Button>
       <Popover
         id={id}

@@ -14,7 +14,7 @@ const Tech = ({tech, ...props}) => {
    const path = "images/";
       return (
       <Col xs="auto text-align-center mt-4">
-         <CustomImg src= {path + tech[1]}/>
+         <CustomImg src= {path + tech[1]} alt={tech[0]} id="logo_techno_principale"/>
       </Col>
       )
       

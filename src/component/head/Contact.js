@@ -28,7 +28,7 @@ const Contact = () => {
             <Pdf/>
             <Col>
                 <a href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">
-                    <ImageButton src="images/github.png"/>
+                    <ImageButton src="images/github.png" alt="icone github" id="profil_github"/>
                 </a>
             </Col>
         </CustomRow>

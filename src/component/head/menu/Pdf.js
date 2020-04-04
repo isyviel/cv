@@ -6,7 +6,7 @@ const Pdf = () => {
   return (
     <Button>
         <a href='cv_Adeline_Simon.pdf' target='__blank' rel="noopener noreferrer">
-          <ImageButton src="images/pdf.png" />
+          <ImageButton src="images/pdf.png" alt="icone pdf" id="telecharger_cv" />
         </a>
     </Button>
   )
