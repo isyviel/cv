@@ -21,7 +21,7 @@ const CustomRow = styled(Row)`
 
 const Contact = () => {
     return( 
-        <CustomRow className="align-items-center">
+        <CustomRow className="align-items-center justify-content-center">
             <Linkedin/>
             <Mail/>
             <Phone/>
