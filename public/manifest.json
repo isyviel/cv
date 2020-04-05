@@ -3,12 +3,21 @@
   "name": "CV-Adeline-Simon",
   "icons": [
     {
+<<<<<<< HEAD
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24",
       "type": "image/x-icon"
     },
     {
       "src": "images/favicon-32x32.png",
+=======
+      "src": "images/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/favicon-16x16.png",
+>>>>>>> icone fix bug
       "type": "image/png",
       "sizes": "32x32"
     }
