@@ -17,7 +17,7 @@ const Exp = ({exp,...props}) => {
             {exp ==="Développeuse Web" ?
             <section>
                 <CustomDiv>
-                    <Title>STRATEGIA Communications</Title>
+                    <Title className="h2"> STRATEGIA Communications</Title>
                     <p className="h5">{LISTE_STAGE}</p>
                     <p className="h6 font-italic">Autonomie, sérieux, communication, ponctualité, passion</p>
                     <hr/>
