@@ -8,7 +8,7 @@ const Detail = styled.div`
         padding-bottom: 22px;
 
         @media screen and (max-width:576px) {
-                font-size: 12px;
+                font-size: 16px;
         }
 `
 
