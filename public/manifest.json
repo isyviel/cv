@@ -24,9 +24,13 @@
 >>>>>>> icone fix bug
       "type": "image/png",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "sizes": "32x32"
 =======
       "sizes": "192x192"
+=======
+      "sizes": "16x16"
+>>>>>>> icone fix bug
     },
     {
       "src": "images/favicon-32x32.png",
