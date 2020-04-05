@@ -30,7 +30,7 @@ const Mail = () => {
 
     const handleSubmit = (event) => {
       event && event.preventDefault()
-      
+
       const templateParams = {
         from_name: values.mail,
         to_name: user,
@@ -74,6 +74,7 @@ const Mail = () => {
                   change={handleChange}/>
                 </FormControl>
               </DialogContent>
+              {isLoading && (<LinearProgress color="secondary"/>)}
           </Dialog>
         </ThemeProvider>
       </div>
