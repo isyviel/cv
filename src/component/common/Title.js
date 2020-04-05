@@ -6,7 +6,7 @@ export default styled.div`
     text-align: center;
 
     @media screen and (max-width:576px) {
-        font-size: 20px;
+        font-size: 22px;
     }
 `
 
