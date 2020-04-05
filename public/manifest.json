@@ -4,6 +4,7 @@
   "icons": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24",
       "type": "image/x-icon"
@@ -12,6 +13,9 @@
       "src": "images/favicon-32x32.png",
 =======
       "src": "images/favicon.ico",
+=======
+      "src": "favicon.ico",
+>>>>>>> icone fix bug
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
@@ -19,7 +23,16 @@
       "src": "images/favicon-16x16.png",
 >>>>>>> icone fix bug
       "type": "image/png",
+<<<<<<< HEAD
       "sizes": "32x32"
+=======
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "512x512"
+>>>>>>> icone fix bug
     }
   ],
   "start_url": ".",
