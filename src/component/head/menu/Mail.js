@@ -1,27 +1,41 @@
-import React , {useState} from "react";
-import Button from '@material-ui/core/Button';
+import React , {useState} from "react"
+import Button from '@material-ui/core/Button'
 import { ThemeProvider } from "styled-components"
 import ImageButton from "../../common/ImageButton"
-import Them from "../../common/theme/MatThemes";
-import { FormControl, DialogTitle, LinearProgress, DialogContent, Dialog } from '@material-ui/core';
+import Colors from '../../common/theme/Colors'
+import { withStyles } from '@material-ui/core/styles'
+import Them from "../../common/theme/MatThemes"
+import { FormControl, DialogTitle, LinearProgress, DialogContent, Dialog } from '@material-ui/core'
 import Form from './mail/Form'
+import SentAlert from './mail/SentAlert'
 import emailjs from 'emailjs-com'
 import USER from '../../common/constantes/mail'
 
 const Mail = () => {
     const [open, setOpen] = useState(false)
+    const [snackOpen, setSnackOpen] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     const [values,setValues] = useState({})
+    const [status, setStatus] = useState(null)
     
     const user = USER
 
+    const ColorLinearProgress = withStyles({
+      colorPrimary: {
+        backgroundColor: Colors.darkGrey,
+      },
+      barColorPrimary: {
+        backgroundColor: Colors.orange,
+      },
+    })(LinearProgress);
+
     const handleClickOpen = (event) => {
      setOpen(true)
-    };
+    }
   
     const handleClose = () => {
       setOpen(false)
-    };
+    }
 
     const handleChange = (event) => {
       event.persist();
@@ -46,14 +60,17 @@ const Mail = () => {
       
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text)
-        alert("Votre e-mail a été envoyé")
+        setStatus(true)
+        setSnackOpen(true)
         setIsLoading(false)
         
      }, (error) => {
         console.log('FAILED...', error);
-        alert("Veuillez vérifier votre saisie ou me contacter à cette adresse : adeline.simon31@hotmail.fr")
+        setStatus(false)
+        setSnackOpen(true)
         setIsLoading(false)
-     });
+        
+     })
     }
 
     return (
@@ -64,7 +81,7 @@ const Mail = () => {
         <ThemeProvider theme={Them}>
           <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" fullWidth>
               <DialogTitle>Pour me contacter...</DialogTitle>
-              {isLoading && (<LinearProgress color="secondary"/>)}
+              {isLoading && (<ColorLinearProgress/>)}
               <DialogContent className="p-2">
                 <FormControl>
                   <Form 
@@ -74,8 +91,11 @@ const Mail = () => {
                   change={handleChange}/>
                 </FormControl>
               </DialogContent>
-              {isLoading && (<LinearProgress color="secondary"/>)}
-          </Dialog>
+              <SentAlert 
+                open={snackOpen} 
+                status={status} 
+              />
+          </Dialog> 
         </ThemeProvider>
       </div>
     ) 
