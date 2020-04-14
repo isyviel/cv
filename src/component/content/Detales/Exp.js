@@ -19,17 +19,18 @@ const Exp = ({exp,...props}) => {
             {exp ==="Développeuse Web" ?
             <section>
                 <CustomDiv>
-                    <Title className="h2"> STRATEGIA Communications</Title>
+                    <Title className="h2">STRATEGIA</Title>
                     <p className="h5">{LISTE_STAGE}</p>
-                    <p className="h6 font-italic">Autonomie, sérieux, communication, ponctualité, passion</p>
+                    <p className="h6 font-italic">Autonomie, sérieux, communication, passion</p>
                     <hr/>
                 </CustomDiv>
                 <CustomArticle>
                     <li>Méthode agile, Slack, Miro, Invision, GitLab.</li>
-                    <li className="mt-2">Achêvement du processus de validation dans un flux d'envoi.</li>
-                    <li className="mt-2">Conception et développement de fonctionnalités :</li>
-                    <div className="text-left">Suppression, Duplication, Exportation en pdf d'un formulaire.</div>
-                    <li className="mt-2">Insertions de champs et définitions des valeurs par défaut.</li>
+                    <li className="mt-2">Conception et développement de fonctionnalités sur une plateforme de gestion de workflow:</li>
+                    <div className="text-left">Insertions de champs de saisie selon le type de demande</div>
+                    <div className="text-left">Suppression, duplication, exportation en pdf d'une demande.</div>
+                    <div className="text-left">Adaptation de la saisie, des données accessibles et des actions possibles selon l'utilisateur.</div>
+                    <div className="text-left">Achèvement du processus de validation</div>
                     <li className="mt-2">Reproductions d'erreurs et tests.</li>
                     <li className="mt-2">Rendre le site adaptable sur petites résolutions.</li>
                 </CustomArticle>
