@@ -20,6 +20,7 @@ const Exp = ({exp,...props}) => {
             <section>
                 <CustomDiv>
                     <Title className="h2">STRATEGIA</Title>
+                    <p><a href="https://strategia.io/">Site Web STRATEGIA</a></p>
                     <p className="h5">{LISTE_STAGE}</p>
                     <p className="h6 font-italic">Autonomie, sérieux, communication, passion</p>
                     <hr/>
