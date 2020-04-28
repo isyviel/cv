@@ -14,7 +14,6 @@ const HomeContainer = styled(Container)
     box-shadow: 5px 5px 4px 0 rgba(0,0,0,0.62);
     position: fixed;
     padding-top: 50px;
-    font-family: 'Dosis', sans-serif;
 `
 const Head = () => {
     return (

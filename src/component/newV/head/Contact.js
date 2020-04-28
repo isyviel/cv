@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import {Row,Container} from "@bootstrap-styled/v4/lib"
 import ImageButton from '../common/ImageButton'
-import {MENU,ICONS} from '../common/constantes/menu'
+import {MENU,ICONS} from '../common/constantes/home'
 
 const ListeContainer = styled(Container)
 `
