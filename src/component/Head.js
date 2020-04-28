@@ -6,18 +6,16 @@ import Contact from './newV/head/Contact'
 import Quote from './newV/head/Quote'
 import Spacer from './newV/common/Spacer'
 
-const HomeContainer = styled(Container)
-`
-    height: 900px;
-    width: 500px;
-    background-color: #333;
-    box-shadow: 5px 5px 4px 0 rgba(0,0,0,0.62);
+const HomeContainer = styled(Container)`
+    
+    width:500px;
+    background: url(images/fond.png) no-repeat left top fixed;
     position: fixed;
-    padding-top: 50px;
+    padding: 50px 0 0 0 !important;
 `
 const Head = () => {
     return (
-        <HomeContainer>
+        <HomeContainer fluid>
             <Me/>
             <Spacer/>
             <Contact/>

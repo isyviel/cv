@@ -2,15 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import {Row,Container} from "@bootstrap-styled/v4/lib"
 import ImageButton from '../common/ImageButton'
-import {MENU,ICONS} from '../common/constantes/home'
+import {HEAD,ICONS} from '../common/constantes/home'
 
-const ListeContainer = styled(Container)
-`
+const ListeContainer = styled(Container)`
     margin: 10px 0px 0px 70px;
+    padding: 0 !important;
 `
 
-const ContactDiv = styled.div
-`
+const ContactDiv = styled.div`
     color: white;
     font-size: 24px;
 `
@@ -19,11 +18,11 @@ const Contact = () => {
    
     return(
        <ListeContainer>
-            {MENU.map((label,index) => {
+            {HEAD.map((label,index) => {
                 return ( 
-                    <Row className="mt-2 align-items-center">
+                    <Row key={index} className="mt-2 align-items-center">
                         <ImageButton src={ICONS[index]}/>
-                        <ContactDiv key={index}>{label}</ContactDiv>
+                        <ContactDiv>{label}</ContactDiv>
                     </Row>)
             })}
         </ListeContainer>

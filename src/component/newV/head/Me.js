@@ -1,12 +1,13 @@
 import styled from "styled-components"
 
 const Me = styled.div`
+    position: relative;
     border-radius : 150px;
     height: 150px;
     width: 150px;
     background : url(images/moi.png) no-repeat;
     background-size: 150px;
-    margin: auto;
+    left: 165px;
 
     @media screen and (max-width: 1200px) {
         left: 100px;

@@ -1,31 +1,26 @@
 import React from "react"
 import styled from "styled-components"
-import { Container,Col,Row } from "@bootstrap-styled/v4"
+import { Container,Row } from "@bootstrap-styled/v4"
 import Head from './Head'
 import Content from './Content'
-import Name from './Name'
-import Menu from './Menu'
+import Navigation from "./newV/content/Navigation"
 
-const CustomDiv = styled(Container)`
-    margin: 0;
-    padding: 0;
+const CustomDiv = styled.div`
+    background: url(images/deco_ronds.png) no-repeat fixed ;
+    background-size: 30%;
+    background-position: 28% 36%;
+    font-family: Dosis;
+    padding: 0 !important;
     overflow-y: hidden;
-    overflow-x: scroll;
-    background: url(images/deco_ronds.png) no-repeat center fixed ;
-    background-size: 35%;
-    background-position: 20% 50%;
-    height: 900px;
 `
 
 const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-            <Row>
-                <Name/>
                 <Head/>
                 <Content/>
-            </Row>
+                <Navigation/>
         </CustomDiv>
     )
 }

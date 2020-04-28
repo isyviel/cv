@@ -1,35 +1,41 @@
 import React from "react"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import styled from "styled-components"
-import {TECHNOS} from './newV/common/constantes/home'
-import Menu from './Menu'
+import Menu from './newV/content/Menu'
+import Colors from './newV/common/themes/Colors'
+import Name from "./Name"
+import Navigation from "./newV/content/Navigation"
 
-const ContentContainer = styled(Container)
-`
+const ContentContainer = styled(Container)`
     position: relative;
-    left: 600px;
-    top: 30px;
-    color: white;
+    left: 65%;
+    color: ${Colors.darkGrey};
     font-size: 24px;
 `
 
-const CustomCol = styled(Col)
+const Squarecontainer = styled(Container)`
+    height: 500px;
+    width: 5px;
+    background-color: ${Colors.orange};
+    margin : 0;
+    padding: 0 !important;
 `
-    margin-bottom: 80px;
+
+const ElementCol = styled(Col)`
+    padding: 0 !important;
+
 `
 const Content = () => {
-    
     return (
         <ContentContainer fluid>
-            <Row className="align-items-end">
-                <CustomCol xs="2">
-                    {TECHNOS.map((label,index) => {
-                        return <Row key={index}>{label}</Row>
-                    })}
-                    
-                </CustomCol>
-                <Menu/>
-            </Row>
+            <Row className="justify-content-end">
+                <ElementCol xs="4">
+                    <Menu/>
+                </ElementCol>
+                <ElementCol>
+                    <Squarecontainer/>
+                </ElementCol>
+            </Row>  
         </ContentContainer>
     )
 }
