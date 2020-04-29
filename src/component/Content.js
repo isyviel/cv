@@ -22,15 +22,6 @@ const Content = () => {
         <ContentContainer fluid>
                 <Name/>
                 <Menu/>
-                <Navigation/>
-           {/* <Row className="justify-content-end">
-                <ElementCol xs="4">
-                    <Menu/>
-                </ElementCol>
-                <ElementCol>
-                    <Squarecontainer/>
-                </ElementCol>
-            </Row>  */}
         </ContentContainer>
     )
 }

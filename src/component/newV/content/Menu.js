@@ -23,7 +23,7 @@ const CustomButton = styled(Button)`
 `
 
 const SquareContainer = styled(Container)`
-    height: 500px;
+    height: 350px;
     width: 5px;
     background-color: ${Colors.orange};
     margin : 10px;

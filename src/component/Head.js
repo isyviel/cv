@@ -8,7 +8,7 @@ import Spacer from './newV/common/Spacer'
 
 const HomeContainer = styled(Container)`
     height: 100%;
-    width:500px;
+    width: 500px;
     background: url(images/fond.png) no-repeat left top fixed;
     position: fixed;
     padding: 50px 0 0 0 !important;
