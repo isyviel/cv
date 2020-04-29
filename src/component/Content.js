@@ -17,7 +17,7 @@ const Squarecontainer = styled(Container)`
     height: 500px;
     width: 5px;
     background-color: ${Colors.orange};
-    margin : 0;
+    margin : 100px 0 0 0;
     padding: 0 !important;
 `
 

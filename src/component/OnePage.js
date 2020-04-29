@@ -6,12 +6,14 @@ import Content from './Content'
 import Navigation from "./newV/content/Navigation"
 
 const CustomDiv = styled.div`
+    min-height: 100% !important;
     background: url(images/deco_ronds.png) no-repeat fixed ;
     background-size: 30%;
-    background-position: 28% 36%;
+    background-position: 28% 109%;
     font-family: Dosis;
     padding: 0 !important;
     overflow-y: hidden;
+    overflow-x: hidden;
 `
 
 const OnePage = () => {

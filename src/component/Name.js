@@ -8,7 +8,7 @@ const NameContainer = styled(Container)`
     max-width: 100%;
     font-size: 48px;
     color: ${Colors.orange};
-    margin-right: 70px;
+    margin: 30px 70px 0 0;
 `
 
 const NameRow = styled(Row)`
