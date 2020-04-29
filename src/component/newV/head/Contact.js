@@ -21,7 +21,23 @@ const Contact = () => {
             {HEAD.map((label,index) => {
                 return ( 
                     <Row key={index} className="mt-2 align-items-center">
-                        <ImageButton src={ICONS[index]}/>
+                        {index === 0 &&(
+                            <ImageButton src={ICONS[index]}/>
+                        )}
+                         {index === 1 &&(
+                            <ImageButton src={ICONS[index]}/>
+                        )}
+                        {index === 2 &&(
+                            <a href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">
+                                <ImageButton src={ICONS[index]}/>
+                            </a>)}
+                        {index === 3 &&(
+                            <a href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">
+                                <ImageButton src={ICONS[index]}/>
+                            </a>)}
+                         {index === 4 &&(
+                            <ImageButton src={ICONS[index]}/>
+                        )}
                         <ContactDiv>{label}</ContactDiv>
                     </Row>)
             })}

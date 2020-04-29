@@ -5,6 +5,7 @@ import Menu from '../content/Menu'
 import Colors from '../common/themes/Colors'
 import Name from "../content/Name"
 import { HEIGHT } from "../common/themes/Sizes"
+import Detales from "../content/Detales"
 
 const ContentContainer = styled(Container)`
     min-height: ${HEIGHT};
@@ -16,6 +17,7 @@ const Content = () => {
     return (
         <ContentContainer fluid>
                 <Name/>
+                <Detales/>
                 <Menu/>
         </ContentContainer>
     )

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
@@ -13,14 +13,12 @@ const ButtonRow = styled(Row)`
     align-items: center;
     margin-top: 10%;
 `
-
 const CustomButton = styled(Button)`
     background: linear-gradient(145deg, #ff8300, #e66e00);
     box-shadow:  25px 25px 50px #9c9c9c, 
                  -25px -25px 50px #ffffff;
-    width : 100%;
+    width : 75%;
 `
-
 const SquareContainer = styled(Container)`
     height: 350px;
     width: 5px;
@@ -31,20 +29,28 @@ const SquareContainer = styled(Container)`
 const MenuContainer = styled(Container)`
     position: fixed;
     right: 10px;
+    top: 150px;
+    z-index: -1;
 `
 const Menu = () => {
+    const [isContent,setIsContent] = useState(true)
+    const displayContent = () => {
+        setIsContent(true)
+    }
     return (
         <MenuContainer>
             <ThemeProvider theme={Theme}>
                 <Row className="justify-content-end align-items-center">
                     <Col xs="3">
-                        {MENU.map((label,index)=> {
-                            return(
-                            <ButtonRow key={index}>
-                                <CustomButton color='primary' size='large'>{label}</CustomButton>
-                            </ButtonRow>
-                            )
-                        })}
+                        <ButtonRow>
+                            <CustomButton onClick={displayContent} color='primary' size='large'>{MENU[0]}</CustomButton>
+                        </ButtonRow>
+                        <ButtonRow>
+                            <CustomButton color='primary' size='large'>{MENU[1]}</CustomButton>
+                        </ButtonRow>
+                        <ButtonRow>
+                            <CustomButton color='primary' size='large'>{MENU[2]}</CustomButton>
+                        </ButtonRow>
                     </Col>
                     <SquareContainer/>
                 </Row>
