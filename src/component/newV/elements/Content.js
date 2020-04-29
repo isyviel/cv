@@ -1,11 +1,10 @@
 import React from "react"
-import { Container,Row,Col } from "@bootstrap-styled/v4"
+import { Container} from "@bootstrap-styled/v4"
 import styled from "styled-components"
-import Menu from './newV/content/Menu'
-import Colors from './newV/common/themes/Colors'
-import Name from "./Name"
-import Navigation from "./newV/content/Navigation"
-import { HEIGHT } from "./newV/common/themes/Sizes"
+import Menu from '../content/Menu'
+import Colors from '../common/themes/Colors'
+import Name from "../content/Name"
+import { HEIGHT } from "../common/themes/Sizes"
 
 const ContentContainer = styled(Container)`
     min-height: ${HEIGHT};
@@ -13,10 +12,6 @@ const ContentContainer = styled(Container)`
     font-size: 24px;
 `
 
-const ElementCol = styled(Col)`
-    padding: 0 !important;
-
-`
 const Content = () => {
     return (
         <ContentContainer fluid>

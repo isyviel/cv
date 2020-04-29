@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { Container,Row } from "@bootstrap-styled/v4"
-import Head from './Head'
-import Content from './Content'
-import Navigation from "./newV/content/Navigation"
+import { Container} from "@bootstrap-styled/v4"
+import Head from './newV/elements/Head'
+import Content from './newV/elements/Content'
+import Navigation from './newV/elements/Navigation'
 import {HEIGHT} from './newV/common/themes/Sizes'
 
 const CustomDiv = styled(Container)`

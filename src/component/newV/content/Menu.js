@@ -5,8 +5,7 @@ import Button from '@material-ui/core/Button'
 import {MENU} from '../common/constantes/home'
 import { ThemeProvider } from '@material-ui/styles';
 import Theme from '../common/themes/Theme'
-import Name from "../../Name"
-import Navigation from "./Navigation"
+
 import Colors from '../common/themes/Colors'
 
 const ButtonRow = styled(Row)`
@@ -29,24 +28,28 @@ const SquareContainer = styled(Container)`
     margin : 10px;
     padding: 0 !important;
 `
-
+const MenuContainer = styled(Container)`
+    position: fixed;
+    right: 10px;
+`
 const Menu = () => {
     return (
-        <ThemeProvider theme={Theme}>
-            <Row className="justify-content-end align-items-center">
-                <Col xs="3">
-                    {MENU.map((label,index)=> {
-                        return(
-                        <ButtonRow key={index}>
-                            <CustomButton color='primary' size='large'>{label}</CustomButton>
-                        </ButtonRow>
-                        )
-                    })}
-                </Col>
-                <SquareContainer/>
-            </Row>
-
-        </ThemeProvider>
+        <MenuContainer>
+            <ThemeProvider theme={Theme}>
+                <Row className="justify-content-end align-items-center">
+                    <Col xs="3">
+                        {MENU.map((label,index)=> {
+                            return(
+                            <ButtonRow key={index}>
+                                <CustomButton color='primary' size='large'>{label}</CustomButton>
+                            </ButtonRow>
+                            )
+                        })}
+                    </Col>
+                    <SquareContainer/>
+                </Row>
+            </ThemeProvider>
+        </MenuContainer>
     )
         
 }
