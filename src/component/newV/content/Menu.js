@@ -6,11 +6,12 @@ import {MENU} from '../common/constantes/home'
 import { ThemeProvider } from '@material-ui/styles';
 import Theme from '../common/themes/Theme'
 import Name from "../../Name"
+import Navigation from "./Navigation"
 
 const CenterRow = styled(Row)`
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 50px;
 `
 
 const CustomButton = styled(Button)`
@@ -33,6 +34,7 @@ const Menu = () => {
             </CenterRow>
             )
         })}
+
         </ThemeProvider>
     )
         

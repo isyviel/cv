@@ -11,7 +11,7 @@ const ListeContainer = styled(Container)`
 
 const ContactDiv = styled.div`
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 `
 
 const Contact = () => {

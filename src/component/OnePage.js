@@ -4,16 +4,15 @@ import { Container,Row } from "@bootstrap-styled/v4"
 import Head from './Head'
 import Content from './Content'
 import Navigation from "./newV/content/Navigation"
+import {HEIGHT} from './newV/common/themes/Sizes'
 
 const CustomDiv = styled.div`
-    min-height: 100% !important;
-    background: url(images/deco_ronds.png) no-repeat fixed ;
-    background-size: 30%;
-    background-position: 28% 109%;
+    height : ${HEIGHT};
+    width : ${window.innerWidth};
+    background: url(images/deco_ronds.png) no-repeat center fixed ;
     font-family: Dosis;
     padding: 0 !important;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y : hidden;
 `
 
 const OnePage = () => {

@@ -14,7 +14,7 @@ const QuoteAuthor = styled.div`
     font-size: 24px;
     color: ${Colors.orange};
     text-align: right;
-    margin: 0 50px 45px 0;
+    margin: 0 50px 0 0;
 `
 
 const Quote = () => {

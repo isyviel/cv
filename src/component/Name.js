@@ -5,7 +5,6 @@ import Colors from './newV/common/themes/Colors'
 import {TECHNOS} from './newV/common/constantes/home'
 
 const NameContainer = styled(Container)`
-    max-width: 100%;
     font-size: 48px;
     color: ${Colors.orange};
     margin: 30px 70px 0 0;

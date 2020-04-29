@@ -7,7 +7,7 @@ import Quote from './newV/head/Quote'
 import Spacer from './newV/common/Spacer'
 
 const HomeContainer = styled(Container)`
-    min-height: 100%;
+    height: 100%;
     width:500px;
     background: url(images/fond.png) no-repeat left top fixed;
     position: fixed;

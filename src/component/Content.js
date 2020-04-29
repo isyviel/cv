@@ -5,8 +5,10 @@ import Menu from './newV/content/Menu'
 import Colors from './newV/common/themes/Colors'
 import Name from "./Name"
 import Navigation from "./newV/content/Navigation"
+import { HEIGHT } from "./newV/common/themes/Sizes"
 
 const ContentContainer = styled(Container)`
+    min-height: ${HEIGHT};
     position: relative;
     left: 65%;
     color: ${Colors.darkGrey};
