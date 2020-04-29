@@ -9,18 +9,8 @@ import { HEIGHT } from "./newV/common/themes/Sizes"
 
 const ContentContainer = styled(Container)`
     min-height: ${HEIGHT};
-    position: relative;
-    left: 65%;
     color: ${Colors.darkGrey};
     font-size: 24px;
-`
-
-const Squarecontainer = styled(Container)`
-    height: 500px;
-    width: 5px;
-    background-color: ${Colors.orange};
-    margin : 100px 0 0 0;
-    padding: 0 !important;
 `
 
 const ElementCol = styled(Col)`
@@ -30,14 +20,17 @@ const ElementCol = styled(Col)`
 const Content = () => {
     return (
         <ContentContainer fluid>
-            <Row className="justify-content-end">
+                <Name/>
+                <Menu/>
+                <Navigation/>
+           {/* <Row className="justify-content-end">
                 <ElementCol xs="4">
                     <Menu/>
                 </ElementCol>
                 <ElementCol>
                     <Squarecontainer/>
                 </ElementCol>
-            </Row>  
+            </Row>  */}
         </ContentContainer>
     )
 }

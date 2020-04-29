@@ -7,7 +7,9 @@ import {TECHNOS} from './newV/common/constantes/home'
 const NameContainer = styled(Container)`
     font-size: 48px;
     color: ${Colors.orange};
-    margin: 30px 70px 0 0;
+    text-align: right;
+    padding: 0 !important;
+    margin: 0 !important;
 `
 
 const NameRow = styled(Row)`
@@ -15,18 +17,15 @@ const NameRow = styled(Row)`
 `
 const Name = () => {
     return(
-        <NameContainer>
-            <NameRow>
+        <NameContainer fluid>        
                 <h1>Adeline Simon</h1>
-            </NameRow>
-            <NameRow>
                 <h2>Développeuse Web et Web Mobile</h2>
-            </NameRow>
-            <NameRow>
-                {TECHNOS.map((label,index) => {
-                        return <h3 className="h4 text-dark" key={index}>{label}</h3>
+                <h3 className="h4 text-dark"> 
+                    {TECHNOS.map((label,index) => {
+                        return <span key={index}>{label}</span>
                     })}
-            </NameRow>
+                </h3>
+               
         </NameContainer>
     )
 }

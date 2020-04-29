@@ -7,8 +7,6 @@ import Navigation from "./newV/content/Navigation"
 import {HEIGHT} from './newV/common/themes/Sizes'
 
 const CustomDiv = styled.div`
-    height : ${HEIGHT};
-    width : ${window.innerWidth};
     background: url(images/deco_ronds.png) no-repeat center fixed ;
     font-family: Dosis;
     padding: 0 !important;
@@ -21,7 +19,6 @@ const OnePage = () => {
         <CustomDiv fluid data-nosnippet>
                 <Head/>
                 <Content/>
-                <Navigation/>
         </CustomDiv>
     )
 }
