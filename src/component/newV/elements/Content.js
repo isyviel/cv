@@ -5,6 +5,7 @@ import Menu from '../content/Menu'
 import Colors from '../common/themes/Colors'
 import Name from "../content/Name"
 import { HEIGHT } from "../common/themes/Sizes"
+import {MENU} from '../common/constantes/home'
 import Detales from "../content/Detales"
 import Collapse from '@material-ui/core/Collapse'
 import { Slide } from "@material-ui/core"
@@ -17,19 +18,27 @@ const ContentContainer = styled(Container)`
 const Empty = styled(Container)`
     height: 450px;
     width:100px;
-    background-color: red;
+    background-color: transparent;
     margin: 0;
 `
 const Content = ({goToContent, contentIsShown, hideContent,...props}) => {
+    
+    const exp = MENU[0];
+    const projects = MENU[2];
+    const diplome=MENU[1];
 
     return (
         <ContentContainer fluid>
                 <Name/>
-                {/*
-                    TO DO: montrer un container vide ou plein pour garder le fond de la page
-                */}
-                {contentIsShown ? <Detales closeSlide={hideContent} viewDetales={contentIsShown}/> : <Empty/>}
-                <Menu fromMenu={goToContent} isDeploy={contentIsShown}/>
+                
+                {contentIsShown ? 
+                <Detales closeSlide={hideContent} viewDetales={contentIsShown}/> 
+                : <Empty/>}
+                <Menu exp={exp} 
+                        diplome={diplome} 
+                        projects={projects} 
+                        fromMenu={goToContent} isDeploy={contentIsShown}/>
+                
         </ContentContainer>
     )
 }

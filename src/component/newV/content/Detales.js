@@ -27,7 +27,7 @@ const Detales = ({viewDetales, closeSlide,...props}) => {
                     <Row className="justify-content-end">
                         <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
                     </Row>
-                    <h1 className="h5">Expérience</h1>
+                    <h1 className="h5">EXPERIENCE</h1>
                         <Row>
                             <DMenu/>
                             <DArticle/>

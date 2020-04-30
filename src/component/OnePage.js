@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState,useRef } from "react"
 import styled from "styled-components"
 import { Container} from "@bootstrap-styled/v4"
 import Head from './newV/elements/Head'
@@ -19,10 +19,12 @@ const CustomDiv = styled(Container)`
 const OnePage = () => {
     const [isHome,setIsHome] = useState(true)
     const [isContent, setIsContent] = useState(false);
+    const detales = useRef(null)
 
-    const displayContent = () => {
+    const displayContent = (e) => {
         setIsContent(true)
-        setIsHome(false) 
+        setIsHome(false)
+        console.log(e.target.value)
     }
 
     const returnToHome =() => {
@@ -30,10 +32,15 @@ const OnePage = () => {
         setIsHome(true)
     }
 
+
+
     return (
         <CustomDiv fluid data-nosnippet>
                 {isHome ? <Head isHome={isHome}/> : <MiniHead isHome={isHome}/>}
-                <Content contentIsShown={isContent} hideContent={returnToHome} goToContent={displayContent}/>
+                <Content contentIsShown={isContent} 
+                            hideContent={returnToHome} 
+                            goToContent={displayContent}/>
+                
                 <Navigation/>
         </CustomDiv>
     )

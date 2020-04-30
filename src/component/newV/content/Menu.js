@@ -21,7 +21,7 @@ const SquareContainer = styled(Container)`
     padding: 0 !important;
 `
 
-const Menu = ({fromMenu, isDeploy,...props}) => { 
+const Menu = ({fromMenu, isDeploy, exp, diplome, projects, ...props}) => { 
 
     const MenuContainer = styled(Container)`
         position: fixed;
@@ -50,13 +50,13 @@ const classes = useStyles()
                 <Row className="justify-content-end align-items-center">
                     <Col xs="3">
                         <ButtonRow>
-                            <Button className={classes.root} onClick={fromMenu}>{MENU[0]}</Button>
+                            <Button className={classes.root} onClick={fromMenu}>{exp}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button className={classes.root}>{MENU[1]}</Button>
+                            <Button className={classes.root}>{diplome}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button className={classes.root}>{MENU[2]}</Button>
+                            <Button className={classes.root}>{projects}</Button>
                         </ButtonRow>
                     </Col>
                     <SquareContainer/>

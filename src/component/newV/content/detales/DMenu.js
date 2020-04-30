@@ -40,7 +40,7 @@ const DMenu = ({fromMenu,...props}) => {
 
     return (
       
-            <ThemeProvider them={Theme}>
+            <ThemeProvider>
                     <Col xs="2">
                         <ButtonRow>
                             <Button className={classes.root} onClick={fromMenu}>Web</Button>
