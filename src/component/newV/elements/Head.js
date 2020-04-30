@@ -5,24 +5,26 @@ import Me from '../head/Me'
 import Contact from '../head/Contact'
 import Quote from '../head/Quote'
 import Spacer from '../common/Spacer'
+import { Slide } from "@material-ui/core"
 
 const HomeContainer = styled(Container)`
     height: 100%;
     width: 500px;
     background: url(images/fond.png) no-repeat left top fixed;
     position: fixed;
-    padding: 50px 0 0 0 !important;
+    padding: 50px 0 0 70px !important;
 `
-const Head = () => {
+const Head = ({isHome,...props}) => {
     return (
-        <HomeContainer fluid>
-            <Me/>
-            <Spacer/>
-            <Contact/>
-            <Spacer/>
-            <Quote/>
-        </HomeContainer>
-    
+        <Slide direction="right" in={isHome}>
+            <HomeContainer fluid>
+                <Me/>
+                <Spacer/>
+                <Contact isHome={isHome}/>
+                <Spacer/>
+                <Quote/>
+            </HomeContainer>
+        </Slide>
     )
 }
 

@@ -31,14 +31,14 @@ const MenuContainer = styled(Container)`
     top: 150px;
     z-index: -1;
 `
-const Menu = ({displayContent,...props}) => {  
+const Menu = ({fromMenu,...props}) => {  
     return (
         <MenuContainer>
             <ThemeProvider theme={Theme}>
                 <Row className="justify-content-end align-items-center">
                     <Col xs="3">
                         <ButtonRow>
-                            <CustomButton onClick={displayContent} color='primary' size='large'>{MENU[0]}</CustomButton>
+                            <CustomButton onClick={fromMenu} color='primary' size='large'>{MENU[0]}</CustomButton>
                         </ButtonRow>
                         <ButtonRow>
                             <CustomButton color='primary' size='large'>{MENU[1]}</CustomButton>

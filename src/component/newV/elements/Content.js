@@ -7,6 +7,7 @@ import Name from "../content/Name"
 import { HEIGHT } from "../common/themes/Sizes"
 import Detales from "../content/Detales"
 import Collapse from '@material-ui/core/Collapse'
+import { Slide } from "@material-ui/core"
 
 const ContentContainer = styled(Container)`
     min-height: ${HEIGHT};
@@ -14,24 +15,13 @@ const ContentContainer = styled(Container)`
     font-size: 24px;
 `
 
-const Content = () => {
-    const [isContent, setIsContent] = useState(false);
-
-    const displayContent = () => {
-        setIsContent(true)
-       
-    }
-
-    const closeCollapse = () => {
-        setIsContent(false)
-        console.log(isContent)
-    }
+const Content = ({goToContent, contentIsShown, hideContent,...props}) => {
 
     return (
         <ContentContainer fluid>
                 <Name/>
-                <Collapse in={isContent}><Detales closeDetales={closeCollapse}/></Collapse>
-                <Menu displayContent={displayContent}/>
+                {contentIsShown &&(<Detales closeSlide={hideContent} viewDetales={contentIsShown}/>)}
+                <Menu fromMenu={goToContent}/>
         </ContentContainer>
     )
 }

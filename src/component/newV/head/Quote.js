@@ -7,7 +7,7 @@ const QuoteDiv = styled.div`
     font-size: 24px;
     font-style: italic;
     color: white;
-    margin: 0 0 0 10%;
+    margin: 0;
 `
 
 const QuoteAuthor = styled.div`

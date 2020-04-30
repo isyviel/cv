@@ -5,7 +5,7 @@ import ImageButton from '../common/ImageButton'
 import {HEAD,ICONS} from '../common/constantes/home'
 
 const ListeContainer = styled(Container)`
-    margin: 10px 0px 0px 70px;
+    margin: 10px 0px 0px 0px;
     padding: 0 !important;
 `
 
@@ -14,11 +14,12 @@ const ContactDiv = styled.div`
     font-size: 20px;
 `
 
-const Contact = () => {
+const Contact = ({isHome,...props}) => {
    
     return(
        <ListeContainer>
             {HEAD.map((label,index) => {
+                console.log(isHome)
                 return ( 
                     <Row key={index} className="mt-2 align-items-center">
                         {index === 0 &&(
@@ -38,7 +39,7 @@ const Contact = () => {
                          {index === 4 &&(
                             <ImageButton src={ICONS[index]}/>
                         )}
-                        <ContactDiv>{label}</ContactDiv>
+                        {isHome &&(<ContactDiv>{label}</ContactDiv>)}
                     </Row>)
             })}
         </ListeContainer>
