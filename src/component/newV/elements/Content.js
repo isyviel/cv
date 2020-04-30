@@ -22,22 +22,26 @@ const Empty = styled(Container)`
     margin: 0;
 `
 const Content = ({goToContent, contentIsShown, hideContent,...props}) => {
-    
+
     const exp = MENU[0];
     const projects = MENU[2];
     const diplome=MENU[1];
 
+  
     return (
         <ContentContainer fluid>
                 <Name/>
-                
+
                 {contentIsShown ? 
-                <Detales closeSlide={hideContent} viewDetales={contentIsShown}/> 
+                <Detales closeSlide={hideContent} 
+                        viewDetales={contentIsShown}
+                        /> 
                 : <Empty/>}
                 <Menu exp={exp} 
                         diplome={diplome} 
                         projects={projects} 
-                        fromMenu={goToContent} isDeploy={contentIsShown}/>
+                        fromMenu={goToContent} 
+                        isDeploy={contentIsShown}/>
                 
         </ContentContainer>
     )

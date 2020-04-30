@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import {MENU} from '../common/constantes/home'
 import { ThemeProvider, makeStyles } from '@material-ui/styles';
 import Colors from '../common/themes/Colors'
+import { getByTestId } from "@testing-library/react"
 
 
 const ButtonRow = styled(Row)`
@@ -21,7 +22,7 @@ const SquareContainer = styled(Container)`
     padding: 0 !important;
 `
 
-const Menu = ({fromMenu, isDeploy, exp, diplome, projects, ...props}) => { 
+const Menu = ({fromMenu, isDeploy, exp, diplome, projects, displayForm,...props}) => { 
 
     const MenuContainer = styled(Container)`
         position: fixed;
@@ -44,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
 
 const classes = useStyles()
 
+
     return (
         <MenuContainer>
             <ThemeProvider>
@@ -53,10 +55,10 @@ const classes = useStyles()
                             <Button className={classes.root} onClick={fromMenu}>{exp}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button className={classes.root}>{diplome}</Button>
+                            <Button className={classes.root} onClick={fromMenu}>{diplome}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button className={classes.root}>{projects}</Button>
+                            <Button className={classes.root} onClick={fromMenu} >{projects}</Button>
                         </ButtonRow>
                     </Col>
                     <SquareContainer/>

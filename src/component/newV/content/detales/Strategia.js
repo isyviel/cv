@@ -1,11 +1,14 @@
 import React from "react"
 import {Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
+import { Zoom, Fade } from "@material-ui/core"
 
-const DArticle = () => {
+const Strategia = ({isWeb,...props}) => {
     return(
+    <Fade in={isWeb}>
         <Col>
             <h1 className="h4">STRATEGIA</h1>
+            <a href="https://strategia.io/">Site Web STRATEGIA</a>
             <h2 className="h5"> Symfony, React/JSX, ApiPlatform, Material-UI, Postman, Twig, Bootstrap, Ubuntu</h2>
             <h3 className="h6">Autonomie, sérieux, communication, passion</h3>
 
@@ -20,7 +23,8 @@ const DArticle = () => {
             Rendre le site adaptable sur petites résolutions.
             </article>
         </Col>
+    </Fade>
     )
 }
 
-export default DArticle
+export default Strategia

@@ -14,10 +14,9 @@ const DisabledButton = styled(Button)`
     width : 80%;
 
 `
-const DMenu = ({fromMenu,...props}) => {  
+const DMenu = ({fromMenu, displaySales,displayWeb,...props}) => {  
 
     const useStyles = makeStyles((theme) => ({
- 
         root: {
             color: "#FF7A00",
             background:"linear-gradient(145deg, #ffffff, #e6e6e6)", 
@@ -28,7 +27,7 @@ const DMenu = ({fromMenu,...props}) => {
                 backgroundColor: "#FFFFF", 
                 boxShadow: "inset 6px 6px 13px #adadad,inset -6px -6px 13px #ffffff",
               },
-            '&:active': {
+            '&:focus': {
                 background:"linear-gradient(145deg, #ff8300, #e66e00)", 
                 boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
                 color: "white",
@@ -43,10 +42,10 @@ const DMenu = ({fromMenu,...props}) => {
             <ThemeProvider>
                     <Col xs="2">
                         <ButtonRow>
-                            <Button className={classes.root} onClick={fromMenu}>Web</Button>
+                            <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button  className={classes.root}>Vente</Button>
+                            <Button  className={classes.root} id="sales" onClick={displaySales}>Vente</Button>
                         </ButtonRow>
                         <ButtonRow>
                             <DisabledButton color='primary' variant="outlined" size='medium' disabled>Altran</DisabledButton>

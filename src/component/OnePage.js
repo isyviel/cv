@@ -18,13 +18,12 @@ const CustomDiv = styled(Container)`
 
 const OnePage = () => {
     const [isHome,setIsHome] = useState(true)
-    const [isContent, setIsContent] = useState(false);
-    const detales = useRef(null)
+    const [isContent, setIsContent] = useState(false)
 
-    const displayContent = (e) => {
+    const displayContent = () => {
+      
         setIsContent(true)
         setIsHome(false)
-        console.log(e.target.value)
     }
 
     const returnToHome =() => {
@@ -39,8 +38,8 @@ const OnePage = () => {
                 {isHome ? <Head isHome={isHome}/> : <MiniHead isHome={isHome}/>}
                 <Content contentIsShown={isContent} 
                             hideContent={returnToHome} 
-                            goToContent={displayContent}/>
-                
+                            goToContent={displayContent}
+                            />
                 <Navigation/>
         </CustomDiv>
     )

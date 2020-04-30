@@ -1,9 +1,10 @@
-import React from "react"
+import React , {useState} from "react"
 import {Container,Row} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import { Slide } from "@material-ui/core"
+import { Slide, Zoom, Fade } from "@material-ui/core"
 import DMenu from "./detales/DMenu"
-import DArticle from "./detales/DArticle"
+import Strategia from "./detales/Strategia"
+import Vente from "./detales/Vente"
 
 const DetalesContainer =  styled(Container)`
     height: 450px;
@@ -21,6 +22,19 @@ const Cross = styled.img`
 `
 const Detales = ({viewDetales, closeSlide,...props}) => {
 
+    const [isWeb, setIsWeb] = useState(true)
+    const [isSales, setIsSales] = useState(false)
+    
+    const displaySales = () => {
+        setIsSales(true)
+        setIsWeb(false)
+    }
+
+    const displayWeb = () => {
+        setIsWeb(true)
+        setIsSales(false)
+    }
+
     return(
             <Slide timeout={800} in={viewDetales} direction="left">
                 <DetalesContainer>
@@ -29,8 +43,9 @@ const Detales = ({viewDetales, closeSlide,...props}) => {
                     </Row>
                     <h1 className="h5">EXPERIENCE</h1>
                         <Row>
-                            <DMenu/>
-                            <DArticle/>
+                            <DMenu displaySales={displaySales} displayWeb={displayWeb}/>
+                            {isWeb && (<Strategia isWeb={isWeb}/>)}
+                            {isSales &&(<Vente isSales={isSales}/>)}
                         </Row>
                 </DetalesContainer>
             </Slide>
