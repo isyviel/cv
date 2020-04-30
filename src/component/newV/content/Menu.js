@@ -1,11 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
 import {MENU} from '../common/constantes/home'
 import { ThemeProvider } from '@material-ui/styles';
 import Theme from '../common/themes/Theme'
-
 import Colors from '../common/themes/Colors'
 
 const ButtonRow = styled(Row)`
@@ -32,11 +31,7 @@ const MenuContainer = styled(Container)`
     top: 150px;
     z-index: -1;
 `
-const Menu = () => {
-    const [isContent,setIsContent] = useState(true)
-    const displayContent = () => {
-        setIsContent(true)
-    }
+const Menu = ({displayContent,...props}) => {  
     return (
         <MenuContainer>
             <ThemeProvider theme={Theme}>

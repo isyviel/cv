@@ -1,22 +1,26 @@
 import React from "react"
-import {Container} from "@bootstrap-styled/v4/lib"
+import {Container,Row} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import Colors from '../common/themes/Colors'
 
 const DetalesContainer =  styled(Container)`
     height: 400px;
     min-width: 99%;
     background-color: rgba(255,255,255,0.7);
     margin: 0;
-    padding: 5% 10% 5% 25%;
+    padding: 5% 5% 5% 25%;
     font-family: Arial;
     font-size: 16px;
     z-index: 2;
 `
-const Detales = ({isContent,...props}) => {
+const Cross = styled.img`
+    cursor: pointer;
+    width: 20px;
+`
+const Detales = ({isContent, closeDetales,...props}) => {
 
     return(
         <DetalesContainer>
+            <Row className="justify-content-end"><Cross onClick={closeDetales} src="images/croix.png" alt="croix"/></Row>
             <p>Titre</p>
             <article>
                 There are many variations of passages of Lorem Ipsum available, but the 
