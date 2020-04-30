@@ -5,6 +5,7 @@ import Me from '../head/Me'
 import Contact from '../head/Contact'
 import Quote from '../head/Quote'
 import Spacer from '../common/Spacer'
+import { Slide } from "@material-ui/core"
 
 const HomeContainer = styled(Container)`
     height: 100%;
@@ -14,12 +15,13 @@ const HomeContainer = styled(Container)`
     padding-top: 17%;
     z-index: 2;
 `
-const MiniHead = () => {
+const MiniHead = ({isHome,...props}) => {
     return (
-        <HomeContainer fluid>
-            <Contact/>
-        </HomeContainer>
-    
+        <Slide direction="right" in={!isHome}>
+            <HomeContainer fluid>
+                <Contact/>
+            </HomeContainer>
+        </Slide>
     )
 }
 

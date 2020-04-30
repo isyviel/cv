@@ -14,14 +14,22 @@ const ContentContainer = styled(Container)`
     color: ${Colors.darkGrey};
     font-size: 24px;
 `
-
+const Empty = styled(Container)`
+    height: 450px;
+    width:100px;
+    background-color: red;
+    margin: 0;
+`
 const Content = ({goToContent, contentIsShown, hideContent,...props}) => {
 
     return (
         <ContentContainer fluid>
                 <Name/>
-                {contentIsShown &&(<Detales closeSlide={hideContent} viewDetales={contentIsShown}/>)}
-                <Menu fromMenu={goToContent}/>
+                {/*
+                    TO DO: montrer un container vide ou plein pour garder le fond de la page
+                */}
+                {contentIsShown ? <Detales closeSlide={hideContent} viewDetales={contentIsShown}/> : <Empty/>}
+                <Menu fromMenu={goToContent} isDeploy={contentIsShown}/>
         </ContentContainer>
     )
 }

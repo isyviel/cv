@@ -22,7 +22,7 @@ const OnePage = () => {
 
     const displayContent = () => {
         setIsContent(true)
-        setIsHome(false)
+        setIsHome(false) 
     }
 
     const returnToHome =() => {
@@ -32,7 +32,7 @@ const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-                {isHome ? <Head isHome={isHome}/> : <MiniHead/>}
+                {isHome ? <Head isHome={isHome}/> : <MiniHead isHome={isHome}/>}
                 <Content contentIsShown={isContent} hideContent={returnToHome} goToContent={displayContent}/>
                 <Navigation/>
         </CustomDiv>

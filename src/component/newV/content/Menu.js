@@ -3,21 +3,16 @@ import styled from "styled-components"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
 import {MENU} from '../common/constantes/home'
-import { ThemeProvider } from '@material-ui/styles';
-import Theme from '../common/themes/Theme'
+import { ThemeProvider, makeStyles } from '@material-ui/styles';
 import Colors from '../common/themes/Colors'
+
 
 const ButtonRow = styled(Row)`
     justify-content: end;
     align-items: center;
     margin-top: 10%;
 `
-const CustomButton = styled(Button)`
-    background: linear-gradient(145deg, #ff8300, #e66e00);
-    box-shadow:  25px 25px 50px #9c9c9c, 
-                 -25px -25px 50px #ffffff;
-    width : 75%;
-`
+
 const SquareContainer = styled(Container)`
     height: 350px;
     width: 5px;
@@ -25,26 +20,43 @@ const SquareContainer = styled(Container)`
     margin : 10px;
     padding: 0 !important;
 `
-const MenuContainer = styled(Container)`
-    position: fixed;
-    right: 10px;
-    top: 150px;
-    z-index: -1;
-`
-const Menu = ({fromMenu,...props}) => {  
+
+const Menu = ({fromMenu, isDeploy,...props}) => { 
+
+    const MenuContainer = styled(Container)`
+        position: fixed;
+        right: 10px;
+        top: 150px;
+        z-index: ${isDeploy ? -1 : 1};
+    `
+const useStyles = makeStyles((theme) => ({
+    root: {
+        background:"linear-gradient(145deg, #ff8300, #e66e00)", 
+        boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
+        color: "white",
+        width: "75%",
+        fontSize: "16px",
+        '&:hover': {
+            backgroundColor: "#FF7A00", 
+            boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
+          },     
+}}))
+
+const classes = useStyles()
+
     return (
         <MenuContainer>
-            <ThemeProvider theme={Theme}>
+            <ThemeProvider>
                 <Row className="justify-content-end align-items-center">
                     <Col xs="3">
                         <ButtonRow>
-                            <CustomButton onClick={fromMenu} color='primary' size='large'>{MENU[0]}</CustomButton>
+                            <Button className={classes.root} onClick={fromMenu}>{MENU[0]}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <CustomButton color='primary' size='large'>{MENU[1]}</CustomButton>
+                            <Button className={classes.root}>{MENU[1]}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <CustomButton color='primary' size='large'>{MENU[2]}</CustomButton>
+                            <Button className={classes.root}>{MENU[2]}</Button>
                         </ButtonRow>
                     </Col>
                     <SquareContainer/>
