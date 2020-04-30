@@ -25,7 +25,7 @@ const Detales = ({viewDetales, closeSlide,...props}) => {
                 <Row className="justify-content-end">
                     <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
                 </Row>
-                <p>Titre</p>
+                <p>Expérience</p>
                 <article>
                     There are many variations of passages of Lorem Ipsum available, but the 
                     majority have suffered alteration in some form, by injected humour, or 
