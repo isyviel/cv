@@ -1,6 +1,5 @@
 import React from "react"
 import {Col} from "@bootstrap-styled/v4/lib"
-import styled from "styled-components"
 import { Fade } from "@material-ui/core"
 
 const Adrar = ({isWeb,...props}) => {

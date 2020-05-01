@@ -1,7 +1,5 @@
 import React , {useState} from "react"
-import {Container,Row} from "@bootstrap-styled/v4/lib"
-import styled from "styled-components"
-import { Slide} from "@material-ui/core"
+import {Row} from "@bootstrap-styled/v4/lib"
 import ExpMenu from "./Exp/ExpMenu"
 import Strategia from "./Exp/Strategia"
 import Vente from "./Exp/Vente"

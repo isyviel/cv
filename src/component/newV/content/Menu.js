@@ -2,13 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
-import { ThemeProvider, makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
 import Colors from '../common/themes/Colors'
 
-
 const ButtonRow = styled(Row)`
-    justify-content: end;
-    align-items: center;
     margin-top: 10%;
 `
 
@@ -54,22 +51,20 @@ const classes = useStyles()
 
     return (
         <MenuContainer>
-            <ThemeProvider>
                 <Row className="justify-content-end align-items-center">
                     <Col xs="3">
-                        <ButtonRow>
+                        <ButtonRow className="justify-content-end align-items-center">
                             <Button className={classes.root} onClick={fromExpButton}>{exp}</Button>
                         </ButtonRow>
-                        <ButtonRow>
+                        <ButtonRow className="justify-content-end align-items-center">
                             <Button className={classes.root} onClick={fromFormationButton} >{diplome}</Button>
                         </ButtonRow>
-                        <ButtonRow>
+                        <ButtonRow className="justify-content-end align-items-center">
                             <Button className={classes.root} onClick={fromProjectButton}>{projects}</Button>
                         </ButtonRow>
                     </Col>
                     <SquareContainer/>
-                </Row>
-            </ThemeProvider>
+                </Row>            
         </MenuContainer>
     )
         

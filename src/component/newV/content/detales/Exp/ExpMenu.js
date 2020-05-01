@@ -9,10 +9,6 @@ const ButtonRow = styled(Row)`
     align-items: center;
     margin-top: 10%;
 `
-const DisabledButton = styled(Button)`
-    width : 80%;
-
-`
 const DMenu = ({displaySales,displayWeb,...props}) => {  
 
     const useStyles = makeStyles((theme) => ({
@@ -37,7 +33,6 @@ const DMenu = ({displaySales,displayWeb,...props}) => {
     const classes = useStyles()
 
     return (
-      
             <ThemeProvider>
                     <Col xs="2">
                         <ButtonRow>
@@ -46,12 +41,8 @@ const DMenu = ({displaySales,displayWeb,...props}) => {
                         <ButtonRow>
                             <Button  className={classes.root} id="sales" onClick={displaySales}>Vente</Button>
                         </ButtonRow>
-                        <ButtonRow>
-                            <DisabledButton color='primary' variant="outlined" size='medium' disabled>Altran</DisabledButton>
-                        </ButtonRow>
                     </Col>
             </ThemeProvider>
-    
     )
         
 }

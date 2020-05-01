@@ -37,7 +37,6 @@ const Content = ({
     return (
         <ContentContainer fluid>
                 <Name/>
-
                 {contentIsShown ? 
                 <Detales closeSlide={hideContent} 
                         viewDetales={contentIsShown}
@@ -53,10 +52,8 @@ const Content = ({
                         projects={projects}
                         isDeploy={contentIsShown} 
                         fromExpButton={goToExpContent} 
-                        isDeploy={contentIsShown}
                         fromFormationButton={goToFormationContent}
                         fromProjectButton={goToProjectContent}/>
-                
         </ContentContainer>
     )
 }

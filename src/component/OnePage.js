@@ -14,6 +14,7 @@ const CustomDiv = styled(Container)`
     font-family: Dosis;
     padding: 0 !important;
     overflow-y : hidden;
+    overflow-x: hidden;
 `
 
 const OnePage = () => {

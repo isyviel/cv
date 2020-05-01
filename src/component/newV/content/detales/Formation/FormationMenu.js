@@ -9,10 +9,6 @@ const ButtonRow = styled(Row)`
     align-items: center;
     margin-top: 10%;
 `
-const DisabledButton = styled(Button)`
-    width : 80%;
-
-`
 const FormationMenu = ({displayEnglish,displayAdrar,...props}) => {  
 
     const useStyles = makeStyles((theme) => ({
