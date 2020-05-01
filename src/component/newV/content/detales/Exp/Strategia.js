@@ -1,7 +1,7 @@
 import React from "react"
 import {Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import { Zoom, Fade } from "@material-ui/core"
+import { Fade } from "@material-ui/core"
 
 const Strategia = ({isWeb,...props}) => {
     return(

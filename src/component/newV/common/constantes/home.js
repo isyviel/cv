@@ -4,4 +4,4 @@ export const QUOTE = ["Faire un bond en avant, je sautille pas","- Perceval, Kaa
 export const NOM = "Adeline SIMON"
 export const TITRE = "Développeuse Web et Web Mobile"
 export const TECHNOS = ["ReactJS, "," Material-ui, ","PHP 7, ","Symfony 4, ", "Boostrap"]
-export const MENU = ["Expérience", "Formations", "Projets"]
+export const MENU = ["EXPERIENCE", "FORMATIONS", "PORTFOLIO"]

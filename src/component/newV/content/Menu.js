@@ -2,10 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
-import {MENU} from '../common/constantes/home'
 import { ThemeProvider, makeStyles } from '@material-ui/styles';
 import Colors from '../common/themes/Colors'
-import { getByTestId } from "@testing-library/react"
 
 
 const ButtonRow = styled(Row)`
@@ -22,7 +20,15 @@ const SquareContainer = styled(Container)`
     padding: 0 !important;
 `
 
-const Menu = ({fromMenu, isDeploy, exp, diplome, projects, displayForm,...props}) => { 
+const Menu = ({
+    fromProjectButton,
+    fromFormationButton,
+    fromExpButton, 
+    isDeploy, 
+    exp, 
+    diplome, 
+    projects, 
+    ...props}) => { 
 
     const MenuContainer = styled(Container)`
         position: fixed;
@@ -52,13 +58,13 @@ const classes = useStyles()
                 <Row className="justify-content-end align-items-center">
                     <Col xs="3">
                         <ButtonRow>
-                            <Button className={classes.root} onClick={fromMenu}>{exp}</Button>
+                            <Button className={classes.root} onClick={fromExpButton}>{exp}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button className={classes.root} onClick={fromMenu}>{diplome}</Button>
+                            <Button className={classes.root} onClick={fromFormationButton} >{diplome}</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button className={classes.root} onClick={fromMenu} >{projects}</Button>
+                            <Button className={classes.root} onClick={fromProjectButton}>{projects}</Button>
                         </ButtonRow>
                     </Col>
                     <SquareContainer/>

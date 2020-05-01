@@ -1,10 +1,10 @@
 import React , {useState} from "react"
 import {Container,Row} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import { Slide, Zoom, Fade } from "@material-ui/core"
-import DMenu from "./detales/DMenu"
-import Strategia from "./detales/Strategia"
-import Vente from "./detales/Vente"
+import { Slide} from "@material-ui/core"
+import Exp from "./detales/Exp"
+import Formation from "./detales/Formation"
+import Projects from "./detales/Projects"
 
 const DetalesContainer =  styled(Container)`
     height: 450px;
@@ -20,20 +20,7 @@ const Cross = styled.img`
     cursor: pointer;
     width: 20px;
 `
-const Detales = ({viewDetales, closeSlide,...props}) => {
-
-    const [isWeb, setIsWeb] = useState(true)
-    const [isSales, setIsSales] = useState(false)
-    
-    const displaySales = () => {
-        setIsSales(true)
-        setIsWeb(false)
-    }
-
-    const displayWeb = () => {
-        setIsWeb(true)
-        setIsSales(false)
-    }
+const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject, exp,diplome,projects,...props}) => {
 
     return(
             <Slide timeout={800} in={viewDetales} direction="left">
@@ -41,12 +28,10 @@ const Detales = ({viewDetales, closeSlide,...props}) => {
                     <Row className="justify-content-end">
                         <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
                     </Row>
-                    <h1 className="h5">EXPERIENCE</h1>
-                        <Row>
-                            <DMenu displaySales={displaySales} displayWeb={displayWeb}/>
-                            {isWeb && (<Strategia isWeb={isWeb}/>)}
-                            {isSales &&(<Vente isSales={isSales}/>)}
-                        </Row>
+                    {isExp && (<Exp exp={exp}/>)}
+                    {isFormation &&(<Formation diplome={diplome}/>)}
+                    {isProject &&(<Projects projects={projects}/>)}
+                   
                 </DetalesContainer>
             </Slide>
     )

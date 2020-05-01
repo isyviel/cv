@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Container,Row,Col } from "@bootstrap-styled/v4"
+import { Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
 import { ThemeProvider, makeStyles } from '@material-ui/styles';
-import Theme from '../../common/themes/Theme'
 
 const ButtonRow = styled(Row)`
     justify-content: center;
@@ -14,7 +13,7 @@ const DisabledButton = styled(Button)`
     width : 80%;
 
 `
-const DMenu = ({fromMenu, displaySales,displayWeb,...props}) => {  
+const FormationMenu = ({displayEnglish,displayAdrar,...props}) => {  
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -42,13 +41,10 @@ const DMenu = ({fromMenu, displaySales,displayWeb,...props}) => {
             <ThemeProvider>
                     <Col xs="2">
                         <ButtonRow>
-                            <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button>
+                            <Button className={classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>
                         </ButtonRow>
                         <ButtonRow>
-                            <Button  className={classes.root} id="sales" onClick={displaySales}>Vente</Button>
-                        </ButtonRow>
-                        <ButtonRow>
-                            <DisabledButton color='primary' variant="outlined" size='medium' disabled>Altran</DisabledButton>
+                            <Button  className={classes.root} id="sales" onClick={displayEnglish}>Anglais</Button>
                         </ButtonRow>
                     </Col>
             </ThemeProvider>
@@ -56,4 +52,4 @@ const DMenu = ({fromMenu, displaySales,displayWeb,...props}) => {
     )
         
 }
-export default DMenu
+export default FormationMenu

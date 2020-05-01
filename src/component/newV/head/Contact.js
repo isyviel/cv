@@ -19,7 +19,6 @@ const Contact = ({isHome,...props}) => {
     return(
        <ListeContainer>
             {HEAD.map((label,index) => {
-                console.log(isHome)
                 return ( 
                     <Row key={index} className="mt-2 align-items-center">
                         {index === 0 &&(
