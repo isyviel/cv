@@ -18,6 +18,13 @@ const CustomDiv = styled(Container)`
 `
 
 const OnePage = () => {
+
+    /**
+     * TO DO : responsive
+     * bouton envoi des mail donne un slide avce formulaire
+     * bouton fleche navigation passe a catégorie suivante
+     * portfolio a personnaliser
+     */
     const [isHome,setIsHome] = useState(true)
     const [isContent, setIsContent] = useState(false)
     const [isFormation, setIsFormation] = useState(false)
