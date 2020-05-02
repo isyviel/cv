@@ -5,6 +5,7 @@ import { Slide} from "@material-ui/core"
 import Exp from "./detales/Exp"
 import Formation from "./detales/Formation"
 import Projects from "./detales/Projects"
+import SendMail from "./detales/SendMail"
 
 const DetalesContainer =  styled(Container)`
     height: 450px;
@@ -20,7 +21,7 @@ const Cross = styled.img`
     cursor: pointer;
     width: 20px;
 `
-const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject, exp,diplome,projects,...props}) => {
+const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail, exp,diplome,projects,...props}) => {
 
     return(
             <Slide timeout={800} in={viewDetales} direction="left">
@@ -31,6 +32,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject, exp,diplo
                     {isExp && (<Exp exp={exp}/>)}
                     {isFormation &&(<Formation diplome={diplome}/>)}
                     {isProject &&(<Projects projects={projects}/>)}
+                    {isMail &&(<SendMail/>)}
                    
                 </DetalesContainer>
             </Slide>

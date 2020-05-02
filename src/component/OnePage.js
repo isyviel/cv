@@ -23,6 +23,7 @@ const OnePage = () => {
     const [isFormation, setIsFormation] = useState(false)
     const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
+    const [ismail, setIsMail] = useState(true)
 
     const displayExp = () => {
         setIsContent(true)

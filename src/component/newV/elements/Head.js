@@ -15,6 +15,8 @@ const HomeContainer = styled(Container)`
     padding: 50px 0 0 70px !important;
 `
 const Head = ({isHome,...props}) => {
+
+ 
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
             <HomeContainer fluid>

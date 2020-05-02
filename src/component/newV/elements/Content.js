@@ -23,6 +23,7 @@ const Content = ({
     isProject,
     isExp,
     isFormation,
+    isMail,
     goToProjectContent,
     goToExpContent,
     goToFormationContent,
@@ -43,6 +44,7 @@ const Content = ({
                         isExp={isExp}
                         isFormation={isFormation}
                         isProject={isProject}
+                        isMail={isMail}
                         exp={exp}
                         projects={projects}
                         diplome={diplome}/> 
