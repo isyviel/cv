@@ -5,6 +5,7 @@ import ImageButton from '../common/ImageButton'
 import {HEAD,ICONS} from '../common/constantes/home'
 import { Button } from "@material-ui/core"
 import Phone from "./Phone"
+import Mail from "./Mail"
 
 const ListeContainer = styled(Container)`
     margin: 10px 0px 0px 0px;
@@ -15,7 +16,7 @@ const ContactDiv = styled.div`
     font-size: 20px;
 `
 
-const Contact = ({isHome, handleClickOpen,...props}) => {
+const Contact = ({isHome, handleClickOpen, contactForm,...props}) => {
    
     return(
        <ListeContainer>
@@ -23,9 +24,7 @@ const Contact = ({isHome, handleClickOpen,...props}) => {
                 return ( 
                     <Row key={index} className="align-items-center">
                         {index === 0 &&(
-                            <Button size="small" classname="p-0">
-                                <ImageButton src="images/mail.png" alt="icone arobase" id="envoyer_mail"/>
-                            </Button>
+                            <Mail displayForm={contactForm}/>
                         )}
                          {index === 1 &&(
                             <Phone label={label} isHome={isHome}/>

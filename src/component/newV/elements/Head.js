@@ -14,7 +14,7 @@ const HomeContainer = styled(Container)`
     position: fixed;
     padding: 50px 0 0 70px !important;
 `
-const Head = ({isHome,...props}) => {
+const Head = ({isHome,mailToHead,...props}) => {
 
  
     return (
@@ -22,7 +22,7 @@ const Head = ({isHome,...props}) => {
             <HomeContainer fluid>
                 <Me/>
                 <Spacer/>
-                <Contact isHome={isHome}/>
+                <Contact isHome={isHome} contactForm={mailToHead}/>
                 <Spacer/>
                 <Quote/>
             </HomeContainer>

@@ -30,7 +30,13 @@ const OnePage = () => {
     const [isFormation, setIsFormation] = useState(false)
     const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
-    const [ismail, setIsMail] = useState(true)
+    const [isMail, setIsMail] = useState(true)
+
+    const displayMailForm = () => {
+        setIsMail(true)
+        setIsContent(true)
+        setIsHome(false)
+    }
 
     const displayExp = () => {
         setIsContent(true)
@@ -62,8 +68,9 @@ const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-                {isHome ? <Head isHome={isHome}/> : <MiniHead isHome={isHome}/>}
-                <Content 
+                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome}/>}
+                <Content
+                    isMail = {isMail}
                     isExp={isExp}
                     isFormation={isFormation}
                     isProject={isProject}
