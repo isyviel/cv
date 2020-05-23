@@ -12,11 +12,11 @@ const HomeContainer = styled(Container)`
     padding-top: 17%;
     z-index: 2;
 `
-const MiniHead = ({isHome,...props}) => {
+const MiniHead = ({isHome,mailToHead,homeToHead,...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={!isHome}>
             <HomeContainer fluid>
-                <Contact/>
+                <Contact isHome={isHome} contactForm={mailToHead} returnToHome={homeToHead}/>
             </HomeContainer>
         </Slide>
     )

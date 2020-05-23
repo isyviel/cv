@@ -28,7 +28,7 @@ const Phone = ({isHome,label,...props}) => {
     
   return (
     <div>
-      <Button disabled={isHome ? true : false } size="small" className="pl-0 pr-0 ml-1" aria-describedby={id} onClick={handleClickOpen}>
+      <Button disabled={isHome ? true : false } size="small" className="pl-0 ml-1" aria-describedby={id} onClick={handleClickOpen}>
         <ImageButton src="images/phone.png" alt="icone téléphone" id="téléphoner"/>
       </Button>
       <Popover

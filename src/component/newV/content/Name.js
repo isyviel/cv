@@ -14,10 +14,11 @@ const Name = ({isHome,...props}) => {
     padding: ${isHome ? "15px 0 0 28% !important" : "15px 0 0 8%"};
     margin: 0 !important;
     font-family: 'Bangers';
+    z-index: 0;
 `
 
     return(
-        <Slide timeout={800}  direction="left" in={isHome}>
+        <Slide timeout={800}  direction="right" in={isHome}>
             <NameContainer fluid>        
                     <h1>{NOM} - {TITRE}</h1>
                     <h3 className="h4 text-dark"> 

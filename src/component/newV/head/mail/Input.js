@@ -16,7 +16,7 @@ const Input = ({label,required, change, send, value, name, fullWidth, className,
           value={value}
           name={name}
           fullWidth={fullWidth}
-          className="mb-2 mr-4"
+          className="mb-4 mr-4"
           variant="outlined"
         />
         </ThemeProvider>

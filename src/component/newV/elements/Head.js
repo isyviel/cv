@@ -14,6 +14,7 @@ const HomeContainer = styled(Container)`
     background-color: #272727;
     position: fixed;
     padding: 50px 0 0 70px !important;
+    z-index: 1;
 `
 const Head = ({isHome,mailToHead,...props}) => {
 

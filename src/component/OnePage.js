@@ -25,10 +25,10 @@ const OnePage = () => {
      * bouton fleche navigation passe a catégorie suivante
      * portfolio a personnaliser
      */
-    const [isHome,setIsHome] = useState(false)
-    const [isContent, setIsContent] = useState(true)
+    const [isHome,setIsHome] = useState(true)
+    const [isContent, setIsContent] = useState(false)
     const [isFormation, setIsFormation] = useState(false)
-    const [isExp, setIsExp] = useState(true)
+    const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
 
@@ -47,6 +47,7 @@ const OnePage = () => {
         setIsHome(false)
         setIsMail(false)
         setIsProject(false)
+        setIsFormation(false)
     }
 
     const displayFormation = () => {
@@ -55,6 +56,7 @@ const OnePage = () => {
         setIsHome(false)
         setIsExp(false)
         setIsMail(false)
+        setIsProject(false)
     }
 
     const displayProjects = () => {
@@ -63,6 +65,7 @@ const OnePage = () => {
         setIsContent(true)
         setIsProject(true)
         setIsHome(false)
+        setIsExp(false)
     }
 
     const returnToHome =() => {
@@ -89,7 +92,7 @@ const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome}/>}
+                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome} homeToHead={returnToHome}/>}
                 <Name isHome={isHome}/>
                 <Content
                     isMail = {isMail}

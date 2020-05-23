@@ -8,20 +8,25 @@ import Button from '@material-ui/core/Button';
 import Colors from '../../common/themes/Colors'
 import { withStyles } from '@material-ui/core/styles'
 import {LinearProgress} from '@material-ui/core'
+import styled from "styled-components"
 
+const CustomDiv = styled.div`
+  height: 20px;
+`
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
   const useStyles = makeStyles((theme) => ({
     root: {
-        background:"linear-gradient(145deg, #ff8300, #e66e00)", 
-        boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
-        color: "white",
-        width: "25%",
-        fontSize: "16px",
-        '&:hover': {
-            backgroundColor: "#FF7A00", 
-            boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
-          },     
+      background:"linear-gradient(145deg, #ff8300, #e66e00)", 
+      boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
+      color: "white",
+      width: "25%",
+      fontSize: "20px",
+      fontFamily: 'Dosis',
+      '&:hover': {
+          backgroundColor: "#FF7A00", 
+          boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
+        },   
 }}))
 
 const classes = useStyles()
@@ -37,6 +42,7 @@ const ColorLinearProgress = withStyles({
 
     return (
         <Container>
+          <CustomDiv>{isLoading &&(<ColorLinearProgress fullWidth/>)}</CustomDiv>
           <form onSubmit={submit} values={values}>
             <Input fullWidth={true} required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={change}/>
             <Input fullWidth={true} label="Objet : " name="objet" value={values.objet} change={change} />
@@ -44,11 +50,12 @@ const ColorLinearProgress = withStyles({
             <Input label="Nom" name="nom" value={values.nom}  change={change}/>
             <Input label="Prénom" name="prenom" value={values.prenom}  change={change}/>
             <Input label="Téléphone" name="phone" value={values.phone} change={change} />
-            {isLoading &&(<ColorLinearProgress/>)}
             <Row className="justify-content-around mt-4">
-              <Button type="submit" color="secondary" className={classes.root}>
+              {!values.mail ? <div><p>* Adresse mail obligatoire</p><Button disabled>Envoyer</Button></div>
+              :
+                <Button type="submit" className={classes.root}>
                 Envoyer
-              </Button>  
+              </Button>}  
             </Row>  
           </form>
         </Container> 

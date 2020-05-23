@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
 import { ThemeProvider, makeStyles } from '@material-ui/styles';
+import Colors from "../../common/themes/Colors";
 
 const ButtonRow = styled(Row)`
     justify-content: center;
@@ -13,20 +14,21 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...pr
 
     const useStyles = makeStyles((theme) => ({
         root: {
-            color: "#FF7A00",
-            background:"linear-gradient(145deg, #ffffff, #e6e6e6)", 
-            boxShadow: "10px 10px 20px #b0b0b0,-10px -10px 20px #ffffff",
+            background:"linear-gradient(145deg, #ff8300, #e66e00)", 
+            boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
+            color: "white",
             width: "100%",
             fontFamily: 'Dosis',
             fontSize: '20px',
             '&:hover': {
-                backgroundColor: "#FFFFF", 
-                boxShadow: "inset 6px 6px 13px #adadad,inset -6px -6px 13px #ffffff",
+                backgroundColor: "#FF7A00", 
+                boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
               },
             '&:focus': {
-                background:"linear-gradient(145deg, #ff8300, #e66e00)", 
-                boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
-                color: "white",
+                backgroundColor: "#FFFFF",
+                background: "rgba(255,255,255)",
+                color: Colors.orange,
+                boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
             },
     }}))
     
@@ -35,7 +37,6 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...pr
     return (
             <ThemeProvider>
                     <Col xs="2 mr-4">
-                    {console.log(isExp)}
                         <ButtonRow>
                             {isExp ? <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> : <Button className={classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>}
                         </ButtonRow>

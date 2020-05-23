@@ -31,9 +31,9 @@ const Menu = ({
     const MenuContainer = styled(Container)`
         position: fixed;
         right: 10px;
-        top: 150px;
-        z-index: ${isDeploy ? -1 : 1};
+        top: 15%;
         padding-top: 5%;
+        max-width: 300px !important;
     `
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,11 +41,12 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
         color: "white",
         width: "75%",
-        fontSize: "16px",
+        fontSize: "20px",
+        fontFamily: 'Dosis',
         '&:hover': {
             backgroundColor: "#FF7A00", 
             boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
-          },     
+          },   
 }}))
 
 const classes = useStyles()
@@ -54,7 +55,7 @@ const classes = useStyles()
     return (
         <MenuContainer>
                 <Row className="justify-content-end align-items-center">
-                    <Col xs="3">
+                    <Col>
                         <ButtonRow className="justify-content-end align-items-center">
                             <Button className={classes.root} onClick={fromExpButton}>{exp}</Button>
                         </ButtonRow>

@@ -11,8 +11,8 @@ import { Fade } from "@material-ui/core"
 
 const DetalesContainer =  styled(Container)`
     height: 80%;
-    min-width: 99%;
-    background: linear-gradient(90deg,rgb(255, 255, 255,0.1) 0%,rgba(255, 255, 255) 100%);
+    min-width: 87%;
+    background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
     margin: 0;
     padding: 0 5% 3% 8%;
     font-size: 16px;
@@ -85,17 +85,15 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                         )}
                     
                         {isProject &&(
-                                <Projects/>
+                            <Row>
+                                <Projects isProject={isProject}/>
+                            </Row>
                         )}
 
                         {isMail &&(
                             <SendMail/>
                         )}
-
-                        
-                        
-                    
-                   
+                 
                 </DetalesContainer>
             </Slide>
     )

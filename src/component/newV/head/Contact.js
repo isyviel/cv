@@ -16,35 +16,38 @@ const ContactDiv = styled.div`
     font-size: 20px;
 `
 
-const Contact = ({isHome, handleClickOpen, contactForm,...props}) => {
+const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) => {
    
     return(
        <ListeContainer>
-            {HEAD.map((label,index) => {
-                return ( 
+                    {HEAD.map((label,index) => {
+                        return (
                     <Row key={index} className="align-items-center">
-                        {index === 0 &&(
+                        {isHome && index === 1 &&(
                             <Mail displayForm={contactForm}/>
                         )}
-                         {index === 1 &&(
+                        {!isHome && index=== 0 &&(
+                            <Button size='small' onClick={returnToHome} target="_blank" rel="noopener noreferrer">
+                                <ImageButton src="images/home.png"/>
+                            </Button>)}
+                        {index === 2 &&(
                             <Phone label={label} isHome={isHome}/>
                         )}
-                        {index === 2 &&(
-                            <Button size='small' href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">
-                                <ImageButton src={ICONS[index]}/>
-                            </Button>)}
                         {index === 3 &&(
-                            <Button size='small' href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">
-                                <ImageButton src={ICONS[index]}/>
+                            <Button size='small' href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">
+                                <ImageButton src={ICONS[index-1]}/>
                             </Button>)}
-                         {index === 4 &&(
+                        {index === 4 &&(
+                            <Button size='small' href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">
+                                <ImageButton src={ICONS[index-1]}/>
+                            </Button>)}
+                         {index === 5 &&(
                             <Button size='small' href='adeline_simon_CV.pdf' target='__blank' rel="noopener noreferrer">
-                                <ImageButton src={ICONS[index]}/>
+                                <ImageButton src={ICONS[index-1]}/>
                             </Button>
                         )}
-                        {isHome &&(<ContactDiv key={index} className={index === 1 ? "ml-1" : "" }>{label}</ContactDiv>)}
-                    </Row>)
-            })}
+                        {isHome &&(<ContactDiv key={index} className={index === 2 ? "ml-1" : "" }>{label}</ContactDiv>)}
+                    </Row>)})}
         </ListeContainer>
     )
 }

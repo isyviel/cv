@@ -5,17 +5,14 @@ import Menu from '../content/Menu'
 import Colors from '../common/themes/Colors'
 import {MENU} from '../common/constantes/home'
 import Detales from "../content/Detales"
+import Aboutme from "../content/AboutMe"
 
 const ContentContainer = styled(Container)`
     height: 100%;
     color: ${Colors.darkGrey};
     font-size: 24px;
 `
-const Empty = styled(Container)`
-    width:100px;
-    background-color: transparent;
-    margin: 0;
-`
+
 const Content = ({
     isProject,
     isExp,
@@ -49,7 +46,7 @@ const Content = ({
                         projects={projects}
                         diplome={diplome}
                         mail={mail}/> 
-                : <Empty/>}
+                : <Aboutme isHome={isHome}/>}
                 <Menu exp={exp} 
                         diplome={diplome} 
                         projects={projects}

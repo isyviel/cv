@@ -18,7 +18,7 @@ const Area = ({label,change, send,value, name,...props}) => {
           onChange={change}
           value={value}
           name={name}
-          className="mb-2"
+          className="mb-4"
         />
         </ThemeProvider>    
     )
