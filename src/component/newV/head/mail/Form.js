@@ -5,8 +5,6 @@ import Area from './Area'
 import {Row,Col} from "@bootstrap-styled/v4/lib"
 import {Container} from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button';
-import { ThemeProvider } from "styled-components"
-import Theme from "../../common/themes/Theme"
 import Colors from '../../common/themes/Colors'
 import { withStyles } from '@material-ui/core/styles'
 import {LinearProgress} from '@material-ui/core'

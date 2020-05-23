@@ -61,7 +61,6 @@ const SendMail = ()=> {
 
 return(
         <Container>
-          <p>Pour me contacter:</p>
             <FormControl>
                   <Form
                   windowClose={handleClose} 

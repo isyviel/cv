@@ -3,8 +3,6 @@ import { Container} from "@bootstrap-styled/v4"
 import styled from "styled-components"
 import Menu from '../content/Menu'
 import Colors from '../common/themes/Colors'
-import Name from "../content/Name"
-import { HEIGHT } from "../common/themes/Sizes"
 import {MENU} from '../common/constantes/home'
 import Detales from "../content/Detales"
 
@@ -34,6 +32,7 @@ const Content = ({
     const exp = MENU[0];
     const projects = MENU[2];
     const diplome=MENU[1];
+    const mail=MENU[3];
 
   
     return (
@@ -48,7 +47,8 @@ const Content = ({
                         isHome={isHome}
                         exp={exp}
                         projects={projects}
-                        diplome={diplome}/> 
+                        diplome={diplome}
+                        mail={mail}/> 
                 : <Empty/>}
                 <Menu exp={exp} 
                         diplome={diplome} 

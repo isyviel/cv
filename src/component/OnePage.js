@@ -4,7 +4,6 @@ import { Container} from "@bootstrap-styled/v4"
 import Head from './newV/elements/Head'
 import Content from './newV/elements/Content'
 import Navigation from './newV/elements/Navigation'
-import {HEIGHT} from './newV/common/themes/Sizes'
 import MiniHead from "./newV/elements/MiniHead"
 import Name from "./newV/content/Name"
 

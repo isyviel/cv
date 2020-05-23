@@ -2,9 +2,9 @@ import React from "react"
 import {Col} from "@bootstrap-styled/v4/lib"
 import { Fade } from "@material-ui/core"
 
-const Adrar = ({isWeb,...props}) => {
+const Adrar = ({isAdrar,...props}) => {
     return(
-    <Fade in={isWeb}>
+    <Fade in={isAdrar}>
         <Col>
             <h1 className="h4">Web</h1>
             <a href="https://www.adrar-numerique.com/">Site Web</a>

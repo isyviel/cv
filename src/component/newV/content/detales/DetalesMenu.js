@@ -9,15 +9,16 @@ const ButtonRow = styled(Row)`
     align-items: center;
     margin-top: 10%;
 `
-const DMenu = ({displaySales,displayWeb,...props}) => {  
+const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...props}) => {  
 
     const useStyles = makeStyles((theme) => ({
         root: {
             color: "#FF7A00",
             background:"linear-gradient(145deg, #ffffff, #e6e6e6)", 
             boxShadow: "10px 10px 20px #b0b0b0,-10px -10px 20px #ffffff",
-            width: "90%",
-            fontSize: "16px",
+            width: "100%",
+            fontFamily: 'Dosis',
+            fontSize: '20px',
             '&:hover': {
                 backgroundColor: "#FFFFF", 
                 boxShadow: "inset 6px 6px 13px #adadad,inset -6px -6px 13px #ffffff",
@@ -27,7 +28,6 @@ const DMenu = ({displaySales,displayWeb,...props}) => {
                 boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
                 color: "white",
             },
-            fontWeight: "bold",
     }}))
     
     const classes = useStyles()
@@ -35,11 +35,12 @@ const DMenu = ({displaySales,displayWeb,...props}) => {
     return (
             <ThemeProvider>
                     <Col xs="2 mr-4">
+                    {console.log(isExp)}
                         <ButtonRow>
-                            <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button>
+                            {isExp ? <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> : <Button className={classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>}
                         </ButtonRow>
                         <ButtonRow>
-                            <Button  className={classes.root} id="sales" onClick={displaySales}>Vente</Button>
+                            {isExp ? <Button className={classes.root} id="sales" onClick={displaySales}>Vente</Button> : <Button  className={classes.root} id="english" onClick={displayEnglish}>Anglais</Button>}
                         </ButtonRow>
                     </Col>
             </ThemeProvider>
