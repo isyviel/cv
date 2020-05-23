@@ -11,6 +11,13 @@ const HomeContainer = styled(Container)`
     position: fixed;
     padding-top: 17%;
     z-index: 2;
+    @media screen and (max-width:576px) {
+        height: 100%;
+        width: 10%;
+        background-color: #272727;
+        padding: 100px 0 0 2px !important;
+
+    }
 `
 const MiniHead = ({isHome,mailToHead,homeToHead,...props}) => {
     return (

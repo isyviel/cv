@@ -4,6 +4,10 @@ import Colors from "./themes/Colors"
 
 const Image =  styled.img`
     height: 100px;
+    @media screen and (max-width:576px) {
+        height: 0;
+        display: none;
+    }
 `
 
 const Logo = ({src, ...props}) => {

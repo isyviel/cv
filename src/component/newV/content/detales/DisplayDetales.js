@@ -13,6 +13,12 @@ const Title = styled.h1`
     color: ${Colors.orange};
     font-family: 'Bangers';
     font-size: 3em;
+
+    @media screen and (max-width:576px) {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15px;
+    }
 `
 const Skills = styled.h2`
     font-family: 'Bangers';
@@ -71,12 +77,11 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
     return(
     <Fade timeout={800} in={isContent}>
         <Col>
-            <Row className="justify-content-between align-items-center ml-0">
+            <Row className="justify-content-sm-between justify-content-center align-items-center ml-0">
                 <Title className="h3">{title}</Title>
                 <Logo src={src}/>
             </Row>
             <WebSite href={href} content={content}/>
-        
             <Skills className="h5">{skills}</Skills>
             <SoftSkills className="h6">{softSkills}</SoftSkills>
             <article>

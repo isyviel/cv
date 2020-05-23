@@ -12,7 +12,7 @@ const Area = ({label,change, send,value, name,...props}) => {
           id="outlined-multiline-static"
           label="Votre message"
           multiline
-          rows="3"
+          rows="6"
           fullWidth
           color="secondary"
           onChange={change}

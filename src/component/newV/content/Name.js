@@ -32,6 +32,7 @@ const Name = ({isHome,...props}) => {
 
     @media screen and (max-width:576px) {
         padding: 15px 0 0 25px !important;
+        height: ${!isHome ? "0px" : "100%"};
     }
 `
 

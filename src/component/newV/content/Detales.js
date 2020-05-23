@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {Container,Row} from "@bootstrap-styled/v4/lib"
+import {Container,Row,Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import { Slide} from "@material-ui/core"
 import Projects from "./detales/Projects"
@@ -17,6 +17,11 @@ const DetalesContainer =  styled(Container)`
     padding: 0 5% 3% 8%;
     font-size: 16px;
     z-index: 1;
+
+    @media screen and (max-width:576px) {
+        height: 100%;
+        padding-top: 0;
+    }
 `
 const Cross = styled.img`
     cursor: pointer;
@@ -26,6 +31,10 @@ const Cross = styled.img`
 const CategoryTitle = styled.h1`
     font-family: 'Bangers';
     font-size: 2em;
+    @media screen and (max-width:576px) {
+        font-size: 20px;
+        text-align: center;
+    }
 `
 
 const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,...props}) => {
@@ -69,19 +78,25 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     </CategoryTitle>
                     
                         {isExp &&(
-                            <Row>
-                                <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp}/>
+                            <Row className="d-none d-sm-block">
+                                {/* <div className="d-block d-sm-none"> */}
+                                    
+                                        <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp}/>
+                                    
                                     {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
                                     {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
+                                {/* </div> */}
+                                
                             </Row>
                         )}
 
                         {isFormation &&(
-                            <Row>
+                            <Row className="d-xs-none">
                                 <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar}/>
                                 {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
                                 {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
                             </Row>
+
                         )}
                     
                         {isProject &&(

@@ -19,7 +19,6 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...pr
             color: "white",
             width: "100%",
             fontFamily: 'Dosis',
-            fontSize: '20px',
             '&:hover': {
                 backgroundColor: "#FF7A00", 
                 boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
@@ -36,7 +35,7 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...pr
 
     return (
             <ThemeProvider>
-                    <Col xs="2 mr-4">
+                    <Col xs="2 mr-4 d-none d-sm-block" sm="2">
                         <ButtonRow>
                             {isExp ? <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> : <Button className={classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>}
                         </ButtonRow>
@@ -44,6 +43,14 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...pr
                             {isExp ? <Button className={classes.root} id="sales" onClick={displaySales}>Vente</Button> : <Button  className={classes.root} id="english" onClick={displayEnglish}>Anglais</Button>}
                         </ButtonRow>
                     </Col>
+                    <Row className="d-block d-sm-none justify-content-center">
+                        <Col xs="4">
+                            {isExp ? <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> : <Button className={classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>}
+                        </Col>
+                        <Col xs="4">
+                            {isExp ? <Button className={classes.root} id="sales" onClick={displaySales}>Vente</Button> : <Button  className={classes.root} id="english" onClick={displayEnglish}>Anglais</Button>}
+                        </Col>
+                    </Row>
             </ThemeProvider>
     )
         
