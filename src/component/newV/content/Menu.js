@@ -7,6 +7,9 @@ import Colors from '../common/themes/Colors'
 
 const ButtonRow = styled(Row)`
     margin-top: 10%;
+    @media screen and (max-width:576px) {
+        margin-top: 10px;
+    }
 `
 
 const SquareContainer = styled(Container)`
@@ -15,6 +18,10 @@ const SquareContainer = styled(Container)`
     background-color: ${Colors.orange};
     margin : 10px;
     padding: 0 !important;
+
+    @media screen and (max-width:576px) {
+        display: none;
+    }
 `
 
 const Menu = ({
@@ -34,6 +41,12 @@ const Menu = ({
         top: 15%;
         padding-top: 5%;
         max-width: 300px !important;
+
+        @media screen and (max-width:576px) {
+            margin: 0;
+            padding-left: 65px;
+            position: static;
+        }
     `
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
         color: "white",
         width: "75%",
-        fontSize: "20px",
         fontFamily: 'Dosis',
         '&:hover': {
             backgroundColor: "#FF7A00", 

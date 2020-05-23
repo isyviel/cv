@@ -6,6 +6,10 @@ const Fleche = styled.img`
     right: 10px;
     bottom: 20px;
     cursor: pointer;
+
+    @media screen and (max-width:576px) {
+        height: 50px;
+    }
 `
 
 const Navigation = ({displayNext,...props}) => {

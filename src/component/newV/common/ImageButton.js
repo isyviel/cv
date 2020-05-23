@@ -7,5 +7,7 @@ export default styled.img`
     @media screen and (max-width:768px) {
         width: 30px;
     }
-    
+    @media screen and (max-width:576px) {
+        margin: 0;
+    }
 `

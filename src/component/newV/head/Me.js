@@ -20,9 +20,11 @@ const Me = styled.div`
         height: 100px;
         width: 100px;
         background-size: 100px;
-        position: static !important;
         margin: auto !important;
     }
     
+    @media screen and (max-width:576px) {
+        display: none;
+    }
 `
 export default Me

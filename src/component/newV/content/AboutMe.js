@@ -6,6 +6,11 @@ import { Slide } from "@material-ui/core"
 const CustomContainer = styled(Container)`
     padding: 13% 0 0 8%;
     font-size: 20px;
+
+    @media screen and (max-width:576px) {
+        font-size: 15px;
+        padding: 15px 20px 0 40px;
+    }
 `
 const Aboutme = ({isHome,...props}) => {
     return (

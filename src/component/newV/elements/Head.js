@@ -15,6 +15,14 @@ const HomeContainer = styled(Container)`
     position: fixed;
     padding: 50px 0 0 70px !important;
     z-index: 1;
+
+    @media screen and (max-width:576px) {
+        height: 100%;
+        width: 10%;
+        background-color: #272727;
+        padding: 100px 0 0 2px !important;
+
+    }
 `
 const Head = ({isHome,mailToHead,...props}) => {
 

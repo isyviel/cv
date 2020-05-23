@@ -14,6 +14,9 @@ const ListeContainer = styled(Container)`
 const ContactDiv = styled.div`
     color: white;
     font-size: 20px;
+    @media screen and (max-width:576px) {
+        display: none;
+    }
 `
 
 const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) => {
@@ -22,7 +25,7 @@ const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) 
        <ListeContainer>
                     {HEAD.map((label,index) => {
                         return (
-                    <Row key={index} className="align-items-center">
+                    <Row key={index} className="align-items-center xs-align-items-end">
                         {isHome && index === 1 &&(
                             <Mail displayForm={contactForm}/>
                         )}

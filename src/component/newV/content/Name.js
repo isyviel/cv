@@ -5,6 +5,20 @@ import Colors from '../common/themes/Colors'
 import {TECHNOS,NOM, TITRE} from '../common/constantes/home'
 import { Slide } from "@material-ui/core"
 
+const CustomH1 = styled.h1`
+    @media screen and (max-width:576px) {
+        font-size: 20px ;
+        text-align: center;
+    }
+`
+const CustomH2 = styled.h2`
+    color: black;
+    @media screen and (max-width:576px) {
+        font-size: 16px ;
+        text-align: center;
+    }
+`
+
 const Name = ({isHome,...props}) => {
 
     const NameContainer = styled(Container)`
@@ -15,17 +29,24 @@ const Name = ({isHome,...props}) => {
     margin: 0 !important;
     font-family: 'Bangers';
     z-index: 0;
+
+    @media screen and (max-width:576px) {
+        padding: 15px 0 0 25px !important;
+    }
 `
+
 
     return(
         <Slide timeout={800}  direction="right" in={isHome}>
-            <NameContainer fluid>        
-                    <h1>{NOM} - {TITRE}</h1>
-                    <h3 className="h4 text-dark"> 
+            <NameContainer fluid>
+                    <CustomH1>     
+                        {NOM} - {TITRE}
+                    </CustomH1>
+                    <CustomH2>
                         {TECHNOS.map((label,index) => {
                             return <span key={index}>{label}</span>
                         })}
-                    </h3>
+                    </CustomH2>
             </NameContainer>
         </Slide>         
     )
