@@ -10,7 +10,7 @@ const ButtonRow = styled(Row)`
 `
 
 const SquareContainer = styled(Container)`
-    height: 350px;
+    height: 450px;
     width: 5px;
     background-color: ${Colors.orange};
     margin : 10px;
@@ -20,7 +20,8 @@ const SquareContainer = styled(Container)`
 const Menu = ({
     fromProjectButton,
     fromFormationButton,
-    fromExpButton, 
+    fromExpButton,
+    fromMailButton,
     isDeploy, 
     exp, 
     diplome, 
@@ -32,6 +33,7 @@ const Menu = ({
         right: 10px;
         top: 150px;
         z-index: ${isDeploy ? -1 : 1};
+        padding-top: 5%;
     `
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -61,6 +63,9 @@ const classes = useStyles()
                         </ButtonRow>
                         <ButtonRow className="justify-content-end align-items-center">
                             <Button className={classes.root} onClick={fromProjectButton}>{projects}</Button>
+                        </ButtonRow>
+                        <ButtonRow className="justify-content-end align-items-center">
+                            <Button className={classes.root} onClick={fromMailButton}>Contact</Button>
                         </ButtonRow>
                     </Col>
                     <SquareContainer/>

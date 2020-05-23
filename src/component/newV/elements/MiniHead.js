@@ -14,7 +14,7 @@ const HomeContainer = styled(Container)`
 `
 const MiniHead = ({isHome,...props}) => {
     return (
-        <Slide direction="right" in={!isHome}>
+        <Slide timeout={800}  direction="right" in={!isHome}>
             <HomeContainer fluid>
                 <Contact/>
             </HomeContainer>

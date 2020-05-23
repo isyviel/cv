@@ -1,13 +1,17 @@
 import React from "react"
 import {Col} from "@bootstrap-styled/v4/lib"
 import { Fade } from "@material-ui/core"
+import styled from "styled-components"
 
+const CompanyTitle = styled.h1`
+    font-family: 'Bangers';
+`
 const Strategia = ({isWeb,...props}) => {
     return(
     <Fade in={isWeb}>
         <Col>
-            <h1 className="h4">STRATEGIA</h1>
-            <a href="https://strategia.io/">Site Web STRATEGIA</a>
+            <CompanyTitle className="h3">STRATEGIA</CompanyTitle>
+            <a href="https://strategia.io/" target="__blank">Site Web STRATEGIA</a>
             <h2 className="h5"> Symfony, React/JSX, ApiPlatform, Material-UI, Postman, Twig, Bootstrap, Ubuntu</h2>
             <h3 className="h6">Autonomie, sérieux, communication, passion</h3>
 

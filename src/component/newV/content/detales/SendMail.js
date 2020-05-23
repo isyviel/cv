@@ -1,6 +1,6 @@
 import React , {useState} from "react"
 import {Row} from "@bootstrap-styled/v4/lib"
-import { FormControl,LinearProgress} from '@material-ui/core'
+import { FormControl,LinearProgress, Container} from '@material-ui/core'
 import Form from '../../head/mail/Form'
 import SentAlert from '../../head/mail/SentAlert'
 import emailjs from 'emailjs-com'
@@ -60,7 +60,8 @@ const SendMail = ()=> {
       }
 
 return(
-        <div>
+        <Container>
+          <p>Pour me contacter:</p>
             <FormControl>
                   <Form
                   windowClose={handleClose} 
@@ -73,7 +74,7 @@ return(
                 open={snackOpen} 
                 status={status} 
               />
-        </div>
+        </Container>
     )
 }
 

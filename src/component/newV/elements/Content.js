@@ -9,12 +9,11 @@ import {MENU} from '../common/constantes/home'
 import Detales from "../content/Detales"
 
 const ContentContainer = styled(Container)`
-    min-height: ${HEIGHT};
+    height: 100%;
     color: ${Colors.darkGrey};
     font-size: 24px;
 `
 const Empty = styled(Container)`
-    height: 450px;
     width:100px;
     background-color: transparent;
     margin: 0;
@@ -24,9 +23,11 @@ const Content = ({
     isExp,
     isFormation,
     isMail,
+    isHome,
     goToProjectContent,
     goToExpContent,
     goToFormationContent,
+    goToMailForm,
     contentIsShown, 
     hideContent,...props}) => {
 
@@ -37,7 +38,6 @@ const Content = ({
   
     return (
         <ContentContainer fluid>
-                <Name/>
                 {contentIsShown ? 
                 <Detales closeSlide={hideContent} 
                         viewDetales={contentIsShown}
@@ -45,6 +45,7 @@ const Content = ({
                         isFormation={isFormation}
                         isProject={isProject}
                         isMail={isMail}
+                        isHome={isHome}
                         exp={exp}
                         projects={projects}
                         diplome={diplome}/> 
@@ -55,7 +56,9 @@ const Content = ({
                         isDeploy={contentIsShown} 
                         fromExpButton={goToExpContent} 
                         fromFormationButton={goToFormationContent}
-                        fromProjectButton={goToProjectContent}/>
+                        fromProjectButton={goToProjectContent}
+                        fromMailButton={goToMailForm}/>
+                        
         </ContentContainer>
     )
 }

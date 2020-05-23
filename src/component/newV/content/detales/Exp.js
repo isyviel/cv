@@ -3,6 +3,13 @@ import {Row} from "@bootstrap-styled/v4/lib"
 import ExpMenu from "./Exp/ExpMenu"
 import Strategia from "./Exp/Strategia"
 import Vente from "./Exp/Vente"
+import Colors from "../../common/themes/Colors"
+import styled from "styled-components"
+
+const CategoryTitle = styled.h1`
+    font-family: 'Bangers';
+    color: ${Colors.orange};
+`
 
 const Exp = ({exp,...props})=> {
 
@@ -21,7 +28,7 @@ const Exp = ({exp,...props})=> {
 
 return(
         <div>
-            <h1 className="h5">{exp}</h1>
+            <CategoryTitle>{exp}</CategoryTitle>
                 <Row>
                     <ExpMenu displaySales={displaySales} displayWeb={displayWeb}/>
                     {isWeb && (<Strategia isWeb={isWeb}/>)}

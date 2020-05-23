@@ -5,11 +5,12 @@ const Fleche = styled.img`
     position: fixed;
     right: 10px;
     bottom: 20px;
+    cursor: pointer;
 `
 
-const Navigation = () => {
+const Navigation = ({displayNext,...props}) => {
     return (
-        <Fleche src="images/fleche.png"  alt="icone fleche" id="logo_fleche_droite"/>     
+        <Fleche src="images/fleche.png" onClick={displayNext}  alt="icone fleche" id="logo_fleche_droite"/>     
     )
 }
 

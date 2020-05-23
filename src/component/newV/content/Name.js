@@ -3,27 +3,30 @@ import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import Colors from '../common/themes/Colors'
 import {TECHNOS,NOM, TITRE} from '../common/constantes/home'
+import { Slide } from "@material-ui/core"
 
-const NameContainer = styled(Container)`
+const Name = ({isHome,...props}) => {
+
+    const NameContainer = styled(Container)`
     font-size: 48px;
     color: ${Colors.orange};
-    text-align: right;
-    padding: 0 !important;
+    text-align: left;
+    padding: ${isHome ? "15px 0 0 28% !important" : "15px 0 0 8%"};
     margin: 0 !important;
+    font-family: 'Bangers';
 `
 
-const Name = () => {
     return(
-        <NameContainer fluid>        
-                <h1>{NOM}</h1>
-                <h2>{TITRE}</h2>
-                <h3 className="h4 text-dark"> 
-                    {TECHNOS.map((label,index) => {
-                        return <span key={index}>{label}</span>
-                    })}
-                </h3>
-               
-        </NameContainer>
+        <Slide timeout={800}  direction="left" in={isHome}>
+            <NameContainer fluid>        
+                    <h1>{NOM} - {TITRE}</h1>
+                    <h3 className="h4 text-dark"> 
+                        {TECHNOS.map((label,index) => {
+                            return <span key={index}>{label}</span>
+                        })}
+                    </h3>
+            </NameContainer>
+        </Slide>         
     )
 }
 

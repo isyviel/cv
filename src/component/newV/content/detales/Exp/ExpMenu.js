@@ -16,7 +16,7 @@ const DMenu = ({displaySales,displayWeb,...props}) => {
             color: "#FF7A00",
             background:"linear-gradient(145deg, #ffffff, #e6e6e6)", 
             boxShadow: "10px 10px 20px #b0b0b0,-10px -10px 20px #ffffff",
-            width: "80%",
+            width: "90%",
             fontSize: "16px",
             '&:hover': {
                 backgroundColor: "#FFFFF", 
@@ -34,7 +34,7 @@ const DMenu = ({displaySales,displayWeb,...props}) => {
 
     return (
             <ThemeProvider>
-                    <Col xs="2">
+                    <Col xs="2 mr-4">
                         <ButtonRow>
                             <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button>
                         </ButtonRow>

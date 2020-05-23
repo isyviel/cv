@@ -6,11 +6,12 @@ import Content from './newV/elements/Content'
 import Navigation from './newV/elements/Navigation'
 import {HEIGHT} from './newV/common/themes/Sizes'
 import MiniHead from "./newV/elements/MiniHead"
+import Name from "./newV/content/Name"
 
 
 const CustomDiv = styled(Container)`
-    height: ${HEIGHT};
-    background: url(images/deco_ronds.png) no-repeat center fixed ;
+    background: url(images/deco_ronds.png) fixed center no-repeat;
+    height: 958px;
     font-family: Dosis;
     padding: 0 !important;
     overflow-y : hidden;
@@ -25,32 +26,41 @@ const OnePage = () => {
      * bouton fleche navigation passe a catégorie suivante
      * portfolio a personnaliser
      */
-    const [isHome,setIsHome] = useState(true)
-    const [isContent, setIsContent] = useState(false)
+    const [isHome,setIsHome] = useState(false)
+    const [isContent, setIsContent] = useState(true)
     const [isFormation, setIsFormation] = useState(false)
-    const [isExp, setIsExp] = useState(false)
+    const [isExp, setIsExp] = useState(true)
     const [isProject, setIsProject] = useState(false)
-    const [isMail, setIsMail] = useState(true)
+    const [isMail, setIsMail] = useState(false)
 
     const displayMailForm = () => {
         setIsMail(true)
         setIsContent(true)
         setIsHome(false)
+        setIsProject(false)
+        setIsExp(false)
+        setIsFormation(false)
     }
 
     const displayExp = () => {
         setIsContent(true)
         setIsExp(true)
         setIsHome(false)
+        setIsMail(false)
+        setIsProject(false)
     }
 
     const displayFormation = () => {
         setIsContent(true)
         setIsFormation(true)
         setIsHome(false)
+        setIsExp(false)
+        setIsMail(false)
     }
 
     const displayProjects = () => {
+        setIsFormation(false)
+        setIsMail(false)
         setIsContent(true)
         setIsProject(true)
         setIsHome(false)
@@ -65,10 +75,23 @@ const OnePage = () => {
     }
 
 
+    const showDetales = () => {
+        setIsHome(false)
+        setIsContent(true)
+        if(isExp){
+            displayFormation()
+        }else if (isFormation) {
+            displayProjects()
+        } else if (isProject) {
+            displayMailForm()
+        } else {displayExp()
+        }
+    }
 
     return (
         <CustomDiv fluid data-nosnippet>
                 {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome}/>}
+                <Name isHome={isHome}/>
                 <Content
                     isMail = {isMail}
                     isExp={isExp}
@@ -78,8 +101,10 @@ const OnePage = () => {
                     contentIsShown={isContent} 
                     goToExpContent={displayExp}
                     goToFormationContent = {displayFormation}
-                    goToProjectContent = {displayProjects}/>
-                <Navigation/>
+                    goToProjectContent = {displayProjects}
+                    goToMailForm = {displayMailForm}
+                    isHome={isHome}/>
+                <Navigation displayNext={showDetales}/>
         </CustomDiv>
     )
 }

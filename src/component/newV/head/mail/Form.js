@@ -28,7 +28,6 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
 
 const classes = useStyles()
 
-
 const ColorLinearProgress = withStyles({
   colorPrimary: {
     backgroundColor: Colors.darkGrey,
@@ -49,9 +48,9 @@ const ColorLinearProgress = withStyles({
             <Input label="Téléphone" name="phone" value={values.phone} change={change} />
             {isLoading &&(<ColorLinearProgress/>)}
             <Row className="justify-content-around mt-4">
-            <Button type="submit" color="secondary" className={classes.root}>
-              Envoyer
-            </Button>  
+              <Button type="submit" color="secondary" className={classes.root}>
+                Envoyer
+              </Button>  
             </Row>  
           </form>
         </Container> 

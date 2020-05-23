@@ -15,6 +15,7 @@ const QuoteAuthor = styled.div`
     color: ${Colors.orange};
     text-align: right;
     margin: 0 50px 0 0;
+    font-family: 'Bangers';
 `
 
 const Quote = () => {
