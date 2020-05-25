@@ -14,6 +14,7 @@ const Fleche = styled.img`
         height: 80px;
     }
     @media screen and (max-width:576px) {
+        bottom: 5px;
         height: 50px;
     }
 `

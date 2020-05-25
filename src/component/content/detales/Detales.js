@@ -24,7 +24,7 @@ z-index: 1;
 
 @media screen and (max-width:992px) {
     margin-left: 2%;
-    padding-top:0;
+    padding: 0 0 3% 8%;
     max-width: 95%;
 }
 @media screen and (max-width:768px) {
@@ -33,7 +33,6 @@ z-index: 1;
 @media screen and (max-width:576px) {
     margin-left: 0;
     height: 100%;
-    padding-top: 0;
 }
 `
 const CategoryTitle = styled.h1`
