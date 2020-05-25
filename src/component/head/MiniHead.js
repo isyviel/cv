@@ -1,7 +1,7 @@
 import React from "react"
 import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import Contact from '../head/Contact'
+import Contact from './Contact'
 import { Slide } from "@material-ui/core"
 
 const HomeContainer = styled(Container)`

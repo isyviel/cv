@@ -1,12 +1,12 @@
 import React from "react"
 import {Container,Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import Me from '../head/Me'
-import Contact from '../head/Contact'
-import Quote from '../head/Quote'
+import Me from './Me'
+import Contact from './Contact'
+import Quote from './Quote'
 import Spacer from '../common/Spacer'
 import { Slide } from "@material-ui/core"
-import Name from "../content/Name"
+import Name from "../Name"
 
 const HomeContainer = styled(Container)`
     height: 100%;

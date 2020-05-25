@@ -1,7 +1,6 @@
-
 import React , {useState} from "react"
 import Button from '@material-ui/core/Button';
-import ImageButton from "../../common/ImageButton"
+import ImageButton from "../common/ImageButton"
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Phone = () => {
+const Phone = ({isHome,label,...props}) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const classes = useStyles();
@@ -28,7 +27,7 @@ const Phone = () => {
     
   return (
     <div>
-      <Button aria-describedby={id} onClick={handleClickOpen}>
+      <Button size="small" className="pl-1 " aria-describedby={id} onClick={handleClickOpen}>
         <ImageButton src="images/phone.png" alt="icone téléphone" id="téléphoner"/>
       </Button>
       <Popover
@@ -37,15 +36,11 @@ const Phone = () => {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
+          vertical: 'right',
+          horizontal: 'right',
         }}
       >
-        <Typography className={classes.typography} >0621692869</Typography>
+        <Typography className={classes.typography} >{label}</Typography>
       </Popover>
     </div>
   )

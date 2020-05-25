@@ -1,8 +1,8 @@
 import React from "react"
 import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import Colors from '../common/themes/Colors'
-import {TECHNOS,NOM, TITRE} from '../common/constantes/home'
+import Colors from './common/themes/Colors'
+import {TECHNOS,NOM, TITRE} from './common/constantes/home'
 import { Slide } from "@material-ui/core"
 
 const CustomH1 = styled.h1`

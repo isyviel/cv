@@ -1,11 +1,11 @@
 import React from "react"
 import { Container} from "@bootstrap-styled/v4"
 import styled from "styled-components"
-import Menu from '../content/Menu'
+import Menu from './Menu'
 import Colors from '../common/themes/Colors'
 import {MENU} from '../common/constantes/home'
-import Detales from "../content/Detales"
-import Aboutme from "../content/AboutMe"
+import Detales from "./detales/Detales"
+import Aboutme from "./AboutMe"
 
 const ContentContainer = styled(Container)`
     height: 100%;

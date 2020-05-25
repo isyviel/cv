@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Container} from "@bootstrap-styled/v4"
-import Head from './newV/elements/Head'
-import Content from './newV/elements/Content'
-import Navigation from './newV/elements/Navigation'
-import MiniHead from "./newV/elements/MiniHead"
-import Name from "./newV/content/Name"
+import Head from './head/Head'
+import Content from './content/Content'
+import Navigation from './Navigation'
+import MiniHead from "./head/MiniHead"
+import Name from "./Name"
 
 
 const CustomDiv = styled(Container)`
