@@ -18,6 +18,11 @@ const ContactDiv = styled.div`
         display: none;
     }
 `
+const CustomRow =styled(Row)`
+    @media screen and (max-width:576px) {
+        margin: 40px;
+    }
+`
 
 const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) => {
    
@@ -25,8 +30,8 @@ const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) 
        <ListeContainer>
                     {HEAD.map((label,index) => {
                         return (
-                    <Row key={index} className="align-items-center xs-align-items-end">
-                        {isHome && index === 1 &&(
+                    <CustomRow key={index} className="align-items-center">
+                        {index === 1 &&(
                             <Mail displayForm={contactForm}/>
                         )}
                         {!isHome && index=== 0 &&(
@@ -50,7 +55,7 @@ const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) 
                             </Button>
                         )}
                         {isHome &&(<ContactDiv key={index} className={index === 2 ? "ml-1" : "" }>{label}</ContactDiv>)}
-                    </Row>)})}
+                    </CustomRow>)})}
         </ListeContainer>
     )
 }

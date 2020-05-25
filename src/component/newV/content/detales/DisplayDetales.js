@@ -22,16 +22,26 @@ const Title = styled.h1`
 `
 const Skills = styled.h2`
     font-family: 'Bangers';
-    margin : 20px 0 10px 0;
+    margin : 20px 0 10px 15px;
+    @media screen and (max-width:576px) {
+        font-size: 16px;
+        text-align: center;
+    }
 `
 const SoftSkills = styled.h3`
     font-family: 'Bangers';
-    margin : 20px 0 20px 0;
+    margin : 20px 0 20px 15px;
+    @media screen and (max-width:576px) {
+        text-align: center;
+    }
 `
 
 const CustomLi = styled.ul`
     list-style-type: none;
     padding-left: 0;
+    @media screen and (max-width:576px) {
+        margin-left: 10px;
+    }
 `
 
 const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) => {
@@ -78,13 +88,17 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
     <Fade timeout={800} in={isContent}>
         <Col>
             <Row className="justify-content-sm-between justify-content-center align-items-center ml-0">
-                <Title className="h3">{title}</Title>
+                <Col>
+                    <Title className="h3">{title}</Title>
+                    <Row className="justify-content-center justify-content-sm-start ml-sm-1">
+                        <WebSite href={href} content={content}/>
+                    </Row>
+                </Col>
                 <Logo src={src}/>
             </Row>
-            <WebSite href={href} content={content}/>
             <Skills className="h5">{skills}</Skills>
             <SoftSkills className="h6">{softSkills}</SoftSkills>
-            <article>
+            <article className="ml-3">
                 <CustomLi>
                    {description.map((element,index) => {
                         return(

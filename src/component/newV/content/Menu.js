@@ -44,8 +44,12 @@ const Menu = ({
 
         @media screen and (max-width:576px) {
             margin: 0;
-            padding-left: 65px;
-            position: static;
+            padding: 0 0 0 0;
+            top: 70%;
+            left: 20px;
+            width: 70%;
+            z-index: 1;
+            ${isDeploy &&("display : none;")}
         }
     `
 const useStyles = makeStyles((theme) => ({

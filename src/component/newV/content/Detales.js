@@ -34,6 +34,7 @@ const CategoryTitle = styled.h1`
     @media screen and (max-width:576px) {
         font-size: 20px;
         text-align: center;
+        margin-bottom: 0;
     }
 `
 
@@ -78,20 +79,16 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     </CategoryTitle>
                     
                         {isExp &&(
-                            <Row className="d-none d-sm-block">
-                                {/* <div className="d-block d-sm-none"> */}
-                                    
-                                        <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp}/>
-                                    
-                                    {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
-                                    {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
-                                {/* </div> */}
-                                
+                            <Row>
+                                <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp}/>
+                                {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
+                                {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
                             </Row>
+                        
                         )}
 
                         {isFormation &&(
-                            <Row className="d-xs-none">
+                            <Row>
                                 <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar}/>
                                 {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
                                 {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}

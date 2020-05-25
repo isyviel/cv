@@ -13,7 +13,7 @@ const HomeContainer = styled(Container)`
     z-index: 2;
     @media screen and (max-width:576px) {
         height: 100%;
-        width: 10%;
+        width: 40px;
         background-color: #272727;
         padding: 100px 0 0 2px !important;
 

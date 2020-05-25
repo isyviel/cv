@@ -2,8 +2,11 @@ import React from "react"
 import TextField from '@material-ui/core/TextField';
 import Them from '../../../common/theme/MatThemes'
 import { ThemeProvider } from '@material-ui/styles';
+import styled from "styled-components"
+import { makeStyles } from '@material-ui/styles';
+import InputBase from '@material-ui/core/InputBase';
 
-const Input = ({label,required, change, send, value, name, fullWidth, className,...props}) => {
+const Input = ({label,required, change, send, value, name, ...props}) => {
 
     return(
       <ThemeProvider theme={Them}>
@@ -15,8 +18,8 @@ const Input = ({label,required, change, send, value, name, fullWidth, className,
           onChange={change}
           value={value}
           name={name}
-          fullWidth={fullWidth}
-          className="mb-4 mr-4"
+          fullWidth
+          className="mb-2"
           variant="outlined"
         />
         </ThemeProvider>

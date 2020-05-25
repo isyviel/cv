@@ -16,7 +16,7 @@ const CustomDiv = styled(Container)`
     overflow-y : hidden;
     overflow-x: hidden;
     @media screen and (max-width:576px) {
-        height: 100%;
+        height: 700px;
     }
 `
 
@@ -28,10 +28,10 @@ const OnePage = () => {
      * bouton fleche navigation passe a catégorie suivante
      * portfolio a personnaliser
      */
-    const [isHome,setIsHome] = useState(false)
-    const [isContent, setIsContent] = useState(true)
+    const [isHome,setIsHome] = useState(true)
+    const [isContent, setIsContent] = useState(false)
     const [isFormation, setIsFormation] = useState(false)
-    const [isExp, setIsExp] = useState(true)
+    const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
 
@@ -77,6 +77,7 @@ const OnePage = () => {
         setIsFormation(false)
         setIsContent(false)
         setIsHome(true)
+        console.log(isContent, "isContent")
     }
 
 
