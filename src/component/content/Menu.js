@@ -42,7 +42,6 @@ const Menu = ({
         top: 15%;
         padding-top: 5%;
         width: 400px;
-        
 
         @media screen and (max-width:1400px) {
             ${isMail &&("display : none;")}            
