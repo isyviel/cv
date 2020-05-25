@@ -42,7 +42,9 @@ const Aboutme = ({isHome,...props}) => {
     return (
         <Slide timeout={800} direction="right" in={isHome}>
             <CustomContainer>
-                <article className="text-justify">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"</article>
+                <article className="text-justify">
+                    SITE EN CONSTRUCTION
+                </article>
             </CustomContainer>
         </Slide>
     )
