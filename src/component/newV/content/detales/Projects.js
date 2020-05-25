@@ -11,7 +11,7 @@ import styled from "styled-components"
 
 const CustomCard = styled(Card)`
     width: 500px;
-    @media screen and (max-width:576px) {
+    @media screen and (max-width:992px) {
        width: 95%;
        margin: 20px 0 0 20px; 
     }

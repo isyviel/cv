@@ -62,7 +62,7 @@ const SendMail = ()=> {
 return(
         <Container>
             <FormControl>
-                  <Form
+                <Form
                   windowClose={handleClose} 
                   submit={handleSubmit}
                   values={values}

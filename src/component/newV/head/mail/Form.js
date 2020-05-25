@@ -19,11 +19,23 @@ const CustomP = styled.p`
 const CustomForm = styled.form`
   width: 900px;
   margin: 0 0 0 10%;
-
-  @media screen and (max-width:576px) {
-    max-width:285px;
+  @media screen and (max-width:1200px) {
+    max-width:95%;
+    margin: 0 !important;
     padding: 0 !important;
-}
+  }
+  @media screen and (max-width:992px) {
+    max-width:90%;
+  }
+  @media screen and (max-width:768px) {
+    max-width:85%;
+   
+  }
+  @media screen and (max-width:576px) {
+    max-width:33%;
+   
+  }
+  
 `
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
@@ -52,7 +64,7 @@ const ColorLinearProgress = withStyles({
 })(LinearProgress);
 
     return (
-        <Container className="p-0 container-xs" >
+        <Container className="p-0 no-gutters" >
           <CustomDiv>{isLoading &&(<ColorLinearProgress fullWidth/>)}</CustomDiv>
           <CustomForm onSubmit={submit} values={values}>
             <Input required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={change}/>

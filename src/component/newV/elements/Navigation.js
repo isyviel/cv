@@ -7,6 +7,12 @@ const Fleche = styled.img`
     bottom: 20px;
     cursor: pointer;
 
+    @media screen and (max-width:992px) {
+        margin-right: 2%;
+    }
+    @media screen and (max-width:768px) {
+        height: 80px;
+    }
     @media screen and (max-width:576px) {
         height: 50px;
     }

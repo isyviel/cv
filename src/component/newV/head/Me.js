@@ -9,18 +9,21 @@ const Me = styled.div`
     background-size: 150px;
     
     @media screen and (max-width: 1200px) {
-        left: 100px;
+        margin: 0 0 0 20%;
     }
 
     @media screen and (max-width:992px) {
-        left: 200px;
-    }
-
-    @media screen and (max-width:768px) {
+        margin: 0 0 0 -10px;
         height: 100px;
         width: 100px;
         background-size: 100px;
-        margin: auto !important;
+    }
+
+    @media screen and (max-width:768px) {
+        height: 80px;
+        width: 80px;
+        background-size: 80px;
+        margin: 0;
     }
     
     @media screen and (max-width:576px) {

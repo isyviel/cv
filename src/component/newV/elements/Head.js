@@ -10,19 +10,31 @@ import Name from "../content/Name"
 
 const HomeContainer = styled(Container)`
     height: 100%;
-    width: 500px;
+    width: 450px;
     background-color: #272727;
     position: fixed;
     padding: 50px 0 0 70px !important;
     z-index: 1;
 
-    @media screen and (max-width:576px) {
-        height: 100%;
-        width: 40px;
-        background-color: #272727;
-        padding: 100px 0 0 2px !important;
-
+    @media screen and (max-width:1200px) {
+       width:350px;
+       padding: 50px 0 0 45px !important;
     }
+    @media screen and (max-width:992px) {
+        width:150px;
+        padding: 45px 0 0 35px !important;
+    }
+
+    @media screen and (max-width:768px) {
+        width:100px;
+        padding: 50px 0 0 15px !important;
+    }
+    @media screen and (max-width:576px) {
+        width: 40px;
+        padding: 100px 0 0 2px !important;
+    }
+
+    
 `
 const Head = ({isHome,mailToHead,...props}) => {
 

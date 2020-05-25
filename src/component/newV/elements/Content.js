@@ -54,7 +54,8 @@ const Content = ({
                         fromExpButton={goToExpContent} 
                         fromFormationButton={goToFormationContent}
                         fromProjectButton={goToProjectContent}
-                        fromMailButton={goToMailForm}/>
+                        fromMailButton={goToMailForm}
+                        isMail={isMail}/>
                         
         </ContentContainer>
     )

@@ -9,32 +9,44 @@ import DetalesMenu from "./detales/DetalesMenu"
 import DisplayDetales from "./detales/DisplayDetales"
 import { Fade } from "@material-ui/core"
 
-const DetalesContainer =  styled(Container)`
-    height: 80%;
-    min-width: 87%;
-    background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
-    margin: 0;
-    padding: 0 5% 3% 8%;
-    font-size: 16px;
-    z-index: 1;
-
-    @media screen and (max-width:576px) {
-        height: 100%;
-        padding-top: 0;
-    }
-`
 const Cross = styled.img`
     cursor: pointer;
     width: 20px;
 `
+const DetalesContainer =  styled(Container)`
+height: 80%;
+min-width: 87%;
+background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
+margin: 0;
+padding: 0 5% 3% 8%;
+font-size: 16px;
+z-index: 1;
 
+@media screen and (max-width:992px) {
+    margin-left: 2%;
+    padding-top:0;
+    max-width: 95%;
+}
+@media screen and (max-width:768px) {
+    margin-left: 5%;
+  }
+@media screen and (max-width:576px) {
+    margin-left: 0;
+    height: 100%;
+    padding-top: 0;
+}
+`
 const CategoryTitle = styled.h1`
     font-family: 'Bangers';
     font-size: 2em;
+    @media screen and (max-width:992px) {
+        font-size: 24px;
+        margin-left: 10px;
+    }
     @media screen and (max-width:576px) {
         font-size: 20px;
         text-align: center;
-        margin-bottom: 0;
+        margin: 0;
     }
 `
 
@@ -79,7 +91,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     </CategoryTitle>
                     
                         {isExp &&(
-                            <Row>
+                            <Row className="ml-sm-3">
                                 <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp}/>
                                 {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
                                 {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
@@ -88,7 +100,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                         )}
 
                         {isFormation &&(
-                            <Row>
+                            <Row className="ml-sm-3">
                                 <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar}/>
                                 {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
                                 {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
@@ -97,7 +109,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                         )}
                     
                         {isProject &&(
-                            <Row>
+                            <Row className="ml-sm-2">
                                 <Projects isProject={isProject}/>
                             </Row>
                         )}

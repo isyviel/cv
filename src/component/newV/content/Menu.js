@@ -29,7 +29,8 @@ const Menu = ({
     fromFormationButton,
     fromExpButton,
     fromMailButton,
-    isDeploy, 
+    isDeploy,
+    isMail,
     exp, 
     diplome, 
     projects, 
@@ -40,17 +41,23 @@ const Menu = ({
         right: 10px;
         top: 15%;
         padding-top: 5%;
-        max-width: 300px !important;
+        width: 400px;
+       ${isMail &&("display : none;")}
+       
+        @media screen and (max-width:1200px) {
+            padding: 0;
+            max-width: 300px !important;
+            ${isDeploy &&("display : none;")}
+        }
 
         @media screen and (max-width:576px) {
             margin: 0;
-            padding: 0 0 0 0;
-            top: 70%;
-            left: 20px;
+            top: 60%;
+            left: 35px;
             width: 70%;
             z-index: 1;
-            ${isDeploy &&("display : none;")}
         }
+        
     `
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -71,7 +78,7 @@ const classes = useStyles()
     return (
         <MenuContainer>
                 <Row className="justify-content-end align-items-center">
-                    <Col>
+                    <Col sm="8">
                         <ButtonRow className="justify-content-end align-items-center">
                             <Button className={classes.root} onClick={fromExpButton}>{exp}</Button>
                         </ButtonRow>

@@ -8,7 +8,10 @@ const QuoteDiv = styled.div`
     font-style: italic;
     color: white;
     margin: 0;
-    @media screen and (max-width:576px) {
+    @media screen and (max-width:1200px) {
+       margin-left: -20px;
+    }
+    @media screen and (max-width:992px) {
         display: none;
     }
 `
@@ -19,7 +22,7 @@ const QuoteAuthor = styled.div`
     text-align: right;
     margin: 0 50px 0 0;
     font-family: 'Bangers';
-    @media screen and (max-width:576px) {
+    @media screen and (max-width:992px) {
         display: none;
     }
 `

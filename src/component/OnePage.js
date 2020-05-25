@@ -77,7 +77,7 @@ const OnePage = () => {
         setIsFormation(false)
         setIsContent(false)
         setIsHome(true)
-        console.log(isContent, "isContent")
+        setIsMail(false)
     }
 
 
@@ -96,8 +96,8 @@ const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome} homeToHead={returnToHome}/>}
-                <Name isHome={isHome}/>
+                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>}
+                <Name isHome={isHome} isContent={isContent}/>
                 <Content
                     isMail = {isMail}
                     isExp={isExp}

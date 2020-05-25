@@ -14,13 +14,20 @@ const ListeContainer = styled(Container)`
 const ContactDiv = styled.div`
     color: white;
     font-size: 20px;
-    @media screen and (max-width:576px) {
+    @media screen and (max-width:992px) {
         display: none;
     }
 `
 const CustomRow =styled(Row)`
+    @media screen and (max-width:992px) {
+        padding-left: 20px;
+    }
+    @media screen and (max-width:768px) {
+        padding-left: 15px;
+        margin-top: 25px;
+    }
     @media screen and (max-width:576px) {
-        margin: 40px;
+        padding-left: 2px;
     }
 `
 
@@ -30,27 +37,27 @@ const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) 
        <ListeContainer>
                     {HEAD.map((label,index) => {
                         return (
-                    <CustomRow key={index} className="align-items-center">
+                    <CustomRow key={index} className="justify-content-start align-items-center">
                         {index === 1 &&(
                             <Mail displayForm={contactForm}/>
                         )}
                         {!isHome && index=== 0 &&(
-                            <Button size='small' onClick={returnToHome} target="_blank" rel="noopener noreferrer">
+                            <Button onClick={returnToHome} target="_blank" rel="noopener noreferrer">
                                 <ImageButton src="images/home.png"/>
                             </Button>)}
                         {index === 2 &&(
                             <Phone label={label} isHome={isHome}/>
                         )}
                         {index === 3 &&(
-                            <Button size='small' href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">
+                            <Button href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">
                                 <ImageButton src={ICONS[index-1]}/>
                             </Button>)}
                         {index === 4 &&(
-                            <Button size='small' href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">
+                            <Button href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">
                                 <ImageButton src={ICONS[index-1]}/>
                             </Button>)}
                          {index === 5 &&(
-                            <Button size='small' href='adeline_simon_CV.pdf' target='__blank' rel="noopener noreferrer">
+                            <Button href='adeline_simon_CV.pdf' target='__blank' rel="noopener noreferrer">
                                 <ImageButton src={ICONS[index-1]}/>
                             </Button>
                         )}
