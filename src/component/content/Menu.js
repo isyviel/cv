@@ -42,13 +42,17 @@ const Menu = ({
         top: 15%;
         padding-top: 5%;
         width: 400px;
-       
+        
+
+        @media screen and (max-width:1400px) {
+            ${isMail &&("display : none;")}            
+        }
        
         @media screen and (max-width:1200px) {
             padding: 0;
             max-width: 300px !important;
-            ${isDeploy || isMail &&("display : none;")}
-           
+            ${isDeploy &&("display : none;")}
+            ${isMail &&("display : none;")}
         }
 
         @media screen and (max-width:576px) {
