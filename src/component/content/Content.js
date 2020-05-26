@@ -7,6 +7,7 @@ import {MENU} from '../common/constantes/home'
 import Detales from "./detales/Detales"
 import Aboutme from "./AboutMe"
 import Navigation from "../Navigation"
+import Footer from "../head/Footer"
 
 const ContentContainer = styled(Container)`
     height: 100%;
@@ -21,6 +22,7 @@ const Content = ({
     isMail,
     isHome,
     isActive,
+    open,
     goToProjectContent,
     goToExpContent,
     goToFormationContent,
@@ -62,6 +64,7 @@ const Content = ({
                         isProject={isProject}
                         isMail={isMail}
                         isHome={isHome}/>
+                <Footer open={open}/>
                         
         </ContentContainer>
     )

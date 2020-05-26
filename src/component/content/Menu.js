@@ -45,8 +45,7 @@ const Menu = ({
         position: fixed;
         right: 10px;
         top: 15%;
-        padding-top: 5%;
-        width: 400px;
+        width: 300px;
 
         
         @media screen and (max-width:1200px) {
@@ -56,6 +55,12 @@ const Menu = ({
             ${isMail &&("display : none;")}
         }
 
+        @media screen and (max-width:768px) {
+            padding: 0;
+            max-width: 200px !important;
+            ${isDeploy &&("display : none;")}
+            ${isMail &&("display : none;")}
+        }
         @media screen and (max-width:576px) {
             margin: 0;
             top: 40%;

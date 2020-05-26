@@ -8,6 +8,7 @@ import MiniHead from "./head/MiniHead"
 import Name from "./Name"
 
 
+
 const CustomDiv = styled(Container)`
     background: url(images/deco_ronds.png) fixed center no-repeat;
     height: 958px;
@@ -34,6 +35,13 @@ const OnePage = () => {
     const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
+    const [open, setOpen] = useState(false)
+    
+    const displayFooter = () => {
+        if(open) {
+            setOpen(false)
+        } else {setOpen(true)}
+    }
 
     const displayMailForm = () => {
         setIsMail(true)
@@ -109,7 +117,7 @@ const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>}
+                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm} footerfromHead={displayFooter}/> : <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>}
                 <Name isHome={isHome} isContent={isContent}/>
                 <Navigation displayNext={showDetales} displayPrevious={showPrevious}/>
                 <Content
@@ -123,7 +131,9 @@ const OnePage = () => {
                     goToFormationContent = {displayFormation}
                     goToProjectContent = {displayProjects}
                     goToMailForm = {displayMailForm}
-                    isHome={isHome}/>
+                    isHome={isHome}
+                    open={open}/>
+                
         </CustomDiv>
     )
 }

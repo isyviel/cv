@@ -12,30 +12,31 @@ import { Fade } from "@material-ui/core"
 const Cross = styled.img`
     cursor: pointer;
     width: 20px;
+    margin-right: 20px;
 `
 const DetalesContainer =  styled(Container)`
-height: 80%;
-min-width: 87%;
-background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
-margin: 0;
-padding: 0 5% 3% 8%;
-font-size: 16px;
-z-index: 1;
-
-@media screen and (max-width:992px) {
-    margin-left: 2%;
+    height: 80%;
+    min-width: 87%;
+    background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
+    margin: 0;
     padding: 0 0 3% 8%;
-    max-width: 95%;
-}
-@media screen and (max-width:768px) {
-    margin-left: 5%;
-    padding: 0 5% 3% 8%;
-  }
-@media screen and (max-width:576px) {
-    margin-left: 0;
-    height: 100%;
-    padding: 0 0 3% 10%;
-}
+    font-size: 16px;
+    z-index: 1;
+
+    @media screen and (max-width:992px) {
+        margin-left: 2%;
+        padding: 0 0 3% 8%;
+        max-width: 95%;
+    }
+    @media screen and (max-width:768px) {
+        margin-left: 5%;
+        padding: 0 5% 3% 8%;
+    }
+    @media screen and (max-width:576px) {
+        margin-left: 0;
+        height: 100%;
+        padding: 0 0 3% 10%;
+    }
 `
 const CategoryTitle = styled.h1`
     font-family: 'Bangers';

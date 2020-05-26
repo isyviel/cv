@@ -102,7 +102,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
     return(
     <Fade timeout={800} in={isContent}>
         <Col>
-            <Row className="justify-content-sm-between justify-content-center align-items-start ml-0">
+            <Row className="justify-content-sm-between justify-content-center align-items-start ml-0 pr-4">
                 <Col>
                     <Title className="h3">{title}</Title>
                     <Row className="justify-content-center justify-content-sm-start">

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {Container,Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import Me from './Me'
@@ -7,6 +7,7 @@ import Quote from './Quote'
 import Spacer from '../common/Spacer'
 import { Slide } from "@material-ui/core"
 import Name from "../Name"
+import Footer from "./Footer"
 
 const HomeContainer = styled(Container)`
     height: 100%;
@@ -36,17 +37,14 @@ const HomeContainer = styled(Container)`
 
     
 `
-const Head = ({isHome,mailToHead,...props}) => {
+const Head = ({isHome,mailToHead, footerfromHead,...props}) => {
 
- 
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
             <HomeContainer fluid>
                 <Me/>
                 <Spacer/>
-                <Contact isHome={isHome} contactForm={mailToHead}/>
-                <Spacer/>
-                <Quote/>
+                <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
             </HomeContainer>
         </Slide>
     )

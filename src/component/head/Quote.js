@@ -2,29 +2,36 @@ import React from "react"
 import styled from "styled-components"
 import {QUOTE} from '../common/constantes/home'
 import Colors from '../common/themes/Colors'
+import Container from "@bootstrap-styled/v4/lib/Container"
 
 const QuoteDiv = styled.div`
     font-size: 24px;
     font-style: italic;
-    color: white;
     margin: 0;
-    @media screen and (max-width:1200px) {
-       margin-left: -20px;
+   
+    @media screen and (max-width:768px) {
+        font-size: 18px;
     }
-    @media screen and (max-width:992px) {
-        display: none;
+    @media screen and (max-width:596px) {
+        text-align: center;
     }
+  
 `
 
 const QuoteAuthor = styled.div`
     font-size: 24px;
-    color: ${Colors.orange};
+    color: ${Colors.grey};
     text-align: right;
-    margin: 0 50px 0 0;
+
     font-family: 'Bangers';
-    @media screen and (max-width:992px) {
-        display: none;
+    @media screen and (max-width:768px) {
+        font-size: 18px;
     }
+    @media screen and (max-width:596px) {
+
+        text-align: center;
+    }
+   
 `
 
 const Quote = () => {

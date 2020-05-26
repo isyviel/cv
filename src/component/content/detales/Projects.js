@@ -93,7 +93,7 @@ return(
                     <CardContent>
                             <Typography className={classes.label} gutterBottom>Liste d'envoi</Typography>
                             <article className="mb-4">
-                                Application d'envoi automatique de mails indépendantes de la boite mail
+                                Application d'envoi automatique de mails pour une boutique
                             </article>
                     </CardContent>
             </CustomCard>

@@ -31,7 +31,7 @@ const CustomRow =styled(Row)`
     }
 `
 
-const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) => {
+const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,...props}) => {
    
     return(
        <ListeContainer>
@@ -58,6 +58,11 @@ const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,...props}) 
                             </Button>)}
                          {index === 5 &&(
                             <Button href='adeline_simon_CV.pdf' target='__blank' rel="noopener noreferrer">
+                                <ImageButton src={ICONS[index-1]}/>
+                            </Button>
+                        )}
+                        {index === 6 &&(
+                            <Button className="pt-4 mt-4" onClick={goToFooter} rel="noopener noreferrer">
                                 <ImageButton src={ICONS[index-1]}/>
                             </Button>
                         )}
