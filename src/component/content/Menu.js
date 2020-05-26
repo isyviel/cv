@@ -58,8 +58,8 @@ const Menu = ({
 
         @media screen and (max-width:576px) {
             margin: 0;
-            top: 60%;
-            left: 15%;
+            top: 40%;
+            left: 10%;
             width: 70%;
             z-index: 1;
         }

@@ -12,14 +12,34 @@ import Container from "@bootstrap-styled/v4/lib/Container";
 
 const CustomDiv = styled.div`
   height: 20px;
-  margin: 0 0 0 15%;
+  margin: 0;
+
+  @media screen and (max-width:1440px) {
+    max-width:80%;
+    min-width: 80%;
+  }
+  @media screen and (max-width:1200px) {
+   
+    min-width: 95%;
+  }
+  @media screen and (max-width:992px) {
+    
+    min-width: 90%;
+  }
+  @media screen and (max-width:768px) {
+    
+    min-width: 85%;
+  }
+  @media screen and (max-width:576px) {
+    min-width: 33%;
+    max-width: 33%;
+  }
 `
 const CustomP = styled.p`
   color: ${Colors.orange};
 `
 const CustomForm = styled.form`
   width: 900px;
-  margin: 0 0 0 10%;
 
   @media screen and (max-width:1440px) {
     max-width:80%;

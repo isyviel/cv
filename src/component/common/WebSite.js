@@ -5,13 +5,15 @@ import Colors from "./themes/Colors"
 const Link =  styled.a`
     :hover{
         text-decoration: none;
-        color: ${Colors.darkOrange};
+        font-weight: bold;
+        color: ${Colors.orange};
     }
     color: ${Colors.orange};
+    margin: 0 0 15px 15px;
 `
 const Text = styled.p`
     color: ${Colors.orange};
-    margin: 0;
+    margin: 0 0 0 15px;
 `
 
 const WebSite = ({href, content, isSales,isEnglish,...props}) => {

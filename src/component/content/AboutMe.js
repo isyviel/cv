@@ -2,6 +2,7 @@ import React from "react"
 import Container from "@bootstrap-styled/v4/lib/Container"
 import styled from "styled-components"
 import { Slide } from "@material-ui/core"
+import { ABOUTME } from "../common/constantes/home"
 
 const CustomContainer = styled(Container)`
     padding: 13% 45% 0 8%;
