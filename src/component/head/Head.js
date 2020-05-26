@@ -50,9 +50,7 @@ const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
                 <Spacer/>
                 <Quote/>
                 <Spacer/>
-               
                 <Spacer/>
-                
                 <Button className="pt-4 mt-4 pl-0" onClick={footerfromHead} size="small" rel="noopener noreferrer">
                     <ImageButton src="images/menu.png"/>
                 </Button>

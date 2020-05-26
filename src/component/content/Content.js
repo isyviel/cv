@@ -10,7 +10,7 @@ import Navigation from "../Navigation"
 import Footer from "../head/Footer"
 
 const ContentContainer = styled(Container)`
-    height: 100%;
+   
     color: ${Colors.darkGrey};
     font-size: 24px;
 `

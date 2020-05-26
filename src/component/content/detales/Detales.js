@@ -64,10 +64,15 @@ const Square = styled(Container) `
     z-index: 1;
 `
  const CustomImg = styled.img `
+        margin-bottom: 20px;
         height: 200px;
         z-index: 2;
+        @media screen and (max-width:992px) {
+            height: 150px;
+        }
         @media screen and (max-width:768px) {
             height: 150px;
+       
         }
         @media screen and (max-width:576px) {
             height: 50px;
