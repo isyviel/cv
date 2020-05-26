@@ -93,12 +93,25 @@ const OnePage = () => {
         } else {displayExp()
         }
     }
+    const showPrevious = () => {
+        setIsHome(false)
+        setIsContent(true)
+        if(isExp){
+            displayMailForm()
+        }else if (isFormation) {
+            displayExp()
+        } else if (isProject) {
+            displayFormation()
+        } else if (isMail){
+            displayProjects()
+        } else {displayMailForm()}
+    }
 
     return (
         <CustomDiv fluid data-nosnippet>
                 {isHome ? <Head isHome={isHome} mailToHead={displayMailForm}/> : <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>}
                 <Name isHome={isHome} isContent={isContent}/>
-                <Navigation displayNext={showDetales}/>
+                <Navigation displayNext={showDetales} displayPrevious={showPrevious}/>
                 <Content
                     isMail = {isMail}
                     isExp={isExp}
@@ -111,7 +124,6 @@ const OnePage = () => {
                     goToProjectContent = {displayProjects}
                     goToMailForm = {displayMailForm}
                     isHome={isHome}/>
-                
         </CustomDiv>
     )
 }

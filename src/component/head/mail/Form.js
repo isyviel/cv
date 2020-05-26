@@ -12,6 +12,7 @@ import Container from "@bootstrap-styled/v4/lib/Container";
 
 const CustomDiv = styled.div`
   height: 20px;
+  margin: 0 0 0 15%;
 `
 const CustomP = styled.p`
   color: ${Colors.orange};
@@ -19,6 +20,12 @@ const CustomP = styled.p`
 const CustomForm = styled.form`
   width: 900px;
   margin: 0 0 0 10%;
+
+  @media screen and (max-width:1440px) {
+    max-width:80%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   @media screen and (max-width:1200px) {
     max-width:95%;
     margin: 0 !important;
@@ -50,7 +57,16 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
           backgroundColor: "#FF7A00", 
           boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
         },   
-}}))
+  },
+  active: {
+    fontFamily: 'Dosis',
+    width: "200px",
+    backgroundColor: "#FFFFF",
+    background: "rgba(255,255,255)",
+    color: Colors.orange,
+    boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
+  }
+}))
 
 const classes = useStyles()
 
@@ -83,12 +99,13 @@ const ColorLinearProgress = withStyles({
               {!values.mail ? 
                 <div>
                   <CustomP>* Adresse mail obligatoire</CustomP>
-                  <Button className={classes.root} disabled>Envoyer</Button>
+                  <Button className={classes.active} disabled>Envoyer</Button>
                 </div>
               :
                 <div>
                     <CustomP className="text-white">* Adresse mail obligatoire</CustomP>
-                    <Button type="submit" className={classes.root}>
+                    <Button type="submit" className={isLoading ? classes.active: classes.root}
+                    disabled={isLoading ? true : false}>
                       Envoyer
                     </Button>
                 </div>

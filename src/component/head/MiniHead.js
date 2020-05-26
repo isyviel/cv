@@ -22,15 +22,11 @@ const HomeContainer = styled(Container)`
 
     @media screen and (max-width:768px) {
         width:100px;
-        background-color: #272727;
         padding: 50px 0 0 15px !important;
     }
     @media screen and (max-width:576px) {
-       
         width: 40px;
-        background-color: #272727;
         padding: 100px 0 0 2px !important;
-
     }
 `
 const MiniHead = ({isHome,mailToHead,homeToHead,...props}) => {

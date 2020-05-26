@@ -18,7 +18,7 @@ const SendMail = ()=> {
     const [isLoading, setIsLoading] = useState(false)
     const [values,setValues] = useState({})
     const [status, setStatus] = useState(null)
-      
+
     const handleClose = () => {
         setOpen(false)
       }

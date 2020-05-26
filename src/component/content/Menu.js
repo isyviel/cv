@@ -30,10 +30,15 @@ const Menu = ({
     fromExpButton,
     fromMailButton,
     isDeploy,
+    isExp,
+    isFormation,
+    isProject,
     isMail,
+    isHome,
     exp, 
     diplome, 
-    projects, 
+    projects,
+    isActive,
     ...props}) => { 
 
     const MenuContainer = styled(Container)`
@@ -43,10 +48,7 @@ const Menu = ({
         padding-top: 5%;
         width: 400px;
 
-        @media screen and (max-width:1400px) {
-            ${isMail &&("display : none;")}            
-        }
-       
+        
         @media screen and (max-width:1200px) {
             padding: 0;
             max-width: 300px !important;
@@ -57,7 +59,7 @@ const Menu = ({
         @media screen and (max-width:576px) {
             margin: 0;
             top: 60%;
-            left: 35px;
+            left: 15%;
             width: 70%;
             z-index: 1;
         }
@@ -65,7 +67,7 @@ const Menu = ({
     `
 const useStyles = makeStyles((theme) => ({
     root: {
-        background:"linear-gradient(145deg, #ff8300, #e66e00)", 
+        background: "linear-gradient(145deg, #ff8300, #e66e00)", 
         boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
         color: "white",
         width: "75%",
@@ -73,8 +75,23 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: "#FF7A00", 
             boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
-          },   
-}}))
+        },
+        '&:focus': {
+        backgroundColor: "#FFFFF",
+        background: "rgba(255,255,255)",
+        color: Colors.orange,
+        boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
+        },          
+    },
+    active: {
+        fontFamily: 'Dosis',
+        width: "75%",
+        backgroundColor: "#FFFFF",
+        background: "rgba(255,255,255)",
+        color: Colors.orange,
+        boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
+    }
+}))
 
 const classes = useStyles()
 
@@ -82,18 +99,18 @@ const classes = useStyles()
     return (
         <MenuContainer>
                 <Row className="justify-content-end align-items-center">
-                    <Col sm="8">
+                    <Col>
                         <ButtonRow className="justify-content-end align-items-center">
-                            <Button className={classes.root} onClick={fromExpButton}>{exp}</Button>
+                            <Button className={isExp ? classes.active : classes.root} onClick={fromExpButton}>{exp}</Button>
                         </ButtonRow>
                         <ButtonRow className="justify-content-end align-items-center">
-                            <Button className={classes.root} onClick={fromFormationButton} >{diplome}</Button>
+                            <Button className={isFormation ? classes.active : classes.root} onClick={fromFormationButton}>{diplome}</Button>
                         </ButtonRow>
                         <ButtonRow className="justify-content-end align-items-center">
-                            <Button className={classes.root} onClick={fromProjectButton}>{projects}</Button>
+                            <Button className={isProject ? classes.active : classes.root} onClick={fromProjectButton}>{projects}</Button>
                         </ButtonRow>
                         <ButtonRow className="justify-content-end align-items-center">
-                            <Button className={classes.root} onClick={fromMailButton}>Contact</Button>
+                            <Button className={isMail ? classes.active : classes.root} onClick={fromMailButton}>Contact</Button>
                         </ButtonRow>
                     </Col>
                     <SquareContainer/>

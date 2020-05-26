@@ -6,6 +6,7 @@ import Colors from '../common/themes/Colors'
 import {MENU} from '../common/constantes/home'
 import Detales from "./detales/Detales"
 import Aboutme from "./AboutMe"
+import Navigation from "../Navigation"
 
 const ContentContainer = styled(Container)`
     height: 100%;
@@ -19,6 +20,7 @@ const Content = ({
     isFormation,
     isMail,
     isHome,
+    isActive,
     goToProjectContent,
     goToExpContent,
     goToFormationContent,
@@ -55,7 +57,11 @@ const Content = ({
                         fromFormationButton={goToFormationContent}
                         fromProjectButton={goToProjectContent}
                         fromMailButton={goToMailForm}
-                        isMail={isMail}/>
+                        isExp={isExp}
+                        isFormation={isFormation}
+                        isProject={isProject}
+                        isMail={isMail}
+                        isHome={isHome}/>
                         
         </ContentContainer>
     )

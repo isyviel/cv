@@ -13,7 +13,7 @@ const ButtonRow = styled(Row)`
         margin-top: 10px;
     }
 `
-const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...props}) => {  
+const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,isWeb,isAdrar,isSales,isEng,...props}) => {  
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -26,13 +26,16 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...pr
                 backgroundColor: "#FF7A00", 
                 boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
               },
-            '&:focus': {
-                backgroundColor: "#FFFFF",
-                background: "rgba(255,255,255)",
-                color: Colors.orange,
-                boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
-            },
-    }}))
+        },
+        active: {
+            fontFamily: 'Dosis',
+            width: "100%",
+            backgroundColor: "#FFFFF",
+            background: "rgba(255,255,255)",
+            color: Colors.orange,
+            boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
+        }
+    }))
     
     const classes = useStyles()
 
@@ -40,10 +43,16 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,...pr
             <ThemeProvider>
                     <Col xs="10 mx-auto" sm="2 ml-4">
                         <ButtonRow>
-                            {isExp ? <Button className={classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> : <Button className={classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>}
+                            {isExp ? 
+                                <Button className={isWeb ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> 
+                                : <Button className={isAdrar ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>
+                            }
                         </ButtonRow>
                         <ButtonRow>
-                            {isExp ? <Button className={classes.root} id="sales" onClick={displaySales}>Vente</Button> : <Button  className={classes.root} id="english" onClick={displayEnglish}>Anglais</Button>}
+                            {isExp ? 
+                                <Button className={isSales ? classes.active : classes.root} id="sales" onClick={displaySales}>Vente</Button> 
+                                : <Button  className={isEng ? classes.active : classes.root} id="english" onClick={displayEnglish}>Anglais</Button>
+                            }
                         </ButtonRow>
                     </Col>
             </ThemeProvider>

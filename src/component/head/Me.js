@@ -20,9 +20,9 @@ const Me = styled.div`
     }
 
     @media screen and (max-width:768px) {
-        height: 80px;
-        width: 80px;
-        background-size: 80px;
+        height: 70px;
+        width: 70px;
+        background-size: 70px;
         margin: 0;
     }
     

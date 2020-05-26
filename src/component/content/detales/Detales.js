@@ -29,10 +29,12 @@ z-index: 1;
 }
 @media screen and (max-width:768px) {
     margin-left: 5%;
+    padding: 0 5% 3% 8%;
   }
 @media screen and (max-width:576px) {
     margin-left: 0;
     height: 100%;
+    padding: 0 0 3% 10%;
 }
 `
 const CategoryTitle = styled.h1`
@@ -41,6 +43,9 @@ const CategoryTitle = styled.h1`
     @media screen and (max-width:992px) {
         font-size: 24px;
         margin-left: 10px;
+    }
+    @media screen and (max-width:768px) {
+        margin-left: 5%;
     }
     @media screen and (max-width:576px) {
         font-size: 20px;
@@ -91,7 +96,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     
                         {isExp &&(
                             <Row className="ml-sm-3">
-                                <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp}/>
+                                <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp} isSales={isSales} isWeb={isWeb}/>
                                 {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
                                 {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
                             </Row>
@@ -100,7 +105,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
 
                         {isFormation &&(
                             <Row className="ml-sm-3">
-                                <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar}/>
+                                <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar} isEng={isEng} isAdrar={isAdrar}/>
                                 {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
                                 {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
                             </Row>
