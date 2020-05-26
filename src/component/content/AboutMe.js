@@ -54,11 +54,11 @@ const Aboutme = ({isHome,...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
             <CustomContainer>
-                
-            <div className="pl-3 text-center">
+                <div>EN CONSTRUCTION</div>
+            {/* <div className="pl-3 text-center">
                 Passionnée de moto et d'informatique , j'ai laissé derrière moi 10 années de vente au détail d'habillement pour évoluer dans le monde du digital.
             </div>
-            <div className="pl-3 text-center">Ici commence mon voyage de développeuse web.</div>
+            <div className="pl-3 text-center">Ici commence mon voyage de développeuse web.</div> */}
            </CustomContainer>
         </Slide>
     )
