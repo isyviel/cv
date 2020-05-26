@@ -22,7 +22,6 @@ const Fleche = styled.img`
 const FlecheG = styled.img`
     position: fixed;
     right: 100px;
-    rotate: 180deg;
     bottom: 20px;
     cursor: pointer;
 
@@ -45,7 +44,7 @@ const Navigation = ({displayNext,displayPrevious,...props}) => {
             onClick={displayNext}  
             alt="icone fleche" 
             id="logo_fleche_droite"/>
-            <FlecheG src="images/fleche.png" 
+            <FlecheG src="images/flecheg.png" 
             onClick={displayPrevious}  
             alt="icone fleche" 
             id="logo_fleche_droite"/>
