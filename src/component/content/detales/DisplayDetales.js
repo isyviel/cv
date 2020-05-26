@@ -70,8 +70,9 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
         src = "images/strategia.png"
     } else if (isSales) {
         title = VENTE[0]
-        skills = VENTE[1]
-        softSkills = VENTE[2]
+        content = VENTE[1]
+        skills = VENTE[2]
+        softSkills = VENTE[3]
         description = VList
         src = "images/MIM.jpg"
     } else if (isAdrar) {
@@ -84,8 +85,9 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
         src = "images/adrar.png"
     } else if (isEnglish) {
         title = ANGLAIS[0]
-        skills = ANGLAIS[1]
-        softSkills = ANGLAIS[2]
+        content= ANGLAIS[1]
+        skills = ANGLAIS[2]
+        softSkills = ANGLAIS[3]
         description = ANGList
         src = "images/univ.png"
     }
@@ -97,7 +99,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
                 <Col>
                     <Title className="h3">{title}</Title>
                     <Row className="justify-content-center justify-content-sm-start ml-sm-1">
-                        <WebSite href={href} content={content}/>
+                        <WebSite href={href} content={content} isSales={isSales} isEnglish={isEnglish}/>
                     </Row>
                 </Col>
                 <Logo src={src}/>

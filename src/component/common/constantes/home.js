@@ -20,14 +20,14 @@ export const AList = ["Conception et maquettage d'applications:",
 "Java, PHP",
 "Construction et intégration d'une interface web dynamique:",
 "Android, Javascript (Jquery, React), HTML5, CSS3, Bootstrap"]
-export const VENTE = ["Mim / Christine Laure","Commerce, Manutention, Comptabilité","Autonomie, transparence, dynamisme, proactivité, objectifs réalisés"]
+export const VENTE = ["Mim / Christine Laure","2009-2019","Commerce, Manutention, Comptabilité","Autonomie, transparence, dynamisme, proactivité, objectifs réalisés"]
 export const VList = ["Accueil personnalisé, conseils, accompagnement et vente complémentaire.",
 "Mise en place du merchandising libre ou imposé.",
 "Gestion des livraisons, des retours dépôts et des inventaires.",
 "Calcul des objectifs vendeuse et magasin.",
 "Gestion de la sécurité du personnel et des fonds.",
 "Organisation de mesures contre la démarque inconnue."]
-export const ANGLAIS = ["Anglais","2011 : Licence 2 Langue Littérature et Civilisation Etrangère Anglaise","Université Lettres et Langues Poitiers"]
+export const ANGLAIS = ["Anglais","2011","Licence 2 Langue Littérature et Civilisation Etrangère Anglaise","Université Lettres et Langues Poitiers"]
 export const ANGList = ["Littérature",
 "Phonétique",
 "Linguistique",

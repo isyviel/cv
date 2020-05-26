@@ -9,10 +9,14 @@ const Link =  styled.a`
     }
     color: ${Colors.orange};
 `
+const Text = styled.p`
+    color: ${Colors.orange};
+    margin: 0;
+`
 
-const WebSite = ({href, content,...props}) => {
+const WebSite = ({href, content, isSales,isEnglish,...props}) => {
 
-    return <Link href={href} target="__blank">{content}</Link>
+    return isSales || isEnglish ? <Text>{content}</Text> : <Link href={href} target="__blank">{content}</Link>
 }
 
 export default WebSite
