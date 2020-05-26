@@ -119,7 +119,7 @@ const OnePage = () => {
         <CustomDiv fluid data-nosnippet>
                 {isHome ? <Head isHome={isHome} mailToHead={displayMailForm} footerfromHead={displayFooter}/> : <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>}
                 <Name isHome={isHome} isContent={isContent}/>
-                <Navigation displayNext={showDetales} displayPrevious={showPrevious}/>
+                {/* <Navigation displayNext={showDetales} displayPrevious={showPrevious}/> */}
                 <Content
                     isMail = {isMail}
                     isExp={isExp}

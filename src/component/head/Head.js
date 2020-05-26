@@ -5,9 +5,10 @@ import Me from './Me'
 import Contact from './Contact'
 import Quote from './Quote'
 import Spacer from '../common/Spacer'
-import { Slide } from "@material-ui/core"
+import { Slide, Button } from "@material-ui/core"
 import Name from "../Name"
 import Footer from "./Footer"
+import ImageButton from "../common/ImageButton"
 
 const HomeContainer = styled(Container)`
     height: 100%;
@@ -37,7 +38,7 @@ const HomeContainer = styled(Container)`
 
     
 `
-const Head = ({isHome,mailToHead, footerfromHead,...props}) => {
+const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
 
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
@@ -46,7 +47,15 @@ const Head = ({isHome,mailToHead, footerfromHead,...props}) => {
                 <Spacer/>
                 <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
                 <Spacer/>
+                <Spacer/>
                 <Quote/>
+                <Spacer/>
+               
+                <Spacer/>
+                
+                <Button className="pt-4 mt-4 pl-0" onClick={footerfromHead} size="small" rel="noopener noreferrer">
+                    <ImageButton src="images/menu.png"/>
+                </Button>
             </HomeContainer>
         </Slide>
     )

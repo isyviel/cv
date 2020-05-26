@@ -20,7 +20,7 @@ const CategoryTitle = styled.h1`
     font-family: 'Bangers';
     font-size: 20px;
     color: ${Colors.orange};
-    margin-top: 40px;
+    margin-top: 15px;
     @media screen and (max-width:576px) {
         margin: 20px 0 10px 0;
         text-align: center;

@@ -61,11 +61,6 @@ const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,
                                 <ImageButton src={ICONS[index-1]}/>
                             </Button>
                         )}
-                        {index === 6 &&(
-                            <Button className="pt-4 mt-4" onClick={goToFooter} rel="noopener noreferrer">
-                                <ImageButton src={ICONS[index-1]}/>
-                            </Button>
-                        )}
                         {isHome &&(<ContactDiv key={index} className={index === 2 ? "ml-1" : "" }>{label}</ContactDiv>)}
                     </CustomRow>)})}
         </ListeContainer>

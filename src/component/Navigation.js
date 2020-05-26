@@ -5,7 +5,7 @@ import { Row} from "@bootstrap-styled/v4"
 const Fleche = styled.img`
     position: fixed;
     right: 10px;
-    bottom: 20px;
+    bottom: 70px;
     cursor: pointer;
 
     @media screen and (max-width:992px) {
@@ -22,7 +22,7 @@ const Fleche = styled.img`
 const FlecheG = styled.img`
     position: fixed;
     right: 100px;
-    bottom: 20px;
+    bottom: 70px;
     cursor: pointer;
 
     @media screen and (max-width:992px) {

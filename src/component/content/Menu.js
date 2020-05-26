@@ -44,7 +44,7 @@ const Menu = ({
     const MenuContainer = styled(Container)`
         position: fixed;
         right: 10px;
-        top: 15%;
+        top: 30%;
         width: 300px;
 
         
@@ -64,12 +64,12 @@ const Menu = ({
         @media screen and (max-width:576px) {
             margin: 0;
             top: 40%;
-            left: 10%;
             width: 70%;
             z-index: 1;
         }
         
     `
+
 const useStyles = makeStyles((theme) => ({
     root: {
         background: "linear-gradient(145deg, #ff8300, #e66e00)", 
@@ -103,22 +103,23 @@ const classes = useStyles()
 
     return (
         <MenuContainer>
-                <Row className="justify-content-end align-items-center">
+                <Row className="justify-content-center align-items-center">
+                    
                     <Col>
-                        <ButtonRow className="justify-content-end align-items-center">
+                        <ButtonRow className="justify-content-start align-items-center">
                             <Button className={isExp ? classes.active : classes.root} onClick={fromExpButton}>{exp}</Button>
                         </ButtonRow>
-                        <ButtonRow className="justify-content-end align-items-center">
+                        <ButtonRow className="justify-content-start align-items-center">
                             <Button className={isFormation ? classes.active : classes.root} onClick={fromFormationButton}>{diplome}</Button>
                         </ButtonRow>
-                        <ButtonRow className="justify-content-end align-items-center">
+                        <ButtonRow className="justify-content-start align-items-center">
                             <Button className={isProject ? classes.active : classes.root} onClick={fromProjectButton}>{projects}</Button>
                         </ButtonRow>
-                        <ButtonRow className="justify-content-end align-items-center">
+                        <ButtonRow className="justify-content-start align-items-center">
                             <Button className={isMail ? classes.active : classes.root} onClick={fromMailButton}>Contact</Button>
                         </ButtonRow>
                     </Col>
-                    <SquareContainer/>
+                    
                 </Row>            
         </MenuContainer>
     )

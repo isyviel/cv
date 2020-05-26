@@ -8,13 +8,10 @@ import Colors from "../common/themes/Colors"
 
 const CustomContainer = styled(Container)`
     position: fixed;
-    top: 330px;
-    left: 470px;
+    top: 150px;
+    left: 440px;
     font-size: 20px;
-    
-    border: 1px solid ${Colors.orange};
-    width: 25%;
-    border-radius: 5px;
+    width: 50%;
 
     @media screen and (max-width:1200px) {
         left: 370px;
@@ -41,10 +38,28 @@ const CustomContainer = styled(Container)`
         width: 80%;
     }
 `
+
+const CustomImg = styled.img `
+    
+    height: 200px;
+    z-index: 2;
+    @media screen and (max-width:768px) {
+        height: 150px;
+    }
+    @media screen and (max-width:576px) {
+        height: 50px;
+    }
+`
 const Aboutme = ({isHome,...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
-            <img src="images/banniere.png"/>
+            <CustomContainer>
+                
+            <div className="pl-3 text-center">
+                Passionnée de moto et d'informatique , j'ai laissé derrière moi 10 années de vente au détail d'habillement pour évoluer dans le monde du digital.
+            </div>
+            <div className="pl-3 text-center">Ici commence mon voyage de développeuse web.</div>
+           </CustomContainer>
         </Slide>
     )
 }

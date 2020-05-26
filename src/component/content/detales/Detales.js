@@ -55,12 +55,41 @@ const CategoryTitle = styled.h1`
     }
 `
 
+const Square = styled(Container) `
+    margin-bottom: 40px;
+    width: 50px;
+    border-radius: 5px;
+    height: 2px;
+    background: ${Colors.darkGrey};
+    z-index: 1;
+`
+ const CustomImg = styled.img `
+        height: 200px;
+        z-index: 2;
+        @media screen and (max-width:768px) {
+            height: 150px;
+        }
+        @media screen and (max-width:576px) {
+            height: 50px;
+        }
+    `
 const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,...props}) => {
+
+   
 
     const [isWeb, setIsWeb] = useState(true)
     const [isSales, setIsSales] = useState(false)
     const [isEng, setIsEng] = useState(false)
     const [isAdrar, setIsAdrar] = useState(true)
+    let src = ""
+
+    if (isFormation) {
+        src = "images/livre.png"
+    } else if (isExp) {
+        src = "images/ordi.png"
+    } else if (isProject) {
+        src= "images/think.png"
+    }
 
     const displaySales = () => {
         setIsSales(true)
@@ -122,7 +151,9 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                         {isMail &&(
                             <SendMail/>
                         )}
-                 
+                        
+                        <CustomImg src={src}/>
+                        
                 </DetalesContainer>
             </Slide>
     )

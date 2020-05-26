@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Row,Col } from "@bootstrap-styled/v4"
+import { Row,Col,Container } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
 import { ThemeProvider, makeStyles } from '@material-ui/styles';
 import Colors from "../../common/themes/Colors";
@@ -42,6 +42,7 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,isWeb
     return (
             <ThemeProvider>
                     <Col xs="10 mx-auto" sm="2 ml-4">
+                        
                         <ButtonRow>
                             {isExp ? 
                                 <Button className={isWeb ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> 
