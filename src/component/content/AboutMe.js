@@ -44,9 +44,7 @@ const CustomContainer = styled(Container)`
 const Aboutme = ({isHome,...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
-            <CustomContainer>
-                <Quote/>
-            </CustomContainer>
+            <img src="images/banniere.png"/>
         </Slide>
     )
 }

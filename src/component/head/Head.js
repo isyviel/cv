@@ -45,6 +45,8 @@ const Head = ({isHome,mailToHead, footerfromHead,...props}) => {
                 <Me/>
                 <Spacer/>
                 <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
+                <Spacer/>
+                <Quote/>
             </HomeContainer>
         </Slide>
     )
