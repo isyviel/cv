@@ -6,18 +6,20 @@ import Drawer from '@material-ui/core/Drawer';
 import ImageButton from "../common/ImageButton";
 import Colors from "../common/themes/Colors";
 
-const CustomContainer = styled(Container)`
+const Footer = ({open, slideOutFooter,isHome,...props}) => {
+
+    const CustomContainer = styled(Container)`
     position: fixed;
     bottom: 0px;
     background-color: #272727;
     min-width: 100%;
-    padding: 0 40px 0 450px;
+    padding: ${isHome ? "0 40px 0 450px":"0 40px 0 80px"};
 
     @media screen and (max-width:1200px) {
-        padding: 0 40px 0 350px;
+        padding: ${isHome ? "0 40px 0 350px":"0 40px 0 80px"};
      }
      @media screen and (max-width:992px) {
-         padding: 0 40px 0 150px;
+        padding: ${isHome ? "0 40px 0 150px":"0 40px 0 80px"};
      }
  
      @media screen and (max-width:768px) {
@@ -27,9 +29,7 @@ const CustomContainer = styled(Container)`
          padding: 0 40px 0 40px;
          
      }
-    
-`
-const Footer = ({open, slideOutFooter,...props}) => {
+   `
     const useStyles = makeStyles((theme) => ({
         root: {
             color: Colors.orange,

@@ -8,7 +8,7 @@ import Quote from './Quote'
 import Spacer from '../common/Spacer'
 import { Slide, Button } from "@material-ui/core"
 import Name from "../Name"
-import Footer from "./Footer"
+import Footer from "../content/Footer"
 import ImageButton from "../common/ImageButton"
 
 const ToggleContainer = styled(Container)`
