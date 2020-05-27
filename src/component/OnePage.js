@@ -10,7 +10,7 @@ import Name from "./Name"
 
 
 const CustomDiv = styled(Container)`
-    background: url(images/deco_ronds.png) fixed center no-repeat;
+    background: url(images/deco.png) fixed bottom no-repeat;
     height: 958px;
     font-family: Dosis;
     padding: 0 !important;
