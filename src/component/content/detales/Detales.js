@@ -86,13 +86,6 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
     const [isAdrar, setIsAdrar] = useState(true)
     let src = ""
 
-    if (isFormation) {
-        src = "images/livre.png"
-    } else if (isExp) {
-        src = "images/ordi.png"
-    } else if (isProject) {
-        src= "images/think.png"
-    }
 
     const displaySales = () => {
         setIsSales(true)
@@ -128,34 +121,40 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     </CategoryTitle>
                     
                         {isExp &&(
+                             <>
                             <Row className="ml-sm-3">
                                 <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp} isSales={isSales} isWeb={isWeb}/>
                                 {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
                                 {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
                             </Row>
-                        
+                            <CustomImg src="images/ordi.png"/>
+                            </>
                         )}
 
                         {isFormation &&(
+                            <>
                             <Row className="ml-sm-3">
                                 <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar} isEng={isEng} isAdrar={isAdrar}/>
                                 {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
                                 {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
                             </Row>
+                            <CustomImg src="images/livre.png"/>
+                            </>
 
                         )}
                     
                         {isProject &&(
+                            <>
                             <Row className="ml-sm-2">
                                 <Projects isProject={isProject}/>
                             </Row>
+                            <CustomImg src="images/think.png"/>
+                            </>
                         )}
 
                         {isMail &&(
                             <SendMail/>
                         )}
-                        
-                        <CustomImg src={src}/>
                         
                 </DetalesContainer>
             </Slide>
