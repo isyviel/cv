@@ -45,23 +45,29 @@ const Name = ({isHome,isContent,...props}) => {
         font-size: 48px;
         color: ${Colors.orange};
         text-align: left;
-        padding: 0 20px 0 0 ;
+        padding: ${isHome ? "15px 0 0 460px !important" : "15px 0 0 8%"};
         margin: 0 !important;
         font-family: 'Bangers';
         z-index: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: end;
 
+        @media screen and (max-width:1200px) {
+            padding: 15px 0 0 360px !important;
+        }
+        @media screen and (max-width:992px) {
+            padding: 15px 0 0 160px !important;
+        }
+        @media screen and (max-width:768px) {
+            padding: 15px 0 0 110px !important;
+        }
         @media screen and (max-width:576px) {
-            margin-left: 40px;
+            padding: 15px 0 0 25px !important;
+            margin: 0 0 0 45px;
         }
     `
 
 
     return(
-        <Slide timeout={800}  direction="left" in={isHome}>
+        <Slide timeout={800}  direction="right" in={isHome}>
             <NameContainer fluid>
                     <CustomH1>     
                         {NOM} - {TITRE}
