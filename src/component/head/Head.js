@@ -9,6 +9,7 @@ import { Slide, Button } from "@material-ui/core"
 import Name from "../Name"
 import Footer from "./Footer"
 import ImageButton from "../common/ImageButton"
+import Toggle from "./Toggle"
 
 const HomeContainer = styled(Container)`
     height: 100%;
@@ -28,12 +29,12 @@ const HomeContainer = styled(Container)`
     }
     @media screen and (max-width:992px) {
         width:150px;
-        padding: 45px 0 0 35px !important;
+        padding: 45px 0 0 0 !important;
     }
 
     @media screen and (max-width:768px) {
         width:100px;
-        padding: 50px 0 0 15px !important;
+        padding: 50px 0 0 0 !important;
     }
     @media screen and (max-width:576px) {
         width: 40px;
@@ -53,9 +54,7 @@ const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
                 
                 <Quote/>
                
-                <Button className="pl-0" onClick={footerfromHead} size="small" rel="noopener noreferrer">
-                    <ImageButton src="images/menu.png"/>
-                </Button>
+                <Toggle footerfromHead={footerfromHead}/>
             </HomeContainer>
         </Slide>
     )
