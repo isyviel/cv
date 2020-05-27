@@ -62,10 +62,9 @@ const Menu = ({
             ${isMail &&("display : none;")}
         }
         @media screen and (max-width:576px) {
-            margin: 0;
-            top: 40%;
+            
+            margin: auto;
             width: 70%;
-            z-index: 1;
         }
         
     `
@@ -106,16 +105,16 @@ const classes = useStyles()
                 <Row className="justify-content-center align-items-center">
                     
                     <Col>
-                        <ButtonRow className="justify-content-start align-items-center">
+                        <ButtonRow className="justify-content-center align-items-center">
                             <Button className={isExp ? classes.active : classes.root} onClick={fromExpButton}>{exp}</Button>
                         </ButtonRow>
-                        <ButtonRow className="justify-content-start align-items-center">
+                        <ButtonRow className="justify-content-md-start justify-content-center align-items-center">
                             <Button className={isFormation ? classes.active : classes.root} onClick={fromFormationButton}>{diplome}</Button>
                         </ButtonRow>
-                        <ButtonRow className="justify-content-start align-items-center">
+                        <ButtonRow className="justify-content-center align-items-center">
                             <Button className={isProject ? classes.active : classes.root} onClick={fromProjectButton}>{projects}</Button>
                         </ButtonRow>
-                        <ButtonRow className="justify-content-start align-items-center">
+                        <ButtonRow className="justify-content-md-start justify-content-center align-items-center">
                             <Button className={isMail ? classes.active : classes.root} onClick={fromMailButton}>Contact</Button>
                         </ButtonRow>
                     </Col>

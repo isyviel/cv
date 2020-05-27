@@ -15,13 +15,13 @@ const Cross = styled.img`
     margin-right: 20px;
 `
 const DetalesContainer =  styled(Container)`
-    height: 80%;
     min-width: 87%;
     background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
-    margin: 0;
-    padding: 0 0 3% 8%;
+    margin: 30px 0 0 0;
+    padding: 0 0 0 8%;
     font-size: 16px;
     z-index: 1;
+    
 
     @media screen and (max-width:992px) {
         margin-left: 2%;
@@ -55,27 +55,25 @@ const CategoryTitle = styled.h1`
     }
 `
 
-const Square = styled(Container) `
-    margin-bottom: 40px;
-    width: 50px;
-    border-radius: 5px;
-    height: 2px;
-    background: ${Colors.darkGrey};
-    z-index: 1;
-`
  const CustomImg = styled.img `
-        margin-bottom: 20px;
+        margin: 0 0 10px 50px;
         height: 200px;
         z-index: 2;
+        @media screen and (max-width:1200px) {
+            margin: 0 0 10px 15px;
+        }
+       
         @media screen and (max-width:992px) {
             height: 150px;
+            margin: 0 0 10px 15px;
         }
         @media screen and (max-width:768px) {
             height: 150px;
        
         }
         @media screen and (max-width:576px) {
-            height: 50px;
+            height: 100px;
+            margin: 0;
         }
     `
 const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,...props}) => {

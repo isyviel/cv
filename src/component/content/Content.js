@@ -10,9 +10,16 @@ import Navigation from "../Navigation"
 import Footer from "./Footer"
 
 const ContentContainer = styled(Container)`
-   
+  
     color: ${Colors.darkGrey};
     font-size: 24px;
+
+    @media screen and (max-width:576px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const Content = ({
