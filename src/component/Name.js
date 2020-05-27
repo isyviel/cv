@@ -53,8 +53,9 @@ const Name = ({isHome,isContent,...props}) => {
         flex-direction: column;
         justify-content: start;
         align-items: end;
+
         @media screen and (max-width:576px) {
-            margin-left: 20px;
+            margin-left: 40px;
         }
     `
 
