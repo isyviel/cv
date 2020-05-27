@@ -108,11 +108,11 @@ const Aboutme = ({isHome,...props}) => {
     return (
             <CustomContainer>
                 <div>EN CONSTRUCTION</div>
-                <div>{hasMovedCursor
+                {/* <div>{hasMovedCursor
           ? `Your cursor is at ${x}, ${y}.`
-          : "Move your mouse around."}</div>
-                <div>{detectMoto ? <Fade in={detectMoto}><MotoImg src= "images/lucky.png"/></Fade>: "PAS LA"}</div>
-                <div>{detect ? <Fade in={detect}><ColImg src= "images/iraty.png"/></Fade>: "PAS LA"}</div>
+          : "Move your mouse around."}</div> */}
+                <div>{detectMoto ? <Fade in={detectMoto}><MotoImg src= "images/lucky.png"/></Fade>: ""}</div>
+                <div>{detect ? <Fade in={detect}><ColImg src= "images/iraty.png"/></Fade>: ""}</div>
                 
                {/* <CustomImg src= "images/lucky.png"/> */}
              {/* <div className="pl-3 text-center">
