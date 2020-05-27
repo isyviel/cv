@@ -16,9 +16,6 @@ const CustomDiv = styled(Container)`
     padding: 0 !important;
     overflow-y : hidden;
     overflow-x: hidden;
-    @media screen and (max-width:576px) {
-        height: 700px;
-    }
 `
 
 const OnePage = () => {
@@ -32,9 +29,15 @@ const OnePage = () => {
     const [open, setOpen] = useState(false)
     
     const displayFooter = () => {
+        console.log(open, "open")
         if(open) {
             setOpen(false)
-        } else {setOpen(true)}
+        } else {
+            setOpen(true)
+        }
+    }
+    const closeFooter = () => {
+        setOpen(false)
     }
 
     const displayMailForm = () => {
@@ -126,8 +129,8 @@ const OnePage = () => {
                     goToProjectContent = {displayProjects}
                     goToMailForm = {displayMailForm}
                     isHome={isHome}
-                    open={open}/>
-                
+                    open={open}
+                    notFooter={closeFooter}/>
         </CustomDiv>
     )
 }

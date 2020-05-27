@@ -17,6 +17,10 @@ const HomeContainer = styled(Container)`
     position: fixed;
     padding: 50px 0 0 70px !important;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: end;
 
     @media screen and (max-width:1200px) {
        width:350px;
@@ -44,14 +48,12 @@ const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
         <Slide timeout={800}  direction="right" in={isHome}>
             <HomeContainer fluid>
                 <Me/>
-                <Spacer/>
+                
                 <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
-                <Spacer/>
-                <Spacer/>
+                
                 <Quote/>
-                <Spacer/>
-                <Spacer/>
-                <Button className="pt-4 mt-4 pl-0" onClick={footerfromHead} size="small" rel="noopener noreferrer">
+               
+                <Button className="pl-0" onClick={footerfromHead} size="small" rel="noopener noreferrer">
                     <ImageButton src="images/menu.png"/>
                 </Button>
             </HomeContainer>

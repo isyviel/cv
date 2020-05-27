@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import {Row,Col,Container} from "@bootstrap-styled/v4/lib"
-import {Button, Menu, MenuItem, Paper, Grow, Slide, makeStyles} from '@material-ui/core/';
+import {Button, Menu, MenuItem, Paper, Grow, Slide, makeStyles, ClickAwayListener } from '@material-ui/core/';
 import Drawer from '@material-ui/core/Drawer';
 import ImageButton from "../common/ImageButton";
 import Colors from "../common/themes/Colors";
@@ -29,18 +29,18 @@ const CustomContainer = styled(Container)`
      }
     
 `
-const Footer = ({open,...props}) => {
+const Footer = ({open, slideOutFooter,...props}) => {
     const useStyles = makeStyles((theme) => ({
         root: {
-            color: "white",
+            color: Colors.orange,
             fontFamily: 'Dosis',
             fontSize: '16px',
             '&:hover': {
-                color: Colors.orange,
+                color: "white",
             },   
         },
         phone : {
-            color: "white",
+            color: Colors.orange,
             fontFamily: 'Dosis',
             fontSize: '16px',
         }
@@ -49,6 +49,7 @@ const Footer = ({open,...props}) => {
     const classes = useStyles()
   
     return (
+        
         <Slide timeout={800} direction='right' in={open}>
             <CustomContainer>
                 <Row className="justify-content-between">

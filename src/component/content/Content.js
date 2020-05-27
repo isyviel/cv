@@ -28,7 +28,8 @@ const Content = ({
     goToFormationContent,
     goToMailForm,
     contentIsShown, 
-    hideContent,...props}) => {
+    hideContent,
+    notFooter,...props}) => {
 
     const exp = MENU[0];
     const projects = MENU[2];
@@ -64,7 +65,7 @@ const Content = ({
                         isProject={isProject}
                         isMail={isMail}
                         isHome={isHome}/>
-                <Footer open={open}/>
+                <Footer open={open} slideOutFooter={notFooter}/>
                         
         </ContentContainer>
     )
