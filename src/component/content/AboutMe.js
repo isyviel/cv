@@ -76,7 +76,10 @@ const ColImg = styled.img `
 const CustContainer = styled(Container)`
     height: 410px;
     width: 434px;
-    background: pink;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow: inset 41px 41px 82px #d9d9d9, 
+                inset -41px -41px 82px #ffffff;
     position: fixed;
     bottom: 84px;
     left: 452px;
@@ -146,10 +149,10 @@ const Aboutme = ({isHome,...props}) => {
     return (
             <CustomContainer>
                 <div>EN CONSTRUCTION</div>
-                {/* <div>{hasMovedCursor
+                <div>{hasMovedCursor
           ? `Your cursor is at ${x}, ${y}`
           : "Move your mouse around."}</div>
-                <div>values : {minMotoX},{maxMotoX}, {minIraY}, {maxIraY}</div> */}
+                <div>values : moto :{minMotoX},{maxMotoX} - iraty: {minIraY}, {maxIraY}</div>
                 <div>{detectMoto ? <Fade in={detectMoto}><MotoImg src= "images/lucky.png"/></Fade>: ""}</div>
                 <div>{detect ? <Fade in={detect}><ColImg src= "images/iraty.png"/></Fade>: ""}</div>
             
@@ -158,7 +161,8 @@ const Aboutme = ({isHome,...props}) => {
              {/* <div className="pl-3 text-center">
             //     Passionnée de moto et d'informatique , j'ai laissé derrière moi 10 années de vente au détail d'habillement pour évoluer dans le monde du digital.
             // </div>*/}
-            <div className="pl-3 text-center">Ici commence mon voyage de développeuse web.</div> 
+            {/* <div className="pl-3 text-center">Ici commence mon voyage de développeuse web.</div> */}
+            
            </CustomContainer>
     )
 }

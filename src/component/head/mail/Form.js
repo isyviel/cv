@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/core/styles'
 import {LinearProgress} from '@material-ui/core'
 import styled from "styled-components"
 import Container from "@bootstrap-styled/v4/lib/Container";
+import useWindowSize from "../../common/constantes/size";
 
 const CustomDiv = styled.div`
   height: 20px;
@@ -35,35 +36,36 @@ const CustomDiv = styled.div`
     max-width: 33%;
   }
 `
+const CustomForm = styled.form`
+width: 900px;
+
+@media screen and (max-width:1440px) {
+  max-width:80%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media screen and (max-width:1200px) {
+  max-width:95%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media screen and (max-width:992px) {
+  max-width:90%;
+}
+@media screen and (max-width:768px) {
+  max-width:85%;
+ 
+}
+@media screen and (max-width:576px) {
+  max-width:30%;
+  
+}
+
+`
 const CustomP = styled.p`
   color: ${Colors.orange};
 `
-const CustomForm = styled.form`
-  width: 900px;
 
-  @media screen and (max-width:1440px) {
-    max-width:80%;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  @media screen and (max-width:1200px) {
-    max-width:95%;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  @media screen and (max-width:992px) {
-    max-width:90%;
-  }
-  @media screen and (max-width:768px) {
-    max-width:85%;
-   
-  }
-  @media screen and (max-width:576px) {
-    max-width:33%;
-   
-  }
-  
-`
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
   const useStyles = makeStyles((theme) => ({

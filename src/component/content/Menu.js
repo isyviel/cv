@@ -62,7 +62,8 @@ const Menu = ({
             ${isMail &&("display : none;")}
         }
         @media screen and (max-width:576px) {
-            right: 20%;
+            right: 0;
+            left: 5%;
             top: 300px;
             margin: auto;
         }
