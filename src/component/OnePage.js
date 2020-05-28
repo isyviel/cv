@@ -6,6 +6,7 @@ import Content from './content/Content'
 import Navigation from './Navigation'
 import MiniHead from "./head/MiniHead"
 import Name from "./Name"
+import useWindowSize from "./common/constantes/size"
 
 
 const OnePage = () => {
@@ -17,20 +18,11 @@ const OnePage = () => {
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
     const [open, setOpen] = useState(false)
-    const [size, setSize] = useState(null);
-
-    useEffect(() => {
-        detectSize()
-        console.log(size)
-      }, [size]);
-    
-    const detectSize =()=> {
-        setSize(window.innerHeight)
-    }
+    const {h,w} = useWindowSize()
 
     const CustomDiv = styled(Container)`
         background: url(images/deco.png) fixed bottom no-repeat;
-        height: ${size}px;
+        height: ${h}px;
         font-family: Dosis;
         padding: 0 !important;
         overflow-y : hidden;
@@ -139,7 +131,8 @@ const OnePage = () => {
                     goToMailForm = {displayMailForm}
                     isHome={isHome}
                     open={open}
-                    notFooter={closeFooter}/>
+                    notFooter={closeFooter}
+                />
         </CustomDiv>
     )
 }
