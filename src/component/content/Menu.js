@@ -43,8 +43,8 @@ const Menu = ({
 
     const MenuContainer = styled(Container)`
         position: fixed;
-        right: 10px;
         top: 30%;
+        right: 10px;
         width: 300px;
 
         
@@ -62,9 +62,9 @@ const Menu = ({
             ${isMail &&("display : none;")}
         }
         @media screen and (max-width:576px) {
-            
+            right: 20%;
+            top: 300px;
             margin: auto;
-            width: 70%;
         }
         
     `

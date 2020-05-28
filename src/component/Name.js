@@ -18,7 +18,6 @@ const CustomH1 = styled.h1`
     }
     @media screen and (max-width:576px) {
         font-size: 18px ;
-        text-align: center;
     }
 `
 const CustomH2 = styled.h2`
@@ -34,7 +33,6 @@ const CustomH2 = styled.h2`
     }
     @media screen and (max-width:576px) {
         font-size: 16px ;
-        text-align: center;
     }
 `
 
@@ -60,8 +58,8 @@ const Name = ({isHome,isContent,...props}) => {
             padding: 15px 0 0 110px !important;
         }
         @media screen and (max-width:576px) {
-            padding: 15px 0 0 25px !important;
-            margin: 0 0 0 45px;
+            padding: 15px 0 0 45px !important;
+           
         }
     `
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState,useEffect } from "react"
 import styled from "styled-components"
 import { Container} from "@bootstrap-styled/v4"
 import Head from './head/Head'
@@ -7,16 +7,6 @@ import Navigation from './Navigation'
 import MiniHead from "./head/MiniHead"
 import Name from "./Name"
 
-
-
-const CustomDiv = styled(Container)`
-    background: url(images/deco.png) fixed bottom no-repeat;
-    height: 958px;
-    font-family: Dosis;
-    padding: 0 !important;
-    overflow-y : hidden;
-    overflow-x: hidden;
-`
 
 const OnePage = () => {
 
@@ -27,7 +17,26 @@ const OnePage = () => {
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
     const [open, setOpen] = useState(false)
+    const [size, setSize] = useState(null);
+
+    useEffect(() => {
+        detectSize()
+        console.log(size)
+      }, [size]);
     
+    const detectSize =()=> {
+        setSize(window.innerHeight)
+    }
+
+    const CustomDiv = styled(Container)`
+        background: url(images/deco.png) fixed bottom no-repeat;
+        height: ${size}px;
+        font-family: Dosis;
+        padding: 0 !important;
+        overflow-y : hidden;
+        overflow-x: hidden;
+    `
+
     const displayFooter = () => {
         console.log(open, "open")
         if(open) {
