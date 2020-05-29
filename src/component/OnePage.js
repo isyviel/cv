@@ -8,7 +8,6 @@ import MiniHead from "./head/MiniHead"
 import Name from "./Name"
 import useWindowSize from "./common/hook/size"
 
-
 const OnePage = () => {
 
     const [isHome,setIsHome] = useState(true)
