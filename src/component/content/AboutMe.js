@@ -153,6 +153,7 @@ const Aboutme = ({isHome,...props}) => {
           ? `Your cursor is at ${x}, ${y}`
           : "Move your mouse around."}</div>
                 <div>values : moto :{minMotoX},{maxMotoX} - iraty: {minIraY}, {maxIraY}</div>
+                <div>sizes : h = {h} and w = {w}</div>
                 <div>{detectMoto ? <Fade in={detectMoto}><MotoImg src= "images/lucky.png"/></Fade>: ""}</div>
                 <div>{detect ? <Fade in={detect}><ColImg src= "images/iraty.png"/></Fade>: ""}</div>
             

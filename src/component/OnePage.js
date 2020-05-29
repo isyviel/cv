@@ -22,7 +22,8 @@ const OnePage = () => {
 
     const CustomDiv = styled(Container)`
         background: url(images/deco.png) fixed bottom no-repeat;
-        height: ${h}px;
+        min-height: ${h}px;
+        max-height: ${h}px;
         font-family: Dosis;
         padding: 0 !important;
         overflow-y : hidden;

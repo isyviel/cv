@@ -18,10 +18,9 @@ const HomeContainer = styled(Container)`
     position: fixed;
     padding: 50px 0 0 70px !important;
     z-index: 1;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     flex-direction: column;
-    align-items: end;
 
     @media screen and (max-width:1200px) {
        width:350px;
