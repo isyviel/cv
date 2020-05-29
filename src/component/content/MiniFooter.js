@@ -2,8 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import {Row,Col,Container} from "@bootstrap-styled/v4/lib"
 import {Button, Menu, MenuItem, Paper, Grow, Slide, makeStyles, ClickAwayListener } from '@material-ui/core/';
-import Drawer from '@material-ui/core/Drawer';
-import ImageButton from "../common/img/ImageButton";
 import Colors from "../common/themes/Colors";
 import useWindowSize from "../common/hook/size";
 
@@ -25,15 +23,16 @@ const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
         }
     `
     const CustomRow = styled(Row) `
-    width: ${w - 80}px;
-    
-    @media screen and (max-width:768px) {
-        width: ${w - 100}px;
-    }
-    @media screen and (max-width:576px) {
-        width: ${w - 40}px;
-    }
-`
+        width: ${w - 80}px;
+        
+        @media screen and (max-width:768px) {
+            width: ${w - 100}px;
+        }
+        @media screen and (max-width:576px) {
+            width: ${w - 40}px;
+        }
+    `
+
     const useStyles = makeStyles((theme) => ({
         root: {
             color: Colors.orange,
@@ -47,13 +46,12 @@ const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
             color: Colors.orange,
             fontFamily: 'Dosis',
             fontSize: '16px',
-        }
+        },
     }))
     
     const classes = useStyles()
   
     return (
-        
         <Slide timeout={800} direction='right' in={footerOpen}>
             <CustomContainer>
                 <CustomRow className="justify-content-between">

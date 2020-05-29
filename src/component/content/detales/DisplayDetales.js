@@ -105,32 +105,32 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
     }
 
     return(
-    <Fade timeout={800} in={isContent}>
-        <Col>
-            <Row className="justify-content-sm-between justify-content-center align-items-start ml-0 pr-4">
-                <Col>
-                    <Title className="h3">{title}</Title>
-                    <Row className="justify-content-center justify-content-sm-start">
-                        <WebSite href={href} content={content} isSales={isSales} isEnglish={isEnglish}/>
-                    </Row>
-                    {isAdrar &&(<Text>2020</Text>)}
-                    {isWeb &&(<Text>2020</Text>)}
-                </Col>
-                <Logo alt={alt} src={src}/>
-            </Row>
-            <Skills className="h5">{skills}</Skills>
-            <SoftSkills className="h6">{softSkills}</SoftSkills>
-            <article className="ml-1 ml-sm-3">
-                <CustomLi>
-                   {description.map((element,index) => {
-                        return(
-                            <Description content={element} key={index}/>
-                        )
-                    })} 
-                </CustomLi>
-            </article>
-        </Col>
-    </Fade>
+        <Fade timeout={800} in={isContent}>
+            <Col>
+                <Row className="justify-content-sm-between justify-content-center align-items-start ml-0 pr-4">
+                    <Col>
+                        <Title className="h3">{title}</Title>
+                        <Row className="justify-content-center justify-content-sm-start">
+                            <WebSite href={href} content={content} isSales={isSales} isEnglish={isEnglish}/>
+                        </Row>
+                        {isAdrar &&(<Text>2020</Text>)}
+                        {isWeb &&(<Text>2020</Text>)}
+                    </Col>
+                    <Logo alt={alt} src={src}/>
+                </Row>
+                <Skills className="h5">{skills}</Skills>
+                <SoftSkills className="h6">{softSkills}</SoftSkills>
+                <article className="ml-1 ml-sm-3">
+                    <CustomLi>
+                        {description.map((element,index) => {
+                            return(
+                                <Description content={element} key={index}/>
+                            )
+                        })} 
+                    </CustomLi>
+                </article>
+            </Col>
+        </Fade>
     )
 }
 

@@ -67,7 +67,6 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
     @media screen and (max-width:576px) {
       max-width:${w - 130}px;
     }
-
   `
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -90,56 +89,53 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
       boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
     },
     input: {
-        
         display: w > 576 ? "flex": "block",
         justifyContent: "center",
     },
 }))
 
-const classes = useStyles()
+  const classes = useStyles()
 
-const ColorLinearProgress = withStyles({
-  colorPrimary: {
-    backgroundColor: Colors.darkGrey,
-  },
-  barColorPrimary: {
-    backgroundColor: Colors.orange,
-  },
-})(LinearProgress);
+  const ColorLinearProgress = withStyles({
+    colorPrimary: {
+      backgroundColor: Colors.darkGrey,
+    },
+    barColorPrimary: {
+      backgroundColor: Colors.orange,
+    },
+  })(LinearProgress);
 
-    return (
-        <Container className="p-0 no-gutters" >
-          <CustomDiv>{isLoading &&(<ColorLinearProgress fullWidth/>)}</CustomDiv>
-          <CustomForm onSubmit={submit} values={values}>
-            <Input required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={change}/>
-            <Input label="Objet : " name="objet" value={values.objet} change={change} />
-            <Area label="Votre message" name="message" value={values.message} change={change}/>
-            <div className={classes.input}>
-                <Input label="Nom" name="nom" value={values.nom}  change={change}/>
-              
-             
-                <Input label="Prénom" name="prenom" value={values.prenom}  change={change}/>
-              
-                <Input label="Téléphone" name="phone" value={values.phone} change={change} />
-            </div> 
-            <Row className="justify-content-around mt-4">
-              {!values.mail ? 
-                <div>
-                  <CustomP>* Adresse mail obligatoire</CustomP>
-                  <Button className={classes.active} disabled>Envoyer</Button>
-                </div>
-              :
-                <div>
-                    <CustomP className="text-white">* Adresse mail obligatoire</CustomP>
-                    <Button type="submit" className={isLoading ? classes.active: classes.root}
-                    disabled={isLoading ? true : false}>
-                      Envoyer
-                    </Button>
-                </div>
-                }  
-            </Row>  
-          </CustomForm>
-        </Container> 
+  return (
+    <Container className="p-0 no-gutters" >
+      <CustomDiv>
+        {isLoading &&(<ColorLinearProgress fullWidth/>)}
+      </CustomDiv>
+      <CustomForm onSubmit={submit} values={values}>
+        <Input required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={change}/>
+        <Input label="Objet : " name="objet" value={values.objet} change={change} />
+        <Area label="Votre message" name="message" value={values.message} change={change}/>
+        <div className={classes.input}>
+            <Input label="Nom" name="nom" value={values.nom}  change={change}/>
+            <Input label="Prénom" name="prenom" value={values.prenom}  change={change}/>
+            <Input label="Téléphone" name="phone" value={values.phone} change={change} />
+        </div> 
+        <Row className="justify-content-around mt-4">
+          {!values.mail ? 
+            <div>
+              <CustomP>* Adresse mail obligatoire</CustomP>
+              <Button className={classes.active} disabled>Envoyer</Button>
+            </div>
+          :
+            <div>
+                <CustomP className="text-white">* Adresse mail obligatoire</CustomP>
+                <Button type="submit" className={isLoading ? classes.active: classes.root}
+                disabled={isLoading ? true : false}>
+                  Envoyer
+                </Button>
+            </div>}  
+        </Row>  
+      </CustomForm>
+    </Container> 
     )
 }
 

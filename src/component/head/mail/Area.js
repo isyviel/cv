@@ -5,7 +5,6 @@ import Theme from '../../common/themes/Theme'
 
 const Area = ({label,change, send,value, name,...props}) => {
 
-
     return(
       <ThemeProvider theme={Theme}>
         <TextField
@@ -20,7 +19,7 @@ const Area = ({label,change, send,value, name,...props}) => {
           name={name}
           className="mb-4"
         />
-        </ThemeProvider>    
+      </ThemeProvider>    
     )
 }
 

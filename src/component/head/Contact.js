@@ -18,26 +18,25 @@ const ContactDiv = styled.div`
 const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,...props}) => {
 
     const ListeContainer = styled(Container)`
-    margin: 0;
-    padding: 0 !important;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: ${isHome ? "start" : "center"};
-
-`
-const CustomRow =styled(Row)`
-    @media screen and (max-width:992px) {
-        padding-left: ${isHome ? "55px" : "0"};
-    }
-    @media screen and (max-width:768px) {
-        padding-left: ${isHome ? "30px" : "0"};
-        margin-top: 25px;
-    }
-    @media screen and (max-width:576px) {
-        padding-left: 2px;
-    }
-`
+        margin: 0;
+        padding: 0 !important;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: ${isHome ? "start" : "center"};
+    `
+    const CustomRow =styled(Row)`
+        @media screen and (max-width:992px) {
+            padding-left: ${isHome ? "55px" : "0"};
+        }
+        @media screen and (max-width:768px) {
+            padding-left: ${isHome ? "30px" : "0"};
+            margin-top: 25px;
+        }
+        @media screen and (max-width:576px) {
+            padding-left: 2px;
+        }
+    `
     return(
        <ListeContainer>
                     {HEAD.map((label,index) => {

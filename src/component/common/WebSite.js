@@ -17,7 +17,6 @@ const Text = styled.p`
 `
 
 const WebSite = ({href, content, isSales,isEnglish,...props}) => {
-
     return isSales || isEnglish ? <Text>{content}</Text> : <Link href={href} target="__blank">{content}</Link>
 }
 

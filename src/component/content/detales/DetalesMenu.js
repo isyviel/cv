@@ -40,23 +40,20 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,isWeb
     const classes = useStyles()
 
     return (
-            <ThemeProvider>
-                    <Col xs="10 mx-auto" sm="2 ml-4">
-                        
-                        <ButtonRow>
-                            {isExp ? 
-                                <Button className={isWeb ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> 
-                                : <Button className={isAdrar ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>
-                            }
-                        </ButtonRow>
-                        <ButtonRow>
-                            {isExp ? 
-                                <Button className={isSales ? classes.active : classes.root} id="sales" onClick={displaySales}>Vente</Button> 
-                                : <Button  className={isEng ? classes.active : classes.root} id="english" onClick={displayEnglish}>Anglais</Button>
-                            }
-                        </ButtonRow>
-                    </Col>
-            </ThemeProvider>
+        <ThemeProvider>
+            <Col xs="10 mx-auto" sm="2 ml-4">
+                <ButtonRow>
+                    {isExp ? 
+                        <Button className={isWeb ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> 
+                    :   <Button className={isAdrar ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayAdrar}>Web</Button>}
+                </ButtonRow>
+                <ButtonRow>
+                    {isExp ? 
+                        <Button className={isSales ? classes.active : classes.root} id="sales" onClick={displaySales}>Vente</Button> 
+                    :   <Button  className={isEng ? classes.active : classes.root} id="english" onClick={displayEnglish}>Anglais</Button>}
+                </ButtonRow>
+            </Col>
+        </ThemeProvider>
     )
         
 }

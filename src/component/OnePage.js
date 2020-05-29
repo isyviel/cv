@@ -16,7 +16,6 @@ const OnePage = () => {
     const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
-    const [footerOpen, setFooterOpen] = useState(false)
     const {h,w} = useWindowSize()
 
     const CustomDiv = styled(Container)`
@@ -28,18 +27,6 @@ const OnePage = () => {
         overflow-y : hidden;
         overflow-x: hidden;
     `
-
-    const displayFooter = () => {
-        console.log(footerOpen, "open")
-        if(footerOpen) {
-            setFooterOpen(false)
-        } else {
-            setFooterOpen(true)
-        }
-    }
-    const closeFooter = () => {
-        setFooterOpen(false)
-    }
 
     const displayMailForm = () => {
         setIsMail(true)
@@ -114,25 +101,26 @@ const OnePage = () => {
     }
 
     return (
-        <CustomDiv title="image de fond bulles blanches" fluid data-nosnippet>
-                {isHome ? <Head isHome={isHome} mailToHead={displayMailForm} footerfromHead={displayFooter}/> : <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome} footerfromHead={displayFooter}/>}
-                <Name isHome={isHome} isContent={isContent}/>
-                {/* <Navigation displayNext={showDetales} displayPrevious={showPrevious}/> */}
-                <Content
-                    isMail = {isMail}
-                    isExp={isExp}
-                    isFormation={isFormation}
-                    isProject={isProject}
-                    hideContent={returnToHome}
-                    contentIsShown={isContent} 
-                    goToExpContent={displayExp}
-                    goToFormationContent = {displayFormation}
-                    goToProjectContent = {displayProjects}
-                    goToMailForm = {displayMailForm}
-                    isHome={isHome}
-                    footerOpen={footerOpen}
-                    notFooter={closeFooter}
-                />
+        <CustomDiv fluid data-nosnippet>
+            {isHome ? 
+                <Head isHome={isHome} mailToHead={displayMailForm}/> 
+                : 
+                <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>
+            }
+            <Name isHome={isHome} isContent={isContent}/>
+            {/* <Navigation displayNext={showDetales} displayPrevious={showPrevious}/> */}
+            <Content
+                isMail = {isMail}
+                isExp={isExp}
+                isFormation={isFormation}
+                isProject={isProject}
+                hideContent={returnToHome}
+                contentIsShown={isContent} 
+                goToExpContent={displayExp}
+                goToFormationContent = {displayFormation}
+                goToProjectContent = {displayProjects}
+                goToMailForm = {displayMailForm}
+                isHome={isHome}/>
         </CustomDiv>
     )
 }

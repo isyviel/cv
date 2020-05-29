@@ -39,8 +39,6 @@ const HomeContainer = styled(Container)`
         width: 40px;
         padding: 100px 0 0 2px !important;
     }
-
-    
 `
 const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
 

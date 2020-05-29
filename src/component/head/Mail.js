@@ -6,7 +6,7 @@ import { Button } from "@material-ui/core"
 
 const Mail = ({displayForm,...props}) => {
     return(
-        <Button size="small" classname="p-0" onClick={displayForm}>
+        <Button size="small" className="p-0" onClick={displayForm}>
             <ImageButton src="images/mail.png" alt="icone arobase" id="envoyer_mail"/>
         </Button>
     )

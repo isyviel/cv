@@ -38,37 +38,34 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
     const {h,w}  = useWindowSize();
 
     const DetalesContainer =  styled(Container)`
-    min-width: 87%;
-    background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
-    margin: 30px 0 0 0;
-    padding: 0 0 0 8%;
-    font-size: 16px;
-    z-index: 1;
-    height: ${h - 150}px;
+        min-width: 87%;
+        background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
+        margin: 30px 0 0 0;
+        padding: 0 0 0 8%;
+        font-size: 16px;
+        z-index: 1;
+        height: ${h - 150}px;
     
-
-    @media screen and (max-width:992px) {
-        margin-left: 2%;
-        padding: 0 0 3% 8%;
-        max-width: 95%;
-    }
-    @media screen and (max-width:768px) {
-        margin-left: 5%;
-        padding: 0 5% 3% 8%;
-    }
-    @media screen and (max-width:576px) {
-        margin-left: 0;
-        height: 100%;
-        padding: 0 0 3% 10%;
-    }
-`
+        @media screen and (max-width:992px) {
+            margin-left: 2%;
+            padding: 0 0 3% 8%;
+            max-width: 95%;
+        }
+        @media screen and (max-width:768px) {
+            margin-left: 5%;
+            padding: 0 5% 3% 8%;
+        }
+        @media screen and (max-width:576px) {
+            margin-left: 0;
+            height: 100%;
+            padding: 0 0 3% 10%;
+        }
+    `
 
     const [isWeb, setIsWeb] = useState(true)
     const [isSales, setIsSales] = useState(false)
     const [isEng, setIsEng] = useState(false)
     const [isAdrar, setIsAdrar] = useState(true)
-
-    
 
     const displaySales = () => {
         setIsSales(true)
@@ -91,57 +88,50 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
     }
 
     return(
-            <Slide timeout={800} in={viewDetales} out={isHome} direction="left">
-                       
-                <DetalesContainer>
-                    <Row className="justify-content-end">
-                        <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
+        <Slide timeout={800} in={viewDetales} out={isHome} direction="left">       
+            <DetalesContainer>
+                <Row className="justify-content-end">
+                    <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
+                </Row>
+                <CategoryTitle>
+                    {isExp &&(exp)}
+                    {isFormation &&(diplome)}
+                    {isProject && (projects)}
+                    {isMail &&(mail)}
+                </CategoryTitle>
+                {isExp &&(
+                    <>
+                        <Row className="ml-sm-3">
+                            <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp} isSales={isSales} isWeb={isWeb}/>
+                            {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
+                            {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
+                        </Row>
+                        <Biker alt="personnage en tenue motard sur ordinateur" src="images/ordi.png"/>
+                    </>
+                )}
+                {isFormation &&(
+                    <>
+                        <Row className="ml-sm-3">
+                            <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar} isEng={isEng} isAdrar={isAdrar}/>
+                            {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
+                            {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
+                        </Row>
+                        <Biker alt="personnage en tenue motard avec livre" src="images/livre.png"/>
+                    </>
+                )}
+                {isProject &&(
+                    <>
+                    <Row className="ml-sm-2">
+                        <Projects isProject={isProject}/>
                     </Row>
-                    <CategoryTitle>
-                        {isExp &&(exp)}
-                        {isFormation &&(diplome)}
-                        {isProject && (projects)}
-                        {isMail &&(mail)}
-                    </CategoryTitle>
-                    
-                        {isExp &&(
-                             <>
-                            <Row className="ml-sm-3">
-                                <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp} isSales={isSales} isWeb={isWeb}/>
-                                {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
-                                {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
-                            </Row>
-                            <Biker alt="personnage en tenue motard sur ordinateur" src="images/ordi.png"/>
-                            </>
-                        )}
-
-                        {isFormation &&(
-                            <>
-                            <Row className="ml-sm-3">
-                                <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar} isEng={isEng} isAdrar={isAdrar}/>
-                                {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
-                                {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
-                            </Row>
-                            <Biker alt="personnage en tenue motard avec livre" src="images/livre.png"/>
-                            </>
-
-                        )}
-                    
-                        {isProject &&(
-                            <>
-                            <Row className="ml-sm-2">
-                                <Projects isProject={isProject}/>
-                            </Row>
-                            <Biker alt="personnage en tenue motard réfléchit" src="images/think.png"/>
-                            </>
-                        )}
-
-                        {isMail &&(
-                            <SendMail/>
-                        )}
-                        
-                </DetalesContainer>
-            </Slide>
+                    <Biker alt="personnage en tenue motard réfléchit" src="images/think.png"/>
+                    </>
+                )}
+                {isMail &&(
+                    <SendMail/>
+                )}    
+            </DetalesContainer>
+        </Slide>
     )
 }
 

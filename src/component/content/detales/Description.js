@@ -4,8 +4,7 @@ import styled from "styled-components"
 const Description = ({content,...props}) => {
 
     return (
-        
-            <li>{content}</li>
+        <li>{content}</li>
     )
 }
 

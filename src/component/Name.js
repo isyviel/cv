@@ -22,6 +22,7 @@ const CustomH1 = styled.h1`
 `
 const CustomH2 = styled.h2`
     color: black;
+
     @media screen and (max-width:1200px) {
         font-size: 32px;
     }
@@ -67,14 +68,14 @@ const Name = ({isHome,isContent,...props}) => {
     return(
         <Slide timeout={800}  direction="right" in={isHome}>
             <NameContainer fluid>
-                    <CustomH1>     
-                        {NOM} - {TITRE}
-                    </CustomH1>
-                    <CustomH2>
-                        {TECHNOS.map((label,index) => {
-                            return <span key={index}>{label}</span>
-                        })}
-                    </CustomH2>
+                <CustomH1>     
+                    {NOM} - {TITRE}
+                </CustomH1>
+                <CustomH2>
+                    {TECHNOS.map((label,index) => {
+                        return <span key={index}>{label}</span>
+                    })}
+                </CustomH2>
             </NameContainer>
         </Slide>   
     )

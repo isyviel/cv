@@ -21,7 +21,7 @@ const SendMail = ()=> {
 
     const handleClose = () => {
         setOpen(false)
-      }
+    }
   
     const handleChange = (event) => {
         event.persist();
@@ -59,22 +59,22 @@ const SendMail = ()=> {
        })
       }
 
-return(
-        <Container>
-            <FormControl>
-                <Form
-                  windowClose={handleClose} 
-                  submit={handleSubmit}
-                  values={values}
-                  change={handleChange}
-                  isLoading={isLoading}/>
-            </FormControl>
-            <SentAlert 
-                open={snackOpen} 
-                status={status} 
-              />
-        </Container>
-    )
+  return(
+    <Container>
+      <FormControl>
+        <Form
+          windowClose={handleClose} 
+          submit={handleSubmit}
+          values={values}
+          change={handleChange}
+          isLoading={isLoading}/>
+      </FormControl>
+      <SentAlert 
+        open={snackOpen} 
+        status={status} 
+      />
+    </Container>
+  )
 }
 
 export default SendMail

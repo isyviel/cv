@@ -43,45 +43,16 @@ const CustomContainer = styled(Container)`
     }
 `
 
-const CustContainer = styled(Container)`
-    height: 410px;
-    width: 434px;
-    border-radius: 50px;
-    background: #ffffff;
-    box-shadow: inset 41px 41px 82px #d9d9d9, 
-                inset -41px -41px 82px #ffffff;
-    position: fixed;
-    bottom: 84px;
-    left: 452px;
-    @media screen and (max-width:1200px) {
-        left:352px;
-        width: 323px;
-    }
-    @media screen and (max-width:992px) {
-        left:152px;
-        width: 360px;
-    }
-    @media screen and (max-width:768px) {
-        left:102px;
-        width: 312px;
-    }
-    @media screen and (max-width:596px) {
-        display: none;
-    }
-`
-
 const Aboutme = ({isHome,...props}) => {
 
     const {x, y} = useMousePosition();
     const {h,w}  = useWindowSize();
     const [detectMoto, setDetectMoto] = useState(true);
     const [detect, setDetect] = useState(true);
-    const [detectPiano, setPiano] =useState(true);
-    const hasMovedCursor = typeof x === "number" && typeof y === "number";
+    //const hasMovedCursor = typeof x === "number" && typeof y === "number";
 
     useEffect(() => {
       detectMouse()
-      
     }, [h,w,x,y]);
 
     const minMotoX = w * 31/100
@@ -95,8 +66,6 @@ const Aboutme = ({isHome,...props}) => {
     const maxIraY = h * 96/100
 
     const detectMouse = () => {
-        
-
         if((x > minMotoX) && (x < maxMotoX) && (y > minMotoY) && (y < maxMotoY)){
             setDetect(false)
             setDetectMoto(true)
@@ -105,14 +74,11 @@ const Aboutme = ({isHome,...props}) => {
             setDetectMoto(false)
             setDetect(true)
         } else if ((x > 520 && x < 630) && (y > 85 && y < 365)) {
-               setDetectMoto(false)
-             setDetect(false)
-               setPiano(true)
-           }
-            else {
             setDetectMoto(false)
             setDetect(false)
-               setPiano(false)
+        } else {
+            setDetectMoto(false)
+            setDetect(false)
         } 
     }
 
@@ -120,20 +86,12 @@ const Aboutme = ({isHome,...props}) => {
             <CustomContainer>
                 {/* <div>EN CONSTRUCTION</div> */}
                 {/* <div>{hasMovedCursor
-          ? `Your cursor is at ${x}, ${y}`
-          : "Move your mouse around."}</div>
+                    ? `Your cursor is at ${x}, ${y}`
+                    : "Move your mouse around."}</div>
                 <div>values : moto :{minMotoX},{maxMotoX} - iraty: {minIraY}, {maxIraY}</div>
                 <div>sizes : h = {h} and w = {w}</div> */}
                 <div>{detectMoto ? <Fade in={detectMoto}><MotoImg alt="moto" src= "images/lucky.png"/></Fade>: ""}</div>
                 <div>{detect ? <Fade in={detect}><IratyImg alt="photo col d'iraty" src= "images/iraty.png"/></Fade>: ""}</div>
-            
-                
-               {/* <CustomImg src= "images/lucky.png"/> */}
-             {/* <div className="pl-3 text-center">
-            //     Passionnée de moto et d'informatique , j'ai laissé derrière moi 10 années de vente au détail d'habillement pour évoluer dans le monde du digital.
-            // </div>*/}
-            {/* <div className="pl-3 text-center">Ici commence mon voyage de développeuse web.</div> */}
-            
            </CustomContainer>
     )
 }

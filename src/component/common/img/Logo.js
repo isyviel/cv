@@ -15,7 +15,6 @@ const Image =  styled.img`
 `
 
 const Logo = ({alt,src, ...props}) => {
-
     return <Image alt={alt} src={src}/>
 }
 

@@ -14,7 +14,7 @@ const Input = ({label,required, change, send, value, name, ...props}) => {
       marginRight: "2%",
       marginBottom: w < 576 ? "10px" : "0",
     },
-}))
+  }))
 
 const classes = useStyles()
 
