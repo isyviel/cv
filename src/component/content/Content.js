@@ -71,9 +71,7 @@ const Content = ({
                         isFormation={isFormation}
                         isProject={isProject}
                         isMail={isMail}
-                        isHome={isHome}/>
-                <Footer footerOpen={footerOpen} slideOutFooter={notFooter} isHome={isHome}/>
-                        
+                        isHome={isHome}/>             
         </ContentContainer>
     )
 }

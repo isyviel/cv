@@ -44,13 +44,25 @@ const HomeContainer = styled(Container)`
 `
 const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
 
+    const [footerOpen, setFooterOpen] = useState(false)
+
+    const displayFooter = () => {
+        console.log(footerOpen, "open")
+        if(footerOpen) {
+            setFooterOpen(false)
+        } else {
+            setFooterOpen(true)
+        }
+    }
+
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
             <HomeContainer fluid>
                 <Me title="avatar" />
                 <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
                 <Quote/>
-                <Toggle footerfromHead={footerfromHead}/>
+                <Toggle footerfromHead={displayFooter}/>
+                <Footer footerOpen={footerOpen} isHome={isHome}/>
             </HomeContainer>
         </Slide>
     )

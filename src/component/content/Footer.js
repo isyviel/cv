@@ -5,34 +5,48 @@ import {Button, Menu, MenuItem, Paper, Grow, Slide, makeStyles, ClickAwayListene
 import Drawer from '@material-ui/core/Drawer';
 import ImageButton from "../common/img/ImageButton";
 import Colors from "../common/themes/Colors";
+import useWindowSize from "../common/hook/size";
 
 const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
 
+    const {h,w} = useWindowSize()
     const CustomContainer = styled(Container)`
         position: fixed;
         bottom: 0px;
         background-color: #272727;
         min-width: 100%;
         z-index: 3;
-        padding: ${isHome ? "0 470px 0 10px":"0 100px 0 10px"};
-        margin: ${isHome ? "0 0 0 435px":"0 0 0 65px"};
+        left : 450px;
+        
 
         @media screen and (max-width:1200px) {
-            padding: ${isHome ? "0 370px 0 10px":"0 100px 0 10px"};
-            margin: ${isHome ? "0 0 0 335px":"0 0 0 65px"};
+            left : 350px;
         }
         @media screen and (max-width:992px) {
-            padding: ${isHome ? "0 170px 0 10px":"0 100px 0 10px"};
-            margin: ${isHome ? "0 0 0 135px":"0 0 0 65px"};
+            left : 150px;
         }
     
         @media screen and (max-width:768px) {
-            padding: 0 120px 0 10px;
-            margin: 0 0 0 85px;
+            left : 100px;
         }
         @media screen and (max-width:576px) {
-            padding: 0 60px 0 10px;
-            margin: 0 0 0 70px;
+            left : 40px;
+        }
+    `
+    const CustomRow = styled(Row) `
+        width: ${w - 450}px;
+        
+        @media screen and (max-width:1200px) {
+            width: ${w - 350}px;
+        }
+        @media screen and (max-width:992px) {
+            width: ${w - 150}px;
+        }
+        @media screen and (max-width:768px) {
+            width: ${w - 100}px;
+        }
+        @media screen and (max-width:576px) {
+            width: ${w - 40}px;
         }
     `
     const useStyles = makeStyles((theme) => ({
@@ -48,6 +62,7 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
             color: Colors.orange,
             fontFamily: 'Dosis',
             fontSize: '16px',
+            padding: "6px 8px",
         }
     }))
     
@@ -57,22 +72,22 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
         
         <Slide timeout={800} direction='right' in={footerOpen}>
             <CustomContainer>
-                <Row className="justify-content-between">
+                <CustomRow className="justify-content-between">
                     <Button className={classes.root} href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button>
                     <Button href="mailto:adeline.simon31@hotmail.fr" className={classes.root}>adeline.simon31@hotmail.fr</Button>
-                </Row>
-                <Row className="justify-content-between align-items-center">
+                </CustomRow>
+                <CustomRow className="justify-content-between align-items-center">
                     <Button className={classes.root} href="https://material-ui.com/" target="_blank" rel="noopener noreferrer">Material-UI</Button>
                     <div className={classes.phone}>0621692869</div>
-                </Row>
-                <Row className="justify-content-between">
+                </CustomRow>
+                <CustomRow className="justify-content-between">
                     <Button className={classes.root} href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer">Service EmailJS</Button>
                     <Button className={classes.root} href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">Github</Button>
-                </Row>
-                <Row className="justify-content-between">
+                </CustomRow>
+                <CustomRow className="justify-content-between">
                     <Button className={classes.root} href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHubPages</Button>
                     <Button className={classes.root} href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">Linkedin</Button>
-                </Row>
+                </CustomRow>
             </CustomContainer>
         </Slide>
     )

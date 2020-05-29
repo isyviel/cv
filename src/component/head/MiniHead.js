@@ -1,9 +1,10 @@
-import React from "react"
+import React , {useState} from "react"
 import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import Contact from './Contact'
 import { Slide } from "@material-ui/core"
 import Toggle from "./Toggle"
+import MinFooter from "../content/MiniFooter"
 
 const HomeContainer = styled(Container)`
     height: 100%;
@@ -34,13 +35,23 @@ const HomeContainer = styled(Container)`
         padding: 150px 0 0 0 !important;
     }
 `
-const MiniHead = ({isHome,mailToHead,homeToHead,footerfromHead,...props}) => {
-    
+const MiniHead = ({isHome,mailToHead,homeToHead,...props}) => {
+    const [footerOpen, setFooterOpen] = useState(false)
+
+    const displayFooter = () => {
+        console.log(footerOpen, "open")
+        if(footerOpen) {
+            setFooterOpen(false)
+        } else {
+            setFooterOpen(true)
+        }
+    }
     return (
         <Slide timeout={800}  direction="right" in={!isHome}>
             <HomeContainer fluid>
                 <Contact isHome={isHome} contactForm={mailToHead} returnToHome={homeToHead}/>
-                <Toggle footerfromHead={footerfromHead}/>
+                <Toggle footerfromHead={displayFooter}/>
+                <MinFooter footerOpen={footerOpen}/>
             </HomeContainer>
         </Slide>
     )
