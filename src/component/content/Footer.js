@@ -6,6 +6,7 @@ import Drawer from '@material-ui/core/Drawer';
 import ImageButton from "../common/img/ImageButton";
 import Colors from "../common/themes/Colors";
 import useWindowSize from "../common/hook/size";
+import { HEAD } from "../common/constantes/home";
 
 const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
 
@@ -63,6 +64,7 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
             fontFamily: 'Dosis',
             fontSize: '16px',
             padding: "6px 8px",
+            marginRight: "0",
         }
     }))
     
@@ -74,11 +76,11 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
             <CustomContainer>
                 <CustomRow className="justify-content-between">
                     <Button className={classes.root} href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button>
-                    <Button href="mailto:adeline.simon31@hotmail.fr" className={classes.root}>adeline.simon31@hotmail.fr</Button>
+                    <Button href="mailto:adeline.simon31@hotmail.fr" className={classes.root}>{HEAD[1]}</Button>
                 </CustomRow>
                 <CustomRow className="justify-content-between align-items-center">
                     <Button className={classes.root} href="https://material-ui.com/" target="_blank" rel="noopener noreferrer">Material-UI</Button>
-                    <div className={classes.phone}>0621692869</div>
+                    <div className={classes.phone}>{HEAD[2]}</div>
                 </CustomRow>
                 <CustomRow className="justify-content-between">
                     <Button className={classes.root} href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer">Service EmailJS</Button>
