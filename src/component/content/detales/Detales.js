@@ -127,7 +127,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     <Row className="ml-sm-2">
                         <Projects isProject={isProject}/>
                     </Row>
-                    {/* <Biker alt="personnage en tenue motard réfléchit" src="images/think_opt.png"/> */}
+                    <Biker alt="personnage en tenue motard réfléchit" src="images/think_opt.png"/>
                     </>
                 )}
                 {isMail &&(
