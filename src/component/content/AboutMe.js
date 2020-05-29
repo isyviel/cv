@@ -118,7 +118,7 @@ const Aboutme = ({isHome,...props}) => {
 
     return (
             <CustomContainer>
-                <div>EN CONSTRUCTION</div>
+                {/* <div>EN CONSTRUCTION</div> */}
                 {/* <div>{hasMovedCursor
           ? `Your cursor is at ${x}, ${y}`
           : "Move your mouse around."}</div>
