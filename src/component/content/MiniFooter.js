@@ -6,7 +6,7 @@ import Drawer from '@material-ui/core/Drawer';
 import ImageButton from "../common/img/ImageButton";
 import Colors from "../common/themes/Colors";
 
-const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
+const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
 
     const CustomContainer = styled(Container)`
         position: fixed;
@@ -78,4 +78,4 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
     )
 }
 
-export default Footer
+export default MinFooter

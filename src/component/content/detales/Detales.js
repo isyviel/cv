@@ -8,19 +8,43 @@ import Colors from "../../common/themes/Colors"
 import DetalesMenu from "./DetalesMenu"
 import DisplayDetales from "./DisplayDetales"
 import { Fade } from "@material-ui/core"
+import Biker from "../../common/img/ImgBiker"
+import useWindowSize from "../../common/hook/size"
 
 const Cross = styled.img`
     cursor: pointer;
     width: 20px;
     margin-right: 20px;
 `
-const DetalesContainer =  styled(Container)`
+
+const CategoryTitle = styled.h1`
+    font-family: 'Bangers';
+    font-size: 2em;
+    @media screen and (max-width:992px) {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    @media screen and (max-width:768px) {
+        margin-left: 5%;
+    }
+    @media screen and (max-width:576px) {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+    }
+`
+const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,...props}) => {
+
+    const {h,w}  = useWindowSize();
+
+    const DetalesContainer =  styled(Container)`
     min-width: 87%;
     background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
     margin: 30px 0 0 0;
     padding: 0 0 0 8%;
     font-size: 16px;
     z-index: 1;
+    height: ${h - 150}px;
     
 
     @media screen and (max-width:992px) {
@@ -38,54 +62,13 @@ const DetalesContainer =  styled(Container)`
         padding: 0 0 3% 10%;
     }
 `
-const CategoryTitle = styled.h1`
-    font-family: 'Bangers';
-    font-size: 2em;
-    @media screen and (max-width:992px) {
-        font-size: 24px;
-        margin-left: 10px;
-    }
-    @media screen and (max-width:768px) {
-        margin-left: 5%;
-    }
-    @media screen and (max-width:576px) {
-        font-size: 20px;
-        text-align: center;
-        margin: 0;
-    }
-`
-
- const CustomImg = styled.img `
-        margin: 0 0 10px 50px;
-        height: 200px;
-        z-index: 2;
-        @media screen and (max-width:1200px) {
-            margin: 0 0 10px 15px;
-        }
-       
-        @media screen and (max-width:992px) {
-            height: 150px;
-            margin: 0 0 10px 15px;
-        }
-        @media screen and (max-width:768px) {
-            height: 150px;
-       
-        }
-        @media screen and (max-width:576px) {
-            height: 100px;
-            margin: 0;
-        }
-    `
-const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,...props}) => {
-
-   
 
     const [isWeb, setIsWeb] = useState(true)
     const [isSales, setIsSales] = useState(false)
     const [isEng, setIsEng] = useState(false)
     const [isAdrar, setIsAdrar] = useState(true)
-    let src = ""
 
+    
 
     const displaySales = () => {
         setIsSales(true)
@@ -109,6 +92,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
 
     return(
             <Slide timeout={800} in={viewDetales} out={isHome} direction="left">
+                       
                 <DetalesContainer>
                     <Row className="justify-content-end">
                         <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
@@ -127,7 +111,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                                 {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
                                 {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
                             </Row>
-                            <CustomImg src="images/ordi.png"/>
+                            <Biker alt="personnage en tenue motard sur ordinateur" src="images/ordi.png"/>
                             </>
                         )}
 
@@ -138,7 +122,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                                 {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
                                 {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
                             </Row>
-                            <CustomImg src="images/livre.png"/>
+                            <Biker alt="personnage en tenue motard avec livre" src="images/livre.png"/>
                             </>
 
                         )}
@@ -148,7 +132,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                             <Row className="ml-sm-2">
                                 <Projects isProject={isProject}/>
                             </Row>
-                            <CustomImg src="images/think.png"/>
+                            <Biker alt="personnage en tenue motard réfléchit" src="images/think.png"/>
                             </>
                         )}
 

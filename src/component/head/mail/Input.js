@@ -4,8 +4,19 @@ import Theme from '../../common/themes/Theme'
 import { ThemeProvider } from '@material-ui/styles';
 import styled from "styled-components"
 import { makeStyles } from '@material-ui/styles';
+import useWindowSize from "../../common/hook/size";
 
 const Input = ({label,required, change, send, value, name, ...props}) => {
+
+  const {h,w}  = useWindowSize();
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      marginRight: "2%",
+      marginBottom: w < 576 ? "10px" : "0",
+    },
+}))
+
+const classes = useStyles()
 
     return(
       <ThemeProvider theme={Theme}>
@@ -18,7 +29,7 @@ const Input = ({label,required, change, send, value, name, ...props}) => {
           value={value}
           name={name}
           fullWidth
-          className="mb-2"
+          className={name === "nom" || name === "prenom" || name === "phone" ? classes.root : "mb-2"}
           variant="outlined"
         />
         </ThemeProvider>

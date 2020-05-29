@@ -6,7 +6,7 @@ import Content from './content/Content'
 import Navigation from './Navigation'
 import MiniHead from "./head/MiniHead"
 import Name from "./Name"
-import useWindowSize from "./common/constantes/size"
+import useWindowSize from "./common/hook/size"
 
 
 const OnePage = () => {
@@ -17,7 +17,7 @@ const OnePage = () => {
     const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
-    const [open, setOpen] = useState(false)
+    const [footerOpen, setFooterOpen] = useState(false)
     const {h,w} = useWindowSize()
 
     const CustomDiv = styled(Container)`
@@ -31,15 +31,15 @@ const OnePage = () => {
     `
 
     const displayFooter = () => {
-        console.log(open, "open")
-        if(open) {
-            setOpen(false)
+        console.log(footerOpen, "open")
+        if(footerOpen) {
+            setFooterOpen(false)
         } else {
-            setOpen(true)
+            setFooterOpen(true)
         }
     }
     const closeFooter = () => {
-        setOpen(false)
+        setFooterOpen(false)
     }
 
     const displayMailForm = () => {
@@ -115,7 +115,7 @@ const OnePage = () => {
     }
 
     return (
-        <CustomDiv fluid data-nosnippet>
+        <CustomDiv title="image de fond bulles blanches" fluid data-nosnippet>
                 {isHome ? <Head isHome={isHome} mailToHead={displayMailForm} footerfromHead={displayFooter}/> : <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome} footerfromHead={displayFooter}/>}
                 <Name isHome={isHome} isContent={isContent}/>
                 {/* <Navigation displayNext={showDetales} displayPrevious={showPrevious}/> */}
@@ -131,7 +131,7 @@ const OnePage = () => {
                     goToProjectContent = {displayProjects}
                     goToMailForm = {displayMailForm}
                     isHome={isHome}
-                    open={open}
+                    footerOpen={footerOpen}
                     notFooter={closeFooter}
                 />
         </CustomDiv>

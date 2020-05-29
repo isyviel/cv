@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/core/styles'
 import {LinearProgress} from '@material-ui/core'
 import styled from "styled-components"
 import Container from "@bootstrap-styled/v4/lib/Container";
-import useWindowSize from "../../common/constantes/size";
+import useWindowSize from "../../common/hook/size";
 
 const CustomDiv = styled.div`
   height: 20px;
@@ -36,38 +36,39 @@ const CustomDiv = styled.div`
     max-width: 33%;
   }
 `
-const CustomForm = styled.form`
-width: 900px;
 
-@media screen and (max-width:1440px) {
-  max-width:80%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-@media screen and (max-width:1200px) {
-  max-width:95%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-@media screen and (max-width:992px) {
-  max-width:90%;
-}
-@media screen and (max-width:768px) {
-  max-width:85%;
- 
-}
-@media screen and (max-width:576px) {
-  max-width:30%;
-  
-}
-
-`
 const CustomP = styled.p`
   color: ${Colors.orange};
 `
 
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
+  const {h,w}  = useWindowSize();
+  const CustomForm = styled.form`
+    width: 900px;
+
+    @media screen and (max-width:1440px) {
+      max-width:80%;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    @media screen and (max-width:1200px) {
+      max-width:95%;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    @media screen and (max-width:992px) {
+      max-width:90%;
+    }
+    @media screen and (max-width:768px) {
+      max-width:85%;
+    
+    }
+    @media screen and (max-width:576px) {
+      max-width:${w - 130}px;
+    }
+
+  `
   const useStyles = makeStyles((theme) => ({
     root: {
       background:"linear-gradient(145deg, #ff8300, #e66e00)", 
@@ -79,15 +80,20 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
           backgroundColor: "#FF7A00", 
           boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
         },   
-  },
-  active: {
-    fontFamily: 'Dosis',
-    width: "200px",
-    backgroundColor: "#FFFFF",
-    background: "rgba(255,255,255)",
-    color: Colors.orange,
-    boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
-  }
+    },
+    active: {
+      fontFamily: 'Dosis',
+      width: "200px",
+      backgroundColor: "#FFFFF",
+      background: "rgba(255,255,255)",
+      color: Colors.orange,
+      boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
+    },
+    input: {
+        
+        display: w > 576 ? "flex": "block",
+        justifyContent: "center",
+    },
 }))
 
 const classes = useStyles()
@@ -108,15 +114,14 @@ const ColorLinearProgress = withStyles({
             <Input required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={change}/>
             <Input label="Objet : " name="objet" value={values.objet} change={change} />
             <Area label="Votre message" name="message" value={values.message} change={change}/>
-              <Col xs="12 p-0">
+            <div className={classes.input}>
                 <Input label="Nom" name="nom" value={values.nom}  change={change}/>
-              </Col>
-              <Col xs="12 p-0">
+              
+             
                 <Input label="Prénom" name="prenom" value={values.prenom}  change={change}/>
-              </Col>
-              <Col xs="12 p-0">
+              
                 <Input label="Téléphone" name="phone" value={values.phone} change={change} />
-              </Col>
+            </div> 
             <Row className="justify-content-around mt-4">
               {!values.mail ? 
                 <div>

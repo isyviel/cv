@@ -35,6 +35,7 @@ const HomeContainer = styled(Container)`
     }
 `
 const MiniHead = ({isHome,mailToHead,homeToHead,footerfromHead,...props}) => {
+    
     return (
         <Slide timeout={800}  direction="right" in={!isHome}>
             <HomeContainer fluid>

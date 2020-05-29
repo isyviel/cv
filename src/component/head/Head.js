@@ -8,7 +8,7 @@ import Spacer from '../common/Spacer'
 import { Slide, Button } from "@material-ui/core"
 import Name from "../Name"
 import Footer from "../content/Footer"
-import ImageButton from "../common/ImageButton"
+import ImageButton from "../common/img/ImageButton"
 import Toggle from "./Toggle"
 
 const HomeContainer = styled(Container)`
@@ -47,12 +47,9 @@ const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
             <HomeContainer fluid>
-                <Me/>
-                
+                <Me title="avatar" />
                 <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
-                
                 <Quote/>
-               
                 <Toggle footerfromHead={footerfromHead}/>
             </HomeContainer>
         </Slide>

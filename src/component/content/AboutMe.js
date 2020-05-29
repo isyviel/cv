@@ -5,8 +5,10 @@ import { Slide,Fade } from "@material-ui/core"
 import { ABOUTME } from "../common/constantes/home"
 import Quote from "../head/Quote"
 import Colors from "../common/themes/Colors"
-import useMousePosition from "../common/constantes/position"
-import useWindowSize from "../common/constantes/size"
+import useMousePosition from "../common/hook/position"
+import useWindowSize from "../common/hook/size"
+import MotoImg from "../common/img/ImgMoto"
+import IratyImg from "../common/img/ImgIraty"
 
 const CustomContainer = styled(Container)`
     position: fixed;
@@ -41,38 +43,6 @@ const CustomContainer = styled(Container)`
     }
 `
 
-const MotoImg = styled.img `
-    
-    height: 300px;
-    position: fixed;
-    top: 55%;
-    left: 30%;
-   
-    z-index: 2;
-    @media screen and (max-width:992px) {
-        height: 300px;
-    }
-  @media screen and (max-width:768px) {
-        display: none;
-    }
-`
-
-
-const ColImg = styled.img `
-    
-    height: 300px;
-    position: fixed;
-    top: 60%;
-    left:60%;
-   
-    z-index: 2;
-    @media screen and (max-width:992px) {
-        height: 300px;
-    }
-    @media screen and (max-width:768px) {
-        display: none;
-    }
-`
 const CustContainer = styled(Container)`
     height: 410px;
     width: 434px;
@@ -154,8 +124,8 @@ const Aboutme = ({isHome,...props}) => {
           : "Move your mouse around."}</div>
                 <div>values : moto :{minMotoX},{maxMotoX} - iraty: {minIraY}, {maxIraY}</div>
                 <div>sizes : h = {h} and w = {w}</div>
-                <div>{detectMoto ? <Fade in={detectMoto}><MotoImg src= "images/lucky.png"/></Fade>: ""}</div>
-                <div>{detect ? <Fade in={detect}><ColImg src= "images/iraty.png"/></Fade>: ""}</div>
+                <div>{detectMoto ? <Fade in={detectMoto}><MotoImg alt="moto" src= "images/lucky.png"/></Fade>: ""}</div>
+                <div>{detect ? <Fade in={detect}><IratyImg alt="photo col d'iraty" src= "images/iraty.png"/></Fade>: ""}</div>
             
                 
                {/* <CustomImg src= "images/lucky.png"/> */}

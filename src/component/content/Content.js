@@ -29,7 +29,7 @@ const Content = ({
     isMail,
     isHome,
     isActive,
-    open,
+    footerOpen,
     goToProjectContent,
     goToExpContent,
     goToFormationContent,
@@ -72,7 +72,7 @@ const Content = ({
                         isProject={isProject}
                         isMail={isMail}
                         isHome={isHome}/>
-                <Footer open={open} slideOutFooter={notFooter} isHome={isHome}/>
+                <Footer footerOpen={footerOpen} slideOutFooter={notFooter} isHome={isHome}/>
                         
         </ContentContainer>
     )

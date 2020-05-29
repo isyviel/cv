@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Colors from '../common/themes/Colors'
-import ImageButton from "../common/ImageButton"
+import ImageButton from "../common/img/ImageButton"
 import { Button } from "@material-ui/core"
 
 const Mail = ({displayForm,...props}) => {

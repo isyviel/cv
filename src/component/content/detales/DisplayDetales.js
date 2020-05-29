@@ -6,7 +6,7 @@ import {STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from 
 import WebSite from "../../common/WebSite"
 import Description from "./Description"
 import Colors from "../../common/themes/Colors"
-import Logo from "../../common/Logo"
+import Logo from "../../common/img/Logo"
 import Container from "@bootstrap-styled/v4/lib/Container"
 
 const Title = styled.h1`
@@ -66,6 +66,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
     let softSkills = ""
     let description = []
     let src = ""
+    let alt = ""
 
     if(isWeb) {
         title = STRATEGIA[0]
@@ -75,6 +76,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
         softSkills = STRATEGIA[4]
         description = STRList
         src = "images/strategia.png"
+        alt="logo strategia"
     } else if (isSales) {
         title = VENTE[0]
         content = VENTE[1]
@@ -82,6 +84,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
         softSkills = VENTE[3]
         description = VList
         src = "images/MIM.jpg"
+        alt="logo mim et christine laure"
     } else if (isAdrar) {
         title = ADRAR[0]
         href = ADRAR[1]
@@ -90,6 +93,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
         softSkills = ADRAR[4]
         description = AList
         src = "images/adrar.png"
+        alt = "logo adrar"
     } else if (isEnglish) {
         title = ANGLAIS[0]
         content= ANGLAIS[1]
@@ -97,6 +101,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
         softSkills = ANGLAIS[3]
         description = ANGList
         src = "images/univ.png"
+        alt = "logo université poitiers"
     }
 
     return(
@@ -111,7 +116,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) =>
                     {isAdrar &&(<Text>2020</Text>)}
                     {isWeb &&(<Text>2020</Text>)}
                 </Col>
-                <Logo src={src}/>
+                <Logo alt={alt} src={src}/>
             </Row>
             <Skills className="h5">{skills}</Skills>
             <SoftSkills className="h6">{softSkills}</SoftSkills>
