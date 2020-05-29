@@ -1,6 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import usePreload from "../hook/loadImg"
 
 const CustomImg = styled.img `
     margin: 0 0 10px 50px;
@@ -24,15 +23,8 @@ const CustomImg = styled.img `
     }
 `
 
-const Biker = ({src,fallBackSrc,alt,...props}) => {
-    const bookSrc = usePreload({
-        src: src,
-        fallBackSrc: fallBackSrc
-    });
-    
-    if(!src) return null;
-
-    return <CustomImg alt={alt} src={bookSrc}/>
+const Biker = ({src,alt,...props}) => {
+        return <CustomImg alt={alt} src={src}/>
 }
 
 export default Biker

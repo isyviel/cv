@@ -90,8 +90,8 @@ const Aboutme = ({isHome,...props}) => {
                     : "Move your mouse around."}</div>
                 <div>values : moto :{minMotoX},{maxMotoX} - iraty: {minIraY}, {maxIraY}</div>
                 <div>sizes : h = {h} and w = {w}</div> */}
-                <div>{detectMoto ? <Fade in={detectMoto}><MotoImg alt="moto" src= "images/lucky.png"/></Fade>: ""}</div>
-                <div>{detect ? <Fade in={detect}><IratyImg alt="photo col d'iraty" src= "images/iraty.png"/></Fade>: ""}</div>
+                <div>{detectMoto ? <Fade in={detectMoto}><MotoImg alt="moto"/></Fade>: ""}</div>
+                <div>{detect ? <Fade in={detect}><IratyImg alt="photo col d'iraty"/></Fade>: ""}</div>
            </CustomContainer>
     )
 }

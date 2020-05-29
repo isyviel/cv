@@ -19,8 +19,8 @@ const ColImg = styled.img `
 `
 const IratyImg = ({src,fallBackSrc,alt,...props}) => {
     const motoSrc = usePreload({
-        src: src,
-        fallBackSrc: fallBackSrc
+        src: src= "images/iraty_opt.png",
+        fallBackSrc: src= "images/iraty.png",
     });
     
     if(!src) return null;

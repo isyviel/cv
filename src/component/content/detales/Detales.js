@@ -10,6 +10,7 @@ import DisplayDetales from "./DisplayDetales"
 import { Fade } from "@material-ui/core"
 import Biker from "../../common/img/ImgBiker"
 import useWindowSize from "../../common/hook/size"
+import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
 
 const Cross = styled.img`
     cursor: pointer;
@@ -69,7 +70,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
 
     const displaySales = () => {
         setIsSales(true)
-        setIsWeb(false) 
+        setIsWeb(false)
     }
 
     const displayWeb = () => {
@@ -88,7 +89,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
     }
 
     return(
-        <Slide timeout={800} in={viewDetales} out={isHome} direction="left">       
+        <Slide timeout={800} in={viewDetales} direction="left">    
             <DetalesContainer>
                 <Row className="justify-content-end">
                     <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
@@ -103,28 +104,30 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     <>
                         <Row className="ml-sm-3">
                             <DetalesMenu displaySales={displaySales} displayWeb={displayWeb} isExp={isExp} isSales={isSales} isWeb={isWeb}/>
-                            {isWeb && (<DisplayDetales isContent={isWeb} isWeb={isWeb}/>)}
-                            {isSales && (<DisplayDetales isContent={isSales} isSales={isSales}/>)}
+                             {isWeb ? 
+                             <DisplayDetales isContent={isWeb} detales={STRATEGIA} description={STRList} isWeb={isWeb}/> :
+                             <DisplayDetales isContent={isSales} isSales={isSales} detales={VENTE} description={VList}/>}
                         </Row>
-                        <Biker alt="personnage en tenue motard sur ordinateur" src="images/ordi.png"/>
+                        <Biker alt="personnage en tenue motard sur ordinateur" src="images/ordi_opt.png"/> 
                     </>
-                )}
+                )} 
                 {isFormation &&(
                     <>
                         <Row className="ml-sm-3">
                             <DetalesMenu displayEnglish={displayEnglish} displayAdrar={displayAdrar} isEng={isEng} isAdrar={isAdrar}/>
-                            {isAdrar && (<DisplayDetales isContent={isAdrar} isAdrar={isAdrar}/>)}
-                            {isEng &&(<DisplayDetales isContent={isEng} isEnglish={isEng}/>)}
+                            {isAdrar ? 
+                            <DisplayDetales isContent={isAdrar} detales={ADRAR} description={AList} isAdrar={isAdrar}/>:
+                            <DisplayDetales isContent={isEng} detales={ANGLAIS} description={ANGList} isEnglish={isEng}/>}
                         </Row>
-                        <Biker alt="personnage en tenue motard avec livre" src="images/livre.png"/>
+                        <Biker alt="personnage en tenue motard avec livre" src="images/livre_opt.png"/>
                     </>
-                )}
+                )} 
                 {isProject &&(
                     <>
                     <Row className="ml-sm-2">
                         <Projects isProject={isProject}/>
                     </Row>
-                    <Biker alt="personnage en tenue motard réfléchit" src="images/think.png"/>
+                    {/* <Biker alt="personnage en tenue motard réfléchit" src="images/think_opt.png"/> */}
                     </>
                 )}
                 {isMail &&(

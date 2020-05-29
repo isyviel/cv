@@ -20,11 +20,10 @@ const Moto = styled.img `
 
 const MotoImg = ({src,fallBackSrc,alt,...props}) => {
     const motoSrc = usePreload({
-        src: src,
-        fallBackSrc: fallBackSrc
+        src: "images/lucky.png",
+        fallBackSrc: "images/lucky_opt.png"
     });
     
-    if(!src) return null;
     return <Moto alt={alt} src={motoSrc}/>
 }
 

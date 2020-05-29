@@ -1,8 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import {Col,Row} from "@bootstrap-styled/v4/lib"
 import { Fade } from "@material-ui/core"
 import styled from "styled-components"
-import {STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
 import WebSite from "../../common/WebSite"
 import Description from "./Description"
 import Colors from "../../common/themes/Colors"
@@ -57,69 +56,23 @@ const Text = styled.p`
     }
 `
 
-const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,...props}) => {
-
-    let title = ""
-    let href = ""
-    let content = ""
-    let skills = ""
-    let softSkills = ""
-    let description = []
-    let src = ""
-    let alt = ""
-
-    if(isWeb) {
-        title = STRATEGIA[0]
-        href = STRATEGIA[1]
-        content = STRATEGIA[2]
-        skills = STRATEGIA[3]
-        softSkills = STRATEGIA[4]
-        description = STRList
-        src = "images/strategia.png"
-        alt="logo strategia"
-    } else if (isSales) {
-        title = VENTE[0]
-        content = VENTE[1]
-        skills = VENTE[2]
-        softSkills = VENTE[3]
-        description = VList
-        src = "images/MIM.jpg"
-        alt="logo mim et christine laure"
-    } else if (isAdrar) {
-        title = ADRAR[0]
-        href = ADRAR[1]
-        content = ADRAR[2]
-        skills = ADRAR[3]
-        softSkills = ADRAR[4]
-        description = AList
-        src = "images/adrar.png"
-        alt = "logo adrar"
-    } else if (isEnglish) {
-        title = ANGLAIS[0]
-        content= ANGLAIS[1]
-        skills = ANGLAIS[2]
-        softSkills = ANGLAIS[3]
-        description = ANGList
-        src = "images/univ.png"
-        alt = "logo université poitiers"
-    }
-
+const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,detales,description,...props}) => {
     return(
         <Fade timeout={800} in={isContent}>
             <Col>
                 <Row className="justify-content-sm-between justify-content-center align-items-start ml-0 pr-4">
                     <Col>
-                        <Title className="h3">{title}</Title>
+                        <Title className="h3">{detales.title}</Title>
                         <Row className="justify-content-center justify-content-sm-start">
-                            <WebSite href={href} content={content} isSales={isSales} isEnglish={isEnglish}/>
+                            <WebSite href={detales.href} content={detales.content} isSales={isSales} isEnglish={isEnglish}/>
                         </Row>
                         {isAdrar &&(<Text>2020</Text>)}
                         {isWeb &&(<Text>2020</Text>)}
                     </Col>
-                    <Logo alt={alt} src={src}/>
+                    <Logo alt={detales.alt} src={detales.src}/>
                 </Row>
-                <Skills className="h5">{skills}</Skills>
-                <SoftSkills className="h6">{softSkills}</SoftSkills>
+                <Skills className="h5">{detales.skills}</Skills>
+                <SoftSkills className="h6">{detales.softSkills}</SoftSkills>
                 <article className="ml-1 ml-sm-3">
                     <CustomLi>
                         {description.map((element,index) => {
