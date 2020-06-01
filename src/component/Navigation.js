@@ -1,45 +1,27 @@
 import React from "react"
 import styled from "styled-components"
 import { Row} from "@bootstrap-styled/v4"
+import Container from "@bootstrap-styled/v4/lib/Container"
 
 const Fleche = styled.img`
-    position: fixed;
-    right: 10px;
-    bottom: 70px;
-    cursor: pointer;
-
-    @media screen and (max-width:992px) {
-        margin-right: 2%;
-    }
-    @media screen and (max-width:768px) {
-        height: 80px;
-    }
-    @media screen and (max-width:576px) {
-        bottom: 5px;
-        height: 50px;
-    }
+    height: 50px;
 `
 const FlecheG = styled.img`
-    position: fixed;
-    right: 100px;
-    bottom: 70px;
-    cursor: pointer;
-
-    @media screen and (max-width:992px) {
-        margin-right: 2%;
-    }
-    @media screen and (max-width:768px) {
-        height: 80px;
-    }
+    height: 50px;
+`
+const ArrowContainer = styled(Container)`
+    display: none;
+    height: 0px;
     @media screen and (max-width:576px) {
-        bottom: 5px;
-        height: 50px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 `
-
 const Navigation = ({displayNext,displayPrevious,...props}) => {
     return (
-        <Row className="justify-content-end">
+        <ArrowContainer id="arrow-container">
             <Fleche src="images/fleche.png" 
             onClick={displayNext}  
             alt="icone fleche" 
@@ -48,7 +30,7 @@ const Navigation = ({displayNext,displayPrevious,...props}) => {
             onClick={displayPrevious}  
             alt="icone fleche" 
             id="logo_fleche_droite"/>
-        </Row>     
+        </ArrowContainer>     
     )
 }
 

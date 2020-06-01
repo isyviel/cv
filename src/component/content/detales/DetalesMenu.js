@@ -40,7 +40,6 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,isWeb
     const classes = useStyles()
 
     return (
-        <ThemeProvider>
             <Col xs="10 mx-auto" sm="2 ml-4">
                 <ButtonRow>
                     {isExp ? 
@@ -53,7 +52,6 @@ const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,isWeb
                     :   <Button  className={isEng ? classes.active : classes.root} id="english" onClick={displayEnglish}>Anglais</Button>}
                 </ButtonRow>
             </Col>
-        </ThemeProvider>
     )
         
 }

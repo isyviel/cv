@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import {Row,Col,Container} from "@bootstrap-styled/v4/lib"
 import {Button, Menu, MenuItem, Paper, Grow, Slide, makeStyles, ClickAwayListener } from '@material-ui/core/';
@@ -11,6 +11,7 @@ import { HEAD } from "../common/constantes/home";
 const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
 
     const {h,w} = useWindowSize()
+
     const CustomContainer = styled(Container)`
         position: fixed;
         bottom: 0px;
@@ -62,7 +63,7 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
             color: Colors.orange,
             fontFamily: 'Dosis',
             fontSize: '16px',
-            padding: "6px 8px",
+            paddingRight: "8px",
             marginRight: "0",
         }
     }))

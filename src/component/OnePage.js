@@ -7,6 +7,7 @@ import Navigation from './Navigation'
 import MiniHead from "./head/MiniHead"
 import Name from "./Name"
 import useWindowSize from "./common/hook/size"
+import { Slide } from "@material-ui/core"
 
 const OnePage = () => {
 
@@ -28,10 +29,15 @@ const OnePage = () => {
         overflow-x: hidden;
         ${isMail ? "@media screen and (max-width:576px) {overflow-y : visible;}" : ""} 
     `
+    const displayContent = () => {
+        if(!isContent) {
+            setIsContent(true)
+        }
+    }
 
     const displayMailForm = () => {
+        displayContent()
         setIsMail(true)
-        setIsContent(true)
         setIsHome(false)
         setIsProject(false)
         setIsExp(false)
@@ -39,7 +45,8 @@ const OnePage = () => {
     }
 
     const displayExp = () => {
-        setIsContent(true)
+        displayContent()
+        
         setIsExp(true)
         setIsHome(false)
         setIsMail(false)
@@ -48,7 +55,7 @@ const OnePage = () => {
     }
 
     const displayFormation = () => {
-        setIsContent(true)
+        displayContent()
         setIsFormation(true)
         setIsHome(false)
         setIsExp(false)
@@ -57,9 +64,9 @@ const OnePage = () => {
     }
 
     const displayProjects = () => {
+        displayContent()
         setIsFormation(false)
         setIsMail(false)
-        setIsContent(true)
         setIsProject(true)
         setIsHome(false)
         setIsExp(false)
@@ -75,9 +82,9 @@ const OnePage = () => {
     }
 
 
-    const showDetales = () => {
+    const showNext = () => {
         setIsHome(false)
-        setIsContent(true)
+        displayContent()
         if(isExp){
             displayFormation()
         }else if (isFormation) {
@@ -89,7 +96,7 @@ const OnePage = () => {
     }
     const showPrevious = () => {
         setIsHome(false)
-        setIsContent(true)
+        displayContent()
         if(isExp){
             displayMailForm()
         }else if (isFormation) {
@@ -103,13 +110,9 @@ const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-            {isHome ? 
-                <Head isHome={isHome} mailToHead={displayMailForm}/> 
-                : 
-                <MiniHead isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>
-            }
+            <Head isHome={isHome} mailToHead={displayMailForm}/>   
+            <MiniHead isContent={isContent} isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>
             <Name isHome={isHome} isContent={isContent}/>
-            {/* <Navigation displayNext={showDetales} displayPrevious={showPrevious}/> */}
             <Content
                 isMail = {isMail}
                 isExp={isExp}
@@ -121,7 +124,9 @@ const OnePage = () => {
                 goToFormationContent = {displayFormation}
                 goToProjectContent = {displayProjects}
                 goToMailForm = {displayMailForm}
-                isHome={isHome}/>
+                isHome={isHome}
+                showNext={showNext}
+                showPrevious={showPrevious}/>
         </CustomDiv>
     )
 }

@@ -57,8 +57,9 @@ const Text = styled.p`
 `
 
 const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,detales,description,...props}) => {
+
     return(
-        <Fade timeout={800} in={isContent}>
+        <Fade in={isContent} timeout={800}>
             <Col>
                 <Row className="justify-content-sm-between justify-content-center align-items-start ml-0 pr-4">
                     <Col>
@@ -83,8 +84,7 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,detales,descr
                     </CustomLi>
                 </article>
             </Col>
-        </Fade>
-    )
+        </Fade>)
 }
 
 export default DisplayDetales

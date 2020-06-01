@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {Container,Row,Col} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import { Slide} from "@material-ui/core"
+import Slide from '@material-ui/core/Slide';
 import Projects from "./Projects"
 import SendMail from "./SendMail"
 import Colors from "../../common/themes/Colors"
@@ -10,6 +10,9 @@ import DisplayDetales from "./DisplayDetales"
 import Biker from "../../common/img/ImgBiker"
 import useWindowSize from "../../common/hook/size"
 import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
+import Arrow from "../../common/Arrow"
+import { Fade } from "@material-ui/core";
+
 
 const Cross = styled.img`
     cursor: pointer;
@@ -20,6 +23,7 @@ const Cross = styled.img`
 const CategoryTitle = styled.h1`
     font-family: 'Bangers';
     font-size: 2em;
+    margin: 0;
     @media screen and (max-width:992px) {
         font-size: 24px;
         margin-left: 10px;
@@ -33,23 +37,21 @@ const CategoryTitle = styled.h1`
         margin: 0;
     }
 `
-const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,...props}) => {
+const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,showNext, showPrevious,goSlide,...props}) => {
 
     const {h,w}  = useWindowSize();
 
     const DetalesContainer =  styled(Container)`
-        min-width: 87%;
+        
         background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
-        margin: 30px 0 0 0;
-        padding: 0 0 0 8%;
+        padding: 2% 5% 0 8%;
         font-size: 16px;
         z-index: 1;
         height: ${h - 150}px;
     
         @media screen and (max-width:992px) {
             margin-left: 2%;
-            padding: 0 0 3% 8%;
-            max-width: 95%;
+            padding: 0 8% 3% 8%;
         }
         @media screen and (max-width:768px) {
             margin-left: 5%;
@@ -60,6 +62,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
             height: 100%;
             padding: 0 0 3% 10%;
         }
+
     `
 
     const [isWeb, setIsWeb] = useState(true)
@@ -88,17 +91,24 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
     }
 
     return(
-        <Slide timeout={800} in={viewDetales} direction="left">    
-            <DetalesContainer>
+        
+            <DetalesContainer fluid>
                 <Row className="justify-content-end">
                     <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
                 </Row>
-                <CategoryTitle>
-                    {isExp &&(exp)}
-                    {isFormation &&(diplome)}
-                    {isProject && (projects)}
-                    {isMail &&(mail)}
-                </CategoryTitle>
+                
+                <Row className="justify-content-center align-items-center">
+                    <Arrow src="images/flecheg.png" onClick={showPrevious}/>
+                    <Fade in={viewDetales} timeout={800}>
+                        <CategoryTitle>
+                            {isExp &&(exp)}
+                            {isFormation &&(diplome)}
+                            {isProject && (projects)}
+                            {isMail &&(mail)}
+                        </CategoryTitle>
+                    </Fade>
+                    <Arrow src="images/fleche.png" onClick={showNext}/>
+                </Row>
                 {isExp &&(
                     <>
                         <Row className="ml-sm-3">
@@ -107,7 +117,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                              <DisplayDetales isContent={isWeb} detales={STRATEGIA} description={STRList} isWeb={isWeb}/> :
                              <DisplayDetales isContent={isSales} isSales={isSales} detales={VENTE} description={VList}/>}
                         </Row>
-                        <Biker alt="personnage en tenue motard sur ordinateur" src="images/ordi_opt.png"/> 
+                        <Biker alt="personnage en tenue motard sur ordinateur" src="images/ordi_opt.png"/>
                     </>
                 )} 
                 {isFormation &&(
@@ -130,10 +140,10 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     </>
                 )}
                 {isMail &&(
-                    <SendMail/>
-                )}    
+                    <SendMail isMail={isMail}/>
+                )}
             </DetalesContainer>
-        </Slide>
+       
     )
 }
 

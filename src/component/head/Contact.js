@@ -65,7 +65,7 @@ const Contact = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,
                                 <ImageButton alt="icone pdf" src={ICONS[index-1]}/>
                             </Button>
                         )}
-                        {isHome &&(<ContactDiv key={index} className={index === 2 ? "ml-1" : "" }>{label}</ContactDiv>)}
+                        {isHome &&(<ContactDiv key={index}>{label}</ContactDiv>)}
                     </CustomRow>)})}
                     
         </ListeContainer>

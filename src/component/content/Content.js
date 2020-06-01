@@ -7,17 +7,7 @@ import {MENU} from '../common/constantes/home'
 import Detales from "./detales/Detales"
 import Aboutme from "./AboutMe"
 import { Slide } from "@material-ui/core"
-
-const ContentContainer = styled(Container)`
-    color: ${Colors.darkGrey};
-    font-size: 24px;
-    @media screen and (max-width:576px) {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-`
+import Navigation from "../Navigation"
 
 const Content = ({
     isProject,
@@ -32,8 +22,21 @@ const Content = ({
     goToFormationContent,
     goToMailForm,
     contentIsShown, 
+    showNext,
+    showPrevious,
     hideContent,...props}) => {
 
+    const ContentContainer = styled(Container)`
+        color: ${Colors.darkGrey};
+        font-size: 24px;
+        ${contentIsShown ? "transition: transform 800ms cubic-bezier(0, 0, 0.2, 1) 0ms" : "transform: none"}; 
+        @media screen and (max-width:576px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;        
+    }
+`
     const exp = MENU[0];
     const projects = MENU[2];
     const diplome=MENU[1];
@@ -42,8 +45,8 @@ const Content = ({
   
     return (
         <ContentContainer fluid>
-            {contentIsShown ?   
-                <Detales closeSlide={hideContent} 
+            {contentIsShown ?
+                    <Detales closeSlide={hideContent} 
                         viewDetales={contentIsShown}
                         isExp={isExp}
                         isFormation={isFormation}
@@ -53,8 +56,10 @@ const Content = ({
                         exp={exp}
                         projects={projects}
                         diplome={diplome}
-                        mail={mail}/>
-                : <Aboutme isHome={isHome}/>}
+                        mail={mail}
+                        showNext={showNext}
+                        showPrevious={showPrevious}
+                        goSlide={true}/> : <Aboutme isHome={isHome}/>}
             <Menu exp={exp} 
                     diplome={diplome} 
                     projects={projects}

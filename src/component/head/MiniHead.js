@@ -5,6 +5,7 @@ import Contact from './Contact'
 import { Slide } from "@material-ui/core"
 import Toggle from "./Toggle"
 import MinFooter from "../content/MiniFooter"
+import Navigation from "../Navigation"
 
 const HomeContainer = styled(Container)`
     height: 100%;
@@ -35,7 +36,7 @@ const HomeContainer = styled(Container)`
         padding: 150px 0 0 0 !important;
     }
 `
-const MiniHead = ({isHome,mailToHead,homeToHead,...props}) => {
+const MiniHead = ({isContent,isHome,mailToHead,homeToHead,...props}) => {
     const [footerOpen, setFooterOpen] = useState(false)
 
     const displayFooter = () => {
@@ -47,7 +48,7 @@ const MiniHead = ({isHome,mailToHead,homeToHead,...props}) => {
         }
     }
     return (
-        <Slide timeout={800}  direction="right" in={!isHome}>
+        <Slide timeout={800}  direction="right" in={isContent}>
             <HomeContainer fluid>
                 <Contact isHome={isHome} contactForm={mailToHead} returnToHome={homeToHead}/>
                 <Toggle footerfromHead={displayFooter}/>

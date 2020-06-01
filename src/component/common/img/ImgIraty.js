@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Colors from "../themes/Colors"
 import usePreload from "../hook/loadImg";
 
+
 const ColImg = styled.img `    
     height: 300px;
     position: fixed;
@@ -23,7 +24,6 @@ const IratyImg = ({src,fallBackSrc,alt,...props}) => {
         fallBackSrc: src= "images/iraty.png",
     });
     
-    if(!src) return null;
     return <ColImg alt={alt} src={motoSrc}/>
 }
 

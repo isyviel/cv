@@ -9,6 +9,7 @@ import useMousePosition from "../common/hook/position"
 import useWindowSize from "../common/hook/size"
 import MotoImg from "../common/img/ImgMoto"
 import IratyImg from "../common/img/ImgIraty"
+import useIsMounted from "../common/hook/ismounted"
 
 const CustomContainer = styled(Container)`
     position: fixed;
@@ -49,11 +50,15 @@ const Aboutme = ({isHome,...props}) => {
     const {h,w}  = useWindowSize();
     const [detectMoto, setDetectMoto] = useState(true);
     const [detect, setDetect] = useState(true);
+    const isMounted = useIsMounted();
     //const hasMovedCursor = typeof x === "number" && typeof y === "number";
 
     useEffect(() => {
-      detectMouse()
-    }, [h,w,x,y]);
+        if(isMounted.current){
+            detectMouse()
+        }
+      
+    }, [h,w,x,y,isMounted]);
 
     const minMotoX = w * 31/100
     const maxMotoX = w * 55/100
@@ -90,8 +95,10 @@ const Aboutme = ({isHome,...props}) => {
                     : "Move your mouse around."}</div>
                 <div>values : moto :{minMotoX},{maxMotoX} - iraty: {minIraY}, {maxIraY}</div>
                 <div>sizes : h = {h} and w = {w}</div> */}
-                <div>{detectMoto ? <Fade in={detectMoto}><MotoImg alt="moto"/></Fade>: ""}</div>
-                <div>{detect ? <Fade in={detect}><IratyImg alt="photo col d'iraty"/></Fade>: ""}</div>
+               
+                {/* <div>{detectMoto &&(<MotoImg alt="moto"/>)}</div>
+                <div>{detect &&(<IratyImg alt="photo col d'iraty"/>)}</div> */}
+                
            </CustomContainer>
     )
 }

@@ -35,10 +35,6 @@ const Phone = ({isHome,label,...props}) => {
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'right',
-          horizontal: 'right',
-        }}
       >
         <Typography className={classes.typography} >{label}</Typography>
       </Popover>

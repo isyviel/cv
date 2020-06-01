@@ -41,6 +41,7 @@ const CustomP = styled.p`
   color: ${Colors.orange};
 `
 
+
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
   const {h,w}  = useWindowSize();
