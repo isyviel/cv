@@ -4,7 +4,28 @@ export const QUOTE = ["Faire un bond en avant, je sautille pas","- Perceval, Kaa
 export const NOM = "Adeline SIMON"
 export const TITRE = "Développeuse Web et Web Mobile"
 export const TECHNOS = ["ReactJS, "," Material-ui, ","PHP 7, ","Symfony 4, ", "Boostrap"]
-export const MENU = ["EXPERIENCE", "FORMATIONS", "PORTFOLIO", "CONTACT"]
+export const MENU ={
+    exp: {
+        index: 0,
+        title:"EXPERIENCE",
+        classe: "justify-content-center align-items-center",
+    },
+    formations: {
+        index: 1,
+        title: "FORMATIONS",
+        classe: "justify-content-md-start justify-content-center align-items-center",
+    },
+    projet : {
+        index: 2,
+        title: "PORTFOLIO",
+        classe: "justify-content-center align-items-center",
+    },
+    mail : {
+        index: 3,
+        title: "CONTACT",
+        classe: "justify-content-md-start justify-content-center align-items-center",
+    }
+}
 
 export const STRATEGIA = {
     title: "STRATEGIA",

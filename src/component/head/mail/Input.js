@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import styled from "styled-components"
 import { makeStyles } from '@material-ui/styles';
 import useWindowSize from "../../common/hook/size";
+import formStyles from "../../common/themes/formTheme";
 
 const Input = ({label,required, change, send, value, name, ...props}) => {
 

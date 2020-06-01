@@ -1,18 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
 import {Col,Row} from "@bootstrap-styled/v4/lib"
 import { Fade } from "@material-ui/core"
 import styled from "styled-components"
 import WebSite from "../../common/WebSite"
-import Description from "./Description"
 import Colors from "../../common/themes/Colors"
 import Logo from "../../common/img/Logo"
-import Container from "@bootstrap-styled/v4/lib/Container"
 
 const Title = styled.h1`
     color: ${Colors.orange};
     font-family: 'Bangers';
     font-size: 3em;
-
     @media screen and (max-width:992px) {
         font-size: 2em;
     }
@@ -40,9 +37,7 @@ const SoftSkills = styled.h3`
         text-align: center;
     }
 `
-
 const CustomLi = styled.ul`
-    
     padding-left: 0;
     margin-left: 5%;
     @media screen and (max-width:576px) {
@@ -64,7 +59,6 @@ const Dtitle = styled.div`
     font-weight: bold;
 `
 const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,detales,description,...props}) => {
-
     return(
         <Fade in={isContent} timeout={800}>
             <Col>
@@ -89,21 +83,21 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,detales,descr
                             <CustomLi>
                                 {description.conception.detales.map(
                                     (element,index) => {
-                                        return(<Description content={element} key={index}/>)
+                                        return(<li key={index}>{element}</li>)
                                     })
                                 }
                             </CustomLi>
                             <Dtitle>{description.back.title}</Dtitle>
-                            <CustomLi>{description.back.detales}</CustomLi>
+                            <CustomLi><li>{description.back.detales}</li></CustomLi>
                             <Dtitle>{description.front.title}</Dtitle>
-                            <CustomLi>{description.front.detales}</CustomLi>
+                            <CustomLi><li>{description.front.detales}</li></CustomLi>
                         </div>
                 : 
                     <CustomLi>
                         {description.detales &&(
                             description.detales.map((element,index) => {
                             return(
-                                <Description content={element} key={index}/>
+                                <li key={index}>{element}</li>
                             )
                         }))} 
                     </CustomLi>

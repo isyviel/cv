@@ -1,5 +1,4 @@
 import React from "react"
-import { makeStyles } from '@material-ui/styles';
 import Input from './Input'
 import Area from './Area'
 import {Row,Col} from "@bootstrap-styled/v4/lib"
@@ -10,6 +9,7 @@ import {LinearProgress} from '@material-ui/core'
 import styled from "styled-components"
 import Container from "@bootstrap-styled/v4/lib/Container";
 import useWindowSize from "../../common/hook/size";
+import formStyles from "../../common/themes/formTheme";
 
 const CustomDiv = styled.div`
   height: 20px;
@@ -41,7 +41,6 @@ const CustomP = styled.p`
   color: ${Colors.orange};
 `
 
-
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
   const {h,w}  = useWindowSize();
@@ -69,33 +68,7 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
       max-width:${w - 130}px;
     }
   `
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      background:"linear-gradient(145deg, #ff8300, #e66e00)", 
-      boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
-      color: "white",
-      width: "200px",
-      fontFamily: 'Dosis',
-      '&:hover': {
-          backgroundColor: "#FF7A00", 
-          boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
-        },   
-    },
-    active: {
-      fontFamily: 'Dosis',
-      width: "200px",
-      backgroundColor: "#FFFFF",
-      background: "rgba(255,255,255)",
-      color: Colors.orange,
-      boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
-    },
-    input: {
-        display: w > 576 ? "flex": "block",
-        justifyContent: "center",
-    },
-}))
-
-  const classes = useStyles()
+  const classes = formStyles()
 
   const ColorLinearProgress = withStyles({
     colorPrimary: {

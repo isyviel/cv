@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import {Row,Col,Container} from "@bootstrap-styled/v4/lib"
-import {Button, Menu, MenuItem, Paper, Grow, Slide, makeStyles, ClickAwayListener } from '@material-ui/core/';
-import Colors from "../common/themes/Colors";
+import {Row,Container} from "@bootstrap-styled/v4/lib"
+import {Button, Slide} from '@material-ui/core/';
 import useWindowSize from "../common/hook/size";
+import footerStyles from "../common/themes/footerTheme";
 
 const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
     const {h,w} = useWindowSize()
@@ -32,43 +32,27 @@ const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
             width: ${w - 40}px;
         }
     `
-
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            color: Colors.orange,
-            fontFamily: 'Dosis',
-            fontSize: '16px',
-            '&:hover': {
-                color: "white",
-            },   
-        },
-        phone : {
-            color: Colors.orange,
-            fontFamily: 'Dosis',
-            fontSize: '16px',
-        },
-    }))
     
-    const classes = useStyles()
+    const classes = footerStyles()
   
     return (
         <Slide timeout={800} direction='right' in={footerOpen}>
             <CustomContainer>
                 <CustomRow className="justify-content-between">
-                    <Button className={classes.root} href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button>
-                    <Button href="mailto:adeline.simon31@hotmail.fr" className={classes.root}>adeline.simon31@hotmail.fr</Button>
+                    <Button className={classes.miniroot} href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button>
+                    <Button href="mailto:adeline.simon31@hotmail.fr" className={classes.miniroot}>adeline.simon31@hotmail.fr</Button>
                 </CustomRow>
                 <CustomRow className="justify-content-between align-items-center">
-                    <Button className={classes.root} href="https://material-ui.com/" target="_blank" rel="noopener noreferrer">Material-UI</Button>
-                    <div className={classes.phone}>0621692869</div>
+                    <Button className={classes.miniroot} href="https://material-ui.com/" target="_blank" rel="noopener noreferrer">Material-UI</Button>
+                    <div className={classes.miniphone}>0621692869</div>
                 </CustomRow>
                 <CustomRow className="justify-content-between">
-                    <Button className={classes.root} href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer">Service EmailJS</Button>
-                    <Button className={classes.root} href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">Github</Button>
+                    <Button className={classes.miniroot} href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer">Service EmailJS</Button>
+                    <Button className={classes.miniroot} href="https://www.github.com/isyviel" target="_blank" rel="noopener noreferrer">Github</Button>
                 </CustomRow>
                 <CustomRow className="justify-content-between">
-                    <Button className={classes.root} href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHubPages</Button>
-                    <Button className={classes.root} href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">Linkedin</Button>
+                    <Button className={classes.miniroot} href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHubPages</Button>
+                    <Button className={classes.miniroot} href="https://www.linkedin.com/in/adeline-simon-b8614018b" target="_blank" rel="noopener noreferrer">Linkedin</Button>
                 </CustomRow>
             </CustomContainer>
         </Slide>

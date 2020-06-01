@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
-import {Row,Col,Container} from "@bootstrap-styled/v4/lib"
-import {Button, Menu, MenuItem, Paper, Grow, Slide, makeStyles, ClickAwayListener } from '@material-ui/core/';
-import Drawer from '@material-ui/core/Drawer';
-import ImageButton from "../common/img/ImageButton";
-import Colors from "../common/themes/Colors";
+import {Row,Container} from "@bootstrap-styled/v4/lib"
+import {Button, Slide} from '@material-ui/core/';
 import useWindowSize from "../common/hook/size";
 import { HEAD } from "../common/constantes/home";
+import footerStyles from "../common/themes/footerTheme";
 
 const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
 
@@ -49,26 +47,8 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
         @media screen and (max-width:576px) {
             width: ${w - 40}px;
         }
-    `
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            color: Colors.orange,
-            fontFamily: 'Dosis',
-            fontSize: '16px',
-            '&:hover': {
-                color: "white",
-            },   
-        },
-        phone : {
-            color: Colors.orange,
-            fontFamily: 'Dosis',
-            fontSize: '16px',
-            paddingRight: "8px",
-            marginRight: "0",
-        }
-    }))
-    
-    const classes = useStyles()
+    `    
+    const classes = footerStyles()
   
     return (
         

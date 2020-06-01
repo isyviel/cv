@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Colors from "../themes/Colors"
 import usePreload from "../hook/loadImg";
-
 
 const Moto = styled.img `
     height: 300px;

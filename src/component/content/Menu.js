@@ -2,8 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
-import { makeStyles } from '@material-ui/styles';
-import Colors from '../common/themes/Colors'
+import {MENU} from '../common/constantes/home'
+
+import menuStyles from "../common/themes/menuTheme";
 
 const ButtonRow = styled(Row)`
     margin-top: 10%;
@@ -56,53 +57,24 @@ const Menu = ({
         }
         
     `
-
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            background: "linear-gradient(145deg, #ff8300, #e66e00)", 
-            boxShadow: "6px 6px 13px #8a4200, -6px -6px 13px #e6e6e6",
-            color: "white",
-            width: "75%",
-            fontFamily: 'Dosis',
-            '&:hover': {
-                backgroundColor: "#FF7A00", 
-                boxShadow: "inset 6px 6px 13px #b05400, inset -6px -6px 13px #ffa000",
-            },
-            '&:focus': {
-            backgroundColor: "#FFFFF",
-            background: "rgba(255,255,255)",
-            color: Colors.orange,
-            boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
-            },          
-        },
-        active: {
-            fontFamily: 'Dosis',
-            width: "75%",
-            backgroundColor: "#FFFFF",
-            background: "rgba(255,255,255)",
-            color: Colors.orange,
-            boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
-        }
-    }))
-
-const classes = useStyles()
+const click = [fromExpButton,fromFormationButton,fromProjectButton,fromMailButton]
+const classes = menuStyles()
 
     return (
         <MenuContainer>
                 <Row className="justify-content-center align-items-center">
-                    <Col>
-                        <ButtonRow className="justify-content-center align-items-center">
-                            <Button className={isExp ? classes.active : classes.root} onClick={fromExpButton}>{exp}</Button>
-                        </ButtonRow>
-                        <ButtonRow className="justify-content-md-start justify-content-center align-items-center">
-                            <Button className={isFormation ? classes.active : classes.root} onClick={fromFormationButton}>{diplome}</Button>
-                        </ButtonRow>
-                        <ButtonRow className="justify-content-center align-items-center">
-                            <Button className={isProject ? classes.active : classes.root} onClick={fromProjectButton}>{projects}</Button>
-                        </ButtonRow>
-                        <ButtonRow className="justify-content-md-start justify-content-center align-items-center">
-                            <Button className={isMail ? classes.active : classes.root} onClick={fromMailButton}>Contact</Button>
-                        </ButtonRow>
+                    <Col> 
+                        {Object.entries(MENU).map(([key,value],i)=> {
+                            return (
+                                <ButtonRow key={i} className={value.classe}>
+                                    <Button key={i} 
+                                        className={(isExp && i === 0) || (isFormation && i===1) || (isProject && i===2) || (isMail && i === 3)? classes.active: classes.root} 
+                                        onClick={click[i]}>
+                                            {value.title}
+                                    </Button>
+                                </ButtonRow>
+                            )
+                        })}
                     </Col>
                 </Row>            
         </MenuContainer>

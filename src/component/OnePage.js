@@ -27,11 +27,7 @@ const OnePage = () => {
         padding: 0 !important;
         overflow-y : hidden;
         overflow-x: hidden;
-<<<<<<< HEAD
-        @media screen and (max-width:576px) {overflow-y : visible;} 
-=======
         ${isContent ? "@media screen and (max-width:576px) {overflow-y : visible;}" : ""} 
->>>>>>> amelio
     `
     const displayContent = () => {
         if(!isContent) {

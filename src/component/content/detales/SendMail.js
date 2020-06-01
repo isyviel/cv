@@ -1,14 +1,9 @@
 import React , {useState} from "react"
-import {Row} from "@bootstrap-styled/v4/lib"
-import { FormControl,LinearProgress, Container, Fade} from '@material-ui/core'
+import { FormControl, Container, Fade} from '@material-ui/core'
 import Form from '../../head/mail/Form'
 import SentAlert from '../../head/mail/SentAlert'
 import emailjs from 'emailjs-com'
 import {USER} from '../../common/constantes/mail'
-import { ThemeProvider } from "styled-components"
-import Theme from '../../common/themes/Theme'
-import Colors from '../../common/themes/Colors'
-import { withStyles } from '@material-ui/core/styles'
 
 const SendMail = ({isMail, ...props})=> {
 
@@ -62,20 +57,20 @@ const SendMail = ({isMail, ...props})=> {
   return(
     <Fade timeout={800} in={isMail}>
       <Container>
-      <FormControl>
-        <Form
-          windowClose={handleClose} 
-          submit={handleSubmit}
-          values={values}
-          change={handleChange}
-          isLoading={isLoading}/>
-      </FormControl>
-      <SentAlert 
-        open={snackOpen} 
-        status={status} 
-      />
-    </Container>
-  </Fade>
+        <FormControl>
+          <Form
+            windowClose={handleClose} 
+            submit={handleSubmit}
+            values={values}
+            change={handleChange}
+            isLoading={isLoading}/>
+        </FormControl>
+        <SentAlert 
+          open={snackOpen} 
+          status={status} 
+        />
+      </Container>
+    </Fade>
   )
 }
 
