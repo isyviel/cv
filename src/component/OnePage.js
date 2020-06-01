@@ -26,6 +26,7 @@ const OnePage = () => {
         padding: 0 !important;
         overflow-y : hidden;
         overflow-x: hidden;
+        ${isMail ? "@media screen and (max-width:576px) {overflow-y : visible;}" : ""} 
     `
 
     const displayMailForm = () => {

@@ -51,7 +51,7 @@ const Menu = ({
         @media screen and (max-width:576px) {
             right: 0;
             left: 5%;
-            top: 300px;
+            top: 120px;
             margin: auto;
         }
         

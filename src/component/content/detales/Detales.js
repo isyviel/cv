@@ -56,7 +56,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
             padding: 0 5% 3% 8%;
         }
         @media screen and (max-width:576px) {
-            margin-left: 0;
+            margin: 0;
             height: 100%;
             padding: 0 0 3% 10%;
         }
