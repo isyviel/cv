@@ -26,15 +26,9 @@ const CategoryTitle = styled.h1`
     margin: 0;
     @media screen and (max-width:992px) {
         font-size: 24px;
-        margin-left: 10px;
-    }
-    @media screen and (max-width:768px) {
-        margin-left: 5%;
     }
     @media screen and (max-width:576px) {
         font-size: 20px;
-        text-align: center;
-        margin: 0;
     }
 `
 const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,showNext, showPrevious,goSlide,...props}) => {
@@ -97,7 +91,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                     <Cross onClick={closeSlide} src="images/croix.png" alt="croix"/>
                 </Row>
                 
-                <Row className="justify-content-center align-items-center">
+                <Row className="justify-content-center align-items-center mb-4">
                     <Arrow src="images/flecheg.png" onClick={showPrevious}/>
                     <Fade in={viewDetales} timeout={800}>
                         <CategoryTitle>
