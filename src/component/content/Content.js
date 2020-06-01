@@ -6,6 +6,7 @@ import Colors from '../common/themes/Colors'
 import {MENU} from '../common/constantes/home'
 import Detales from "./detales/Detales"
 import Aboutme from "./AboutMe"
+import { Slide } from "@material-ui/core"
 
 const ContentContainer = styled(Container)`
     color: ${Colors.darkGrey};
@@ -41,7 +42,7 @@ const Content = ({
   
     return (
         <ContentContainer fluid>
-            {contentIsShown ? 
+            {contentIsShown ?   
                 <Detales closeSlide={hideContent} 
                         viewDetales={contentIsShown}
                         isExp={isExp}
@@ -52,7 +53,7 @@ const Content = ({
                         exp={exp}
                         projects={projects}
                         diplome={diplome}
-                        mail={mail}/> 
+                        mail={mail}/>
                 : <Aboutme isHome={isHome}/>}
             <Menu exp={exp} 
                     diplome={diplome} 

@@ -18,7 +18,6 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
         min-width: 100%;
         z-index: 3;
         left : 450px;
-        
 
         @media screen and (max-width:1200px) {
             left : 350px;

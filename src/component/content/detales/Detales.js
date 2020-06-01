@@ -7,7 +7,6 @@ import SendMail from "./SendMail"
 import Colors from "../../common/themes/Colors"
 import DetalesMenu from "./DetalesMenu"
 import DisplayDetales from "./DisplayDetales"
-import { Fade } from "@material-ui/core"
 import Biker from "../../common/img/ImgBiker"
 import useWindowSize from "../../common/hook/size"
 import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
@@ -124,10 +123,10 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                 )} 
                 {isProject &&(
                     <>
-                    <Row className="ml-sm-2">
-                        <Projects isProject={isProject}/>
-                    </Row>
-                    <Biker alt="personnage en tenue motard réfléchit" src="images/think_opt.png"/>
+                        <Row className="ml-sm-2">
+                            <Projects isProject={isProject}/>
+                        </Row>
+                        <Biker alt="personnage en tenue motard réfléchit" src="images/think_opt.png"/>
                     </>
                 )}
                 {isMail &&(
