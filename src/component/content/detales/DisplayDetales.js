@@ -42,8 +42,9 @@ const SoftSkills = styled.h3`
 `
 
 const CustomLi = styled.ul`
-    list-style-type: none;
+    
     padding-left: 0;
+    margin-left: 5%;
     @media screen and (max-width:576px) {
         margin-left: 10px;
     }
@@ -55,7 +56,13 @@ const Text = styled.p`
         text-align: center;
     }
 `
-
+const Dskills = styled.div `
+    color: ${Colors.orange};
+    margin-bottom: 1%;
+`
+const Dtitle = styled.div`
+    font-weight: bold;
+`
 const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,detales,description,...props}) => {
 
     return(
@@ -67,21 +74,40 @@ const DisplayDetales = ({isContent,isWeb,isSales,isAdrar,isEnglish,detales,descr
                         <Row className="justify-content-center justify-content-sm-start">
                             <WebSite href={detales.href} content={detales.content} isSales={isSales} isEnglish={isEnglish}/>
                         </Row>
-                        {isAdrar &&(<Text>2020</Text>)}
-                        {isWeb &&(<Text>2020</Text>)}
+                        {isAdrar || isWeb ? <Text>2020</Text> : <></>}
                     </Col>
                     <Logo alt={detales.alt} src={detales.src}/>
                 </Row>
                 <Skills className="h5">{detales.skills}</Skills>
                 <SoftSkills className="h6">{detales.softSkills}</SoftSkills>
                 <article className="ml-1 ml-sm-3">
+                    <Dskills>{description.skills}</Dskills>
+                    <Dtitle>{description.resume}</Dtitle>
+                    {isAdrar ?
+                        <div>
+                            <Dtitle>{description.conception.title}</Dtitle>
+                            <CustomLi>
+                                {description.conception.detales.map(
+                                    (element,index) => {
+                                        return(<Description content={element} key={index}/>)
+                                    })
+                                }
+                            </CustomLi>
+                            <Dtitle>{description.back.title}</Dtitle>
+                            <CustomLi>{description.back.detales}</CustomLi>
+                            <Dtitle>{description.front.title}</Dtitle>
+                            <CustomLi>{description.front.detales}</CustomLi>
+                        </div>
+                : 
                     <CustomLi>
-                        {description.map((element,index) => {
+                        {description.detales &&(
+                            description.detales.map((element,index) => {
                             return(
                                 <Description content={element} key={index}/>
                             )
-                        })} 
+                        }))} 
                     </CustomLi>
+                }
                 </article>
             </Col>
         </Fade>)

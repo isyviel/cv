@@ -8,7 +8,7 @@ import Colors from "../../common/themes/Colors";
 const ButtonRow = styled(Row)`
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-bottom: 10%;
     @media screen and (max-width:576px) {
         margin-top: 10px;
     }
