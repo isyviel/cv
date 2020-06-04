@@ -108,7 +108,7 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                 </>
             )}
             {isMail &&(
-                <SendMail isMail={isMail}/>
+                <SendMail/>
             )}
         </DetalesContainer> 
     )

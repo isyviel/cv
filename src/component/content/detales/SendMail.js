@@ -1,11 +1,11 @@
-import React , {useState} from "react"
+import React , {useState, useEffect} from "react"
 import { FormControl, Container, Fade} from '@material-ui/core'
 import Form from '../../head/mail/Form'
 import SentAlert from '../../head/mail/SentAlert'
 import emailjs from 'emailjs-com'
 import {USER} from '../../common/constantes/mail'
 
-const SendMail = ({isMail, ...props})=> {
+const SendMail = ()=> {
 
     const user = USER
     const [open, setOpen] = useState(false)
@@ -55,7 +55,7 @@ const SendMail = ({isMail, ...props})=> {
       }
 
   return(
-    <Fade timeout={800} in={isMail}>
+    
       <Container>
         <FormControl>
           <Form
@@ -70,7 +70,7 @@ const SendMail = ({isMail, ...props})=> {
           status={status} 
         />
       </Container>
-    </Fade>
+   
   )
 }
 

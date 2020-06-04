@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import styled from "styled-components"
 import { makeStyles } from '@material-ui/styles';
 import useWindowSize from "../../common/hook/size";
-import formStyles from "../../common/themes/formTheme";
+
 
 const Input = ({label,required, change, send, value, name, ...props}) => {
 
@@ -26,10 +26,10 @@ const classes = useStyles()
           id="standard-secondary"
           label={label}
           color="secondary"
-          onChange={change}
           value={value}
           name={name}
           fullWidth
+          onChange={change}
           className={name === "nom" || name === "prenom" || name === "phone" ? classes.root : "mb-2"}
           variant="outlined"
         />
