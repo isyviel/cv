@@ -7,7 +7,7 @@ import DetalesMenu from "./DetalesMenu"
 import DisplayDetales from "./DisplayDetales"
 import Biker from "../../common/img/ImgBiker"
 import useWindowSize from "../../common/hook/size"
-import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
+import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList, HEAD } from "../../common/constantes/home"
 import Arrow from "../../common/Arrow"
 import { Fade, CircularProgress, withStyles } from "@material-ui/core";
 import Cross from "../../common/Cross"
@@ -111,7 +111,9 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
             {isMail &&(
                 //<SendMail/>
                 <div>
-                    <div className="h1 text-center"> Formulaire en cours de maintenance</div>
+                    <div className="h1 text-center mb-4"> Formulaire en cours de maintenance</div>
+                    <div className="h4 text-center">Vous pouvez me contacter à cette adresse mail:</div>
+                    <div className="h2 text-center mb-4 pb-4">{HEAD[1]}</div>
                     <Row className="justify-content-center">
                         <CircularProgress/>
                     </Row>
