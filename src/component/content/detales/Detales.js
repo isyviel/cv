@@ -9,9 +9,10 @@ import Biker from "../../common/img/ImgBiker"
 import useWindowSize from "../../common/hook/size"
 import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
 import Arrow from "../../common/Arrow"
-import { Fade } from "@material-ui/core";
+import { Fade, CircularProgress, withStyles } from "@material-ui/core";
 import Cross from "../../common/Cross"
 import CategoryTitle from "./CategoryTitle"
+import Colors from "../../common/themes/Colors"
 
 const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,showNext, showPrevious,goSlide,...props}) => {
 
@@ -108,7 +109,13 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                 </>
             )}
             {isMail &&(
-                <SendMail/>
+                //<SendMail/>
+                <div>
+                    <div className="h1 text-center"> Formulaire en cours de maintenance</div>
+                    <Row className="justify-content-center">
+                        <CircularProgress/>
+                    </Row>
+                </div>
             )}
         </DetalesContainer> 
     )
