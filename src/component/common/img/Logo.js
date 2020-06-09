@@ -7,7 +7,7 @@ const Image =  styled.img`
         height: 80px;
     }
     
-    @media screen and (max-width:576px) {
+    @media screen and (max-width:768px) {
         height: 0px;
         display: none;
     }

@@ -15,7 +15,7 @@ const ContactDiv = styled.div`
     }
 `
 
-const ContactDetales = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,...props}) => {
+const MiniContactDetales = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,...props}) => {
 
     return(
        
@@ -25,6 +25,10 @@ const ContactDetales = ({isHome, handleClickOpen, contactForm, returnToHome,goTo
             {index === 1 &&(
                 <Mail displayForm={contactForm}/>
             )}
+            {index=== 0 &&(
+                <Button className="p-0" onClick={returnToHome} target="_blank" rel="noopener noreferrer">
+                    <ImageButton alt="icone home" src="images/home.png"/>
+                </Button>)}
             {index === 2 &&(
                 <Phone label={label} isHome={isHome}/>
             )}
@@ -41,9 +45,8 @@ const ContactDetales = ({isHome, handleClickOpen, contactForm, returnToHome,goTo
                     <ImageButton alt="icone pdf" src={ICONS[index-1]}/>
                 </Button>
             )}
-            <ContactDiv key={index}>{label}</ContactDiv>
         </Row>)})
     )
 }
 
-export default ContactDetales
+export default MiniContactDetales

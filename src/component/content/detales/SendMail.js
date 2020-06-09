@@ -5,11 +5,13 @@ import emailjs from 'emailjs-com'
 import {USER} from '../../common/constantes/mail'
 import styled from "styled-components"
 import Container from "@bootstrap-styled/v4/lib/Container";
+import useWindowSize from "../../common/hook/size"
 
 const CustomContainer = styled(Container) `
         width: ${()=>{
           const menu = document.getElementById('menuRight').getBoundingClientRect()
-          const form = menu.x - menu.width / 2
+          const {w} = useWindowSize()
+          const form = w - menu.width - 150
           return form}
         }px;
         margin-left: 15px;
