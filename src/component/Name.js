@@ -51,7 +51,7 @@ const NameContainer = styled(Container)`
 
 const Name = ({isHome,...props}) => {
     return(
-        <Slide timeout={800}  direction="right" in={isHome}>
+        <Slide timeout={800}  direction="left" in={isHome}>
             <NameContainer fluid>
                 <CustomH1>     
                     {NOM} - {TITRE}
