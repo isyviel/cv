@@ -1,24 +1,31 @@
 import React , {useState, useEffect} from "react"
-import { FormControl, Fade} from '@material-ui/core'
 import Form from '../../head/mail/Form'
 import SentAlert from '../../head/mail/SentAlert'
 import emailjs from 'emailjs-com'
 import {USER} from '../../common/constantes/mail'
 import styled from "styled-components"
 import Container from "@bootstrap-styled/v4/lib/Container";
+import useWindowSize from "../../common/hook/size"
+
+const CustomContainer = styled(Container) `
+        width: ${()=>{
+          const menu = document.getElementById('menuRight').getBoundingClientRect()
+          const form = menu.x - menu.width / 2
+          return form}
+        }px;
+        margin-left: 15px;
+        @media screen and (max-width:1200px) {
+          width: 95%;
+      }
+`
 
 const SendMail = ()=> {
 
     const user = USER
-    const [open, setOpen] = useState(false)
     const [snackOpen, setSnackOpen] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     const [values,setValues] = useState({})
     const [status, setStatus] = useState(null)
-
-    const handleClose = () => {
-        setOpen(false)
-    }
   
     const handleChange = (event) => {
         event.persist();
@@ -56,12 +63,10 @@ const SendMail = ()=> {
           
        })
       }
-
   return(
     
-      <Container className="no-gutters m-0">
+      <CustomContainer id='mail'>
         <Form
-          windowClose={handleClose} 
           submit={handleSubmit}
           values={values}
           change={handleChange}
@@ -70,7 +75,7 @@ const SendMail = ()=> {
           open={snackOpen} 
           status={status} 
         />
-      </Container>
+      </CustomContainer>
    
   )
 }

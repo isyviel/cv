@@ -3,13 +3,35 @@ import styled from "styled-components"
 import { Container,Row,Col } from "@bootstrap-styled/v4"
 import Button from '@material-ui/core/Button'
 import {MENU} from '../common/constantes/home'
-
 import menuStyles from "../common/themes/menuTheme";
 
 const ButtonRow = styled(Row)`
     margin-top: 10%;
     @media screen and (max-width:576px) {
         margin-top: 10px;
+    }
+`
+
+const MenuContainer = styled(Container)`
+    position: fixed;
+    top: 30%;
+    right: 10px;
+    width: 300px;
+
+    @media screen and (max-width:1200px) {
+        padding: 0;
+        max-width: 300px !important;
+    }
+
+    @media screen and (max-width:768px) {
+        padding: 0;
+        max-width: 200px !important;
+    }
+    @media screen and (max-width:576px) {
+        right: 0;
+        left: 5%;
+        top: 120px;
+        margin: auto;
     }
 `
 
@@ -30,38 +52,11 @@ const Menu = ({
     isActive,
     ...props}) => { 
 
-    const MenuContainer = styled(Container)`
-        position: fixed;
-        top: 30%;
-        right: 10px;
-        width: 300px;
-        
-        @media screen and (max-width:1200px) {
-            padding: 0;
-            max-width: 300px !important;
-            ${isDeploy &&("display : none;")}
-            ${isMail &&("display : none;")}
-        }
-
-        @media screen and (max-width:768px) {
-            padding: 0;
-            max-width: 200px !important;
-            ${isDeploy &&("display : none;")}
-            ${isMail &&("display : none;")}
-        }
-        @media screen and (max-width:576px) {
-            right: 0;
-            left: 5%;
-            top: 120px;
-            margin: auto;
-        }
-        
-    `
 const click = [fromExpButton,fromFormationButton,fromProjectButton,fromMailButton]
 const classes = menuStyles()
 
     return (
-        <MenuContainer>
+        <MenuContainer className={isDeploy ? "d-none d-xl-block" : ""} id={'menuRight'}>
                 <Row className="justify-content-center align-items-center">
                     <Col> 
                         {Object.entries(MENU).map(([key,value],i)=> {

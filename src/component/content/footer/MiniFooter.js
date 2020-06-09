@@ -1,13 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import {Row,Container} from "@bootstrap-styled/v4/lib"
 import {Button, Slide} from '@material-ui/core/';
-import useWindowSize from "../common/hook/size";
-import footerStyles from "../common/themes/footerTheme";
+import useWindowSize from "../../common/hook/size";
+import footerStyles from "../../common/themes/footerTheme";
 
-const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
-    const {h,w} = useWindowSize()
-    const CustomContainer = styled(Container)`
+const CustomContainer = styled(Container)`
         position: fixed;
         bottom: 0px;
         background-color: #272727;
@@ -22,17 +20,28 @@ const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
             left : 40px;
         }
     `
-    const CustomRow = styled(Row) `
-        width: ${w - 80}px;
-        
-        @media screen and (max-width:768px) {
-            width: ${w - 100}px;
-        }
-        @media screen and (max-width:576px) {
-            width: ${w - 40}px;
-        }
-    `
+const CustomRow = styled(Row) `
+    width: ${() => {
+        const {w} = useWindowSize()
+        const width = w-80
+        return width}}px;
     
+    @media screen and (max-width:768px) {
+        width: ${() => {
+            const {w} = useWindowSize()
+            const width = w-100
+            return width}}px;
+    }
+    @media screen and (max-width:576px) {
+        width: ${() => {
+            const {w} = useWindowSize()
+            const width = w-40
+            return width}}px;
+    }
+`
+
+const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
+
     const classes = footerStyles()
   
     return (

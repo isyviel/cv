@@ -2,56 +2,70 @@ import React from "react"
 import styled from "styled-components"
 import {Row,Container} from "@bootstrap-styled/v4/lib"
 import {Button, Slide} from '@material-ui/core/';
-import useWindowSize from "../common/hook/size";
-import { HEAD } from "../common/constantes/home";
-import footerStyles from "../common/themes/footerTheme";
+import useWindowSize from "../../common/hook/size";
+import { HEAD } from "../../common/constantes/home";
+import footerStyles from "../../common/themes/footerTheme";
 
+
+const CustomContainer = styled(Container)`
+position: fixed;
+bottom: 0px;
+background-color: #272727;
+min-width: 100%;
+z-index: 3;
+left : 450px;
+
+@media screen and (max-width:1200px) {
+    left : 350px;
+}
+@media screen and (max-width:992px) {
+    left : 150px;
+}
+
+@media screen and (max-width:768px) {
+    left : 100px;
+}
+@media screen and (max-width:576px) {
+    left : 40px;
+}
+`
+
+const CustomRow = styled(Row) `
+    width: ${() => {
+        const {w} = useWindowSize()
+        const width = w - 450
+        return width}}px;
+
+    @media screen and (max-width:1200px) {
+        width: ${() => {
+            const {w} = useWindowSize()
+            const width = w - 350
+            return width}}px;
+    }
+    @media screen and (max-width:992px) {
+        ${() => {
+            const {w} = useWindowSize()
+            const width = w - 150
+            return width}}px;
+    }
+    @media screen and (max-width:768px) {
+        width: ${() => {
+            const {w} = useWindowSize()
+            const width = w - 100
+            return width}}px;
+    }
+    @media screen and (max-width:576px) {
+        width: ${() => {
+            const {w} = useWindowSize()
+            const width = w - 40
+            return width}}px;
+    }
+`  
 const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
 
-    const {h,w} = useWindowSize()
-
-    const CustomContainer = styled(Container)`
-        position: fixed;
-        bottom: 0px;
-        background-color: #272727;
-        min-width: 100%;
-        z-index: 3;
-        left : 450px;
-
-        @media screen and (max-width:1200px) {
-            left : 350px;
-        }
-        @media screen and (max-width:992px) {
-            left : 150px;
-        }
-    
-        @media screen and (max-width:768px) {
-            left : 100px;
-        }
-        @media screen and (max-width:576px) {
-            left : 40px;
-        }
-    `
-    const CustomRow = styled(Row) `
-        width: ${w - 450}px;
-        
-        @media screen and (max-width:1200px) {
-            width: ${w - 350}px;
-        }
-        @media screen and (max-width:992px) {
-            width: ${w - 150}px;
-        }
-        @media screen and (max-width:768px) {
-            width: ${w - 100}px;
-        }
-        @media screen and (max-width:576px) {
-            width: ${w - 40}px;
-        }
-    `    
     const classes = footerStyles()
   
-    return (
-        
+    return (  
         <Slide timeout={800} direction='right' in={footerOpen}>
             <CustomContainer>
                 <CustomRow className="justify-content-between">

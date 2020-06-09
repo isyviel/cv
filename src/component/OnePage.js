@@ -1,13 +1,11 @@
-import React, { useState,useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Container} from "@bootstrap-styled/v4"
 import Head from './head/Head'
 import Content from './content/Content'
-import Navigation from './Navigation'
 import MiniHead from "./head/MiniHead"
 import Name from "./Name"
 import useWindowSize from "./common/hook/size"
-import { Slide } from "@material-ui/core"
 
 const OnePage = () => {
 
@@ -17,18 +15,16 @@ const OnePage = () => {
     const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
-    const {h,w} = useWindowSize()
+    const {h} = useWindowSize()
 
     const CustomDiv = styled(Container)`
+        height: ${h}px;
         background: url(images/deco.png) fixed bottom no-repeat;
-        min-height: ${h}px;
-        max-height: ${h}px;
         font-family: Dosis;
         padding: 0 !important;
-        overflow-y : hidden;
         overflow-x: hidden;
-        ${isContent ? "@media screen and (max-width:576px) {overflow-y : visible;}" : ""} 
     `
+
     const displayContent = () => {
         if(!isContent) {
             setIsContent(true)
@@ -126,7 +122,8 @@ const OnePage = () => {
                 goToMailForm = {displayMailForm}
                 isHome={isHome}
                 showNext={showNext}
-                showPrevious={showPrevious}/>
+                showPrevious={showPrevious}
+                id='content'/>
         </CustomDiv>
     )
 }

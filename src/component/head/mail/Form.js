@@ -1,13 +1,12 @@
 import React from "react"
 import Input from './Input'
 import Area from './Area'
-import {Row,Col} from "@bootstrap-styled/v4/lib"
+import {Row} from "@bootstrap-styled/v4/lib"
 import Button from '@material-ui/core/Button';
 import Colors from '../../common/themes/Colors'
 import { withStyles,makeStyles } from '@material-ui/core/styles'
 import {LinearProgress} from '@material-ui/core'
 import styled from "styled-components"
-import Container from "@bootstrap-styled/v4/lib/Container";
 import useWindowSize from "../../common/hook/size";
 
 const CustomDiv = styled.div`
@@ -49,7 +48,7 @@ const RowDiv = styled.div`
 
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
-  const {h,w}  = useWindowSize();
+  const {w}  = useWindowSize();
   const formStyles = makeStyles((theme) => ({
     root: {
         background:"linear-gradient(145deg, #ff8300, #e66e00)", 

@@ -1,10 +1,10 @@
 import React , {useState} from "react"
 import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import Contact from './Contact'
+import Contact from './contact/ContactList'
 import { Slide } from "@material-ui/core"
 import Toggle from "./Toggle"
-import MinFooter from "../content/MiniFooter"
+import MinFooter from "../content/footer/MiniFooter"
 import Navigation from "../Navigation"
 
 const HomeContainer = styled(Container)`
@@ -51,7 +51,7 @@ const MiniHead = ({isContent,isHome,mailToHead,homeToHead,...props}) => {
         <Slide timeout={800}  direction="right" in={isContent}>
             <HomeContainer fluid>
                 <Contact isHome={isHome} contactForm={mailToHead} returnToHome={homeToHead}/>
-                <Toggle footerfromHead={displayFooter}/>
+                <Toggle isHome={isHome} footerfromHead={displayFooter}/>
                 <MinFooter footerOpen={footerOpen}/>
             </HomeContainer>
         </Slide>

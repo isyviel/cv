@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer, useRef } from "react"
+import { useEffect, useReducer } from "react"
 
 // we need to keep track of which image has been loaded. 
 //We don't want our fallback image to "override" our main 
