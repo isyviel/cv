@@ -7,7 +7,7 @@ import DetalesMenu from "./DetalesMenu"
 import DisplayDetales from "./DisplayDetales"
 import Biker from "../../common/img/ImgBiker"
 import useWindowSize from "../../common/hook/size"
-import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
+import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList, HEAD } from "../../common/constantes/home"
 import Arrow from "../../common/Arrow"
 import { Fade, Slide } from "@material-ui/core";
 import Cross from "../../common/Cross"

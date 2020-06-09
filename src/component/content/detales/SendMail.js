@@ -17,7 +17,7 @@ const CustomContainer = styled(Container) `
         margin-left: 15px;
         @media screen and (max-width:1200px) {
           width: 95%;
-      }
+        }
 `
 
 const SendMail = ()=> {
