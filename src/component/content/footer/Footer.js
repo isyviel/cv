@@ -39,7 +39,7 @@ const CustomRow = styled(Row) `
     @media screen and (max-width:1200px) {
         width: ${() => {
             const {w} = useWindowSize()
-            const width = w - 150
+            const width = w - 350
             return width}}px;
     }
     

@@ -34,7 +34,7 @@ const Projects = ({projects,isProject,...props})=> {
         <Fade in={isProject} timeout={800}>
             <div className="ml-2 mb-sm-2 mb-xs-0">
                 <CategoryTitle>En cours ...</CategoryTitle>
-                <Row>
+                <Row className="pl-4">
                     <CustomCard>
                         <h3 className="h3">{projects}</h3>
                         <CardContent>
@@ -55,7 +55,7 @@ const Projects = ({projects,isProject,...props})=> {
                     </CustomCard>
                 </Row>
                 <CategoryTitle>A venir ...</CategoryTitle>
-                <Row>
+                <Row className="pl-4">
                     <CustomCard>
                         <h3 className="h3">{projects}</h3>
                         <CardContent>
