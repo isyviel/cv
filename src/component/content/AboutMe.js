@@ -13,6 +13,7 @@ const CustomContainer = styled(Container)`
     left: 440px;
     font-size: 20px;
     width: 50%;
+    height: 0px;
 
     @media screen and (max-width:1200px) {
         left: 370px;

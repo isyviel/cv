@@ -21,16 +21,14 @@ const DetalesContainer =  styled(Container)`
     padding: 2% 10% 2% 1%;
     font-size: 16px;
     z-index: 1;
+
     @media screen and (max-width:1200px) {
-        
         padding: 3% 10% 3% 2%;
     }
     @media screen and (max-width:992px) {
-        
         padding: 3% 15% 3% 2%;
     }
     @media screen and (max-width:768px) {
-        
         padding: 3% 15% 3% 0;
     }
     @media screen and (max-width:576px) {

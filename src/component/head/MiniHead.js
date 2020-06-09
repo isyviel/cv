@@ -12,7 +12,7 @@ const HomeContainer = styled(Container)`
     background-color: #272727;
     position: fixed;
     padding: 290px 0 0 0;
-    z-index: 0;
+    z-index: 4;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -36,7 +36,7 @@ const MiniHead = ({isContent,isHome,mailToHead,homeToHead,footerFromPage,footerO
             <HomeContainer fluid>
                 <MiniContact isHome={isHome} contactForm={mailToHead} returnToHome={homeToHead}/>
                 <Toggle isHome={isHome} footerfromHead={footerFromPage}/>
-                {footerOpen &&(<MinFooter footerOpen={footerOpen}/>)}
+                <MinFooter footerOpen={footerOpen}/>
             </HomeContainer>
         </Slide>
     )

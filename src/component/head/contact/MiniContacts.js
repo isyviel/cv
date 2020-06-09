@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import {Row} from "@bootstrap-styled/v4/lib"
 import ImageButton from '../../common/img/ImageButton'
 import {HEAD,ICONS} from '../../common/constantes/home'

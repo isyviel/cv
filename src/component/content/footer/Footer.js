@@ -42,7 +42,12 @@ const CustomRow = styled(Row) `
             const width = w - 350
             return width}}px;
     }
-    
+    @media screen and (max-width:992px) {
+        width: ${() => {
+            const {w} = useWindowSize()
+            const width = w - 150
+            return width}}px;
+    }
     @media screen and (max-width:768px) {
         width: ${() => {
             const {w} = useWindowSize()
@@ -61,7 +66,7 @@ const Footer = ({footerOpen, slideOutFooter,isHome,...props}) => {
     const classes = footerStyles()
   
     return (  
-        <Slide timeout={800} direction='right' in={footerOpen}>
+        <Slide timeout={400} direction='right' in={footerOpen}>
             <CustomContainer>
                 <CustomRow className="justify-content-between">
                     <Button className={classes.root} href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button>

@@ -29,23 +29,9 @@ const OnePage = () => {
     const [footerOpen, setFooterOpen] = useState(false)
     const [miniFooterOpen, setMiniFooterOpen] = useState(false)
 
-    const displayFooter = () => {
-        //console.log(footerOpen, "open")
-        if(footerOpen) {
-            setFooterOpen(false)
-        } else {
-            setFooterOpen(true)
-        }
-    }
-
-    const displayMiniFooter = () => {
-        //console.log(footerOpen, "open")
-        if(miniFooterOpen) {
-            setMiniFooterOpen(false)
-        } else {
-            setMiniFooterOpen(true)
-        }
-    }
+    const displayFooter = () => setFooterOpen((prev) => !prev)  
+    
+    const displayMiniFooter = () => setMiniFooterOpen((prev) => !prev)
 
     const displayContent = () => {
         if(!isContent) {
