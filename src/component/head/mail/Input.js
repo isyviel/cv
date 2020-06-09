@@ -12,7 +12,8 @@ const Input = ({label,required, change, send, value, name, ...props}) => {
   const {h,w}  = useWindowSize();
   const useStyles = makeStyles((theme) => ({
     root: {
-      marginRight: "2%",
+      marginRight: "1%",
+      marginLeft: "1%",
       marginBottom: w < 576 ? "10px" : "0",
     },
   }))

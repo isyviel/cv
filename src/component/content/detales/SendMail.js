@@ -1,9 +1,11 @@
 import React , {useState, useEffect} from "react"
-import { FormControl, Container, Fade} from '@material-ui/core'
+import { FormControl, Fade} from '@material-ui/core'
 import Form from '../../head/mail/Form'
 import SentAlert from '../../head/mail/SentAlert'
 import emailjs from 'emailjs-com'
 import {USER} from '../../common/constantes/mail'
+import styled from "styled-components"
+import Container from "@bootstrap-styled/v4/lib/Container";
 
 const SendMail = ()=> {
 
@@ -21,6 +23,7 @@ const SendMail = ()=> {
     const handleChange = (event) => {
         event.persist();
         setValues({...values, [event.target.name]: event.target.value});
+        console.log(values)
     }
 
     const handleSubmit = (event) => {
@@ -56,15 +59,13 @@ const SendMail = ()=> {
 
   return(
     
-      <Container>
-        <FormControl>
-          <Form
-            windowClose={handleClose} 
-            submit={handleSubmit}
-            values={values}
-            change={handleChange}
-            isLoading={isLoading}/>
-        </FormControl>
+      <Container className="no-gutters m-0">
+        <Form
+          windowClose={handleClose} 
+          submit={handleSubmit}
+          values={values}
+          change={handleChange}
+          isLoading={isLoading}/>
         <SentAlert 
           open={snackOpen} 
           status={status} 

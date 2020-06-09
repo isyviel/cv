@@ -18,6 +18,7 @@ const Area = ({label,change, send,value, name,...props}) => {
           value={value}
           name={name}
           className="mb-4"
+          variant="outlined"
         />
       </ThemeProvider>    
     )

@@ -109,13 +109,13 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                 </>
             )}
             {isMail &&(
-                //<SendMail/>
-                <div>
-                    <div className="h1 text-center"> Formulaire en cours de maintenance</div>
-                    <Row className="justify-content-center">
-                        <CircularProgress/>
-                    </Row>
-                </div>
+                <SendMail/>
+                // <div>
+                //     <div className="h1 text-center"> Formulaire en cours de maintenance</div>
+                //     <Row className="justify-content-center">
+                //         <CircularProgress/>
+                //     </Row>
+                // </div>
             )}
         </DetalesContainer> 
     )
