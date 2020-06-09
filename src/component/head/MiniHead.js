@@ -1,7 +1,6 @@
 import React from "react"
 import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
-import Contact from './contact/ContactList'
 import { Slide } from "@material-ui/core"
 import Toggle from "./Toggle"
 import MinFooter from "../content/footer/MiniFooter"

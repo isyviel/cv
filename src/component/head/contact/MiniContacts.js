@@ -3,17 +3,9 @@ import styled from "styled-components"
 import {Row} from "@bootstrap-styled/v4/lib"
 import ImageButton from '../../common/img/ImageButton'
 import {HEAD,ICONS} from '../../common/constantes/home'
-import { Button, Fade } from "@material-ui/core"
+import { Button} from "@material-ui/core"
 import Phone from "./Phone"
 import Mail from "../mail/Mail"
-
-const ContactDiv = styled.div`
-    color: white;
-    font-size: 20px;
-    @media screen and (max-width:992px) {
-        display: none;
-    }
-`
 
 const MiniContactDetales = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,...props}) => {
 
