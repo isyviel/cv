@@ -5,7 +5,7 @@ const footerStyles = makeStyles((theme) => ({
     root: {
         color: Colors.orange,
         fontFamily: 'Dosis',
-        fontSize: '16px',
+        fontSize: '12px',
         '&:hover': {
             color: "white",
         },   
@@ -13,7 +13,7 @@ const footerStyles = makeStyles((theme) => ({
     phone : {
         color: Colors.orange,
         fontFamily: 'Dosis',
-        fontSize: '16px',
+        fontSize: '12px',
         padding: "6px 8px",
         marginRight: "0",
     },

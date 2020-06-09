@@ -14,7 +14,7 @@ const Area = ({label,change, send,value, name,...props}) => {
       } else if (h>700){
         setRows(10)
       }
-    },[])
+    },[h])
 
     return(
       <ThemeProvider theme={Theme}>

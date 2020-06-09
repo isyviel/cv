@@ -9,38 +9,35 @@ import Biker from "../../common/img/ImgBiker"
 import useWindowSize from "../../common/hook/size"
 import { STRATEGIA, ADRAR, VENTE, ANGLAIS, STRList, VList, AList, ANGList } from "../../common/constantes/home"
 import Arrow from "../../common/Arrow"
-import { Fade, CircularProgress, withStyles, Slide } from "@material-ui/core";
+import { Fade, Slide } from "@material-ui/core";
 import Cross from "../../common/Cross"
 import CategoryTitle from "./CategoryTitle"
-import Colors from "../../common/themes/Colors"
 
 const DetalesContainer =  styled(Container)`
-        height: 
-        ${() => {const {h} = useWindowSize()
-                return h-70}}px;
-        background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
-        padding: 2% 5% 2% 8%;
-        font-size: 16px;
-        z-index: 1;
-        @media screen and (max-width:992px) {
-            margin-left: 2%;
-            padding: 0 8% 3% 8%;
-        }
-        @media screen and (max-width:768px) {
-            margin-left: 5%;
-            padding: 0 5% 3% 8%;
-        }
-        @media screen and (max-width:576px) {
-            margin: 0;
-            height: 100%;
-            padding: 0 0 3% 10%;
-        }
+    height: 
+    ${() => {const {h} = useWindowSize()
+            return h-70}}px;
+    background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
+    padding: 2% 5% 2% 8%;
+    font-size: 16px;
+    z-index: 1;
+    @media screen and (max-width:992px) {
+        margin-left: 2%;
+        padding: 3% 5% 3% 8%;
+    }
+    @media screen and (max-width:768px) {
+        margin-left: 5%;
+        padding: 3% 5% 3% 8%;
+    }
+    @media screen and (max-width:576px) {
+        margin: 0;
+        height: 100%;
+        padding: 4% 0 3% 10%;
+    }
 
-    `
+`
 
 const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isHome, exp,diplome,projects,mail,showNext, showPrevious,goSlide,menu,...props}) => {
-
-    const {h}  = useWindowSize();
 
     const [isWeb, setIsWeb] = useState(true)
     const [isSales, setIsSales] = useState(false)
@@ -112,12 +109,6 @@ const Detales = ({viewDetales, closeSlide,isExp,isFormation,isProject,isMail,isH
                 )}
                 {isMail &&(
                     <SendMail/>
-                    // <div>
-                    //     <div className="h1 text-center"> Formulaire en cours de maintenance</div>
-                    //     <Row className="justify-content-center">
-                    //         <CircularProgress/>
-                    //     </Row>
-                    // </div>
                 )}
             </DetalesContainer>
         </Slide>

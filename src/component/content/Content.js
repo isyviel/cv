@@ -1,11 +1,10 @@
-import React , {useState,useEffect} from "react"
+import React from "react"
 import { Container} from "@bootstrap-styled/v4"
 import styled from "styled-components"
 import Menu from './Menu'
 import Colors from '../common/themes/Colors'
 import Detales from "./detales/Detales"
 import Aboutme from "./AboutMe"
-import useWindowSize from "../common/hook/size"
 
 const ContentContainer = styled(Container)`
     color: ${Colors.darkGrey};
@@ -47,16 +46,16 @@ const Content = ({
                     showNext={showNext}
                     showPrevious={showPrevious}
                     goSlide={true}/> : <Aboutme isHome={isHome}/>}
-            <Menu   isDeploy={contentIsShown} 
-                    fromExpButton={goToExpContent} 
-                    fromFormationButton={goToFormationContent}
-                    fromProjectButton={goToProjectContent}
-                    fromMailButton={goToMailForm}
-                    isExp={isExp}
-                    isFormation={isFormation}
-                    isProject={isProject}
-                    isMail={isMail}
-                    isHome={isHome} />             
+            <Menu isDeploy={contentIsShown} 
+                fromExpButton={goToExpContent} 
+                fromFormationButton={goToFormationContent}
+                fromProjectButton={goToProjectContent}
+                fromMailButton={goToMailForm}
+                isExp={isExp}
+                isFormation={isFormation}
+                isProject={isProject}
+                isMail={isMail}
+                isHome={isHome} />             
         </ContentContainer>
     )
 }

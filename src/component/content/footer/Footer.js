@@ -12,7 +12,7 @@ position: fixed;
 bottom: 0px;
 background-color: #272727;
 min-width: 100%;
-z-index: 3;
+z-index: 4;
 left : 450px;
 
 @media screen and (max-width:1200px) {
@@ -39,15 +39,10 @@ const CustomRow = styled(Row) `
     @media screen and (max-width:1200px) {
         width: ${() => {
             const {w} = useWindowSize()
-            const width = w - 350
-            return width}}px;
-    }
-    @media screen and (max-width:992px) {
-        ${() => {
-            const {w} = useWindowSize()
             const width = w - 150
             return width}}px;
     }
+    
     @media screen and (max-width:768px) {
         width: ${() => {
             const {w} = useWindowSize()

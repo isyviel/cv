@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import Me from './Me'
@@ -14,11 +14,11 @@ const HomeContainer = styled(Container)`
     background-color: #272727;
     position: fixed;
     padding: 50px 0 0 0 !important;
-    z-index: 1;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    z-index: 1;
 
     @media screen and (max-width:1200px) {
        width:350px;
@@ -39,27 +39,15 @@ const HomeContainer = styled(Container)`
     }
 `
 
-const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
-
-    const [footerOpen, setFooterOpen] = useState(false)
-
-    const displayFooter = () => {
-        console.log(footerOpen, "open")
-        if(footerOpen) {
-            setFooterOpen(false)
-        } else {
-            setFooterOpen(true)
-        }
-    }
-
+const Head = ({isHome,mailToHead,footerFromPage,footerOpen,...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
             <HomeContainer fluid>
                 <Me title="avatar" />
-                <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
+                <Contact isHome={isHome} contactForm={mailToHead} />
                 <Quote/>
-                <Toggle isHome={isHome} footerfromHead={displayFooter}/>
-                <Footer footerOpen={footerOpen} isHome={isHome}/>
+                <Toggle isHome={isHome} footerfromHead={footerFromPage}/>
+                {footerOpen &&(<Footer footerOpen={footerOpen} isHome={isHome}/>)}
             </HomeContainer>
         </Slide>
     )

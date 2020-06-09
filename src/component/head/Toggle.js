@@ -12,7 +12,6 @@ const Toggle = ({footerfromHead, isHome, ...props}) => {
                 <ImageButton alt="icone menu bas de page à développer" src="images/menu.png"/>
             </Button>   
         </Container>
-        
     )
 }
 

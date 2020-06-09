@@ -1,21 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import {Row,Container} from "@bootstrap-styled/v4/lib"
-import ImageButton from '../../common/img/ImageButton'
-import {HEAD,ICONS} from '../../common/constantes/home'
-import { Button } from "@material-ui/core"
-import Phone from "./Phone"
-import Mail from "../mail/Mail"
-import isHome from "./ContactList"
+import {Container} from "@bootstrap-styled/v4/lib"
 import ContactDetales from "./Contacts"
 
-const ContactDiv = styled.div`
-    color: white;
-    font-size: 20px;
-    @media screen and (max-width:992px) {
-        display: none;
-    }
-`
 const ListeContainer = styled(Container)`
     margin: 0 0 0 150px;
     padding: 0 !important;

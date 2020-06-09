@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import {Row,Container} from "@bootstrap-styled/v4/lib"
+import {Row} from "@bootstrap-styled/v4/lib"
 import ImageButton from '../../common/img/ImageButton'
 import {HEAD,ICONS} from '../../common/constantes/home'
-import { Button } from "@material-ui/core"
+import { Button, Fade } from "@material-ui/core"
 import Phone from "./Phone"
 import Mail from "../mail/Mail"
 
@@ -14,17 +14,14 @@ const ContactDiv = styled.div`
         display: none;
     }
 `
-    
-const CustomRow =styled(Row)`
-  
-`
 
 const ContactDetales = ({isHome, handleClickOpen, contactForm, returnToHome,goToFooter,...props}) => {
 
     return(
+       
         HEAD.map((label,index) => {
             return (
-        <CustomRow key={index} className="align-items-center justify-content-center  mt-4 mt-sm-0 ">
+        <Row key={index} className="align-items-center justify-content-center  mt-4 mt-sm-0 ">
             {index === 1 &&(
                 <Mail displayForm={contactForm}/>
             )}
@@ -49,7 +46,7 @@ const ContactDetales = ({isHome, handleClickOpen, contactForm, returnToHome,goTo
                 </Button>
             )}
             {isHome &&(<ContactDiv key={index}>{label}</ContactDiv>)}
-        </CustomRow>)})
+        </Row>)})
     )
 }
 

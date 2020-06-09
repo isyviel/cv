@@ -7,6 +7,17 @@ import MiniHead from "./head/MiniHead"
 import Name from "./Name"
 import useWindowSize from "./common/hook/size"
 
+const CustomDiv = styled(Container)`
+    height: ${() => {
+        const {h} = useWindowSize()
+        return h
+    }}px;
+    background: url(images/deco.png) fixed bottom no-repeat;
+    font-family: Dosis;
+    padding: 0 !important;
+    overflow-x: hidden;
+`
+
 const OnePage = () => {
 
     const [isHome,setIsHome] = useState(true)
@@ -15,57 +26,32 @@ const OnePage = () => {
     const [isExp, setIsExp] = useState(false)
     const [isProject, setIsProject] = useState(false)
     const [isMail, setIsMail] = useState(false)
-    const {h} = useWindowSize()
+    const [footerOpen, setFooterOpen] = useState(false)
+    const [miniFooterOpen, setMiniFooterOpen] = useState(false)
 
-    const CustomDiv = styled(Container)`
-        height: ${h}px;
-        background: url(images/deco.png) fixed bottom no-repeat;
-        font-family: Dosis;
-        padding: 0 !important;
-        overflow-x: hidden;
-    `
+    const displayFooter = () => {
+        //console.log(footerOpen, "open")
+        if(footerOpen) {
+            setFooterOpen(false)
+        } else {
+            setFooterOpen(true)
+        }
+    }
+
+    const displayMiniFooter = () => {
+        //console.log(footerOpen, "open")
+        if(miniFooterOpen) {
+            setMiniFooterOpen(false)
+        } else {
+            setMiniFooterOpen(true)
+        }
+    }
 
     const displayContent = () => {
         if(!isContent) {
             setIsContent(true)
+            setFooterOpen(false)
         }
-    }
-
-    const displayMailForm = () => {
-        displayContent()
-        setIsMail(true)
-        setIsHome(false)
-        setIsProject(false)
-        setIsExp(false)
-        setIsFormation(false)
-    }
-
-    const displayExp = () => {
-        displayContent()
-        
-        setIsExp(true)
-        setIsHome(false)
-        setIsMail(false)
-        setIsProject(false)
-        setIsFormation(false)
-    }
-
-    const displayFormation = () => {
-        displayContent()
-        setIsFormation(true)
-        setIsHome(false)
-        setIsExp(false)
-        setIsMail(false)
-        setIsProject(false)
-    }
-
-    const displayProjects = () => {
-        displayContent()
-        setIsFormation(false)
-        setIsMail(false)
-        setIsProject(true)
-        setIsHome(false)
-        setIsExp(false)
     }
 
     const returnToHome =() => {
@@ -75,8 +61,48 @@ const OnePage = () => {
         setIsContent(false)
         setIsHome(true)
         setIsMail(false)
+        setMiniFooterOpen(false)
     }
 
+    const displayMailForm = () => {
+        displayContent()
+        setIsMail(true)
+        setIsHome(false)
+        setIsProject(false)
+        setIsExp(false)
+        setIsFormation(false)
+        
+    }
+
+    const displayExp = () => {
+        displayContent()
+        setIsExp(true)
+        setIsHome(false)
+        setIsMail(false)
+        setIsProject(false)
+        setIsFormation(false)
+        
+    }
+
+    const displayFormation = () => {
+        displayContent()
+        setIsFormation(true)
+        setIsHome(false)
+        setIsExp(false)
+        setIsMail(false)
+        setIsProject(false)
+        
+    }
+
+    const displayProjects = () => {
+        displayContent()
+        setIsFormation(false)
+        setIsMail(false)
+        setIsProject(true)
+        setIsHome(false)
+        setIsExp(false)
+       
+    }
 
     const showNext = () => {
         setIsHome(false)
@@ -106,9 +132,9 @@ const OnePage = () => {
 
     return (
         <CustomDiv fluid data-nosnippet>
-            <Head isHome={isHome} mailToHead={displayMailForm}/>   
-            <MiniHead isContent={isContent} isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome}/>
-            <Name isHome={isHome} isContent={isContent}/>
+            <Head isHome={isHome} mailToHead={displayMailForm} footerFromPage={displayFooter} footerOpen={footerOpen}/>   
+            <MiniHead isContent={isContent} isHome={isHome} mailToHead={displayMailForm} homeToHead={returnToHome} footerFromPage={displayMiniFooter} footerOpen={miniFooterOpen}/>
+            {isHome &&( <Name isHome={isHome}/>)}
             <Content
                 isMail = {isMail}
                 isExp={isExp}

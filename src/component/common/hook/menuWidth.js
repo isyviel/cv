@@ -6,8 +6,8 @@ const usemenuSize = () => {
 
     const detectMenuSize = () => {
         let menu = document.getElementById('menuRight').getBoundingClientRect()
-        console.log(form,"=> form")
-        console.log(menu,"=> menu")
+        //console.log(form,"=> form")
+        //console.log(menu,"=> menu")
         setFormWidth(menu.x - menu.width / 2) 
     }
 

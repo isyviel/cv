@@ -1,11 +1,10 @@
-import React , {useState, useEffect} from "react"
+import React , {useState} from "react"
 import Form from '../../head/mail/Form'
 import SentAlert from '../../head/mail/SentAlert'
 import emailjs from 'emailjs-com'
 import {USER} from '../../common/constantes/mail'
 import styled from "styled-components"
 import Container from "@bootstrap-styled/v4/lib/Container";
-import useWindowSize from "../../common/hook/size"
 
 const CustomContainer = styled(Container) `
         width: ${()=>{

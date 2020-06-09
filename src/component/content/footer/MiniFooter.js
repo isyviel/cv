@@ -10,7 +10,7 @@ const CustomContainer = styled(Container)`
         bottom: 0px;
         background-color: #272727;
         min-width: 100%;
-        z-index: 3;
+        z-index: 4;
         left : 80px;
         
         @media screen and (max-width:768px) {

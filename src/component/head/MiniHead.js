@@ -1,11 +1,10 @@
-import React , {useState} from "react"
+import React from "react"
 import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import Contact from './contact/ContactList'
 import { Slide } from "@material-ui/core"
 import Toggle from "./Toggle"
 import MinFooter from "../content/footer/MiniFooter"
-import Navigation from "../Navigation"
 
 const HomeContainer = styled(Container)`
     height: 100%;
@@ -13,7 +12,7 @@ const HomeContainer = styled(Container)`
     background-color: #272727;
     position: fixed;
     padding: 150px 0 0 0;
-    z-index: 2;
+    z-index: 0;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -36,23 +35,13 @@ const HomeContainer = styled(Container)`
         padding: 150px 0 0 0 !important;
     }
 `
-const MiniHead = ({isContent,isHome,mailToHead,homeToHead,...props}) => {
-    const [footerOpen, setFooterOpen] = useState(false)
-
-    const displayFooter = () => {
-        console.log(footerOpen, "open")
-        if(footerOpen) {
-            setFooterOpen(false)
-        } else {
-            setFooterOpen(true)
-        }
-    }
+const MiniHead = ({isContent,isHome,mailToHead,homeToHead,footerFromPage,footerOpen,...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={isContent}>
             <HomeContainer fluid>
                 <Contact isHome={isHome} contactForm={mailToHead} returnToHome={homeToHead}/>
-                <Toggle isHome={isHome} footerfromHead={displayFooter}/>
-                <MinFooter footerOpen={footerOpen}/>
+                <Toggle isHome={isHome} footerfromHead={footerFromPage}/>
+                {footerOpen &&(<MinFooter footerOpen={footerOpen}/>)}
             </HomeContainer>
         </Slide>
     )

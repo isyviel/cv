@@ -36,35 +36,20 @@ const CustomH2 = styled.h2`
         font-size: 16px ;
     }
 `
-
-const Name = ({isHome,isContent,...props}) => {
-
-    const NameContainer = styled(Container)`
-        height: ${isContent ? "0px" : "100%"};
-        font-size: 48px;
-        color: ${Colors.orange};
+const NameContainer = styled(Container)`
+    font-size: 48px;
+    color: ${Colors.orange};
+    text-align: right;
+    font-family: 'Bangers';
+    z-index: 0;
+    padding: 15px 15px 0 0 !important;
+    @media screen and (max-width:576px) {
         text-align: left;
-        padding: ${isHome ? "15px 0 0 460px !important" : "15px 0 0 8%"};
-        margin: 0 !important;
-        font-family: 'Bangers';
-        z-index: 0;
+        padding: 15px 0 0 50px !important;
+    }
+`
 
-        @media screen and (max-width:1200px) {
-            padding: 15px 0 0 360px !important;
-        }
-        @media screen and (max-width:992px) {
-            padding: 15px 0 0 160px !important;
-        }
-        @media screen and (max-width:768px) {
-            padding: 15px 0 0 110px !important;
-        }
-        @media screen and (max-width:576px) {
-            padding: 15px 0 0 45px !important;
-           
-        }
-    `
-
-
+const Name = ({isHome,...props}) => {
     return(
         <Slide timeout={800}  direction="right" in={isHome}>
             <NameContainer fluid>
