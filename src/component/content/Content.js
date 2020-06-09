@@ -41,7 +41,7 @@ const Content = ({
  
     return (
         <ContentContainer fluid>
-            {contentIsShown ?
+            {contentIsShown ? 
                 <Detales closeSlide={hideContent} 
                     viewDetales={contentIsShown}
                     isExp={isExp}
@@ -51,7 +51,9 @@ const Content = ({
                     isHome={isHome}
                     showNext={showNext}
                     showPrevious={showPrevious}
-                    goSlide={true}/> : <Aboutme isHome={isHome}/>}
+                    goSlide={true}/>
+                :<Aboutme isHome={isHome}/>
+            }
             <Menu isDeploy={contentIsShown} 
                 fromExpButton={goToExpContent} 
                 fromFormationButton={goToFormationContent}

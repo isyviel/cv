@@ -21,6 +21,7 @@ const CustomContainer = styled(Container)`
         }
     `
 const CustomRow = styled(Row) `
+    z-index: 4;
     width: ${() => {
         const {w} = useWindowSize()
         const width = w-80
@@ -40,12 +41,12 @@ const CustomRow = styled(Row) `
     }
 `
 
-const MinFooter = ({footerOpen, slideOutFooter,isHome,...props}) => {
+const MinFooter = ({footerOpen,isHome,...props}) => {
 
     const classes = footerStyles()
   
     return (
-        <Slide timeout={800} direction='right' in={footerOpen}>
+        <Slide timeout={400} direction='right' in={footerOpen}>
             <CustomContainer>
                 <CustomRow className="justify-content-between">
                     <Button className={classes.miniroot} href="https://icones8.fr/icons/" target="_blank" rel="noopener noreferrer">Icons8.fr</Button>

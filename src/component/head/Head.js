@@ -47,7 +47,7 @@ const Head = ({isHome,mailToHead,footerFromPage,footerOpen,...props}) => {
                 <Contact isHome={isHome} contactForm={mailToHead} />
                 <Quote/>
                 <Toggle isHome={isHome} footerfromHead={footerFromPage}/>
-                {footerOpen &&(<Footer footerOpen={footerOpen} isHome={isHome}/>)}
+                <Footer footerOpen={footerOpen} isHome={isHome}/>
             </HomeContainer>
         </Slide>
     )
