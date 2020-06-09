@@ -12,12 +12,13 @@ const ButtonRow = styled(Row)`
         margin: 5px 0 10px 0;
     }
 `
+
 const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,isWeb,isAdrar,isSales,isEng,...props}) => {  
     
     const classes = useStyles()
 
     return (
-            <Col xs="10 mx-auto" sm="2 ml-4">
+            <Col xs="10 mx-auto" md="2 ml-4">
                 <ButtonRow>
                     {isExp ? 
                         <Button className={isWeb ? classes.active : classes.root} id="web" autoFocus={true} onClick={displayWeb}>Web</Button> 

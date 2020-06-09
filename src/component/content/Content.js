@@ -9,7 +9,13 @@ import Aboutme from "./AboutMe"
 const ContentContainer = styled(Container)`
     color: ${Colors.darkGrey};
     font-size: 24px;
+    margin-left: 80px;
+    padding: 0;
+    @media screen and (max-width:768px) {
+        margin-left: 70px;
+    }
     @media screen and (max-width:576px) {
+        margin-left: 40px;
         display: flex;
         justify-content: center;
         flex-direction: column;

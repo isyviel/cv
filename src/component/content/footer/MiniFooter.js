@@ -14,7 +14,7 @@ const CustomContainer = styled(Container)`
         left : 80px;
         
         @media screen and (max-width:768px) {
-            left : 100px;
+            left : 70px;
         }
         @media screen and (max-width:576px) {
             left : 40px;
@@ -29,7 +29,7 @@ const CustomRow = styled(Row) `
     @media screen and (max-width:768px) {
         width: ${() => {
             const {w} = useWindowSize()
-            const width = w-100
+            const width = w-70
             return width}}px;
     }
     @media screen and (max-width:576px) {

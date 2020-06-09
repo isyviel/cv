@@ -18,21 +18,25 @@ const DetalesContainer =  styled(Container)`
     ${() => {const {h} = useWindowSize()
             return h-70}}px;
     background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgba(255, 255, 255,0) 100%);
-    padding: 2% 5% 2% 8%;
+    padding: 2% 10% 2% 1%;
     font-size: 16px;
     z-index: 1;
+    @media screen and (max-width:1200px) {
+        
+        padding: 3% 10% 3% 2%;
+    }
     @media screen and (max-width:992px) {
-        margin-left: 2%;
-        padding: 3% 5% 3% 8%;
+        
+        padding: 3% 15% 3% 2%;
     }
     @media screen and (max-width:768px) {
-        margin-left: 5%;
-        padding: 3% 5% 3% 8%;
+        
+        padding: 3% 15% 3% 0;
     }
     @media screen and (max-width:576px) {
         margin: 0;
         height: 100%;
-        padding: 4% 0 3% 10%;
+        padding: 4% 15% 3% 2%;
     }
 
 `
