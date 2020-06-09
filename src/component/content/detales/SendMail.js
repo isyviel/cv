@@ -15,7 +15,7 @@ const CustomContainer = styled(Container) `
         margin-left: 15px;
         @media screen and (max-width:1200px) {
           width: 95%;
-      }
+        }
 `
 
 const SendMail = ()=> {
@@ -29,7 +29,7 @@ const SendMail = ()=> {
     const handleChange = (event) => {
         event.persist();
         setValues({...values, [event.target.name]: event.target.value});
-        console.log(values)
+        //console.log(values)
     }
 
     const handleSubmit = (event) => {
