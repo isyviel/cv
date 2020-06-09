@@ -1,13 +1,12 @@
 import React from "react"
 import Input from './Input'
 import Area from './Area'
-import {Row,Col} from "@bootstrap-styled/v4/lib"
+import {Row} from "@bootstrap-styled/v4/lib"
 import Button from '@material-ui/core/Button';
 import Colors from '../../common/themes/Colors'
 import { withStyles,makeStyles } from '@material-ui/core/styles'
 import {LinearProgress} from '@material-ui/core'
 import styled from "styled-components"
-import Container from "@bootstrap-styled/v4/lib/Container";
 import useWindowSize from "../../common/hook/size";
 
 const CustomDiv = styled.div`
@@ -40,9 +39,16 @@ const CustomP = styled.p`
   color: ${Colors.orange};
 `
 
+const RowDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+`
+
 const Form = ({content, windowClose, send,error, response,submit,values,change,isLoading,...props}) => { 
 
-  const {h,w}  = useWindowSize();
+  const {w}  = useWindowSize();
   const formStyles = makeStyles((theme) => ({
     root: {
         background:"linear-gradient(145deg, #ff8300, #e66e00)", 
@@ -64,34 +70,11 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
         boxShadow: "inset 6px 6px 13px #adadad, inset -6px -6px 13px #ffffff", 
       },
       input: {
-          display: w > 576 ? "flex": "block",
+          display: w > 576 ? "flex" : "block",
           justifyContent: "center",
       },
   }))
-  const CustomForm = styled.form`
-    width: 900px;
-
-    @media screen and (max-width:1440px) {
-      max-width:80%;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    @media screen and (max-width:1200px) {
-      max-width:95%;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    @media screen and (max-width:992px) {
-      max-width:90%;
-    }
-    @media screen and (max-width:768px) {
-      max-width:85%;
-    
-    }
-    @media screen and (max-width:576px) {
-      max-width:${w - 130}px;
-    }
-  `
+  
   const classes = formStyles()
 
   const ColorLinearProgress = withStyles({
@@ -104,37 +87,36 @@ const Form = ({content, windowClose, send,error, response,submit,values,change,i
   })(LinearProgress);
 
   return (
-    <Container className="p-0 no-gutters" >
+      
+    <form onSubmit={submit}>
       <CustomDiv>
         {isLoading &&(<ColorLinearProgress fullWidth/>)}
       </CustomDiv>
-      <CustomForm onSubmit={submit}>
-        <Input required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={change}/>
-        <Input label="Objet : " name="objet" value={values.objet} change={change}/>
-        <Area label="Votre message" name="message" value={values.message} change={change}/>
-        <div className={classes.input}>
-            <Input label="Nom" name="nom" value={values.nom} change={change}/>
-            <Input label="Prénom" name="prenom" value={values.prenom} change={change}/>
-            <Input label="Téléphone" name="phone" value={values.phone} change={change}/>
-        </div> 
-        <Row className="justify-content-around mt-4">
-          {!values.mail ? 
-            <div>
-              <CustomP>* Adresse mail obligatoire</CustomP>
-              <Button className={classes.active} disabled>Envoyer</Button>
-            </div>
-          :
-            <div>
-                <CustomP className="text-white">* Adresse mail obligatoire</CustomP>
-                <Button type="submit" className={isLoading ? classes.active: classes.root}
-                disabled={isLoading ? true : false}>
-                  Envoyer
-                </Button>
-            </div>
-}   
-        </Row>  
-      </CustomForm>
-    </Container> 
+      <Input required id="standard-required standard-error-helper-text" label="E-Mail" name="mail" value={values.mail} change={change}/>
+      <Input label="Objet : " name="objet" value={values.objet} change={change}/>
+      <Area label="Votre message" name="message" value={values.message} change={change}/>
+      <RowDiv>
+          <Input label="Nom" name="nom" value={values.nom} change={change}/>
+          <Input label="Prénom" name="prenom" value={values.prenom} change={change}/>
+          <Input label="Téléphone" name="phone" value={values.phone} change={change}/>
+      </RowDiv> 
+      <Row className="justify-content-around mt-4">
+        {!values.mail ? 
+          <div>
+            <CustomP>* Adresse mail obligatoire</CustomP>
+            <Button className={classes.active} disabled>Envoyer</Button>
+          </div>
+        :
+          <div>
+              <CustomP className="text-white">* Adresse mail obligatoire</CustomP>
+              <Button type="submit" className={isLoading ? classes.active: classes.root}
+              disabled={isLoading ? true : false}>
+                Envoyer
+              </Button>
+          </div>}   
+      </Row> 
+    </form>
+  
     )
 }
 

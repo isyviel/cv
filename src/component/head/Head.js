@@ -1,14 +1,11 @@
-import React, { useState } from "react"
-import {Container,Col} from "@bootstrap-styled/v4/lib"
+import React from "react"
+import {Container} from "@bootstrap-styled/v4/lib"
 import styled from "styled-components"
 import Me from './Me'
-import Contact from './Contact'
+import Contact from './contact/ContactList'
 import Quote from './Quote'
-import Spacer from '../common/Spacer'
-import { Slide, Button } from "@material-ui/core"
-import Name from "../Name"
-import Footer from "../content/Footer"
-import ImageButton from "../common/img/ImageButton"
+import { Slide } from "@material-ui/core"
+import Footer from "../content/footer/Footer"
 import Toggle from "./Toggle"
 
 const HomeContainer = styled(Container)`
@@ -16,15 +13,16 @@ const HomeContainer = styled(Container)`
     width: 450px;
     background-color: #272727;
     position: fixed;
-    padding: 50px 0 0 70px !important;
-    z-index: 1;
+    padding: 50px 0 0 0 !important;
     display: inline-flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: column;
+    z-index: 1;
 
     @media screen and (max-width:1200px) {
        width:350px;
-       padding: 50px 0 0 45px !important;
+       padding: 50px 0 0 0 !important;
     }
     @media screen and (max-width:992px) {
         width:150px;
@@ -37,30 +35,19 @@ const HomeContainer = styled(Container)`
     }
     @media screen and (max-width:576px) {
         width: 40px;
-        padding: 100px 0 0 2px !important;
+        padding: 100px 0 0 0 !important;
     }
 `
-const Head = ({isHome,mailToHead, footerfromHead, ...props}) => {
 
-    const [footerOpen, setFooterOpen] = useState(false)
-
-    const displayFooter = () => {
-        console.log(footerOpen, "open")
-        if(footerOpen) {
-            setFooterOpen(false)
-        } else {
-            setFooterOpen(true)
-        }
-    }
-
+const Head = ({isHome,mailToHead,footerFromPage,footerOpen,...props}) => {
     return (
         <Slide timeout={800}  direction="right" in={isHome}>
             <HomeContainer fluid>
                 <Me title="avatar" />
-                <Contact isHome={isHome} contactForm={mailToHead} goToFooter={footerfromHead} />
+                <Contact isHome={isHome} contactForm={mailToHead} />
                 <Quote/>
-                <Toggle footerfromHead={displayFooter}/>
-                <Footer footerOpen={footerOpen} isHome={isHome}/>
+                <Toggle isHome={isHome} footerfromHead={footerFromPage}/>
+                {footerOpen &&(<Footer footerOpen={footerOpen} isHome={isHome}/>)}
             </HomeContainer>
         </Slide>
     )

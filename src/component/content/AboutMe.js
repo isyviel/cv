@@ -70,7 +70,7 @@ const Aboutme = ({isHome,...props}) => {
         if((x > minMotoX) && (x < maxMotoX) && (y > minMotoY) && (y < maxMotoY)){
             setDetect(false)
             setDetectMoto(true)
-            console.log(detectMoto)
+            //console.log(detectMoto)
         } else if ((x > minIraX) && (x < maxIraX) && (y > minIraY) && (y < maxIraY)){
             setDetectMoto(false)
             setDetect(true)

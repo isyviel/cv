@@ -1,29 +1,17 @@
 
-import React, { useState } from "react"
-import {Container,Col} from "@bootstrap-styled/v4/lib"
-import styled from "styled-components"
-import Me from './Me'
-import Contact from './Contact'
-import Quote from './Quote'
-import Spacer from '../common/Spacer'
-import { Slide, Button } from "@material-ui/core"
-import Name from "../Name"
-import Footer from "../content/Footer"
+import React from "react"
+import {Container} from "@bootstrap-styled/v4/lib"
+import { Button } from "@material-ui/core"
 import ImageButton from "../common/img/ImageButton"
 
-const ToggleContainer = styled(Container)`
-    
-`
-
-const Toggle = ({footerfromHead, ...props}) => {
+const Toggle = ({footerfromHead, isHome, ...props}) => {
 
     return(
-        <ToggleContainer className="p-0 mb-2 row justify-content-lg-end justify-content-center">
-            <Button className="p-0" onClick={footerfromHead} size="small" rel="noopener noreferrer">
+        <Container className={isHome? "mb-2 row justify-content-center justify-content-md-end" : "mb-2 row justify-content-center"}>
+            <Button  onClick={footerfromHead} size="small" rel="noopener noreferrer">
                 <ImageButton alt="icone menu bas de page à développer" src="images/menu.png"/>
             </Button>   
-        </ToggleContainer>
-        
+        </Container>
     )
 }
 

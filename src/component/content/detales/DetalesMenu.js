@@ -7,9 +7,9 @@ import useStyles from "../../common/themes/buttonTheme"
 const ButtonRow = styled(Row)`
     justify-content: center;
     align-items: center;
-    margin-bottom: 10%;
-    @media screen and (max-width:576px) {
-        margin-top: 10px;
+    margin-top: 10%;
+    @media screen and (max-width:992px) {
+        margin: 5px 0 10px 0;
     }
 `
 const DMenu = ({displaySales,displayWeb, displayEnglish,displayAdrar,isExp,isWeb,isAdrar,isSales,isEng,...props}) => {  

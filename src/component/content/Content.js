@@ -6,6 +6,17 @@ import Colors from '../common/themes/Colors'
 import Detales from "./detales/Detales"
 import Aboutme from "./AboutMe"
 
+const ContentContainer = styled(Container)`
+    color: ${Colors.darkGrey};
+    font-size: 24px;
+    @media screen and (max-width:576px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;        
+    }
+` 
+
 const Content = ({
     isProject,
     isExp,
@@ -21,18 +32,7 @@ const Content = ({
     showPrevious,
     hideContent,
     ...props}) => {
-
-    const ContentContainer = styled(Container)`
-        color: ${Colors.darkGrey};
-        font-size: 24px;
-        ${contentIsShown ? "transition: transform 800ms cubic-bezier(0, 0, 0.2, 1) 0ms" : "transform: none"}; 
-        @media screen and (max-width:576px) {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;        
-    }
-`  
+ 
     return (
         <ContentContainer fluid>
             {contentIsShown ?
@@ -46,16 +46,16 @@ const Content = ({
                     showNext={showNext}
                     showPrevious={showPrevious}
                     goSlide={true}/> : <Aboutme isHome={isHome}/>}
-            <Menu   isDeploy={contentIsShown} 
-                    fromExpButton={goToExpContent} 
-                    fromFormationButton={goToFormationContent}
-                    fromProjectButton={goToProjectContent}
-                    fromMailButton={goToMailForm}
-                    isExp={isExp}
-                    isFormation={isFormation}
-                    isProject={isProject}
-                    isMail={isMail}
-                    isHome={isHome}/>             
+            <Menu isDeploy={contentIsShown} 
+                fromExpButton={goToExpContent} 
+                fromFormationButton={goToFormationContent}
+                fromProjectButton={goToProjectContent}
+                fromMailButton={goToMailForm}
+                isExp={isExp}
+                isFormation={isFormation}
+                isProject={isProject}
+                isMail={isMail}
+                isHome={isHome} />             
         </ContentContainer>
     )
 }

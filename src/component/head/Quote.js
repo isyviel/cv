@@ -27,13 +27,20 @@ const QuoteAuthor = styled.div`
         display: none;
     }
 `
+const CustContainer = styled(Container)`
+    padding: 0;
+    margin: 0 0 0 150px;
+    @media screen and (max-width:1200px) {
+        margin: 0 0 0 50px;
+     }
+`
 
 const Quote = () => {
     return(
-        <Container fluid className="p-0">
+        <CustContainer fluid>
             <QuoteDiv>{QUOTE[0]}</QuoteDiv>
             <QuoteAuthor>{QUOTE[1]}</QuoteAuthor>
-        </Container>
+        </CustContainer>
     )
 }
 

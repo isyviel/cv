@@ -1,12 +1,10 @@
 import React from "react"
-import {Row,Col} from "@bootstrap-styled/v4/lib"
+import {Row} from "@bootstrap-styled/v4/lib"
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/styles';
 import Colors from "../../common/themes/Colors";
 import { Fade, Button } from "@material-ui/core"
-import Container from "@bootstrap-styled/v4/lib/Container";
 import styled from "styled-components"
 import cardStyles from "../../common/themes/cardTheme";
 
