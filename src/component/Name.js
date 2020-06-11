@@ -54,7 +54,7 @@ const Name = ({isHome,...props}) => {
         <Slide timeout={800}  direction="left" in={isHome}>
             <NameContainer fluid>
                 <CustomH1>     
-                    {NOM} - {TITRE}
+                {NOM} - {TITRE}
                 </CustomH1>
                 <CustomH2>
                     {TECHNOS.map((label,index) => {
