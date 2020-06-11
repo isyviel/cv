@@ -3,7 +3,7 @@ export const ICONS = ["images/mail.png","images/phone.png","images/linkedin.png"
 export const QUOTE = ["Faire un bond en avant, je sautille pas","- Perceval, Kaamelott"]
 export const NOM = "Adeline SIMON"
 export const TITRE = "Développeuse Web et Web Mobile"
-export const TECHNOS = ["ReactJS, "," Material-ui, ","PHP 7, ","Symfony 4, ", "Boostrap"]
+export const TECHNOS = ["ReactJS, ","PHP 7, ","Symfony 4, ","MySQL, ","Git, "," Material-ui, ","Boostrap"]
 export const MENU ={
     exp: {
         index: 0,
