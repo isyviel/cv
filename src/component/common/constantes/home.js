@@ -36,6 +36,17 @@ export const STRATEGIA = {
     src : "images/strategia.png",
     alt : "logo strategia",
 }
+
+export const OCCITECH = {
+    title: "OCCITECH",
+    href: "https://www.occitech.fr/",
+    content: "Site Web OCCITECH",
+    skills: "Magento 1 & 2, Symfony, CakePHP, React/JSX, Front Commerce, Tailwind, , ArchLinux"
+    softSkills: "Autonomie, communication, passion, implication",
+    src : "images/occitech.png",
+    alt : "logo occitech",
+}
+
 export const VENTE = {
     title: "Mim / Christine Laure",
     content: "2009-2019",
@@ -64,6 +75,16 @@ export const ANGLAIS = {
 }
 
 export const STRList = {
+    skills: "Méthode agile, Slack, Miro, Invision, GitLab.", 
+    resume: "Conception et développement de fonctionnalités sur une plateforme de gestion de workflow:",
+    detales : [ "Insertions de champs de saisie selon le type de demande.","Suppression, duplication, exportation en pdf d'une demande.",
+        "Adaptation de la saisie, des données accessibles et des actions possibles selon l'utilisateur.",
+        "Processus de validation du workflow",
+        "Reproductions d'erreurs et tests.",
+        "Responsive"],
+}
+
+export const OCCList = {
     skills: "Méthode agile, Slack, Miro, Invision, GitLab.", 
     resume: "Conception et développement de fonctionnalités sur une plateforme de gestion de workflow:",
     detales : [ "Insertions de champs de saisie selon le type de demande.","Suppression, duplication, exportation en pdf d'une demande.",
