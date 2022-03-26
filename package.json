@@ -15,7 +15,7 @@
     "bootstrap": "^4.4.1",
     "emailjs-com": "^2.4.1",
     "mdbreact": "^4.25.4",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
